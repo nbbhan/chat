@@ -1,24 +1,20 @@
-const { ApolloServer, gql } = require('apollo-server');
+const { ApolloServer } = require('apollo-server')
 
-const typeDefs = gql `
-    type Query {
-        "Simple start!"
-        hello: String
-    }
-`;
+const { sequelize } = require('./models')
 
-const resolvers = {
-    Query: {
-        hello: () => 'natto'
-    },
-};
+const resolvers = require('./graphql/resolvers')
+const typeDefs = require('./graphql/typeDefs')
 
 const server = new ApolloServer({
     typeDefs,
     resolvers,
-  });
-  
-  // The `listen` method launches a web server.
-  server.listen().then(({ url }) => {
-    console.log(`🚀  Server ready at ${url}`);
-  });
+})
+
+server.listen().then(({ url }) => {
+    console.log(`🚀 Server ready at ${url}`)
+
+    sequelize
+        .authenticate()
+        .then(() => console.log('Database connected!!'))
+        .catch((err) => console.log(err))
+})
