@@ -1,6 +1,11 @@
+import Nav from '../../Components/Nav'
+
 function Home() {
     return ( 
-        <h1>Home Page</h1>
+        <>
+            <Nav />
+            <div className='home'>Home Contents</div>
+        </>
     );
 }
 
