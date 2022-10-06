@@ -75,7 +75,7 @@ module.exports = {
     },
   },
   Mutation: {
-    register: async (_, args) => {1
+    register: async (_, args) => {
       let { username, email, password, confirmPassword } = args
       let errors = {}
 
