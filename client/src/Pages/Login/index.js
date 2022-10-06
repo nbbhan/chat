@@ -1,6 +1,6 @@
 function Login() {
     return ( 
-        <h1>Quan loves Barori</h1>
+        <h1>Login</h1>
     );
 }
 
