@@ -36,8 +36,7 @@ module.exports = {
       let errors = {}
 
       try {
-        if (username.trim() === '')
-          errors.username = 'username must not be empty'
+        if (username.trim() === '') errors.username = 'username must not be empty'
         if (password === '') errors.password = 'password must not be empty'
 
         if (Object.keys(errors).length > 0) {
@@ -76,7 +75,7 @@ module.exports = {
     },
   },
   Mutation: {
-    register: async (_, args) => {
+    register: async (_, args) => {1
       let { username, email, password, confirmPassword } = args
       let errors = {}
 
