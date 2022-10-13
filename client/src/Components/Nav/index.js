@@ -13,11 +13,19 @@ function Nav() {
         <div className="nav">
             <div className='nav-container'>
                 <div className='nav-items'>
-                    <div className='nav-items-logo'>
-                        <img src={logo}/>
+                    <div className='nav-items-container'>
+                        <button className='menu-trigger'>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+
+                        <div className='nav-items-logo'>
+                            <img src={logo}/>
+                        </div>
                     </div>
 
-                    <div className='nav-search'>
+                    <div className='nav-items-search'>
                         <input type="text" placeholder='Search...'/>
 
                         <div>
@@ -25,20 +33,10 @@ function Nav() {
                         </div>
                     </div>
 
-                    <div className='nav-menu'>
-                        <div>
-                            Contact
-                        </div>
-
+                    <div className='nav-items-btn'>
                         <div>
                             Login
                         </div>
-
-                        <button className='menu-trigger'>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
                     </div>
                 </div>
             </div>

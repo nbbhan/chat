@@ -1,20 +1,23 @@
 import Nav from '../../Components/Nav'
 import back from '../../Imgs/fakeback.jpg'
 import itemBack from '../../Imgs/back.png'
+import Explore from '../../Components/Explore';
 
 function Home() {
     return ( 
         <>
             <Nav />
 
+            <Explore />
+
             <div className='background'>
-                <img src={back}/>
+                <img src={itemBack}/>
             </div>
 
             <div className='home'>
                 <div className='home-container'>
                     <div className='home-container-item'>
-                        <img src={itemBack} />
+                        {/* <img src={itemBack} /> */}
                     </div>
 
                     <div className='home-container-item'>
