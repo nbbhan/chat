@@ -1,13 +1,10 @@
-import Nav from '../../Components/Nav'
 import back from '../../Imgs/fakeback.jpg'
-import itemBack from '../../Imgs/back.png'
+import itemBack from '../../Imgs/back1.png'
 import Explore from '../../Components/Explore';
 
 function Home() {
     return ( 
         <>
-            <Nav />
-
             <Explore />
 
             <div className='background'>
