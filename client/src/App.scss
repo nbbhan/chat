@@ -321,7 +321,7 @@ a{
     height: calc(100vh - 80px); 
     background: white;
     z-index: 101;
-    box-shadow: 3px 3px 7px var(--myColor);
+    border-right: 1px solid var(--myColor);
 }
 
 
