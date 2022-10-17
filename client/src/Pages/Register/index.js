@@ -27,28 +27,28 @@ function Register() {
                             <div className='register-container-item'>
                                 <label>Username</label><br />
                                 <div>
-                                    <input type="text" value={formvalue.username} onChange={(e) => setFormvalue({ ...formvalue, username: e.target.value})}/>
+                                    <input type="text" value={formvalue.username} onChange={(e) => setFormvalue({ ...formvalue, username: e.target.value})} />
                                 </div>
                             </div>
 
                             <div className='register-container-item'>
                                 <label>E-mail</label><br />
                                 <div>
-                                    <input type="email" value={formvalue.email} onChange={(e) => setFormvalue({ ...formvalue, email: e.target.value})}/>
+                                    <input type="email" value={formvalue.email} onChange={(e) => setFormvalue({ ...formvalue, email: e.target.value})} />
                                 </div>
                             </div>
 
                             <div className='register-container-item'>
                                 <label>Password</label><br />
                                 <div>
-                                    <input type="password" value={formvalue.password} onChange={(e) => setFormvalue({ ...formvalue, password: e.target.value})}/>
+                                    <input type="password" value={formvalue.password} onChange={(e) => setFormvalue({ ...formvalue, password: e.target.value})} />
                                 </div>
                             </div>
 
                             <div className='register-container-item'>
                                 <label>Confirm password</label><br />
                                 <div>
-                                    <input type="password" value={formvalue.confirmpassword} onChange={(e) => setFormvalue({ ...formvalue, confirmpassword: e.target.value})}/>
+                                    <input type="password" value={formvalue.confirmpassword} onChange={(e) => setFormvalue({ ...formvalue, confirmpassword: e.target.value})} />
                                 </div>
                             </div>
                         </div>
