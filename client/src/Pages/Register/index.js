@@ -1,11 +1,19 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom'
 
 function Register() {
 
+    const [formvalue, setFormvalue] = useState({
+        username: '',
+        email: '',
+        password: '',
+        confirmpassword: '',
+    })
+
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        console.log('a');
+        console.log(formvalue);
     }
 
     return (
@@ -19,28 +27,28 @@ function Register() {
                             <div className='register-container-item'>
                                 <label>Username</label><br />
                                 <div>
-                                    <input type="text" />
+                                    <input type="text" value={formvalue.username} onChange={(e) => setFormvalue({ ...formvalue, username: e.target.value})}/>
                                 </div>
                             </div>
 
                             <div className='register-container-item'>
                                 <label>E-mail</label><br />
                                 <div>
-                                    <input type="text" />
+                                    <input type="email" value={formvalue.email} onChange={(e) => setFormvalue({ ...formvalue, email: e.target.value})}/>
                                 </div>
                             </div>
 
                             <div className='register-container-item'>
                                 <label>Password</label><br />
                                 <div>
-                                    <input type="password" />
+                                    <input type="password" value={formvalue.password} onChange={(e) => setFormvalue({ ...formvalue, password: e.target.value})}/>
                                 </div>
                             </div>
 
                             <div className='register-container-item'>
                                 <label>Confirm password</label><br />
                                 <div>
-                                    <input type="password" />
+                                    <input type="password" value={formvalue.confirmpassword} onChange={(e) => setFormvalue({ ...formvalue, confirmpassword: e.target.value})}/>
                                 </div>
                             </div>
                         </div>

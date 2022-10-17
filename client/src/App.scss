@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap');
 
+.dark {
+
+    button{
+        color: blue !important;
+    }
+}
+
+.light{
+    
+    button{
+        color: red !important;
+    }
+}
+
 :root {
     --aColor: #84deff;
     --primary: #fe2c55;

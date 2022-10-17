@@ -1,10 +1,13 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useContext } from 'react';
 import { Link } from 'react-router-dom'
 
 import logo from '../../Imgs/logoN.png'
 import loupe from '../../Imgs/loupe.png'
+import { Data } from '../../Provider'
 
 function Nav() {
+
+    const myData = useContext(Data)
 
     const triggerRef = useRef()
 
@@ -14,12 +17,16 @@ function Nav() {
         triggerRef.current.classList.toggle('active')
     }
 
+    const handleChangeTheme = () => {
+        myData.handleChange()
+    }
+
     useEffect(() => {
         handleTogger()
     }, [trigger])
 
     return ( 
-        <div className="nav">
+        <div className={`nav ${myData.theme}`}>
             <div className='nav-container'>
                 <div className='nav-items'>
                     <div className='nav-items-container'>
@@ -42,6 +49,12 @@ function Nav() {
                         <div>
                             <img src={loupe} />
                         </div>
+                    </div>
+
+                    <div>
+                        <button onClick={() => handleChangeTheme()}>
+                            Theme Change!
+                        </button>
                     </div>
 
                     <div className='nav-items-btn'>
