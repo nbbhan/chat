@@ -1,4 +1,4 @@
-import topImg from '../../Imgs/338.png'
+import topImg from '../../Imgs/縦長.png'
 
 function ImgContainer() {
     return (

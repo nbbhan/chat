@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom'
 
 import back from '../../Imgs/fakeback.jpg'
 import itemBack from '../../Imgs/back1.png'
@@ -43,8 +44,12 @@ function Home() {
 
                             <div className='home-container-item-left-btn'>
                                 <div>
-                                    START
+                                    はじめる
                                 </div>
+                            </div>
+
+                            <div>
+                                <span><Link to='/register'>新規アカウント作成</Link></span>
                             </div>
                         </div>
 

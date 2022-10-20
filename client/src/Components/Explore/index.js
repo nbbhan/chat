@@ -1,10 +1,12 @@
 import { useContext } from 'react';
 
-import user from '../../Imgs/user.png'
 import home from '../../Imgs/home.png'
 import bell from '../../Imgs/bell.png'
 import token from '../../Imgs/token.png'
 import cart from '../../Imgs/shopping-cart.png'
+import chat from '../../Imgs/chat.png'
+import info from '../../Imgs/info.png'
+import favor from '../../Imgs/favor.png'
 
 import { Data } from '../../Provider'
 
@@ -14,28 +16,48 @@ function Explore() {
 
     return (
         <div className="explore" style={{width: `${myData.width}px`}}>
-            <div className='explore-item'>
-                <img src={home} />
+            <div className='explore-items'>
+                <div className='explore-item'>
+                    <img src={home} />
 
-                <div>Home</div>
-            </div>
+                    <div>ホーム</div>
+                </div>
 
-            <div className='explore-item'>
-                <img src={bell} />
+                <div className='explore-item'>
+                    <img src={info} />
 
-                <div>Notification</div>
-            </div>
+                    <div>プロフィール</div>
+                </div>
 
-            <div className='explore-item'>
-                <img src={token} />
+                <div className='explore-item'>
+                    <img src={bell} />
 
-                <div>Point</div>
-            </div>
+                    <div>通知</div>
+                </div>
 
-            <div className='explore-item'>
-                <img src={cart} />
+                <div className='explore-item'>
+                    <img src={token} />
 
-                <div>Cart</div>
+                    <div>ポイント</div>
+                </div>
+
+                <div className='explore-item'>
+                    <img src={cart} />
+
+                    <div>カート</div>
+                </div>
+
+                <div className='explore-item'>
+                    <img src={chat} />
+
+                    <div>チャット</div>
+                </div>
+
+                <div className='explore-item'>
+                    <img src={favor} />
+
+                    <div>お気に入り</div>
+                </div>
             </div>
         </div>
     );

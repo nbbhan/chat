@@ -10,7 +10,7 @@
     "sequelize": "^6.24.0"
   },
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "nodemon server.js --ignore client/",
     "start": "node server.js"
   },
   "name": "chat",

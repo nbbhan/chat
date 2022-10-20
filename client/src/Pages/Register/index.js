@@ -1,7 +1,32 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { gql, useMutation } from '@apollo/client'
+
+import Explore from '../../Components/Explore'
+
+const REGISTER_USER = gql`
+  mutation register(
+    $username: String!
+    $email: String!
+    $password: String!
+    $confirmPassword: String!
+  ) {
+    register(
+      username: $username
+      email: $email
+      password: $password
+      confirmPassword: $confirmPassword
+    ) {
+      username
+      email
+      createdAt
+    }
+  }
+`
 
 function Register() {
+
+    const navigate = useNavigate()
 
     const [formvalue, setFormvalue] = useState({
         username: '',
@@ -10,43 +35,52 @@ function Register() {
         confirmpassword: '',
     })
 
+    const [errors, setErrors] = useState({})
+
+    const [registerUser, { loading }] = useMutation(REGISTER_USER, {
+        update: (_, __) => navigate('/login'),
+        onError: (err) => setErrors(err.graphQLErrors[0].extensions.errors),
+    })
+
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        console.log(formvalue);
+        registerUser({ formvalue })
     }
 
     return (
         <>
+            <Explore />
+
             <div className='register'>
                 <div className='register-container'>
-                    <div className='register-container-title'>Register</div>
+                    <div className='register-container-title'>アカウント作成</div>
 
                     <form onSubmit={e => handleSubmit(e)}>
                         <div className='register-container-items'>
                             <div className='register-container-item'>
-                                <label>Username</label><br />
+                                <label>ユーザー名</label><br />
                                 <div>
                                     <input type="text" value={formvalue.username} onChange={(e) => setFormvalue({ ...formvalue, username: e.target.value})} />
                                 </div>
                             </div>
 
                             <div className='register-container-item'>
-                                <label>E-mail</label><br />
+                                <label>メールアドレス</label><br />
                                 <div>
                                     <input type="email" value={formvalue.email} onChange={(e) => setFormvalue({ ...formvalue, email: e.target.value})} />
                                 </div>
                             </div>
 
                             <div className='register-container-item'>
-                                <label>Password</label><br />
+                                <label>パスワード</label><br />
                                 <div>
                                     <input type="password" value={formvalue.password} onChange={(e) => setFormvalue({ ...formvalue, password: e.target.value})} />
                                 </div>
                             </div>
 
                             <div className='register-container-item'>
-                                <label>Confirm password</label><br />
+                                <label>確認</label><br />
                                 <div>
                                     <input type="password" value={formvalue.confirmpassword} onChange={(e) => setFormvalue({ ...formvalue, confirmpassword: e.target.value})} />
                                 </div>
@@ -54,12 +88,12 @@ function Register() {
                         </div>
 
                         <div className='register-btn'>
-                            <button type='submit'>Register</button>
+                            <button type='submit'>作成</button>
                         </div>
                     </form>
 
                     <div className='register-link'>
-                        <span>Already have an account? <Link to="/login">Login</Link></span>
+                        <span><Link to="/login">すでにアカウントをお持ちの方</Link></span>
                     </div>
                 </div>
             </div>

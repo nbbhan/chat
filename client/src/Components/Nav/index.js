@@ -51,7 +51,7 @@ function Nav() {
                     </div>
 
                     <div className='nav-items-search'>
-                        <input type="text" placeholder='Search...'/>
+                        <input type="text" placeholder='検索...'/>
 
                         <div>
                             <img src={loupe} />
@@ -67,7 +67,7 @@ function Nav() {
                     <div className='nav-items-btn'>
                         <Link to='/login'>
                             <div>
-                                Login
+                                ログイン
                             </div>
                         </Link>
                     </div>
