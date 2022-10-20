@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap');
 
 .dark {
 
@@ -18,6 +19,7 @@
     --aColor: #84deff;
     --primary: #fe2c55;
     --fontColor: black;
+    --cha: #b88c5c;
     --top: 80px;
     --myColor: rgb(210, 210, 210);
     --borderR: 5px;
@@ -75,7 +77,7 @@ a{
     top: 0;
     left: 0;
     z-index: 102;
-    box-shadow: var(--boxS);
+    // box-shadow: var(--boxS);
 }
 .nav-container{
     height: 100%;
@@ -104,6 +106,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    // border: 1px solid black;
 }
 .nav-items-logo{
     width: 80px;
@@ -158,9 +161,10 @@ a{
     
     input{
         border: 2px solid var(--myColor);
-        border-radius: var(--borderR);
-        height: 45px;
-        width: 500px;
+        // border-radius: var(--borderR);
+        border-radius: 100rem;
+        height: 40px;
+        width: 400px;
         padding: 0 1.5rem 0 1.5rem;
         font-size: 16px;
         font-family: 'Comfortaa', cursive;
@@ -182,9 +186,8 @@ a{
     justify-content: center;
 
     div{
-        margin-left: 3rem;
-        height: 45px;
-        width: 100px;
+        height: 40px;
+        width: 80px;
         border: 2px solid var(--myColor);
         border-radius: var(--borderR);
         display: flex;
@@ -213,31 +216,82 @@ a{
 .home-container{
     position: absolute;
     top: 0;
-    left: 300px;
-    width: calc(100% - 300px);
     // border: 1px solid blue;
 }
 .home-container-item{
     width: 100%;
-    height: 900px;
+    height: 1000px;
     background: white;
-    margin-bottom: 30rem;
-    box-shadow: var(--boxS);
+    // margin-bottom: 30rem;
+    // box-shadow: var(--boxS);
     // border-radius: var(--borderR);
     position: relative;
-
-    // img{
-    //     width: 100%;
-    //     height: 100%;
-    //     object-fit: cover;
-    // }
+    display: flex;
 }
 .home-container-item-last{
     width: 100%;
     height: 900px;
     background: white;
-    box-shadow: var(--boxS);
+    // box-shadow: var(--boxS);
     // border-radius: var(--borderR);
+}
+.home-container-item-left{
+    width: 50%;
+    padding: 5rem 5rem 5rem 2rem;
+    
+}
+.home-container-item-left-title{
+    font-size: 10rem;
+    font-weight: 700;
+    color: var(--cha);
+    letter-spacing: 10px;
+    text-shadow: 7px 5px var(--myColor);
+    margin: 0 0 3rem 0;
+    text-align: center;
+}
+.home-container-item-left-contents{
+    font-family: 'Zen Maru Gothic', sans-serif !important;
+    font-size: 3rem;
+    line-height: 60px;
+}
+.home-container-item-left-btn{
+    display: flex;
+    margin-top: 3rem;
+
+    div{
+        height: 70px;
+        width: 250px;
+        border: 2px solid var(--myColor);
+        border-radius: var(--borderR);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover{
+            opacity: var(--opa);
+            cursor: pointer;
+        }
+    }
+}
+.home-container-item-right{
+    width: 50%;
+    padding: 5rem 2rem 5rem 5rem;
+}
+
+.img-container{
+    width: 100%;
+    height: 100%;
+
+    img{
+        border: 5px solid var(--myColor);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        border-top-right-radius: var(--borderR);
+        border-bottom-left-radius: var(--borderR);
+    }
 }
 
 .register, .login{
@@ -327,18 +381,29 @@ a{
         color: var(--aColor) !important;
     }
 }
+
 .explore{
     position: fixed;
     top: var(--top);
     left: 0;
-    width: 300px;
     height: calc(100vh - 80px);
     background: white;
     z-index: 101;
     border-right: 1px solid var(--myColor);
+    // text-align: center;
+    overflow: hidden;
 }
+.explore-item{
+    display: flex;
+    align-items: center;
+    margin: 0 0 3rem 2rem;
 
-
+    img{
+        width: 25px;
+        height: 25px;
+        margin-right: 2.5rem;
+    }
+}
 
 
 
@@ -458,7 +523,7 @@ a{
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--myColor);
+  background-color: black;
   border-radius: 100rem;
 }
 .menu-trigger span:nth-of-type(1) {

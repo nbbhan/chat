@@ -6,14 +6,21 @@ function Provider({children}) {
 
     const [theme, setTheme] = useState('light')
 
+    const [width, setWidth] = useState(65)
+
     const handleChange = () => {
         setTheme(theme === 'light' ? 'dark' : 'light')
     }
 
-    // Water
+    const handleChangeWidth = () => {
+        setWidth(width === 65 ? 250 : 65)
+    }
+
     const value = {
         theme,
-        handleChange
+        width,
+        handleChange,
+        handleChangeWidth
     }
 
     return (

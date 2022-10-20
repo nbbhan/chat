@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 import logo from '../../Imgs/logoN.png'
 import loupe from '../../Imgs/loupe.png'
+
 import { Data } from '../../Provider'
 
 function Nav() {
@@ -21,6 +22,12 @@ function Nav() {
         myData.handleChange()
     }
 
+    const handleTrigger = () => {
+        setTrigger(!trigger)
+
+        myData.handleChangeWidth()
+    }
+
     useEffect(() => {
         handleTogger()
     }, [trigger])
@@ -30,7 +37,7 @@ function Nav() {
             <div className='nav-container'>
                 <div className='nav-items'>
                     <div className='nav-items-container'>
-                        <button className='menu-trigger' ref={triggerRef} onClick={() => setTrigger(!trigger)}>
+                        <button className='menu-trigger' ref={triggerRef} onClick={() => handleTrigger()}>
                             <span></span>
                             <span></span>
                             <span></span>
@@ -51,11 +58,11 @@ function Nav() {
                         </div>
                     </div>
 
-                    <div>
+                    {/* <div>
                         <button onClick={() => handleChangeTheme()}>
                             Theme Change!
                         </button>
-                    </div>
+                    </div> */}
 
                     <div className='nav-items-btn'>
                         <Link to='/login'>
