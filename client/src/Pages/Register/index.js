@@ -32,7 +32,7 @@ function Register() {
         username: '',
         email: '',
         password: '',
-        confirmpassword: '',
+        confirmPassword: '',
     })
 
     const [errors, setErrors] = useState({})
@@ -82,7 +82,7 @@ function Register() {
                             <div className='register-container-item'>
                                 <label>確認</label><br />
                                 <div>
-                                    <input type="password" value={formvalue.confirmpassword} onChange={(e) => setFormvalue({ ...formvalue, confirmpassword: e.target.value})} />
+                                    <input type="password" value={formvalue.confirmPassword} onChange={(e) => setFormvalue({ ...formvalue, confirmPassword: e.target.value})} />
                                 </div>
                             </div>
                         </div>
