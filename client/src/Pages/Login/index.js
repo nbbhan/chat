@@ -5,7 +5,7 @@ import Explore from '../../Components/Explore';
 
 function Login() {
 
-    const [formvalue, setFormvalue] = useState({
+    const [variables, setVariables] = useState({
         username: '',
         password: '',
     })
@@ -13,7 +13,7 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        console.log(formvalue);
+        console.log(variables);
     }
 
     return ( 
@@ -29,14 +29,14 @@ function Login() {
                             <div className='login-container-item'>
                                 <label>ユーザー名</label><br />
                                 <div>
-                                    <input type="text" value={formvalue.username} onChange={(e) => setFormvalue({ ...formvalue, username: e.target.value})} />
+                                    <input type="text" value={variables.username} onChange={(e) => setVariables({ ...variables, username: e.target.value})} />
                                 </div>
                             </div>
 
                             <div className='login-container-item'>
                                 <label>パスワード</label><br />
                                 <div>
-                                    <input type="password" value={formvalue.password} onChange={(e) => setFormvalue({ ...formvalue, password: e.target.value})} />                                                                                                                                                                                                                                                                            
+                                    <input type="password" value={variables.password} onChange={(e) => setVariables({ ...variables, password: e.target.value})} />                                                                                                                                                                                                                                                                            
                                 </div>
                             </div>
                         </div>

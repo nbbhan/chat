@@ -28,7 +28,7 @@ function Register() {
 
     const navigate = useNavigate()
 
-    const [formvalue, setFormvalue] = useState({
+    const [variables, setVariables] = useState({
         username: '',
         email: '',
         password: '',
@@ -43,9 +43,9 @@ function Register() {
     })
 
     const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault()  
 
-        registerUser({ formvalue })
+        registerUser({ variables })
     }
 
     return (
@@ -61,28 +61,28 @@ function Register() {
                             <div className='register-container-item'>
                                 <label>ユーザー名</label><br />
                                 <div>
-                                    <input type="text" value={formvalue.username} onChange={(e) => setFormvalue({ ...formvalue, username: e.target.value})} />
+                                    <input type="text" value={variables.username} onChange={(e) => setVariables({ ...variables, username: e.target.value})} />
                                 </div>
                             </div>
 
                             <div className='register-container-item'>
                                 <label>メールアドレス</label><br />
                                 <div>
-                                    <input type="email" value={formvalue.email} onChange={(e) => setFormvalue({ ...formvalue, email: e.target.value})} />
+                                    <input type="email" value={variables.email} onChange={(e) => setVariables({ ...variables, email: e.target.value})} />
                                 </div>
                             </div>
 
                             <div className='register-container-item'>
                                 <label>パスワード</label><br />
                                 <div>
-                                    <input type="password" value={formvalue.password} onChange={(e) => setFormvalue({ ...formvalue, password: e.target.value})} />
+                                    <input type="password" value={variables.password} onChange={(e) => setVariables({ ...variables, password: e.target.value})} />
                                 </div>
                             </div>
 
                             <div className='register-container-item'>
                                 <label>確認</label><br />
                                 <div>
-                                    <input type="password" value={formvalue.confirmPassword} onChange={(e) => setFormvalue({ ...formvalue, confirmPassword: e.target.value})} />
+                                    <input type="password" value={variables.confirmPassword} onChange={(e) => setVariables({ ...variables, confirmPassword: e.target.value})} />
                                 </div>
                             </div>
                         </div>
