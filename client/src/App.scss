@@ -350,7 +350,7 @@ button{
         height: 40px;
         border: 2px solid var(--myColor);
         border-radius: var(--borderR);
-        padding: 0 1.5rem 0 1.5rem;
+        padding: 0 .5rem 0 .5rem;
         font-size: 16px;
         font-family: var(--fontComfor);
 
@@ -394,6 +394,12 @@ button{
         text-decoration: underline !important;
         color: var(--aColor) !important;
     }
+}
+.text-danger{
+    color: var(--primary) !important;
+}
+.is-invalid{
+    border-color: var(--primary) !important;
 }
 
 .explore{

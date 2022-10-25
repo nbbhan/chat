@@ -59,30 +59,30 @@ function Register() {
                     <form onSubmit={e => handleSubmit(e)}>
                         <div className='register-container-items'>
                             <div className='register-container-item'>
-                                <label>ユーザー名</label><br />
+                                <label className={errors.username && 'text-danger'}>{errors.username ?? 'ユーザー名'}</label><br />
                                 <div>
-                                    <input type="text" value={variables.username} onChange={(e) => setVariables({ ...variables, username: e.target.value})} />
+                                    <input className={errors.username && 'is-invalid'} type="text" value={variables.username} onChange={(e) => setVariables({ ...variables, username: e.target.value})} />
                                 </div>
                             </div>
 
                             <div className='register-container-item'>
-                                <label>メールアドレス</label><br />
+                                <label className={errors.email && 'text-danger'}>{errors.email ?? 'メールアドレス'}</label><br />
                                 <div>
-                                    <input type="email" value={variables.email} onChange={(e) => setVariables({ ...variables, email: e.target.value})} />
+                                    <input className={errors.email && 'is-invalid'} type="email" value={variables.email} onChange={(e) => setVariables({ ...variables, email: e.target.value})} />
                                 </div>
                             </div>
 
                             <div className='register-container-item'>
-                                <label>パスワード</label><br />
+                                <label className={errors.password && 'text-danger'}>{errors.password ?? 'パスワード'}</label><br />
                                 <div>
-                                    <input type="password" value={variables.password} onChange={(e) => setVariables({ ...variables, password: e.target.value})} />
+                                    <input className={errors.password && 'is-invalid'} type="password" value={variables.password} onChange={(e) => setVariables({ ...variables, password: e.target.value})} />
                                 </div>
                             </div>
 
                             <div className='register-container-item'>
-                                <label>確認</label><br />
+                                <label className={errors.confirmPassword && 'text-danger'}>{errors.confirmPassword ?? '確認'}</label><br />
                                 <div>
-                                    <input type="password" value={variables.confirmPassword} onChange={(e) => setVariables({ ...variables, confirmPassword: e.target.value})} />
+                                    <input className={errors.confirmPassword && 'is-invalid'} type="password" value={variables.confirmPassword} onChange={(e) => setVariables({ ...variables, confirmPassword: e.target.value})} />
                                 </div>
                             </div>
                         </div>

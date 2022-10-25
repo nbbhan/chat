@@ -36,8 +36,8 @@ module.exports = {
       let errors = {}
 
       try {
-        if (username.trim() === '') errors.username = 'username must not be empty'
-        if (password === '') errors.password = 'password must not be empty'
+        if (username.trim() === '') errors.username = 'ユーザー名が未入力です'
+        if (password === '') errors.password = 'パスワードが未入力です'
 
         if (Object.keys(errors).length > 0) {
           throw new UserInputError('bad input', { errors })
@@ -48,14 +48,14 @@ module.exports = {
         })
 
         if (!user) {
-          errors.username = 'user not found'
+          errors.username = 'ユーザーが見つかりません'
           throw new UserInputError('user not found', { errors })
         }
 
         const correctPassword = await bcrypt.compare(password, user.password)
 
         if (!correctPassword) {
-          errors.password = 'password is incorrect'
+          errors.password = 'パスワードが正しくありません'
           throw new AuthenticationError('password is incorrect', { errors })
         }
 
@@ -81,16 +81,16 @@ module.exports = {
 
       try {
         // Validate input data
-        if (email.trim() === '') errors.email = 'email must not be empty'
+        if (email.trim() === '') errors.email = 'メールアドレスが未入力です'
         if (username.trim() === '')
-          errors.username = 'username must not be empty'
+          errors.username = 'ユーザー名が未入力です'
         if (password.trim() === '')
-          errors.password = 'password must not be empty'
+          errors.password = 'パスワードが未入力です'
         if (confirmPassword.trim() === '')
-          errors.confirmPassword = 'repeat password must not be empty'
+          errors.confirmPassword = '確認パスワードが未入力です'
 
         if (password !== confirmPassword)
-          errors.confirmPassword = 'passwords must match'
+          errors.confirmPassword = 'パスワードが一致しません'
 
         // // Check if username / email exists
         // const userByUsername = await User.findOne({ where: { username } })
@@ -119,7 +119,7 @@ module.exports = {
         console.log(err)
         if (err.name === 'SequelizeUniqueConstraintError') {
           err.errors.forEach(
-            (e) => (errors[e.path] = `${e.path} is already taken`)
+            (e) => (errors[e.path] = `すでに使用されています`)
           )
         } else if (err.name === 'SequelizeValidationError') {
           err.errors.forEach((e) => (errors[e.path] = e.message))
