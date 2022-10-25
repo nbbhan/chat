@@ -1,24 +1,59 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom'
+import { gql, useQuery } from '@apollo/client'
 
 // import left from '../../Imgs/左.png'
-import itemBack from '../../Imgs/back1.png'
+// import itemBack from '../../Imgs/back1.png'
 import Explore from '../../Components/Explore';
 import ImgContainer from '../../Components/ImgContainer'
 
 import { Data } from '../../Provider'
 
+const GET_USERS = gql`
+  query getUsers {
+    getUsers {
+      username
+      email
+      createdAt
+    }
+  }
+`
+
 function Home() {
 
     const myData = useContext(Data)
+
+    const { loading, data, error } = useQuery(GET_USERS)
+
+    if (error) {
+        console.log(error)
+    }
+
+    if (data) {
+        console.log(data)
+    }
+
+    let usersMarkup
+
+    if (!data || loading) {
+        usersMarkup = <p>Loading..</p>
+    } else if (data.getUsers.length === 0) {
+        usersMarkup = <p>No users have joined yet</p>
+    } else if (data.getUsers.length > 0) {
+        usersMarkup = data.getUsers.map((user) => (
+            <div key={user.username}>
+                <p>{user.username}</p>
+            </div>
+        ))
+    }
 
     return ( 
         <>
             <Explore />
 
-            <div className='background'>
+            {/* <div className='background'>
                 <img src={itemBack}/>
-            </div>
+            </div> */}
 
             <div className='home'>
                 <div className='home-container' style={{left: `${myData.width}px`, width: `calc(100% - ${myData.width}px)`}}>
@@ -39,15 +74,11 @@ function Home() {
                                 </div>
                             </div>
 
-                            <div className='home-container-item-left-btn'>
+                            {/* <div className='home-container-item-left-btn'>
                                 <div>
                                     はじめる
                                 </div>
-                            </div>
-
-                            <div>
-                                <span><Link to='/register'>新規アカウント作成</Link></span>
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className='home-container-item-right'>
@@ -56,7 +87,11 @@ function Home() {
                     </div>
 
                     <div className='home-container-item'>
-                        b
+                        <div>{usersMarkup}</div>
+
+                        <div>
+                            <p>Messages</p>
+                        </div>
                     </div>
 
                     <div className='home-container-item'>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 import logo from '../../Imgs/logoN.png'
 import loupe from '../../Imgs/loupe.png'
+import lightOff from '../../Imgs/light-off.png'
 
 import { Data } from '../../Provider'
 
@@ -58,18 +59,10 @@ function Nav() {
                         </div>
                     </div>
 
-                    {/* <div>
-                        <button onClick={() => handleChangeTheme()}>
-                            Theme Change!
-                        </button>
-                    </div> */}
-
-                    <div className='nav-items-btn'>
-                        <Link to='/login'>
-                            <div>
-                                ログイン
-                            </div>
-                        </Link>
+                    <div className='nav-items-light'>
+                        <div onClick={() => handleChangeTheme()}>
+                            <img src={lightOff} />
+                        </div>
                     </div>
                 </div>
             </div>

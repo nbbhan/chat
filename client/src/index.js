@@ -1,9 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
-import Provider from './Provider';
-import ApolloProvider from './ApolloProvider';
+
+import App from './App'
+import Provider from './Provider'
+import ApolloProvider from './ApolloProvider'
+import { AuthProvider } from './context/auth'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,7 +13,9 @@ root.render(
     <BrowserRouter>
       <Provider>
         <ApolloProvider>
-          <App />
+          <AuthProvider>
+            <App />
+          </AuthProvider>
         </ApolloProvider>
       </Provider>
     </BrowserRouter>

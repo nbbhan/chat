@@ -3,23 +3,14 @@ const { UserInputError, AuthenticationError } = require('apollo-server')
 const jwt = require('jsonwebtoken')
 const { Op } = require('sequelize')
 
-const { User } = require('../models')
-const { JWT_SECRET } = require('../config/env.json')
+const { User } = require('../../models')
+const { JWT_SECRET } = require('../../config/env.json')
 
 module.exports = {
   Query: {
-    getUsers: async (_, __, context) => {
+    getUsers: async (_, __, { user }) => {
       try {
-        let user
-        if (context.req && context.req.headers.authorization) {
-          const token = context.req.headers.authorization.split('Bearer ')[1]
-          jwt.verify(token, JWT_SECRET, (err, decodedToken) => {
-            if (err) {
-              throw new AuthenticationError('Unauthenticated')
-            }
-            user = decodedToken
-          })
-        }
+        if (!user) throw new AuthenticationError('Unauthenticated')
 
         const users = await User.findAll({
           where: { username: { [Op.ne]: user.username } },
@@ -36,7 +27,8 @@ module.exports = {
       let errors = {}
 
       try {
-        if (username.trim() === '') errors.username = 'ユーザー名が未入力です'
+        if (username.trim() === '')
+          errors.username = 'ユーザー名が未入力です'
         if (password === '') errors.password = 'パスワードが未入力です'
 
         if (Object.keys(errors).length > 0) {
@@ -48,7 +40,7 @@ module.exports = {
         })
 
         if (!user) {
-          errors.username = 'ユーザーが見つかりません'
+          errors.username = 'ユーザー名が見つかりません'
           throw new UserInputError('user not found', { errors })
         }
 
@@ -56,7 +48,7 @@ module.exports = {
 
         if (!correctPassword) {
           errors.password = 'パスワードが正しくありません'
-          throw new AuthenticationError('password is incorrect', { errors })
+          throw new UserInputError('password is incorrect', { errors })
         }
 
         const token = jwt.sign({ username }, JWT_SECRET, {
