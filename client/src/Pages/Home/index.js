@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom'
 
-import back from '../../Imgs/fakeback.jpg'
+// import left from '../../Imgs/左.png'
 import itemBack from '../../Imgs/back1.png'
 import Explore from '../../Components/Explore';
 import ImgContainer from '../../Components/ImgContainer'
@@ -24,6 +24,11 @@ function Home() {
                 <div className='home-container' style={{left: `${myData.width}px`, width: `calc(100% - ${myData.width}px)`}}>
                     <div className='home-container-item'>
                         <div className='home-container-item-left'>
+
+                            {/* <div className='home-container-item-left-background'>
+                                <img src={left}/>
+                            </div> */}
+
                             <div className='home-container-item-left-title'>
                                 QOKS
                             </div>
@@ -31,14 +36,6 @@ function Home() {
                             <div className='home-container-item-left-contents'>
                                 <div>
                                     経済の停滞した現状の打開のため国消国産の精神のもと農畜産業のみならずそのほかの産業においてもMADE IN JAPANの製品を取り扱い、それにより販売者は販売経路の拡大とそれに伴う売上の増加を見込め、利用者は遠方の故郷や、訪れたことのない土地の特産品を得ることができる。これを目標としてQOKSを開発しました。
-                                </div>
-
-                                <div>
-                                    
-                                </div>
-
-                                <div>
-                                     
                                 </div>
                             </div>
 
