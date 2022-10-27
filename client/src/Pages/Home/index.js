@@ -1,51 +1,17 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom'
-import { gql, useQuery } from '@apollo/client'
 
 // import left from '../../Imgs/左.png'
+import sen from '../../Imgs/sen.png'
 // import itemBack from '../../Imgs/back1.png'
 import Explore from '../../Components/Explore';
 import ImgContainer from '../../Components/ImgContainer'
 
 import { Data } from '../../Provider'
 
-const GET_USERS = gql`
-  query getUsers {
-    getUsers {
-      username
-      email
-      createdAt
-    }
-  }
-`
-
 function Home() {
 
     const myData = useContext(Data)
-
-    const { loading, data, error } = useQuery(GET_USERS)
-
-    if (error) {
-        console.log(error)
-    }
-
-    if (data) {
-        console.log(data)
-    }
-
-    let usersMarkup
-
-    if (!data || loading) {
-        usersMarkup = <p>Loading..</p>
-    } else if (data.getUsers.length === 0) {
-        usersMarkup = <p>No users have joined yet</p>
-    } else if (data.getUsers.length > 0) {
-        usersMarkup = data.getUsers.map((user) => (
-            <div key={user.username}>
-                <p>{user.username}</p>
-            </div>
-        ))
-    }
 
     return ( 
         <>
@@ -57,13 +23,8 @@ function Home() {
 
             <div className='home'>
                 <div className='home-container' style={{left: `${myData.width}px`, width: `calc(100% - ${myData.width}px)`}}>
-                    <div className='home-container-item'>
+                    <div className='home-container-item' style={{height: "1000px"}}>
                         <div className='home-container-item-left'>
-
-                            {/* <div className='home-container-item-left-background'>
-                                <img src={left}/>
-                            </div> */}
-
                             <div className='home-container-item-left-title'>
                                 QOKS
                             </div>
@@ -79,6 +40,10 @@ function Home() {
                                     はじめる
                                 </div>
                             </div> */}
+
+                            {/* <div className='home-container-item-left-background'>
+                                <img src={left}/>
+                            </div> */}
                         </div>
 
                         <div className='home-container-item-right'>
@@ -86,11 +51,9 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className='home-container-item'>
-                        <div>{usersMarkup}</div>
-
+                    <div className='home-container-item' style={{height: "250px"}}>
                         <div>
-                            <p>Messages</p>
+                            <img src={sen}/>
                         </div>
                     </div>
 

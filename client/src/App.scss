@@ -246,7 +246,6 @@ button{
 }
 .home-container-item{
     width: 100%;
-    height: 1000px;
     background: white;
     // margin-bottom: 30rem;
     // box-shadow: var(--boxS);
@@ -272,6 +271,7 @@ button{
     top: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .home-container-item-left-title{
     font-size: 10rem;
@@ -458,16 +458,110 @@ button{
 .explore-line{
     width: 100%;
     height: calc(3rem + 2px);
-    border-top: 1px solid var(--myColor);
+    border-top: 2px solid var(--myColor);
     opacity: .3;
     // margin: 0 auto;
 }
+.explore-disable{
+    display: none;
+}
 
+.chatbox{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border: 1px solid red;
+    background: white;
+    width: 400px;
+    height: 550px;
+    z-index: 103;
+}
+.chatbox-title{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: var(--fontComfor);
+    color: var(--cha);
+    text-align: center;
+}
+.chatbox-search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
+    div{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 150px;
+        margin-left: 1rem;
+        border-radius: var(--borderR);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // border: 1px solid red;
 
+        &:hover{
+            cursor: pointer;
 
+            img{
+                opacity: var(--opa);
+            }
+        }
 
+        img{
+            width: 20px;
+            height: 20px;
+        }
+    }
+    
+    input{
+        border: 2px solid var(--myColor);
+        // border-radius: var(--borderR);
+        border-radius: 100rem;
+        height: 40px;
+        width: 300px;
+        padding: 0 1.5rem 0 1.5rem;
+        font-size: 16px;
+        font-family: var(--fontComfor);
 
+        &:focus{
+            outline: none;
+        }
+
+        &::placeholder{
+            color: var(--myColor);
+        }
+    }
+}
+.chatbox-container{
+    width: 100%;
+    // border: 1px solid red;
+    margin-top: 3rem;
+}
+.chatbox-container-items{
+    width: 100%;
+}
+.chatbox-container-item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.chatbox-container-item-avatar{
+    border: 1px solid var(--myColor);
+    height: 60px;
+    width: 60px;
+    border-radius: 100rem;
+    margin-right: 2rem;
+}
+.chatbox-container-item-name{
+    
+}
+.chatbox-container-item-message{
+    
+}
 
 
 
