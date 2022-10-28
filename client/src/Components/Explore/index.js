@@ -24,6 +24,10 @@ function Explore() {
         dispatch({ type: 'LOGOUT' })
     }
 
+    const handleChat = () => {
+        myData.handleChatshow()
+    }
+
     return (
         <div className="explore" style={{width: `${myData.width}px`}}>
             <div className='explore-items'>
@@ -47,31 +51,32 @@ function Explore() {
                     <div>カート</div>
                 </div>
 
-                <div className='explore-item'>
+                <div className='explore-item' onClick={() => handleChat()}>
                     <img src={chat} />
 
                     <div>チャット</div>
                 </div>
 
-                <div className='explore-line'></div>
-
-                {/* <div className='explore-item'>
+                <div className='explore-item'>
                     <img src={favor} />
 
                     <div>お気に入り</div>
-                </div> */}
+                </div>
 
-                {/* <div className='explore-item'>
+                <div className='explore-item'>
                     <img src={info} />
 
                     <div>プロフィール</div>
-                </div> */}
+                </div>
 
-                {/* <div className='explore-item'>
+                <div className='explore-item'>
                     <img src={token} />
 
                     <div>ポイント</div>
-                </div> */}
+                </div>
+
+
+                <div className='explore-line'></div>
 
                 <Link to='/login'>
                     <div className='explore-item'>

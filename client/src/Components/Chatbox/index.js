@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom'
+import { useContext, useEffect } from 'react';
 import { gql, useQuery } from '@apollo/client'
 
-import loupe from '../../Imgs/loupe.png'
+import { Data } from '../../Provider'
 
 const GET_USERS = gql`
   query getUsers {
@@ -13,25 +15,27 @@ const GET_USERS = gql`
 `
 
 function Chatbox() {
+    const myData = useContext(Data)
+
     const { loading, data, error } = useQuery(GET_USERS)
 
-    if (error) {
-        console.log(error)
-    }
+    // if (error) {
+    //     console.log(error)
+    // }
 
-    if (data) {
-        console.log(data)
-    }
+    // if (data) {
+    //     console.log(data)
+    // }
 
     let usersMarkup
 
     if (!data || loading) {
-        usersMarkup = <p>Loading..</p>
+        usersMarkup = <div className='chatbox-login'><Link to="/login"><div>ログイン</div></Link></div>
     } else if (data.getUsers.length === 0) {
         usersMarkup = <p>No users have joined yet</p>
     } else if (data.getUsers.length > 0) {
-        usersMarkup = data.getUsers.map((user) => (
-            <div className="chatbox-container-item">
+        usersMarkup = data.getUsers.map((user, index) => (
+            <div className="chatbox-container-item" key={index}>
                 <div className='chatbox-container-item-avatar'>
 
                 </div>
@@ -50,7 +54,7 @@ function Chatbox() {
     }
 
     return (
-        <div className='chatbox'>
+        <div className='chatbox' style={{display: `${myData.chatshow}`}}>
             <div className="chatbox-title">
                 CHAT BOX
 
@@ -59,10 +63,6 @@ function Chatbox() {
 
             <div className="chatbox-search">
                 <input type="text" placeholder='検索...'/>
-
-                <div>
-                    <img src={loupe} />
-                </div>
             </div>
 
             <div className="chatbox-container">
