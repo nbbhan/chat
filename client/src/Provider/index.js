@@ -9,7 +9,7 @@ function Provider({children}) {
 
     const [width, setWidth] = useState(65)
 
-    const [chatshow, setChatshow] = useState('none')
+    const [chatshow, setChatshow] = useState('block')
 
     // Handle
     const handleChange = () => {
