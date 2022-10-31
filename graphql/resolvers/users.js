@@ -3,7 +3,7 @@ const { UserInputError, AuthenticationError } = require('apollo-server')
 const jwt = require('jsonwebtoken')
 const { Op } = require('sequelize')
 
-const { User } = require('../../models')
+const { Message, User } = require('../../models')
 const { JWT_SECRET } = require('../../config/env.json')
 
 module.exports = {
@@ -12,8 +12,24 @@ module.exports = {
       try {
         if (!user) throw new AuthenticationError('Unauthenticated')
 
-        const users = await User.findAll({
+        let users = await User.findAll({
+          attributes: ['username', 'imageUrl', 'createdAt'],
           where: { username: { [Op.ne]: user.username } },
+        })
+
+        const allUserMessages = await Message.findAll({
+          where: {
+            [Op.or]: [{ from: user.username }, { to: user.username }],
+          },
+          order: [['createdAt', 'DESC']],
+        })
+
+        users = users.map((otherUser) => {
+          const latestMessage = allUserMessages.find(
+            (m) => m.from === otherUser.username || m.to === otherUser.username
+          )
+          otherUser.latestMessage = latestMessage
+          return otherUser
         })
 
         return users
@@ -28,8 +44,8 @@ module.exports = {
 
       try {
         if (username.trim() === '')
-          errors.username = 'ユーザー名が未入力です'
-        if (password === '') errors.password = 'パスワードが未入力です'
+          errors.username = 'username must not be empty'
+        if (password === '') errors.password = 'password must not be empty'
 
         if (Object.keys(errors).length > 0) {
           throw new UserInputError('bad input', { errors })
@@ -40,14 +56,14 @@ module.exports = {
         })
 
         if (!user) {
-          errors.username = 'ユーザー名が見つかりません'
+          errors.username = 'user not found'
           throw new UserInputError('user not found', { errors })
         }
 
         const correctPassword = await bcrypt.compare(password, user.password)
 
         if (!correctPassword) {
-          errors.password = 'パスワードが正しくありません'
+          errors.password = 'password is incorrect'
           throw new UserInputError('password is incorrect', { errors })
         }
 
@@ -73,16 +89,16 @@ module.exports = {
 
       try {
         // Validate input data
-        if (email.trim() === '') errors.email = 'メールアドレスが未入力です'
+        if (email.trim() === '') errors.email = 'email must not be empty'
         if (username.trim() === '')
-          errors.username = 'ユーザー名が未入力です'
+          errors.username = 'username must not be empty'
         if (password.trim() === '')
-          errors.password = 'パスワードが未入力です'
+          errors.password = 'password must not be empty'
         if (confirmPassword.trim() === '')
-          errors.confirmPassword = '確認パスワードが未入力です'
+          errors.confirmPassword = 'repeat password must not be empty'
 
         if (password !== confirmPassword)
-          errors.confirmPassword = 'パスワードが一致しません'
+          errors.confirmPassword = 'passwords must match'
 
         // // Check if username / email exists
         // const userByUsername = await User.findOne({ where: { username } })
@@ -111,7 +127,7 @@ module.exports = {
         console.log(err)
         if (err.name === 'SequelizeUniqueConstraintError') {
           err.errors.forEach(
-            (e) => (errors[e.path] = `すでに使用されています`)
+            (e) => (errors[e.path] = `${e.path} is already taken`)
           )
         } else if (err.name === 'SequelizeValidationError') {
           err.errors.forEach((e) => (errors[e.path] = e.message))
