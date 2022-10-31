@@ -57,7 +57,7 @@ function Explore() {
                     <div>チャット</div>
                 </div>
 
-                <div className='explore-item'>
+                {/* <div className='explore-item'>
                     <img src={favor} />
 
                     <div>お気に入り</div>
@@ -73,7 +73,7 @@ function Explore() {
                     <img src={token} />
 
                     <div>ポイント</div>
-                </div>
+                </div> */}
 
 
                 <div className='explore-line'></div>
