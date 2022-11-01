@@ -9,11 +9,17 @@ function Provider({children}) {
 
     const [width, setWidth] = useState(65)
 
-    const [chatshow, setChatshow] = useState('block')
+    const [chatshow, setChatshow] = useState('none')
+
+    const [login, setLogin] = useState('enable')
+
+    const [logout, setLogout] = useState('disable')
 
     // Handle
     const handleChange = () => {
         setTheme(theme === 'light' ? 'dark' : 'light')
+
+        window.localStorage.setItem('theme', theme)
     }
 
     const handleChangeWidth = () => {
@@ -24,14 +30,18 @@ function Provider({children}) {
         setChatshow(chatshow === 'none' ? 'block' : 'none')
     }
 
-    // Export
+    // Provider value
     const value = {
         theme,
         width,
         chatshow,
+        login,
+        logout,
         handleChange,
         handleChangeWidth,
         handleChatshow,
+        setLogin,
+        setLogout,
     }
 
     return (

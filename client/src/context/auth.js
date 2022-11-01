@@ -15,18 +15,20 @@ if (token) {
   } else {
     user = decodedToken
   }
-} else console.log('No token found')
+}
 
 const authReducer = (state, action) => {
   switch (action.type) {
     case 'LOGIN':
       localStorage.setItem('token', action.payload.token)
+      localStorage.setItem('login', 'true')
       return {
         ...state,
         user: action.payload,
       }
     case 'LOGOUT':
       localStorage.removeItem('token')
+      localStorage.setItem('login', 'false')
       return {
         ...state,
         user: null,
@@ -37,6 +39,7 @@ const authReducer = (state, action) => {
 }
 
 export const AuthProvider = ({ children }) => {
+
   const [state, dispatch] = useReducer(authReducer, { user })
 
   return (

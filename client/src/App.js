@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import { useContext, useEffect } from 'react';
 
 import './App.scss';
 import Home from './Pages/Home'
@@ -7,7 +8,25 @@ import Register from './Pages/Register'
 import Nav from './Components/Nav'
 import Chatbox from './Components/Chatbox'
 
+import { Data } from './Provider'
+
 function App() {
+
+  const myData = useContext(Data)
+
+  window.addEventListener('load', (e) => {
+
+    let loginNow = e.currentTarget.localStorage.login
+
+    if(loginNow === 'true'){
+      myData.setLogin('disable') 
+      myData.setLogout('enable')
+    }else{
+      myData.setLogin('enable') 
+      myData.setLogout('disable')
+    }
+  })
+
   return (
     <div className="App">
       <Nav />

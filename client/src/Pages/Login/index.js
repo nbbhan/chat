@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import { gql, useLazyQuery } from '@apollo/client'
 
 import Explore from '../../Components/Explore'
 import { useAuthDispatch } from '../../context/auth'
+
+import { Data } from '../../Provider'
 
 const LOGIN_USER = gql`
   query login($username: String!, $password: String!) {
@@ -17,6 +19,8 @@ const LOGIN_USER = gql`
 `
 
 function Login() {
+
+    const myData = useContext(Data)
 
     const navigate = useNavigate()
 
@@ -34,6 +38,7 @@ function Login() {
         onCompleted(data) {
             dispatch({ type: 'LOGIN', payload: data.login })
             navigate('/')
+            window.location.reload()
         },
     })
 

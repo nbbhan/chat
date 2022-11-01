@@ -15,6 +15,8 @@ function Nav() {
 
     const [trigger, setTrigger] = useState(false)
 
+    const storage = window.localStorage.getItem('theme')
+
     const handleTogger = () => {
         triggerRef.current.classList.toggle('active')
     }
@@ -34,9 +36,9 @@ function Nav() {
     }, [trigger])
 
     return ( 
-        <div className={`nav ${myData.theme}`}>
+        <div className={`nav`}>
             <div className='nav-container'>
-                <div className='nav-items'>
+                <div className={`nav-items ${storage}`}>
                     <div className='nav-items-container'>
                         <button className='menu-trigger' ref={triggerRef} onClick={() => handleTrigger()}>
                             <span></span>
@@ -60,7 +62,11 @@ function Nav() {
                     </div>
 
                     <div className='nav-items-light'>
-                        <div onClick={() => handleChangeTheme()}>
+                        <div 
+                            onClick={() => {
+                                handleChangeTheme()
+                            }}
+                        >
                             <img src={lightOff} />
                         </div>
                     </div>

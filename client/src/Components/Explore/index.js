@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 
 import home from '../../Imgs/home.png'
@@ -22,6 +22,7 @@ function Explore() {
 
     const handleLogout = () => {
         dispatch({ type: 'LOGOUT' })
+        window.location.reload()
     }
 
     const handleChat = () => {
@@ -79,22 +80,22 @@ function Explore() {
                 <div className='explore-line'></div>
 
                 <Link to='/login'>
-                    <div className='explore-item'>
+                    <div className={`explore-item ${myData.login}`}>
                         <img src={login} />
     
                         <div>ログイン</div>
                     </div>
                 </Link>
 
-                <Link to='/register'>
+                {/* <Link to='/register'>
                     <div className='explore-item'>
                         <img src={addUser} />
     
                         <div>新規アカウント作成</div>
                     </div>
-                </Link>
+                </Link> */}
 
-                <div className='explore-item' onClick={handleLogout}>
+                <div className={`explore-item ${myData.logout}`} onClick={() => handleLogout()}>
                     <img src={logout} />
     
                     <div>ログアウト</div>
