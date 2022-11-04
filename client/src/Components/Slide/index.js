@@ -1,6 +1,9 @@
 import flame from '../../Imgs/flame.png'
 
 function Slide() {
+
+    
+
     return (
         <div className="slide">
             <div className="slide-title">
