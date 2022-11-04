@@ -12,23 +12,15 @@ function Slide() {
             img: '',
         },
         {
-            name: '',
+            name: '3',
             img: '',
         },
         {
-            name: '',
+            name: '4',
             img: '',
         },
         {
-            name: '',
-            img: '',
-        },
-        {
-            name: '',
-            img: '',
-        },
-        {
-            name: '',
+            name: '5',
             img: '',
         },
     ]
@@ -46,12 +38,16 @@ function Slide() {
             </div>
 
             <div className="slide-container">
-
-
                 {items.map((item, index) => {
                     return (
                         <div className="slide-container-item" key={index}>
-                            {item.name}
+                            <div className='slide-container-item-name'>
+                                {item.name}
+                            </div>
+                            
+                            <div className='slide-container-item-img'>
+                                <img src={item.img} />
+                            </div>
                         </div>
                     )
                 })}
