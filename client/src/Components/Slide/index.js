@@ -94,19 +94,31 @@ function Slide() {
             </div>
 
             <div className="slide-container">
-                {items.map((item, index) => {
-                    return (
-                        <div className="slide-container-item" key={index}>
-                            <div className='slide-container-item-name'>
-                                {item.name}
-                            </div>
+                <div className="slide-container-main">
+                    {items.map((item, index) => {
+                        return (
+                            <div className="slide-container-item" key={index}>
+                                <div className='slide-container-item-img'>
+                                    <img src={item.img} />
+                                </div>
 
-                            <div className='slide-container-item-img'>
-                                <img src={item.img} />
+                                <div className='slide-container-item-info'>
+                                    {item.name}
+                                </div>
                             </div>
-                        </div>
-                    )
-                })}
+                        )
+                    })}
+                </div>
+            </div>
+
+            <div className='slide-btn'>
+                <div className='slide-btn-pre'>
+
+                </div>
+
+                <div className='slide-btn-next'>
+
+                </div>
             </div>
         </div>
     );
