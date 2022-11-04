@@ -2,7 +2,36 @@ import flame from '../../Imgs/flame.png'
 
 function Slide() {
 
-    
+    const items = [
+        {
+            name: '1',
+            img: '',
+        },
+        {
+            name: '2',
+            img: '',
+        },
+        {
+            name: '',
+            img: '',
+        },
+        {
+            name: '',
+            img: '',
+        },
+        {
+            name: '',
+            img: '',
+        },
+        {
+            name: '',
+            img: '',
+        },
+        {
+            name: '',
+            img: '',
+        },
+    ]
 
     return (
         <div className="slide">
@@ -17,41 +46,15 @@ function Slide() {
             </div>
 
             <div className="slide-container">
-                <div className="slide-container-item">
 
-                </div>
 
-                <div className="slide-container-item">
-
-                </div>
-
-                <div className="slide-container-item">
-
-                </div>
-
-                <div className="slide-container-item">
-
-                </div>
-
-                <div className="slide-container-item">
-
-                </div>
-
-                <div className="slide-container-item">
-
-                </div>
-
-                <div className="slide-container-item">
-
-                </div>
-
-                <div className="slide-container-item">
-
-                </div>
-
-                <div className="slide-container-item">
-
-                </div>
+                {items.map((item, index) => {
+                    return (
+                        <div className="slide-container-item" key={index}>
+                            {item.name}
+                        </div>
+                    )
+                })}
             </div>
         </div>
     );
