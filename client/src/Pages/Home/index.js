@@ -63,7 +63,7 @@ function Home() {
                     </div>
 
                     <div className='home-container-item-last'>
-                        d
+                        
                     </div>
                 </div>
             </div>

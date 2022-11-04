@@ -1,11 +1,13 @@
 import flame from '../../Imgs/flame.png'
 
+import ocha from '../../Imgs/products/お茶_t.jpeg'
+
 function Slide() {
 
     const items = [
         {
             name: '1',
-            img: '',
+            img: ocha,
         },
         {
             name: '2',
@@ -44,7 +46,7 @@ function Slide() {
                             <div className='slide-container-item-name'>
                                 {item.name}
                             </div>
-                            
+
                             <div className='slide-container-item-img'>
                                 <img src={item.img} />
                             </div>
