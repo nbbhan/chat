@@ -613,9 +613,34 @@ button{
     display: flex;
 }
 .slide-title{
-    font-size: 3rem;
     color: var(--cha);
     font-family: var(--fontZen);
+    display: flex;
+    justify-content: space-between;
+    // margin-bottom: 1rem;
+
+    img {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-right: 5px;
+    }
+}
+.slide-title-left{
+    font-size: 3.5rem;
+    display: flex;
+    align-items: center;
+    letter-spacing: 5px;
+}
+.slide-title-right{
+    font-size: 2rem;
+    display: flex;
+    align-items: flex-end;
+    opacity: .5;
+
+    &:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
 }
 .slide-container-item{
     width: 400px;
