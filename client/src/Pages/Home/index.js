@@ -6,6 +6,7 @@ import sen from '../../Imgs/sen.png'
 // import itemBack from '../../Imgs/back1.png'
 import Explore from '../../Components/Explore';
 import ImgContainer from '../../Components/ImgContainer'
+import Slide from '../../Components/Slide'
 
 import { Data } from '../../Provider'
 
@@ -58,7 +59,7 @@ function Home() {
                     </div>
 
                     <div className='home-container-item'>
-                        c
+                        <Slide />
                     </div>
 
                     <div className='home-container-item-last'>
