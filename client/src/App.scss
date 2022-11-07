@@ -609,12 +609,14 @@ button{
 }
 .slide-container{
     width: 100%;
-    overflow-x: scroll;
+    overflow: hidden;
 }
 .slide-container-main{
     width: 10000px;
     height: 500px;
     display: flex;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
 }
 .slide-title{
     color: var(--cha);
@@ -647,12 +649,18 @@ button{
     }
 }
 .slide-container-item{
-    width: 400px;
-    height: 100%;
-    margin-right: 10rem;
+    width: 480px;
+    height: 95%;
+    margin-right: 8rem;
     padding: 1rem;
-    border: 1px solid var(--cha);
+    // border: 1px solid var(--cha);
     border-radius: var(--borderR);
+    transition: all .3s ease-in-out;
+    
+    &:hover{
+        cursor: pointer;
+        box-shadow: 0 3px 10px 3px var(--myColor);
+    }
 }
 .slide-container-item-img{
     width: 100%;
@@ -670,7 +678,12 @@ button{
 .slide-container-item-info{
     
 }
-
+.slide-btn{
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 

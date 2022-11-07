@@ -16,9 +16,11 @@ import wakayama from '../../Imgs/products/和歌山.jpg'
 import kohakutou from '../../Imgs/products/琥珀等_t.jpeg'
 import mannjuu from '../../Imgs/products/饅頭_t.jpeg'
 
-function Slide() {
+import left from '../../Imgs/left.png'
+import right from '../../Imgs/right.png'
 
-    const items = [
+function Slide() {
+    const products = [
         {
             name: '1',
             img: ocha,
@@ -95,7 +97,7 @@ function Slide() {
 
             <div className="slide-container">
                 <div className="slide-container-main">
-                    {items.map((item, index) => {
+                    {products.map((item, index) => {
                         return (
                             <div className="slide-container-item" key={index}>
                                 <div className='slide-container-item-img'>
@@ -113,11 +115,11 @@ function Slide() {
 
             <div className='slide-btn'>
                 <div className='slide-btn-pre'>
-
+                    <img src={left} />
                 </div>
 
                 <div className='slide-btn-next'>
-
+                    <img src={right} />
                 </div>
             </div>
         </div>
