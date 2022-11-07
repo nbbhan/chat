@@ -22,63 +22,63 @@ import right from '../../Imgs/right.png'
 function Slide() {
     const products = [
         {
-            name: '1',
+            name: '商品名',
             img: ocha,
         },
         {
-            name: '2',
+            name: '商品名',
             img: kasutera,
         },
         {
-            name: '3',
+            name: '商品名',
             img: baumkuchen,
         },
         {
-            name: '4',
+            name: '商品名',
             img: fruitsdaihuku,
         },
         {
-            name: '5',
+            name: '商品名',
             img: monaka,
         },
         {
-            name: '6',
+            name: '商品名',
             img: warabimoti,
         },
         {
-            name: '7',
+            name: '商品名',
             img: okayama,
         },
         {
-            name: '8',
+            name: '商品名',
             img: gihu2,
         },
         {
-            name: '9',
+            name: '商品名',
             img: kumamoto,
         },
         {
-            name: '10',
+            name: '商品名0',
             img: niigata,
         },
         {
-            name: '11',
+            name: '商品名1',
             img: momo,
         },
         {
-            name: '12',
+            name: '商品名2',
             img: hyougo,
         },
         {
-            name: '13',
+            name: '商品名3',
             img: wakayama,
         },
         {
-            name: '14',
+            name: '商品名4',
             img: kohakutou,
         },
         {
-            name: '15',
+            name: '商品名5',
             img: mannjuu,
         },
     ]
