@@ -16,10 +16,18 @@ module.exports = gql`
     to: String!
     createdAt: String!
   }
+  type Popular {
+    productId: String!,
+    info: String!,
+    price: Float!,
+    imgUrl: String!,
+    dealerId: String
+  }
   type Query {
     getUsers: [User]!
     login(username: String!, password: String!): User!
     getMessages(from: String!): [Message]!
+    getPopular: [Popular]!
   }
   type Mutation {
     register(

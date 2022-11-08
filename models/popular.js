@@ -14,14 +14,30 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Popular.init({
-    productId: DataTypes.STRING,
-    info: DataTypes.STRING,
-    price: DataTypes.FLOAT,
-    imgUrl: DataTypes.STRING,
-    dealerId: DataTypes.STRING
+    productId: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    info: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    price: {
+      type: DataTypes.FLOAT,
+      allowNull: false
+    },
+    imgUrl: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    dealerId: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   }, {
     sequelize,
     modelName: 'Popular',
+    tableName: 'populars',
   });
   return Popular;
 };

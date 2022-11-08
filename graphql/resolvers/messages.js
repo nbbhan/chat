@@ -12,6 +12,7 @@ module.exports = {
         const otherUser = await User.findOne({
           where: { username: from },
         })
+        
         if (!otherUser) throw new UserInputError('User not found')
 
         const usernames = [user.username, otherUser.username]

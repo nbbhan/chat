@@ -1,5 +1,6 @@
 const userResolvers = require('./users')
 const messageResolvers = require('./messages')
+const popularResolvers = require('./populars')
 
 module.exports = {
   Message: {
