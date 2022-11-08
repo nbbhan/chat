@@ -50,18 +50,27 @@ function Slide(props) {
             </div>
 
             <div className="slide-container">
-                <div className="slide-container-main" style={{ width: `${length * 570 - 210}px`}}>
+                <div 
+                    className="slide-container-main" 
+                    style={{ 
+                        width: `${length * 570 - 210}px`
+                    }}
+                >
                     {
                         props.arr && props.arr.getPopular.map((item, index, row) => {
                             if(index + 1 === row.length){
                                 return (
                                     <div className="slide-container-item" key={index} style={{marginRight: '0'}}>
                                         <div className='slide-container-item-img'>
-                                            <img src={item.img} />
+                                            <img src={item.imgUrl} />
                                         </div>
                         
                                         <div className='slide-container-item-info'>
                                             {item.info}
+                                        </div>
+
+                                        <div className='slide-container-item-price'>
+                                            {`${item.price}￥`}
                                         </div>
                                     </div>
                                 )
@@ -69,11 +78,15 @@ function Slide(props) {
                                 return (
                                     <div className="slide-container-item" key={index}>
                                         <div className='slide-container-item-img'>
-                                            <img src={item.img} />
+                                            <img src={item.imgUrl} />
                                         </div>
                         
                                         <div className='slide-container-item-info'>
                                             {item.info}
+                                        </div>
+
+                                        <div className='slide-container-item-price'>
+                                            {`${item.price}￥`}
                                         </div>
                                     </div>
                                 )
