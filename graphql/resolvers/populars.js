@@ -5,9 +5,11 @@ const { Popular } = require('../../models')
 
 module.exports = {
   Query: {
-    getPopular: async () => {
+    getPopular: async (_, __) => {
       try{
-        
+        let populars = await Popular.findAll()
+
+        return populars
       }catch(err){
         console.log(err)
         throw err

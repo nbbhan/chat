@@ -1,5 +1,6 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom'
+import { gql, useQuery } from '@apollo/client'
 
 // import left from '../../Imgs/左.png'
 import sen from '../../Imgs/sen.png'
@@ -8,132 +9,27 @@ import Explore from '../../Components/Explore';
 import ImgContainer from '../../Components/ImgContainer'
 import Slide from '../../Components/Slide'
 
-import ocha from '../../Imgs/products/お茶_t.jpeg'
-import kasutera from '../../Imgs/products/カステラ_t.jpeg'
-import baumkuchen from '../../Imgs/products/バウムクーヘン_t.jpeg'
-import fruitsdaihuku from '../../Imgs/products/フルーツ大福_t.jpeg'
-import monaka from '../../Imgs/products/モナカ_t.jpeg'
-import warabimoti from '../../Imgs/products/わらび餅_t.jpeg'
-import okayama from '../../Imgs/products/岡山.jpg'
-import gihu2 from '../../Imgs/products/岐阜2.jpg'
-import kumamoto from '../../Imgs/products/熊本.jpg'
-import niigata from '../../Imgs/products/新潟.jpg'
-import momo from '../../Imgs/products/桃_t.jpeg'
-import hyougo from '../../Imgs/products/兵庫.jpeg'
-import wakayama from '../../Imgs/products/和歌山.jpg'
-import kohakutou from '../../Imgs/products/琥珀等_t.jpeg'
-import mannjuu from '../../Imgs/products/饅頭_t.jpeg'
-
 import { Data } from '../../Provider'
 
 import flame from '../../Imgs/flame.png'
 import newImg from '../../Imgs/new.png'
 
+const GET_POPULAR = gql`
+    query popular{
+        getPopular {
+            productId
+            price
+            info
+            imgUrl
+        }
+    }
+`
+
 function Home() {
 
     const myData = useContext(Data)
 
-    const ninki = [
-        {
-            name: '商品名',
-            img: gihu2,
-        },
-        {
-            name: '商品名',
-            img: kumamoto,
-        },
-        {
-            name: '商品名',
-            img: niigata,
-        },
-        {
-            name: '商品名',
-            img: momo,
-        },
-        {
-            name: '商品名',
-            img: ocha,
-        },
-        {
-            name: '商品名',
-            img: kasutera,
-        },
-        {
-            name: '商品名',
-            img: baumkuchen,
-        },
-        {
-            name: '商品名',
-            img: fruitsdaihuku,
-        },
-        {
-            name: '商品名',
-            img: monaka,
-        },
-        {
-            name: '商品名',
-            img: warabimoti,
-        },
-        {
-            name: '商品名',
-            img: okayama,
-        },
-        {
-            name: '商品名2',
-            img: hyougo,
-        },
-        {
-            name: '商品名3',
-            img: wakayama,
-        },
-        {
-            name: '商品名4',
-            img: kohakutou,
-        },
-        {
-            name: '商品名5',
-            img: mannjuu,
-        },
-    ]
-
-    const shinchaku = [
-        {
-            name: '商品名',
-            img: okayama,
-        },
-        {
-            name: '商品名',
-            img: gihu2,
-        },
-        {
-            name: '商品名',
-            img: kumamoto,
-        },
-        {
-            name: '商品名0',
-            img: niigata,
-        },
-        {
-            name: '商品名1',
-            img: momo,
-        },
-        {
-            name: '商品名2',
-            img: hyougo,
-        },
-        {
-            name: '商品名3',
-            img: wakayama,
-        },
-        {
-            name: '商品名4',
-            img: kohakutou,
-        },
-        {
-            name: '商品名5',
-            img: mannjuu,
-        },
-    ]
+    const { loading, data, error } = useQuery(GET_POPULAR)
 
     return ( 
         <>
@@ -180,11 +76,11 @@ function Home() {
                     </div>
 
                     <div className='home-container-item'>
-                        <Slide arr={ninki} name='人気商品' icon={flame}/>
+                        <Slide arr={data} name='人気商品' icon={flame}/>
                     </div>
 
                     <div className='home-container-item'>
-                        {/* <Slide arr={shinchaku} name='新着商品' icon={newImg}/> */}
+                        
                     </div>
 
                     <div className='home-container-item-last'>

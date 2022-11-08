@@ -8,14 +8,14 @@ import { useAuthDispatch } from '../../context/auth'
 import { Data } from '../../Provider'
 
 const LOGIN_USER = gql`
-  query login($username: String!, $password: String!) {
-    login(username: $username, password: $password) {
-      username
-      email
-      createdAt
-      token
+    query login($username: String!, $password: String!) {
+        login(username: $username, password: $password) {
+            username
+            email
+            createdAt
+            token
+        }
     }
-  }
 `
 
 function Login() {

@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { useContext, useEffect } from 'react';
 
-import './App.scss';
+import '~/App.scss';
 import Home from './Pages/Home'
 import Login from './Pages/Login'
 import Register from './Pages/Register'
