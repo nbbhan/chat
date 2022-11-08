@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react'
 
-import '~/App.scss';
+import '~/App.scss'
 import Home from './Pages/Home'
 import Login from './Pages/Login'
 import Register from './Pages/Register'
@@ -11,35 +11,33 @@ import Chatbox from './Components/Chatbox'
 import { Data } from './Provider'
 
 function App() {
+    const myData = useContext(Data)
 
-  const myData = useContext(Data)
+    window.addEventListener('load', (e) => {
+        let loginNow = e.currentTarget.localStorage.login
 
-  window.addEventListener('load', (e) => {
+        if (loginNow === 'true') {
+            myData.setLogin('disable')
+            myData.setLogout('enable')
+        } else {
+            myData.setLogin('enable')
+            myData.setLogout('disable')
+        }
+    })
 
-    let loginNow = e.currentTarget.localStorage.login
+    return (
+        <div className="App">
+            <Nav />
 
-    if(loginNow === 'true'){
-      myData.setLogin('disable') 
-      myData.setLogout('enable')
-    }else{
-      myData.setLogin('enable') 
-      myData.setLogout('disable')
-    }
-  })
+            <Chatbox />
 
-  return (
-    <div className="App">
-      <Nav />
-
-      <Chatbox />
-        
-      <Routes>
-        <Route path='' element={<Home />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/register' element={<Register />} />
-      </Routes>
-    </div>
-  );
+            <Routes>
+                <Route path="" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+            </Routes>
+        </div>
+    )
 }
 
-export default App;
+export default App

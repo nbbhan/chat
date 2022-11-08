@@ -7,8 +7,8 @@ function Slide(props) {
 
     useEffect(() => {
         const slider = document.querySelectorAll('.slide-container')
-        
-        slider.forEach(item => {
+
+        slider.forEach((item) => {
             let isDown = false
             let startX
             let scrollLeft
@@ -28,10 +28,10 @@ function Slide(props) {
                 item.classList.remove('active')
             })
             item.addEventListener('mousemove', (e) => {
-                if(!isDown) return
+                if (!isDown) return
                 e.preventDefault()
                 const x = e.pageX - item.offsetLeft
-                const walk = (x - startX) * 2;
+                const walk = (x - startX) * 2
                 item.scrollLeft = scrollLeft - walk
             })
         })
@@ -41,64 +41,54 @@ function Slide(props) {
         <div className="slide">
             <div className="slide-title">
                 <div className="slide-title-left">
-                    <img src={props.icon} />{props.name}
+                    <img src={props.icon} />
+                    {props.name}
                 </div>
 
-                <div className="slide-title-right">
-                    もっと見る
-                </div>
+                <div className="slide-title-right">もっと見る</div>
             </div>
 
             <div className="slide-container">
-                <div 
-                    className="slide-container-main" 
-                    style={{ 
-                        width: `${length * 570 - 210}px`
+                <div
+                    className="slide-container-main"
+                    style={{
+                        width: `${length * 570 - 210}px`,
                     }}
                 >
-                    {
-                        props.arr && props.arr.getPopular.map((item, index, row) => {
-                            if(index + 1 === row.length){
+                    {props.arr &&
+                        props.arr.getPopular.map((item, index, row) => {
+                            if (index + 1 === row.length) {
                                 return (
-                                    <div className="slide-container-item" key={index} style={{marginRight: '0'}}>
-                                        <div className='slide-container-item-img'>
+                                    <div className="slide-container-item" key={index} style={{ marginRight: '0' }}>
+                                        <div className="slide-container-item-img">
                                             <img src={item.imgUrl} />
                                         </div>
-                        
-                                        <div className='slide-container-item-info'>
-                                            {item.info}
-                                        </div>
 
-                                        <div className='slide-container-item-price'>
-                                            {`${item.price}￥`}
-                                        </div>
+                                        <div className="slide-container-item-info">{item.info}</div>
+
+                                        <div className="slide-container-item-price">{`${item.price}￥`}</div>
                                     </div>
                                 )
-                            }else{
+                            } else {
                                 return (
                                     <div className="slide-container-item" key={index}>
-                                        <div className='slide-container-item-img'>
+                                        <div className="slide-container-item-img">
                                             <img src={item.imgUrl} />
                                         </div>
-                        
-                                        <div className='slide-container-item-info'>
-                                            {item.info}
-                                        </div>
 
-                                        <div className='slide-container-item-price'>
-                                            {`${item.price}￥`}
-                                        </div>
+                                        <div className="slide-container-item-info">{item.info}</div>
+
+                                        <div className="slide-container-item-price">{`${item.price}￥`}</div>
                                     </div>
                                 )
                             }
-                        })
-                    }
+                        })}
                 </div>
             </div>
 
             <BtnLR />
         </div>
-    );
+    )
 }
 
-export default Slide;
+export default Slide

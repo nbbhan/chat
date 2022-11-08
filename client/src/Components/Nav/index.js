@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useContext } from 'react';
+import { useEffect, useState, useRef, useContext } from 'react'
 import { Link } from 'react-router-dom'
 
 import logo from '../../Imgs/logoN.png'
@@ -8,7 +8,6 @@ import lightOff from '../../Imgs/light-off.png'
 import { Data } from '../../Provider'
 
 function Nav() {
-
     const myData = useContext(Data)
 
     const triggerRef = useRef()
@@ -35,34 +34,34 @@ function Nav() {
         handleTogger()
     }, [trigger])
 
-    return ( 
+    return (
         <div className={`nav`}>
-            <div className='nav-container'>
+            <div className="nav-container">
                 <div className={`nav-items ${storage}`}>
-                    <div className='nav-items-container'>
-                        <button className='menu-trigger' ref={triggerRef} onClick={() => handleTrigger()}>
+                    <div className="nav-items-container">
+                        <button className="menu-trigger" ref={triggerRef} onClick={() => handleTrigger()}>
                             <span></span>
                             <span></span>
                             <span></span>
                         </button>
 
-                        <Link to='/'>
-                            <div className='nav-items-logo'>
-                                <img src={logo}/>
+                        <Link to="/">
+                            <div className="nav-items-logo">
+                                <img src={logo} />
                             </div>
                         </Link>
                     </div>
 
-                    <div className='nav-items-search'>
-                        <input type="text" placeholder='検索...'/>
+                    <div className="nav-items-search">
+                        <input type="text" placeholder="検索..." />
 
                         <div>
                             <img src={loupe} />
                         </div>
                     </div>
 
-                    <div className='nav-items-light'>
-                        <div 
+                    <div className="nav-items-light">
+                        <div
                             onClick={() => {
                                 handleChangeTheme()
                             }}
@@ -73,7 +72,7 @@ function Nav() {
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
-export default Nav;
+export default Nav

@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import home from '../../Imgs/home.png'
@@ -30,29 +30,29 @@ function Explore() {
     }
 
     return (
-        <div className="explore" style={{width: `${myData.width}px`}}>
-            <div className='explore-items'>
-                <Link to='/'>
-                    <div className='explore-item'>
+        <div className="explore" style={{ width: `${myData.width}px` }}>
+            <div className="explore-items">
+                <Link to="/">
+                    <div className="explore-item">
                         <img src={home} />
-    
+
                         <div>ホーム</div>
                     </div>
                 </Link>
 
-                <div className='explore-item'>
+                <div className="explore-item">
                     <img src={bell} />
 
                     <div>通知</div>
                 </div>
 
-                <div className='explore-item'>
+                <div className="explore-item">
                     <img src={cart} />
 
                     <div>カート</div>
                 </div>
 
-                <div className='explore-item' onClick={() => handleChat()}>
+                <div className="explore-item" onClick={() => handleChat()}>
                     <img src={chat} />
 
                     <div>チャット</div>
@@ -76,13 +76,12 @@ function Explore() {
                     <div>ポイント</div>
                 </div> */}
 
+                <div className="explore-line"></div>
 
-                <div className='explore-line'></div>
-
-                <Link to='/login'>
+                <Link to="/login">
                     <div className={`explore-item ${myData.login}`}>
                         <img src={login} />
-    
+
                         <div>ログイン</div>
                     </div>
                 </Link>
@@ -97,12 +96,12 @@ function Explore() {
 
                 <div className={`explore-item ${myData.logout}`} onClick={() => handleLogout()}>
                     <img src={logout} />
-    
+
                     <div>ログアウト</div>
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
-export default Explore;
+export default Explore

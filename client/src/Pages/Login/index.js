@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { gql, useLazyQuery } from '@apollo/client'
 
@@ -19,7 +19,6 @@ const LOGIN_USER = gql`
 `
 
 function Login() {
-
     const myData = useContext(Data)
 
     const navigate = useNavigate()
@@ -48,43 +47,61 @@ function Login() {
         loginUser({ variables })
     }
 
-    return ( 
+    return (
         <>
-            <Explore/>
+            <Explore />
 
-            <div className='login'>
-                <div className='login-container'>
-                    <div className='login-container-title'>ログイン</div>
+            <div className="login">
+                <div className="login-container">
+                    <div className="login-container-title">ログイン</div>
 
-                    <form onSubmit={e => handleSubmit(e)}>
-                        <div className='login-container-items'>
-                            <div className='login-container-item'>
-                                <label className={errors.username && 'text-danger'}>{errors.username ?? 'ユーザー名'}</label><br />
+                    <form onSubmit={(e) => handleSubmit(e)}>
+                        <div className="login-container-items">
+                            <div className="login-container-item">
+                                <label className={errors.username && 'text-danger'}>
+                                    {errors.username ?? 'ユーザー名'}
+                                </label>
+                                <br />
                                 <div>
-                                    <input type="text" className={errors.username && 'is-invalid'} value={variables.username} onChange={(e) => setVariables({ ...variables, username: e.target.value})} />
+                                    <input
+                                        type="text"
+                                        className={errors.username && 'is-invalid'}
+                                        value={variables.username}
+                                        onChange={(e) => setVariables({ ...variables, username: e.target.value })}
+                                    />
                                 </div>
                             </div>
 
-                            <div className='login-container-item'>
-                                <label className={errors.password && 'text-danger'}>{errors.password ?? 'パスワード'}</label><br />
+                            <div className="login-container-item">
+                                <label className={errors.password && 'text-danger'}>
+                                    {errors.password ?? 'パスワード'}
+                                </label>
+                                <br />
                                 <div>
-                                    <input type="password" className={errors.password && 'is-invalid'} value={variables.password} onChange={(e) => setVariables({ ...variables, password: e.target.value})} />                                                                                                                                                                                                                                                                            
+                                    <input
+                                        type="password"
+                                        className={errors.password && 'is-invalid'}
+                                        value={variables.password}
+                                        onChange={(e) => setVariables({ ...variables, password: e.target.value })}
+                                    />
                                 </div>
                             </div>
                         </div>
 
-                        <div className='login-btn'>
-                            <button type='submit'>ログイン</button>
+                        <div className="login-btn">
+                            <button type="submit">ログイン</button>
                         </div>
                     </form>
 
-                    <div className='login-link'>
-                        <span><Link to="/register">まだアカウントをお持ちでない方</Link></span>
+                    <div className="login-link">
+                        <span>
+                            <Link to="/register">まだアカウントをお持ちでない方</Link>
+                        </span>
                     </div>
                 </div>
             </div>
         </>
-    );
+    )
 }
 
-export default Login;
+export default Login

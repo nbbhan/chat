@@ -2,8 +2,7 @@ import { createContext, useState } from 'react'
 
 export const Data = createContext()
 
-function Provider({children}) {
-
+function Provider({ children }) {
     // Usestated
     const [theme, setTheme] = useState('light')
 
@@ -44,11 +43,7 @@ function Provider({children}) {
         setLogout,
     }
 
-    return (
-        <Data.Provider value={value}>
-            {children}
-        </Data.Provider>
-    )
+    return <Data.Provider value={value}>{children}</Data.Provider>
 }
 
-export default Provider;
+export default Provider
