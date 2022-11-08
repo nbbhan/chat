@@ -27,6 +27,7 @@ import mannjuu from '../../Imgs/products/饅頭_t.jpeg'
 import { Data } from '../../Provider'
 
 import flame from '../../Imgs/flame.png'
+import newImg from '../../Imgs/new.png'
 
 function Home() {
 
@@ -183,7 +184,7 @@ function Home() {
                     </div>
 
                     <div className='home-container-item'>
-                        <Slide arr={shinchaku} name='新着商品' icon={flame}/>
+                        <Slide arr={shinchaku} name='新着商品' icon={newImg}/>
                     </div>
 
                     <div className='home-container-item-last'>
