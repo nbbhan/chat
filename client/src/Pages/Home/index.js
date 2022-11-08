@@ -36,6 +36,22 @@ function Home() {
     const ninki = [
         {
             name: '商品名',
+            img: gihu2,
+        },
+        {
+            name: '商品名',
+            img: kumamoto,
+        },
+        {
+            name: '商品名',
+            img: niigata,
+        },
+        {
+            name: '商品名',
+            img: momo,
+        },
+        {
+            name: '商品名',
             img: ocha,
         },
         {
@@ -61,22 +77,6 @@ function Home() {
         {
             name: '商品名',
             img: okayama,
-        },
-        {
-            name: '商品名',
-            img: gihu2,
-        },
-        {
-            name: '商品名',
-            img: kumamoto,
-        },
-        {
-            name: '商品名0',
-            img: niigata,
-        },
-        {
-            name: '商品名1',
-            img: momo,
         },
         {
             name: '商品名2',
@@ -145,7 +145,7 @@ function Home() {
 
             <div className='home'>
                 <div className='home-container' style={{left: `${myData.width}px`, width: `calc(100% - ${myData.width}px)`}}>
-                    <div className='home-container-item' style={{height: "1000px"}}>
+                    <div className='home-container-item'>
                         <div className='home-container-item-left'>
                             <div className='home-container-item-left-title'>
                                 QOKS
@@ -184,7 +184,7 @@ function Home() {
                     </div>
 
                     <div className='home-container-item'>
-                        <Slide arr={shinchaku} name='新着商品' icon={newImg}/>
+                        {/* <Slide arr={shinchaku} name='新着商品' icon={newImg}/> */}
                     </div>
 
                     <div className='home-container-item-last'>
