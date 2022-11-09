@@ -9,6 +9,8 @@ module.exports = {
 
         await queryInterface.bulkInsert('users', [
             {
+                userid: 'u0001',
+                account: 'ジョン',
                 username: 'john',
                 email: 'john@email.com',
                 password: password,
@@ -18,6 +20,8 @@ module.exports = {
                 updatedAt,
             },
             {
+                userid: 'u0002',
+                account: 'ジェーン',
                 username: 'jane',
                 email: 'jane@email.com',
                 password: password,
@@ -27,8 +31,43 @@ module.exports = {
                 updatedAt,
             },
             {
+                userid: 'u0003',
+                account: 'ボス',
                 username: 'boss',
                 email: 'boss@email.com',
+                password: password,
+                imageUrl:
+                    'https://images.unsplash.com/photo-1566753323558-f4e0952af115?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2122&q=80',
+                createdAt,
+                updatedAt,
+            },
+            {
+                userid: 'u0004',
+                account: 'ウィリアム',
+                username: 'william',
+                email: 'william@email.com',
+                password: password,
+                imageUrl:
+                    'https://images.unsplash.com/photo-1566753323558-f4e0952af115?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2122&q=80',
+                createdAt,
+                updatedAt,
+            },
+            {
+                userid: 'u0005',
+                account: 'キャメロン',
+                username: 'cameron',
+                email: 'cameron@email.com',
+                password: password,
+                imageUrl:
+                    'https://images.unsplash.com/photo-1566753323558-f4e0952af115?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2122&q=80',
+                createdAt,
+                updatedAt,
+            },
+            {
+                userid: 'u0006',
+                account: 'エマ',
+                username: 'emma',
+                email: 'emma@email.com',
                 password: password,
                 imageUrl:
                     'https://images.unsplash.com/photo-1566753323558-f4e0952af115?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2122&q=80',
