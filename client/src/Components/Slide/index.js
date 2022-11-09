@@ -66,7 +66,7 @@ function Slide(props) {
 
                                         <div className="slide-container-item-info">{item.info}</div>
 
-                                        <div className="slide-container-item-price">{`${item.price}￥`}</div>
+                                        <div className="slide-container-item-price">{`￥${item.price}`}</div>
                                     </div>
                                 )
                             } else {
@@ -78,7 +78,7 @@ function Slide(props) {
 
                                         <div className="slide-container-item-info">{item.info}</div>
 
-                                        <div className="slide-container-item-price">{`${item.price}￥`}</div>
+                                        <div className="slide-container-item-price">{`￥${item.price}`}</div>
                                     </div>
                                 )
                             }
