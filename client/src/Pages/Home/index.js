@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { gql, useQuery } from '@apollo/client'
 
-// import left from '../../Imgs/左.png'
+// import homeleft from '../../Imgs/homeleft.png'
 import sen from '../../Imgs/sen.png'
 // import itemBack from '../../Imgs/back1.png'
 import Explore from '../../Components/Explore'
@@ -63,8 +63,8 @@ function Home() {
                                 </div>
                             </div> */}
 
-                            {/* <div className='home-container-item-left-background'>
-                                <img src={left}/>
+                            {/* <div className="home-container-item-left-background">
+                                <img src={homeleft} />
                             </div> */}
                         </div>
 

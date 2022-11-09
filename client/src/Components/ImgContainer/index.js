@@ -1,10 +1,11 @@
-import topImg from '../../Imgs/縦長.png'
-// import right from '../../Imgs/右.png'
+import first from '../../Imgs/homeleft.png'
+import second from '../../Imgs/homeright.png'
+import third from '../../Imgs/縦長.png'
 
 function ImgContainer() {
     return (
         <div className="img-container">
-            <img src={topImg} />
+            <img src={second} />
         </div>
     )
 }
