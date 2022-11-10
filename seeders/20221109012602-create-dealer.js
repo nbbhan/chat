@@ -49,7 +49,7 @@ module.exports = {
                 createdAt: '2020-07-01 07:00:00',
                 updatedAt: '2020-07-01 07:00:00',
                 info: "['美味すぎ饅頭', '広島県広島市4-4', '0120-00-4444']",
-                intro: '私が自宅(店)で丁寧に丹精込めて作った手作りの饅頭です。とても美味しく出来たと思っているので食べてほしいです。',
+                intro: '丁寧に丹精込めて作った手作りの饅頭です。とても美味しく出来たと思っているので食べてほしいです。',
             },
             {
                 id: 'd0005',
@@ -89,9 +89,9 @@ module.exports = {
             },
             {
                 id: 'd0008',
-                account: '駒場',
-                username: 'komaba',
-                email: 'komaba@mail.com',
+                account: '内海',
+                username: 'utsumi',
+                email: 'utsumi@mail.com',
                 password: '000000',
                 imgUrl: '',
                 createdAt: '2020-07-01 07:00:00',
