@@ -64,7 +64,9 @@ function Slide(props) {
                                             <img src={item.imgUrl} />
                                         </div>
 
-                                        <div className="slide-container-item-info">{item.info}</div>
+                                        <div className="slide-container-item-info">
+                                            <span>{item.info}</span>
+                                        </div>
 
                                         <div className="slide-container-item-price">{`￥${item.price}`}</div>
                                     </div>
@@ -76,7 +78,9 @@ function Slide(props) {
                                             <img src={item.imgUrl} />
                                         </div>
 
-                                        <div className="slide-container-item-info">{item.info}</div>
+                                        <div className="slide-container-item-info">
+                                            <span>{item.info}</span>
+                                        </div>
 
                                         <div className="slide-container-item-price">{`￥${item.price}`}</div>
                                     </div>
@@ -86,7 +90,7 @@ function Slide(props) {
                 </div>
             </div>
 
-            <BtnLR />
+            {/* <BtnLR /> */}
         </div>
     )
 }

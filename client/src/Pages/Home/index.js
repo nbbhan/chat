@@ -57,11 +57,9 @@ function Home() {
                                 </div>
                             </div>
 
-                            {/* <div className='home-container-item-left-btn'>
-                                <div>
-                                    はじめる
-                                </div>
-                            </div> */}
+                            <div className="home-container-item-left-btn">
+                                <div>すぐにはじめる</div>
+                            </div>
 
                             {/* <div className="home-container-item-left-background">
                                 <img src={homeleft} />

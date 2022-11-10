@@ -5,7 +5,7 @@ import third from '../../Imgs/縦長.png'
 function ImgContainer() {
     return (
         <div className="img-container">
-            <img src={first} />
+            <img src={third} />
         </div>
     )
 }

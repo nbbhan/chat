@@ -38,6 +38,13 @@ function Nav() {
         <div className={`nav`}>
             <div className="nav-container">
                 <div className={`nav-items ${storage}`}>
+                    <div
+                        className="nav-items-shadow"
+                        style={{
+                            left: `${myData.width}px`,
+                        }}
+                    ></div>
+
                     <div className="nav-items-container">
                         <button className="menu-trigger" ref={triggerRef} onClick={() => handleTrigger()}>
                             <span></span>

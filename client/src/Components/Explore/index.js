@@ -86,13 +86,13 @@ function Explore() {
                     </div>
                 </Link>
 
-                {/* <Link to='/register'>
-                    <div className='explore-item'>
+                <Link to="/register">
+                    <div className={`explore-item ${myData.login}`}>
                         <img src={addUser} />
-    
-                        <div>新規アカウント作成</div>
+
+                        <div>新規登録</div>
                     </div>
-                </Link> */}
+                </Link>
 
                 <div className={`explore-item ${myData.logout}`} onClick={() => handleLogout()}>
                     <img src={logout} />
