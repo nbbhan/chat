@@ -5,7 +5,7 @@ module.exports = {
         return queryInterface.bulkInsert('dealers', [
             {
                 id: 'd0001',
-                account: 'KING QUAN',
+                account: 'クァン',
                 username: 'quan',
                 email: 'quan@mail.com',
                 password: '000000',
@@ -17,7 +17,7 @@ module.exports = {
             },
             {
                 id: 'd0002',
-                account: 'Dr.近田',
+                account: '近田',
                 username: 'konda',
                 email: 'konda@mail.com',
                 password: '000000',
@@ -29,7 +29,7 @@ module.exports = {
             },
             {
                 id: 'd0003',
-                account: 'cats小川',
+                account: '小川',
                 username: 'ogawa',
                 email: 'ogawa@mail.com',
                 password: '000000',
@@ -41,7 +41,7 @@ module.exports = {
             },
             {
                 id: 'd0004',
-                account: '自宅警備員荻野',
+                account: '荻野',
                 username: 'ogino',
                 email: 'ogino@mail.com',
                 password: '000000',
@@ -49,11 +49,11 @@ module.exports = {
                 createdAt: '2020-07-01 07:00:00',
                 updatedAt: '2020-07-01 07:00:00',
                 info: "['美味すぎ饅頭', '広島県広島市4-4', '0120-00-4444']",
-                intro: '私が自宅(店)で丁寧に丹精込めて作った手作りの饅頭です。とても美味しく出来たと思っているので食べてほしいです。',
+                intro: '丁寧に丹精込めて作った手作りの饅頭です。とても美味しく出来たと思っているので食べてほしいです。',
             },
             {
                 id: 'd0005',
-                account: 'ニライ金井',
+                account: '金井',
                 username: 'kanai',
                 email: 'kanai@mail.com',
                 password: '000000',
@@ -65,7 +65,7 @@ module.exports = {
             },
             {
                 id: 'd0006',
-                account: 'かまぼこp',
+                account: '鎌田',
                 username: 'kamata',
                 email: 'kamata@mail.com',
                 password: '000000',
@@ -77,7 +77,7 @@ module.exports = {
             },
             {
                 id: 'd0007',
-                account: '島田産業有限会社',
+                account: '島田',
                 username: 'shimada',
                 email: 'shimada@mail.com',
                 password: '000000',
@@ -89,9 +89,9 @@ module.exports = {
             },
             {
                 id: 'd0008',
-                account: 'モナカの駒場',
-                username: 'komaba',
-                email: 'komaba@mail.com',
+                account: '内海',
+                username: 'utsumi',
+                email: 'utsumi@mail.com',
                 password: '000000',
                 imgUrl: '',
                 createdAt: '2020-07-01 07:00:00',
@@ -103,7 +103,7 @@ module.exports = {
                 id: 'd0009',
                 account: '夜清',
                 username: 'yorushin',
-                email: 'utsumi@mail.com',
+                email: 'yorushin@mail.com',
                 password: '000000',
                 imgUrl: '',
                 createdAt: '2020-07-01 07:00:00',
@@ -113,7 +113,7 @@ module.exports = {
             },
             {
                 id: 'd0010',
-                account: 'カミド牛',
+                account: '神戸',
                 username: 'kamido',
                 email: 'kamido@mail.com',
                 password: '000000',
