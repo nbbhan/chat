@@ -103,7 +103,7 @@ module.exports = {
                 id: 'd0009',
                 account: '夜清',
                 username: 'yorushin',
-                email: 'utsumi@mail.com',
+                email: 'yorushin@mail.com',
                 password: '000000',
                 imgUrl: '',
                 createdAt: '2020-07-01 07:00:00',
