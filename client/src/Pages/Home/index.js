@@ -20,6 +20,7 @@ const GET_POPULAR = gql`
             price
             info
             imgUrl
+            rating
         }
     }
 `
