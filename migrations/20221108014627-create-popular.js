@@ -21,6 +21,10 @@ module.exports = {
                 allowNull: false,
                 type: Sequelize.FLOAT,
             },
+            rating: {
+                allowNull: false,
+                type: Sequelize.FLOAT,
+            },
             imgUrl: {
                 allowNull: false,
                 type: Sequelize.STRING,

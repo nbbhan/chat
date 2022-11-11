@@ -9,7 +9,7 @@ module.exports = {
 
         await queryInterface.bulkInsert('users', [
             {
-                userid: 'u0001',
+                userId: 'u0001',
                 account: 'ジョン',
                 username: 'john',
                 email: 'john@email.com',
@@ -20,7 +20,7 @@ module.exports = {
                 updatedAt,
             },
             {
-                userid: 'u0002',
+                userId: 'u0002',
                 account: 'ジェーン',
                 username: 'jane',
                 email: 'jane@email.com',
@@ -31,7 +31,7 @@ module.exports = {
                 updatedAt,
             },
             {
-                userid: 'u0003',
+                userId: 'u0003',
                 account: 'ボス',
                 username: 'boss',
                 email: 'boss@email.com',
@@ -42,7 +42,7 @@ module.exports = {
                 updatedAt,
             },
             {
-                userid: 'u0004',
+                userId: 'u0004',
                 account: 'ウィリアム',
                 username: 'william',
                 email: 'william@email.com',
@@ -53,7 +53,7 @@ module.exports = {
                 updatedAt,
             },
             {
-                userid: 'u0005',
+                userId: 'u0005',
                 account: 'キャメロン',
                 username: 'cameron',
                 email: 'cameron@email.com',
@@ -64,7 +64,7 @@ module.exports = {
                 updatedAt,
             },
             {
-                userid: 'u0006',
+                userId: 'u0006',
                 account: 'エマ',
                 username: 'emma',
                 email: 'emma@email.com',
