@@ -12,6 +12,7 @@ import { Data } from '../../Provider'
 
 import flame from '../../Imgs/flame.png'
 import newImg from '../../Imgs/new.png'
+import start from '../../Imgs/start.png'
 
 const GET_POPULAR = gql`
     query popular {
@@ -58,7 +59,12 @@ function Home() {
                             </div>
 
                             <div className="home-container-item-left-btn">
-                                <div>すぐにはじめる</div>
+                                <div className="home-container-item-left-btn-text">
+                                    すぐにはじめる<div className="underline"></div>
+                                    <div className="home-container-item-left-btn-img">
+                                        <img src={start} />
+                                    </div>
+                                </div>
                             </div>
 
                             {/* <div className="home-container-item-left-background">
