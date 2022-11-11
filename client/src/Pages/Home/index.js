@@ -2,12 +2,11 @@ import { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { gql, useQuery } from '@apollo/client'
 
-// import homeleft from '../../Imgs/homeleft.png'
 import sen from '../../Imgs/sen.png'
-// import itemBack from '../../Imgs/back1.png'
 import Explore from '../../Components/Explore'
 import ImgContainer from '../../Components/ImgContainer'
 import Slide from '../../Components/Slide'
+import Prefectures from '~/Components/Prefectures'
 
 import { Data } from '../../Provider'
 
@@ -81,7 +80,9 @@ function Home() {
                         <Slide arr={data} name="人気商品" icon={flame} />
                     </div>
 
-                    <div className="home-container-item"></div>
+                    <div className="home-container-item">
+                        <Prefectures />
+                    </div>
 
                     <div className="home-container-item-last"></div>
                 </div>
