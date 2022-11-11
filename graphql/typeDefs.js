@@ -22,6 +22,7 @@ module.exports = gql`
         price: Float!
         imgUrl: String!
         dealerId: String
+        rating: String!
     }
     type Query {
         getUsers: [User]!

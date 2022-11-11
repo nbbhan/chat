@@ -83,6 +83,8 @@ function Slide(props) {
                                         </div>
 
                                         <div className="slide-container-item-price">{`￥${item.price}`}</div>
+
+                                        <div className="slide-container-item-rating">{`${item.rating}`}</div>
                                     </div>
                                 )
                             }
