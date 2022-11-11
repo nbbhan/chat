@@ -205,7 +205,7 @@ module.exports = {
             },
             {
                 productId: 'p0021',
-                info: '琥珀等',
+                info: '琥珀糖',
                 dealerId: 'd000',
                 price: '700',
                 imgUrl: 'img/productImg/amberSweets.jpeg',
