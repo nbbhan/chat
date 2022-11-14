@@ -115,10 +115,12 @@ function Chatbox() {
                 </div>
                 {messagesData && messagesData.getMessages.length > 0 ? (
                     messagesData.getMessages.map((message) => (
-                        // <div className='chatbox-chat-avatar'>
-                        //     <img src={user.imageUrl} />
-                        // </div>
-                        <p key={message.uuid}>{message.content}</p>
+                        <>
+                            {/* <div className="chatbox-chat-avatar">
+                                <img src={user.imageUrl} />
+                            </div> */}
+                            <p key={message.uuid}>{message.content}</p>
+                        </>
                     ))
                 ) : (
                     <p>Contact now!</p>
