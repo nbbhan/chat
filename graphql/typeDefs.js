@@ -39,6 +39,7 @@ module.exports = gql`
         login(username: String!, password: String!): User!
         getMessages(from: String!): [Message]!
         getPopular: [Popular]!
+        getDealer: [Dealer]!
     }
     type Mutation {
         register(username: String!, email: String!, password: String!, confirmPassword: String!): User!
