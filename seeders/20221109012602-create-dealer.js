@@ -4,7 +4,7 @@ module.exports = {
     up: (queryInterface, Sequelize) => {
         return queryInterface.bulkInsert('dealers', [
             {
-                id: 'd0001',
+                dealerId: 'd0001',
                 account: 'クァン',
                 username: 'quan',
                 email: 'quan@mail.com',
@@ -16,7 +16,7 @@ module.exports = {
                 intro: '２０年以上、たこ焼きを焼き続けています。ぜひ、お越しになってください。',
             },
             {
-                id: 'd0002',
+                dealerId: 'd0002',
                 account: '近田',
                 username: 'konda',
                 email: 'konda@mail.com',
@@ -28,7 +28,7 @@ module.exports = {
                 intro: '代々受け継いできた、本場の抹茶です。特に宇治抹茶がおすすめです。',
             },
             {
-                id: 'd0003',
+                dealerId: 'd0003',
                 account: '小川',
                 username: 'ogawa',
                 email: 'ogawa@mail.com',
@@ -40,7 +40,7 @@ module.exports = {
                 intro: 'リンゴが有名な青森で果物農家を営んでいます。リンゴ以外にもおいしい果物をたくさん作っているので、ぜひ一度味わってみてください。',
             },
             {
-                id: 'd0004',
+                dealerId: 'd0004',
                 account: '荻野',
                 username: 'ogino',
                 email: 'ogino@mail.com',
@@ -52,7 +52,7 @@ module.exports = {
                 intro: '丁寧に丹精込めて作った手作りの饅頭です。とても美味しく出来たと思っているので食べてほしいです。',
             },
             {
-                id: 'd0005',
+                dealerId: 'd0005',
                 account: '金井',
                 username: 'kanai',
                 email: 'kanai@mail.com',
@@ -64,7 +64,7 @@ module.exports = {
                 intro: '家の守り神「シーサー」を可愛らしく、手作りしています。魔除けにぜひ！',
             },
             {
-                id: 'd0006',
+                dealerId: 'd0006',
                 account: '鎌田',
                 username: 'kamata',
                 email: 'kamata@mail.com',
@@ -76,7 +76,7 @@ module.exports = {
                 intro: '米を沢山作っています。農薬を使わず、品種改良を加え、日々よりおいしいごはんを求めて農業に明け暮れています。朝はパン派です。',
             },
             {
-                id: 'd0007',
+                dealerId: 'd0007',
                 account: '島田',
                 username: 'shimada',
                 email: 'shimada@mail.com',
@@ -88,7 +88,7 @@ module.exports = {
                 intro: '高級なうなぎを様々な形で提供しています。うなぎの蒲焼きがおすすめです。',
             },
             {
-                id: 'd0008',
+                dealerId: 'd0008',
                 account: '内海',
                 username: 'utsumi',
                 email: 'utsumi@mail.com',
@@ -100,7 +100,7 @@ module.exports = {
                 intro: '上あごに引っ付かない革命的なモナカを作っています。１つ食べたら２つ目も食べたくなってしまう、やみつきなモナカです。',
             },
             {
-                id: 'd0009',
+                dealerId: 'd0009',
                 account: '夜清',
                 username: 'yorushin',
                 email: 'yorushin@mail.com',
@@ -112,7 +112,7 @@ module.exports = {
                 intro: 'こだわりのだし、うま味のあるつゆ、そしてつるつるの麺を合わせた究極のうどんです。',
             },
             {
-                id: 'd0010',
+                dealerId: 'd0010',
                 account: '神戸',
                 username: 'kamido',
                 email: 'kamido@mail.com',
@@ -131,7 +131,7 @@ module.exports = {
 }
 
 // {
-//     id: 'd0001',
+//     dealerId: 'd0001',
 //     account: '',
 //     username: '',
 //     email: '@mail.com',

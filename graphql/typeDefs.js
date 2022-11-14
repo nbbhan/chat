@@ -24,6 +24,16 @@ module.exports = gql`
         dealerId: String
         rating: String!
     }
+    type Dealer {
+        dealerId: String!
+        account: String!
+        username: String!
+        email: String
+        password: String
+        imgUrl: String
+        info: String!
+        intro: String!
+    }
     type Query {
         getUsers: [User]!
         login(username: String!, password: String!): User!
