@@ -42,6 +42,11 @@ module.exports = gql`
         imgUrl: String!
         intro: String!
     }
+    type Watch {
+        watchId: String!
+        userIdId: String
+        productId: String!
+    }
     type Query {
         getUsers: [User]!
         login(username: String!, password: String!): User!
