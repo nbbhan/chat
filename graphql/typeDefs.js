@@ -53,6 +53,18 @@ module.exports = gql`
         productId: String!
         quantity: Integer!
     }
+    type Point {
+        userId: String!
+        point: Integer!
+        token: String!
+    }
+    type Purchase {
+        historyId: String!
+        userId: String!
+        productId: String!
+        quantity: Integer!
+        returnedQuantity: Integer
+    }
     type Query {
         getUsers: [User]!
         login(username: String!, password: String!): User!
@@ -61,6 +73,7 @@ module.exports = gql`
         getDealer: [Dealer]!
         getProduct: [Product]!
         getCart: [Cart]!
+        getPoint: [Point]!
     }
     type Mutation {
         register(username: String!, email: String!, password: String!, confirmPassword: String!): User!

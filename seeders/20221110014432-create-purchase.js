@@ -4,7 +4,7 @@ module.exports = {
     up: (queryInterface, Sequelize) => {
         return queryInterface.bulkInsert('purchase', [
             {
-                dealerId: 'd0001',
+                historyId: 'h0001',
                 userId: 'u0001',
                 productId: 'p0001',
                 purchasedAt: '',
@@ -21,7 +21,7 @@ module.exports = {
 }
 
 // {
-//   dealerId: 'd0001',
+//   historyId: 'h0001',
 //   userId: 'u0001',
 //   productId: 'p0001',
 //   purchasedAt: '',
