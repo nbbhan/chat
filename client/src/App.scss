@@ -290,6 +290,11 @@ button {
     padding: 2rem 2rem 2rem 2rem;
     position: relative;
 }
+.home-container-item-middle-between-ogino{
+    padding: 0 0 1rem 0;
+    position: relative;
+    text-align: center;
+}
 .home-container-item-left-background {
     position: absolute;
     left: 0;
@@ -311,6 +316,11 @@ button {
 .home-container-item-left-contents {
     font-size: 3rem;
     line-height: 60px;
+    font-family: var(--fontZen);
+}
+.home-container-item-left-contents-ogino {
+    font-size: 2rem;
+    line-height: 50px;
     font-family: var(--fontZen);
 }
 .home-container-item-left-btn {
