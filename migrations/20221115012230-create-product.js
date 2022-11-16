@@ -2,44 +2,48 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
     async up(queryInterface, Sequelize) {
-        await queryInterface.createTable('purchases', {
+        await queryInterface.createTable('products', {
             id: {
                 allowNull: false,
                 autoIncrement: true,
                 primaryKey: true,
                 type: Sequelize.INTEGER,
             },
-            historyId: {
-                allowNull: false,
-                type: Sequelize.STRING,
-            },
-            userId: {
-                allowNull: false,
-                type: Sequelize.STRING,
-            },
             productId: {
                 allowNull: false,
                 type: Sequelize.STRING,
             },
-            purchasedAt: {
+            info: {
+                allowNull: false,
+                type: Sequelize.STRING,
+            },
+            dealerId: {
+                allowNull: false,
+                type: Sequelize.STRING,
+            },
+            price: {
+                allowNull: false,
+                type: Sequelize.FLOAT,
+            },
+            imgUrl: {
+                allowNull: false,
+                type: Sequelize.STRING,
+            },
+            intro: {
+                allowNull: false,
+                type: Sequelize.STRING,
+            },
+            createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE,
             },
-            returnedAt: {
+            updatedAt: {
                 allowNull: false,
                 type: Sequelize.DATE,
-            },
-            quantity: {
-                allowNull: false,
-                type: Sequelize.INTEGER,
-            },
-            returnedQuantity: {
-                allowNull: false,
-                type: Sequelize.INTEGER,
             },
         })
     },
     async down(queryInterface, Sequelize) {
-        await queryInterface.dropTable('purchases')
+        await queryInterface.dropTable('products')
     },
 }

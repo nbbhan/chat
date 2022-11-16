@@ -15,7 +15,7 @@ module.exports = {
             },
             point: {
                 allowNull: false,
-                type: Sequelize.INTEGER,
+                type: Sequelize.FLOAT,
             },
             token: {
                 allowNull: false,
@@ -26,6 +26,14 @@ module.exports = {
                 type: Sequelize.DATE,
             },
             usedAt: {
+                allowNull: false,
+                type: Sequelize.DATE,
+            },
+            createdAt: {
+                allowNull: false,
+                type: Sequelize.DATE,
+            },
+            updatedAt: {
                 allowNull: false,
                 type: Sequelize.DATE,
             },

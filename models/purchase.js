@@ -8,31 +8,31 @@ module.exports = (sequelize, DataTypes) => {
         {
             historyId: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: DataTypes.STRING,
             },
             userId: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: DataTypes.STRING,
             },
             productId: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: DataTypes.STRING,
             },
             purchasedAt: {
                 allowNull: false,
-                type: Sequelize.DATE,
+                type: DataTypes.DATE,
             },
             returnedAt: {
                 allowNull: false,
-                type: Sequelize.DATE,
+                type: DataTypes.DATE,
             },
             quantity: {
                 allowNull: false,
-                type: Sequelize.INTEGER,
+                type: DataTypes.FLOAT,
             },
             returnedQuantity: {
                 allowNull: false,
-                type: Sequelize.INTEGER,
+                type: DataTypes.FLOAT,
             },
         },
         {

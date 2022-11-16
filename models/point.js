@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
             },
             point: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.FLOAT,
                 allowNull: false,
             },
             token: {

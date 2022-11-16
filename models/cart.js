@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
             },
             quantity: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.FLOAT,
                 allowNull: false,
             },
         },
