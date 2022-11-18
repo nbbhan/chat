@@ -812,6 +812,7 @@ button {
     font-family: var(--fontZen);
     margin: 0 auto;
     // transform: translateX(-40px);
+    margin-bottom: 22px;
 }
 .prefectures-item {
     line-height: 40px;
@@ -827,28 +828,54 @@ button {
 }
 .prefectures-container-img {
     width: 1000px;
-    height: 250px;
+    height: 260px;
     // transform: translateX(-40px);
     margin: 0 auto;
-    border: 1px solid rgb(234, 0, 255);
+    border-radius: var(--borderR);
+    overflow: hidden;
+    margin-bottom: 22px;
 
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 70px;
     }
 }
 .prefectures-container-items {
-    height: 400px;
+    height: 45px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 22px;
+}
+.prefecturs-container-item {
+    font-size: 22px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 70px; //var(--borderR);
+    width: 200px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+        color: var(--cha);
+    }
+}
+.prefecturs-container-items-item {
+    height: 90px;
+    width: 1400px;
     border: 1px solid rgb(255, 0, 0);
     margin: 0 auto;
     display: flex;
     justify-content: center;
 }
-.prefecturs-container-item {
+.prefecturs-container-item-item {
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 70px;
     font-size: 22px;
-    border: 1px solid rgb(0, 219, 248);
+    top: 75%;
     width: 200px;
     height: 45px;
     display: flex;

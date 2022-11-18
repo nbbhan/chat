@@ -38,10 +38,18 @@ function Prefectures() {
                     <div className="prefecturs-container-item">関東</div>
                     <div className="prefecturs-container-item">中部</div>
                     <div className="prefecturs-container-item">近畿</div>
-
                     <div className="prefecturs-container-item">中国</div>
                     <div className="prefecturs-container-item">四国</div>
                     <div className="prefecturs-container-item">九州</div>
+                </div>
+                <div className="prefecturs-container-items-item">
+                    <div className="prefecturs-container-item-item">北海道</div>
+                    <div className="prefecturs-container-item-item">青森県</div>
+                    <div className="prefecturs-container-item-item">岩手県</div>
+                    <div className="prefecturs-container-item-item">秋田県</div>
+                    <div className="prefecturs-container-item-item">宮城県</div>
+                    <div className="prefecturs-container-item-item">山形県</div>
+                    <div className="prefecturs-container-item-item">福島県</div>
                 </div>
             </div>
         </div>
