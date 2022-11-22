@@ -34,23 +34,31 @@ function Prefectures() {
                 </div>
 
                 <div className="prefectures-container-items">
-                    <div className="prefecturs-container-item">北海道・東北</div>
+                    <div style={{ marginLeft: '0' }} className="prefecturs-container-item">
+                        北海道・東北
+                    </div>
                     <div className="prefecturs-container-item">関東</div>
                     <div className="prefecturs-container-item">中部</div>
                     <div className="prefecturs-container-item">近畿</div>
                     <div className="prefecturs-container-item">中国</div>
                     <div className="prefecturs-container-item">四国</div>
-                    <div className="prefecturs-container-item">九州</div>
+                    <div style={{ marginRight: '0' }} className="prefecturs-container-item">
+                        九州
+                    </div>
+                </div>
+                {/* <div className="prefecturs-container-items-item">
+                    <div className="prefecturs-container-item-item">新潟県</div>
+                    <div className="prefecturs-container-item-item">富山県</div>
+                    <div className="prefecturs-container-item-item">石川県</div>
+                    <div className="prefecturs-container-item-item">福井県</div>
+                    <div className="prefecturs-container-item-item">山梨県</div>
+                    <div className="prefecturs-container-item-item">長野県</div>
+                    <div className="prefecturs-container-item-item">岐阜県</div>
                 </div>
                 <div className="prefecturs-container-items-item">
-                    <div className="prefecturs-container-item-item">北海道</div>
-                    <div className="prefecturs-container-item-item">青森県</div>
-                    <div className="prefecturs-container-item-item">岩手県</div>
-                    <div className="prefecturs-container-item-item">秋田県</div>
-                    <div className="prefecturs-container-item-item">宮城県</div>
-                    <div className="prefecturs-container-item-item">山形県</div>
-                    <div className="prefecturs-container-item-item">福島県</div>
-                </div>
+                    <div className="prefecturs-container-item-item">静岡県</div>
+                    <div className="prefecturs-container-item-item">愛知県</div>
+                </div> */}
             </div>
         </div>
     )
