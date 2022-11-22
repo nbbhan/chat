@@ -20,9 +20,9 @@ module.exports = gql`
         productId: String!
         info: String!
         price: Float!
+        rating: String!
         imgUrl: String!
         dealerId: String
-        rating: String!
     }
     type Dealer {
         dealerId: String!
