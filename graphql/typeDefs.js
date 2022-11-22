@@ -28,8 +28,8 @@ module.exports = gql`
         dealerId: String!
         account: String!
         username: String!
-        email: String
-        password: String
+        email: String!
+        password: String!
         imgUrl: String
         info: String!
         intro: String!
@@ -37,26 +37,26 @@ module.exports = gql`
     type Product {
         productId: String!
         info: String!
-        dealerId: String
+        dealerId: String!
         price: Float!
         imgUrl: String!
         intro: String!
     }
     type Watch {
         watchId: String!
-        userId: String
+        userId: String!
         productId: String!
     }
     type Cart {
-        addtocartId: String!
-        userId: String
+        addtocartId: String
+        userId: String!
         productId: String!
         quantity: Float!
     }
     type Point {
         userId: String!
         point: Float!
-        token: String
+        token: String!
     }
     type Purchase {
         historyId: String!

@@ -7,19 +7,19 @@ module.exports = (sequelize, DataTypes) => {
     Cart.init(
         {
             addtocartId: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(5),
                 allowNull: false,
             },
             userId: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(5),
                 allowNull: false,
             },
             productId: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(5),
                 allowNull: false,
             },
             quantity: {
-                type: DataTypes.FLOAT,
+                type: DataTypes.FLOAT(3),
                 allowNull: false,
             },
         },

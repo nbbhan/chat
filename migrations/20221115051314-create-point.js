@@ -11,11 +11,11 @@ module.exports = {
             },
             userId: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(5),
             },
             point: {
                 allowNull: false,
-                type: Sequelize.FLOAT,
+                type: Sequelize.FLOAT(5),
             },
             token: {
                 allowNull: false,

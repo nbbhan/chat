@@ -11,15 +11,15 @@ module.exports = {
             },
             historyId: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(20),
             },
             userId: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(5),
             },
             productId: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(20),
             },
             purchasedAt: {
                 allowNull: false,
@@ -31,11 +31,11 @@ module.exports = {
             },
             quantity: {
                 allowNull: false,
-                type: Sequelize.FLOAT,
+                type: Sequelize.FLOAT(3),
             },
             returnedQuantity: {
                 allowNull: false,
-                type: Sequelize.FLOAT,
+                type: Sequelize.FLOAT(3),
             },
             createdAt: {
                 allowNull: false,

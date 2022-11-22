@@ -11,15 +11,15 @@ module.exports = {
             },
             watchId: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(20),
             },
             userId: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(5),
             },
             productId: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(5),
             },
             watchedAt: {
                 allowNull: false,

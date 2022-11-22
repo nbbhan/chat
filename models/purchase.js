@@ -8,15 +8,15 @@ module.exports = (sequelize, DataTypes) => {
         {
             historyId: {
                 allowNull: false,
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(20),
             },
             userId: {
                 allowNull: false,
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(5),
             },
             productId: {
                 allowNull: false,
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(20),
             },
             purchasedAt: {
                 allowNull: false,
@@ -28,11 +28,11 @@ module.exports = (sequelize, DataTypes) => {
             },
             quantity: {
                 allowNull: false,
-                type: DataTypes.FLOAT,
+                type: DataTypes.FLOAT(3),
             },
             returnedQuantity: {
                 allowNull: false,
-                type: DataTypes.FLOAT,
+                type: DataTypes.FLOAT(3),
             },
         },
         {

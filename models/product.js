@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     Product.init(
         {
             productId: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(20),
                 allowNull: false,
             },
             info: {
@@ -15,11 +15,11 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
             },
             dealerId: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(5),
                 allowNull: false,
             },
             price: {
-                type: DataTypes.STRING,
+                type: DataTypes.FLOAT(5),
                 allowNull: false,
             },
             imgUrl: {

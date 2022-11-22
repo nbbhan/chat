@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     Popular.init(
         {
             productId: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(20),
                 allowNull: false,
             },
             info: {
@@ -15,6 +15,10 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
             },
             price: {
+                type: DataTypes.FLOAT(5),
+                allowNull: false,
+            },
+            rating: {
                 type: DataTypes.FLOAT,
                 allowNull: false,
             },
@@ -23,11 +27,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
             },
             dealerId: {
-                type: DataTypes.STRING,
-                allowNull: false,
-            },
-            rating: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(5),
                 allowNull: false,
             },
         },

@@ -11,7 +11,7 @@ module.exports = {
             },
             productId: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(20),
             },
             info: {
                 allowNull: false,
@@ -19,7 +19,7 @@ module.exports = {
             },
             price: {
                 allowNull: false,
-                type: Sequelize.FLOAT,
+                type: Sequelize.FLOAT(5),
             },
             rating: {
                 allowNull: false,
@@ -31,7 +31,7 @@ module.exports = {
             },
             dealerId: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(5),
             },
             createdAt: {
                 allowNull: false,

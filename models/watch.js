@@ -7,15 +7,15 @@ module.exports = (sequelize, DataTypes) => {
     Watch.init(
         {
             watchId: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(20),
                 allowNull: false,
             },
             userId: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(5),
                 allowNull: false,
             },
             productId: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(5),
                 allowNull: false,
             },
             watchedAt: {

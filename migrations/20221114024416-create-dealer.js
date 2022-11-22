@@ -11,23 +11,23 @@ module.exports = {
             },
             dealerId: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(5),
             },
             account: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(20),
             },
             username: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(20),
             },
             email: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(100),
             },
             password: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(20),
             },
             imgUrl: {
                 allowNull: false,

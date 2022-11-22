@@ -7,11 +7,11 @@ module.exports = (sequelize, DataTypes) => {
     Point.init(
         {
             userId: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(5),
                 allowNull: false,
             },
             point: {
-                type: DataTypes.FLOAT,
+                type: DataTypes.FLOAT(5),
                 allowNull: false,
             },
             token: {

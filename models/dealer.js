@@ -7,23 +7,23 @@ module.exports = (sequelize, DataTypes) => {
     Dealer.init(
         {
             dealerId: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(5),
                 allowNull: false,
             },
             account: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(20),
                 allowNull: false,
             },
             username: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(20),
                 allowNull: false,
             },
             email: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(100),
                 allowNull: false,
             },
             password: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(20),
                 allowNull: false,
             },
             imgUrl: {

@@ -11,19 +11,19 @@ module.exports = {
             },
             addtocartId: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(5),
             },
             userId: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(5),
             },
             productId: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(5),
             },
             quantity: {
                 allowNull: false,
-                type: Sequelize.FLOAT,
+                type: Sequelize.FLOAT(3),
             },
             createdAt: {
                 allowNull: false,

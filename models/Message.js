@@ -16,11 +16,11 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
             },
             from: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(20),
                 allowNull: false,
             },
             to: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(20),
                 allowNull: false,
             },
         },
