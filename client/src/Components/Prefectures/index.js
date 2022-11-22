@@ -1,8 +1,10 @@
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 
 import { Data } from '../../Provider'
 
-import specialties from '../../Imgs/back1.png'
+import aki from '../../Imgs/aki.jpg'
+import fuji from '../../Imgs/fuji.jpg'
+import kinkakuji from '../../Imgs/kinkakuji.jpg'
 
 function Prefectures() {
     const myData = useContext(Data)
@@ -30,35 +32,24 @@ function Prefectures() {
 
             <div className="prefectures-container">
                 <div className="prefectures-container-img">
-                    <img alt="写真ですよ" src={specialties} />
+                    <img src={aki} />
                 </div>
 
                 <div className="prefectures-container-items">
-                    <div style={{ marginLeft: '0' }} className="prefecturs-container-item">
+                    <div style={{ marginLeft: '0' }} className="prefectures-container-item">
                         北海道・東北
                     </div>
-                    <div className="prefecturs-container-item">関東</div>
-                    <div className="prefecturs-container-item">中部</div>
-                    <div className="prefecturs-container-item">近畿</div>
-                    <div className="prefecturs-container-item">中国</div>
-                    <div className="prefecturs-container-item">四国</div>
-                    <div style={{ marginRight: '0' }} className="prefecturs-container-item">
+                    <div className="prefectures-container-item">関東</div>
+                    <div className="prefectures-container-item">中部</div>
+                    <div className="prefectures-container-item">近畿</div>
+                    <div className="prefectures-container-item">中国</div>
+                    <div className="prefectures-container-item">四国</div>
+                    <div style={{ marginRight: '0' }} className="prefectures-container-item">
                         九州
                     </div>
                 </div>
-                {/* <div className="prefecturs-container-items-item">
-                    <div className="prefecturs-container-item-item">新潟県</div>
-                    <div className="prefecturs-container-item-item">富山県</div>
-                    <div className="prefecturs-container-item-item">石川県</div>
-                    <div className="prefecturs-container-item-item">福井県</div>
-                    <div className="prefecturs-container-item-item">山梨県</div>
-                    <div className="prefecturs-container-item-item">長野県</div>
-                    <div className="prefecturs-container-item-item">岐阜県</div>
-                </div>
-                <div className="prefecturs-container-items-item">
-                    <div className="prefecturs-container-item-item">静岡県</div>
-                    <div className="prefecturs-container-item-item">愛知県</div>
-                </div> */}
+
+                <div className="prefectures-container-box">aaaaaaaaaaaaaa</div>
             </div>
         </div>
     )

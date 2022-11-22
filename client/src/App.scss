@@ -848,40 +848,35 @@ button {
     justify-content: center;
     margin-bottom: 22px;
 }
-.prefecturs-container-item {
+.prefectures-container-item {
     font-size: 22px;
     border: 2px solid var(--cha);
-    border-radius: 70px; //var(--borderR);
+    border-radius: 100rem; //var(--borderR);
     width: 200px;
     height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 10px 0 10px;
+    margin: 0 1rem 0 1rem;
     transition: all 0.3s ease-in-out;
 
     &:hover {
         cursor: pointer;
         color: var(--cha);
+
+        .prefectures-container-box {
+            border: 1px solid rgb(0, 119, 255);
+        }
     }
 }
-.prefecturs-container-items-item {
-    height: 45px;
-    width: 1400px;
+.prefectures-container-box {
+    height: 500px;
+    width: 1520px;
     border: 1px solid rgb(255, 0, 0);
     margin: 0 auto;
     display: flex;
     justify-content: center;
     margin-bottom: 22px;
-}
-.prefecturs-container-item-item {
-    border: 1px solid rgba(0, 0, 0, 0.315);
-    border-radius: 70px;
-    font-size: 22px;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 // --------------------------------------------
 .menu-trigger,
