@@ -555,14 +555,13 @@ button {
     position: fixed;
     bottom: 0;
     right: 0;
-    border: 2px solid var(--myColor);
     border-radius: var(--borderR);
     background: white;
     width: 400px;
-    height: 550px;
+    min-height: calc(550px + 1rem);
     z-index: 103;
     padding: 1rem;
-    overflow: hidden;
+    border: 2px solid var(--myColor);
 }
 .chatbox-title {
     font-size: 30px;
@@ -624,8 +623,6 @@ button {
         object-fit: cover;
     }
 }
-.chatbox-container-item-name {
-}
 .chatbox-container-item-message {
     color: var(--myColor);
 }
@@ -658,6 +655,69 @@ button {
     height: 100%;
     background: white;
     border-radius: var(--borderR);
+}
+
+// Message
+.message {
+    display: flex;
+    flex-direction: column-reverse;
+    // padding: 1rem;
+    overflow-y: hidden;
+    height: 456px;
+}
+.message-box {
+    display: flex;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+}
+.message-title {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    height: 50px;
+}
+.message-name {
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 2rem;
+}
+.message-close {
+    height: 100%;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+
+    img {
+        height: 20px;
+        width: 20px;
+    }
+}
+.message-send {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 50px - 456px);
+    padding: 0 1rem 0 1rem;
+}
+.sent {
+    width: auto;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    border-radius: 100rem;
+    background: #0d6efd;
+    color: white;
+    margin-left: auto;
+    margin-right: 0;
+}
+.received {
+    width: auto;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    border-radius: 100rem;
+    background: #e9ecef;
+    margin-right: auto;
+    margin-left: 0;
 }
 
 // Slide

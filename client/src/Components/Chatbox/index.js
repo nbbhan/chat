@@ -4,6 +4,9 @@ import { gql, useQuery, useLazyQuery } from '@apollo/client'
 
 import { Data } from '../../Provider'
 
+import Message from '../Message'
+import close from '~/Imgs/close.png'
+
 const GET_USERS = gql`
     query getUsers {
         getUsers {
@@ -74,6 +77,8 @@ function Chatbox() {
                     setSelectedUser(user.username)
 
                     setChatbox('show')
+
+                    myData.setUn(user.username)
                 }}
             >
                 <div className="chatbox-container-item-avatar">
@@ -107,27 +112,34 @@ function Chatbox() {
             </div>
 
             <div className={`chatbox-chat ${chatbox}`}>
-                <div
-                    style={{ color: 'red', textDecoration: 'underline', cursor: 'pointer' }}
-                    onClick={() => setChatbox('hide')}
-                >
-                    close
+                <div className="message-title">
+                    <div className="message-close" onClick={() => setChatbox('hide')}>
+                        <img src={close} />
+                    </div>
+
+                    <div className="message-name">{myData.un}</div>
                 </div>
-                {messagesData && messagesData.getMessages.length > 0 ? (
-                    messagesData.getMessages.map((message) => (
-                        <>
-                            {/* <div className="chatbox-chat-avatar">
-                                <img src={user.imageUrl} />
-                            </div> */}
-                            <p key={message.uuid}>{message.content}</p>
-                        </>
-                    ))
-                ) : (
-                    <p>Contact now!</p>
-                )}
+
+                <div className="message">
+                    {messagesData && messagesData.getMessages.length > 0 ? (
+                        messagesData.getMessages.map((message) => <Message message={message}></Message>)
+                    ) : (
+                        <div className="received" style={{ marginLeft: '1rem' }}>
+                            Contact now!
+                        </div>
+                    )}
+                </div>
+
+                <div className="message-send"></div>
             </div>
         </div>
     )
 }
 
 export default Chatbox
+
+{
+    /* <div className="chatbox-chat-avatar">
+        <img src={user.imageUrl} />
+    </div> */
+}
