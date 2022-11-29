@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useContext, useEffect, useState } from 'react'
-import { gql, useQuery, useLazyQuery } from '@apollo/client'
+import { gql, useQuery, useLazyQuery, useMutation } from '@apollo/client'
 
 import { Data } from '../../Provider'
+import {} from '~/context/message'
+import { useMessageDispatch, useMessageState } from '../../context/message'
 
 import Message from '../Message'
 import close from '~/Imgs/close.png'
+import send from '~/Imgs/send.png'
 
 const GET_USERS = gql`
     query getUsers {
@@ -37,16 +40,49 @@ const GET_MESSAGES = gql`
     }
 `
 
+const SEND_MESSAGE = gql`
+    mutation sendMessage($to: String!, $content: String!) {
+        sendMessage(to: $to, content: $content) {
+            uuid
+            from
+            to
+            content
+            createdAt
+        }
+    }
+`
+
 function Chatbox() {
     const myData = useContext(Data)
 
+    const dispatch = useMessageDispatch()
+
     const [chatbox, setChatbox] = useState('')
 
-    const { loading, data, error } = useQuery(GET_USERS)
+    const [content, setContent] = useState('')
 
-    const [selectedUser, setSelectedUser] = useState(null)
+    const { users } = useMessageState()
+
+    const selectedUser = users?.find((u) => u.selected === true)?.username
+
+    const { loading } = useQuery(GET_USERS, {
+        onCompleted: (data) => dispatch({ type: 'SET_USERS', payload: data.getUsers }),
+        onError: (err) => console.log(err),
+    })
 
     const [getMessages, { loading: messagesLoading, data: messagesData }] = useLazyQuery(GET_MESSAGES)
+
+    const [sendMessage] = useMutation(SEND_MESSAGE, {
+        onCompleted: (data) =>
+            dispatch({
+                type: 'ADD_MESSAGE',
+                payload: {
+                    username: myData.un,
+                    message: data.sendMessage,
+                },
+            }),
+        onError: (err) => console.log(err),
+    })
 
     useEffect(() => {
         if (selectedUser) {
@@ -56,9 +92,22 @@ function Chatbox() {
 
     // if (messagesData) console.log(messagesData.getMessages)
 
+    const submitMessage = (e) => {
+        e.preventDefault()
+
+        if (content.trim() === '' || !selectedUser) return
+
+        setContent('')
+
+        // mutation for sending the message
+        sendMessage({ variables: { to: myData.un, content } })
+
+        window.location.reload()
+    }
+
     let usersMarkup
 
-    if (!data || loading) {
+    if (!users || loading) {
         usersMarkup = (
             <div className="chatbox-login">
                 <Link to="/login">
@@ -66,15 +115,15 @@ function Chatbox() {
                 </Link>
             </div>
         )
-    } else if (data.getUsers.length === 0) {
+    } else if (users.length === 0) {
         usersMarkup = <p>No users have joined yet</p>
-    } else if (data.getUsers.length > 0) {
-        usersMarkup = data.getUsers.map((user, index) => (
+    } else if (users.length > 0) {
+        usersMarkup = users.map((user, index) => (
             <div
                 className="chatbox-container-item"
                 key={index}
                 onClick={() => {
-                    setSelectedUser(user.username)
+                    dispatch({ type: 'SET_SELECTED_USER', payload: user.username })
 
                     setChatbox('show')
 
@@ -122,7 +171,9 @@ function Chatbox() {
 
                 <div className="message">
                     {messagesData && messagesData.getMessages.length > 0 ? (
-                        messagesData.getMessages.map((message) => <Message message={message}></Message>)
+                        messagesData.getMessages.map((message, index) => (
+                            <Message key={index} message={message}></Message>
+                        ))
                     ) : (
                         <div className="received" style={{ marginLeft: '1rem' }}>
                             Contact now!
@@ -130,7 +181,20 @@ function Chatbox() {
                     )}
                 </div>
 
-                <div className="message-send"></div>
+                <div className="message-send">
+                    <form onSubmit={submitMessage} className="message-form">
+                        <div className="message-send-input">
+                            <input
+                                placeholder="Type a message..."
+                                value={content}
+                                onChange={(e) => setContent(e.target.value)}
+                            />
+                        </div>
+                        <div className="message-send-btn">
+                            <img src={send} onClick={submitMessage} />
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     )

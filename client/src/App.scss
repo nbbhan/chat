@@ -562,6 +562,7 @@ button {
     z-index: 103;
     padding: 1rem;
     border: 2px solid var(--myColor);
+    font-family: var(--fontComfor);
 }
 .chatbox-title {
     font-size: 30px;
@@ -608,6 +609,10 @@ button {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 .chatbox-container-item-avatar {
     border: 1px solid var(--myColor);
@@ -662,8 +667,9 @@ button {
     display: flex;
     flex-direction: column-reverse;
     // padding: 1rem;
-    overflow-y: hidden;
-    height: 456px;
+    overflow-y: scroll;
+    height: 460px;
+    width: calc(100% + 17px);
 }
 .message-box {
     display: flex;
@@ -697,10 +703,57 @@ button {
     }
 }
 .message-send {
-    position: absolute;
+    // position: absolute;
     width: 100%;
-    height: calc(100% - 50px - 456px);
+    height: calc(100% - 50px - 460px);
     padding: 0 1rem 0 1rem;
+    // border: 1px solid red;
+    display: flex;
+}
+.message-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.message-send-input {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    input {
+        border: 1px solid var(--myColor);
+        // border-radius: var(--borderR);
+        border-radius: 100rem;
+        height: 80%;
+        width: 100%;
+        padding: 0 1.5rem 0 1.5rem;
+        font-size: 16px;
+        font-family: var(--fontComfor);
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: var(--myColor);
+        }
+    }
+}
+.message-send-btn {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    img {
+        width: 70%;
+    }
 }
 .sent {
     width: auto;
