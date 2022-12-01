@@ -5,7 +5,9 @@ const MessageDispatchContext = createContext()
 
 const messageReducer = (state, action) => {
     let usersCopy, userIndex
+
     const { username, message, messages } = action.payload
+
     switch (action.type) {
         case 'SET_USERS':
             return {

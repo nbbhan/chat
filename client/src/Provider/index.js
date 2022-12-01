@@ -14,7 +14,7 @@ function Provider({ children }) {
 
     const [logout, setLogout] = useState('disable')
 
-    const [un, setUn] = useState('')
+    const [chatbox, setChatbox] = useState('hide')
 
     // Handle
     const handleChange = () => {
@@ -38,13 +38,13 @@ function Provider({ children }) {
         chatshow,
         login,
         logout,
-        un,
+        chatbox,
         handleChange,
         handleChangeWidth,
         handleChatshow,
         setLogin,
         setLogout,
-        setUn,
+        setChatbox,
     }
 
     return <Data.Provider value={value}>{children}</Data.Provider>
