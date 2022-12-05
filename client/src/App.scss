@@ -980,10 +980,6 @@ button {
     &:hover {
         cursor: pointer;
         color: var(--cha);
-
-        .prefectures-container-box {
-            border: 1px solid rgb(0, 119, 255);
-        }
     }
 }
 .prefectures-container-box {

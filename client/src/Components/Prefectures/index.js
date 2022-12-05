@@ -36,17 +36,13 @@ function Prefectures() {
                 </div>
 
                 <div className="prefectures-container-items">
-                    <div style={{ marginLeft: '0' }} className="prefectures-container-item">
-                        北海道・東北
-                    </div>
+                    <div className="prefectures-container-item">北海道・東北</div>
                     <div className="prefectures-container-item">関東</div>
                     <div className="prefectures-container-item">中部</div>
                     <div className="prefectures-container-item">近畿</div>
                     <div className="prefectures-container-item">中国</div>
                     <div className="prefectures-container-item">四国</div>
-                    <div style={{ marginRight: '0' }} className="prefectures-container-item">
-                        九州
-                    </div>
+                    <div className="prefectures-container-item">九州</div>
                 </div>
 
                 <div className="prefectures-container-box">aaaaaaaaaaaaaa</div>
