@@ -6,8 +6,16 @@ import aki from '../../Imgs/aki.jpg'
 import fuji from '../../Imgs/fuji.jpg'
 import kinkakuji from '../../Imgs/kinkakuji.jpg'
 
+import Main from './Main'
+
 function Prefectures() {
     const myData = useContext(Data)
+
+    const handleSelectValue = (e) => {
+        myData.handleSelect(e.target.value)
+    }
+
+    useEffect(() => {}, [myData.select])
 
     return (
         <div className="prefectures">
@@ -27,25 +35,47 @@ function Prefectures() {
                     <div>そういった特産品を</div>
                     <div>皆様のもとへお届けいたします</div>
                 </div>
-                <div className="prefectures-item">どうぞ下記よりご照覧ください</div>
+                <div className="prefectures-item">どうぞ下記よりご照覧ください。</div>
             </div>
 
             <div className="prefectures-container">
-                <div className="prefectures-container-img">
-                    <img src={aki} />
+                <div className="prefectures-container-left">
+                    {/* {myData.select} */}
+
+                    <img src={kinkakuji} />
                 </div>
 
-                <div className="prefectures-container-items">
-                    <div className="prefectures-container-item">北海道・東北</div>
-                    <div className="prefectures-container-item">関東</div>
-                    <div className="prefectures-container-item">中部</div>
-                    <div className="prefectures-container-item">近畿</div>
-                    <div className="prefectures-container-item">中国</div>
-                    <div className="prefectures-container-item">四国</div>
-                    <div className="prefectures-container-item">九州</div>
-                </div>
+                <div className="prefectures-container-right">
+                    <div className="prefectures-container-right-select">
+                        <div className="prefectures-container-right-select-L">
+                            <select
+                                onChange={(e) => {
+                                    handleSelectValue(e)
+                                }}
+                            >
+                                {myData.region.map((item, index) => {
+                                    return (
+                                        <option value={item} key={index}>
+                                            {item}
+                                        </option>
+                                    )
+                                })}
+                            </select>
+                        </div>
 
-                <div className="prefectures-container-box">aaaaaaaaaaaaaa</div>
+                        <div className="prefectures-container-right-select-R">{myData.select}</div>
+
+                        <div className="prefectures-container-right-select-line">
+                            <div className="prefectures-container-right-select-line-main"></div>
+                        </div>
+                    </div>
+
+                    <div className="prefectures-container-right-main">
+                        <Main />
+                    </div>
+
+                    <div className="prefectures-container-right-line"></div>
+                </div>
             </div>
         </div>
     )

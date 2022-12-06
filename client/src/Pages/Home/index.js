@@ -41,7 +41,7 @@ function Home() {
 
             <div className="home">
                 <div
-                    className="home-container" //
+                    className="home-container"
                     style={{ left: `${myData.width}px`, width: `calc(100% - ${myData.width}px)` }}
                 >
                     <div className="home-container-item">
