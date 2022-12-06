@@ -281,7 +281,7 @@ button {
 }
 .home-container-item-last {
     width: 100%;
-    height: 200px;
+    height: 1000px;
     background: white;
     // box-shadow: var(--boxS);
     // border-radius: var(--borderR);
@@ -920,11 +920,17 @@ button {
     width: 100%;
 }
 .prefectures-items {
-    width: 600px;
+    width: 100%;
     font-family: var(--fontZen);
-    margin: 0 auto;
-    // transform: translateX(-40px);
     margin-bottom: 7rem;
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prefectures-items-container {
+    width: 400px;
+    transform: translateX(0.5rem);
 }
 .prefectures-item {
     line-height: 35px;
@@ -936,7 +942,7 @@ button {
     color: var(--cha);
 }
 .prefectures-container {
-    width: 86%;
+    width: 76%;
     min-height: 550px;
     margin: 0 auto;
     display: flex;
@@ -956,16 +962,6 @@ button {
 .prefectures-container-right {
     flex: 1;
     padding: 0 2rem 0 0;
-    position: relative;
-}
-.prefectures-container-right-line {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    border-radius: 100rem;
-    background: var(--cha);
 }
 .prefectures-container-right-select {
     width: 100%;
@@ -984,6 +980,8 @@ button {
         border: none;
         outline: none;
         font-size: 16px;
+        font-weight: 400;
+        font-family: var(--fontZen);
     }
 }
 .prefectures-container-right-select-R {
@@ -1018,15 +1016,44 @@ button {
 }
 .prefectures-container-right-main-item {
     border-bottom: 1px solid var(--cha);
-    width: 70%;
     height: 70px;
     display: flex;
     align-items: center;
-    padding-left: 0.5rem;
+    justify-content: space-between;
+    padding: 0 0.5rem 0 0.5rem;
+    position: relative;
+    overflow: hidden;
 
     &:hover {
         cursor: pointer;
+
+        .prefectures-container-right-main-item-content {
+            opacity: 0;
+        }
+
+        .prefectures-container-right-main-item-hover {
+            transform: translateX(0);
+        }
     }
+
+    img {
+        width: 30px;
+    }
+}
+.prefectures-container-right-main-item-content {
+    transition: all 0.3s ease-in;
+}
+.prefectures-container-right-main-item-hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 // --------------------------------------------
 .menu-trigger,

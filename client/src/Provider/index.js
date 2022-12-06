@@ -4,11 +4,11 @@ export const Data = createContext()
 
 function Provider({ children }) {
     // Arrays
-    const region = ['北海道・東北', '関東', '中部', '近畿', '中国', '四国', '九州']
+    const region = ['北海道・東北', '関東', '中部', '近畿', '中国', '四国', '九州']
 
     const prefect = [
         {
-            name: '北海道・東北',
+            name: '北海道・東北',
             arr: ['北海道', '青森県', '岩手県', '秋田県', '宮城県', '山形県', '福島県'],
         },
         {
@@ -50,7 +50,7 @@ function Provider({ children }) {
 
     const [chatbox, setChatbox] = useState('hide')
 
-    const [select, setSelect] = useState('北海道・東北')
+    const [select, setSelect] = useState('北海道・東北')
 
     // Handle
     const handleChange = () => {

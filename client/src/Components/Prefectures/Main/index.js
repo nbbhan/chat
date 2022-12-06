@@ -1,52 +1,55 @@
 import { useContext, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 
 import { Data } from '~/Provider'
+
+import transit from '~/Imgs/transit.png'
 
 function Main() {
     const myData = useContext(Data)
 
     const handleTransition = (e) => {
         let path = e.target.innerHTML
-
-        let url
-
-        let link
-
-        switch (path) {
-            case '北海道・東北':
-                url = 'tohoku'
-
-                link = <Link to={`/${url}`} />
-                break
-            case '関東':
-                url = 'kanto'
-
-                link = <Link to={`/${url}`} />
-                break
-
-            default:
-                break
-        }
     }
 
     useEffect(() => {}, [myData.select])
 
     return (
-        <>
+        <div className="prefectures-container-right-main">
             {myData.prefect.map((item) => {
                 switch (myData.select) {
                     case item.name:
                         const html = item.arr.map((item, index) => {
-                            return (
-                                <div
-                                    className="prefectures-container-right-main-item"
-                                    key={index}
-                                    onClick={(e) => handleTransition(e)}
-                                >
-                                    {item}
-                                </div>
-                            )
+                            if (index % 2 == 0) {
+                                return (
+                                    <div
+                                        className="prefectures-container-right-main-item"
+                                        style={{ width: '90%' }}
+                                        key={index}
+                                        onClick={(e) => handleTransition(e)}
+                                    >
+                                        <div className="prefectures-container-right-main-item-content">{item}</div>
+
+                                        <div className="prefectures-container-right-main-item-hover">
+                                            <img src={transit} />
+                                        </div>
+                                    </div>
+                                )
+                            } else {
+                                return (
+                                    <div
+                                        className="prefectures-container-right-main-item"
+                                        style={{ width: '100%' }}
+                                        key={index}
+                                        onClick={(e) => handleTransition(e)}
+                                    >
+                                        <div className="prefectures-container-right-main-item-content">{item}</div>
+
+                                        <div className="prefectures-container-right-main-item-hover">
+                                            <img src={transit} />
+                                        </div>
+                                    </div>
+                                )
+                            }
                         })
 
                         return html
@@ -54,7 +57,7 @@ function Main() {
                         break
                 }
             })}
-        </>
+        </div>
     )
 }
 
