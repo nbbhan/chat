@@ -6,7 +6,7 @@ import four from '~/Imgs/4.png'
 function ImgContainer() {
     return (
         <div className="img-container">
-            <img src={four} />
+            <img src={first} />
         </div>
     )
 }

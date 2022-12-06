@@ -19,6 +19,8 @@ function Items() {
                 </div>
                 <div className="prefectures-item">どうぞ下記よりご照覧ください。</div>
             </div>
+
+            <div className="prefectures-items-background">{/* <img /> */}</div>
         </div>
     )
 }
