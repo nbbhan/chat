@@ -35,15 +35,8 @@ function Home() {
         <>
             <Explore />
 
-            {/* <div className='background'>
-                <img src={itemBack}/>
-            </div> */}
-
-            <div className="home">
-                <div
-                    className="home-container"
-                    style={{ left: `${myData.width}px`, width: `calc(100% - ${myData.width}px)` }}
-                >
+            <div className="home" style={{ left: `${myData.width}px`, width: `calc(100% - ${myData.width}px)` }}>
+                <div className="home-container">
                     <div className="home-container-item">
                         <div className="home-container-item-left">
                             <div className="home-container-item-left-title">QOKS</div>

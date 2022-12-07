@@ -8,7 +8,11 @@ function Main() {
     const myData = useContext(Data)
 
     const handleTransition = (e) => {
-        let path = e.target.innerHTML
+        let log
+
+        e.target.nodeName === 'IMG' ? (log = e.target.offsetParent) : (log = e.target)
+
+        console.log(log)
     }
 
     useEffect(() => {}, [myData.select])
@@ -25,11 +29,13 @@ function Main() {
                                         className="prefectures-container-right-main-item"
                                         style={{ width: '90%' }}
                                         key={index}
-                                        onClick={(e) => handleTransition(e)}
                                     >
                                         <div className="prefectures-container-right-main-item-content">{item}</div>
 
-                                        <div className="prefectures-container-right-main-item-hover">
+                                        <div
+                                            className="prefectures-container-right-main-item-hover"
+                                            onClick={(e) => handleTransition(e)}
+                                        >
                                             <img src={transit} />
                                         </div>
                                     </div>
@@ -40,11 +46,13 @@ function Main() {
                                         className="prefectures-container-right-main-item"
                                         style={{ width: '100%' }}
                                         key={index}
-                                        onClick={(e) => handleTransition(e)}
                                     >
                                         <div className="prefectures-container-right-main-item-content">{item}</div>
 
-                                        <div className="prefectures-container-right-main-item-hover">
+                                        <div
+                                            className="prefectures-container-right-main-item-hover"
+                                            onClick={(e) => handleTransition(e)}
+                                        >
                                             <img src={transit} />
                                         </div>
                                     </div>

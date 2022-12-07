@@ -9,7 +9,8 @@
 .light {
 }
 .enable {
-    display: flex !important;
+    display: block !important;
+    width: 100%;
 }
 
 .disable {
@@ -42,7 +43,7 @@
     --primary: #fe2c55;
     --fontColor: black;
     --cha: #b88c5c;
-    --top: 65px;
+    --top: 0;
     --myColor: rgb(210, 210, 210);
     --borderR: 5px;
     --boxS: 3px 3px 7px rgb(150, 150, 150, 0.7);
@@ -53,6 +54,7 @@
 html {
     font-size: 62.5%;
     cursor: default;
+    background: var(--cha);
 }
 body {
     // font-family: 'Noto Sans JP', sans-serif;
@@ -101,7 +103,7 @@ button {
 // Nav
 .nav {
     width: 100%;
-    height: 65px;
+    height: 20px;
     position: fixed;
     top: 0;
     left: 0;
@@ -115,7 +117,7 @@ button {
 .nav-items {
     width: 100%;
     height: 100%;
-    background: rgb(255, 255, 255);
+    background: var(--cha);
     padding: 0 2rem 0 2rem;
     display: flex;
     align-items: center;
@@ -123,9 +125,9 @@ button {
     position: relative;
 }
 .nav-items-shadow {
-    background: linear-gradient(to bottom, transparent, #aaa);
+    // background: linear-gradient(to bottom, transparent, #aaa);
     opacity: 0.1;
-    width: calc(100% - 250px);
+    width: calc(100% - 300px);
     pointer-events: none;
     position: absolute;
     bottom: 0;
@@ -252,13 +254,15 @@ button {
     position: absolute;
     top: var(--top);
     width: 100%;
+    height: 100vh;
     z-index: 100;
     color: var(--fontColor);
     display: flex;
     justify-content: center;
     align-items: center;
-    // padding-top: 20px;
-    background: rgba(50, 50, 50, 0.4);
+    padding: 15px 15px 15px 0;
+    // background: rgba(50, 50, 50, 0.4);
+    background: var(--cha);
 
     a {
         text-decoration: underline !important;
@@ -267,8 +271,11 @@ button {
     }
 }
 .home-container {
-    position: absolute;
-    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: white;
+    overflow-x: scroll;
 }
 .home-container-item {
     width: 100%;
@@ -290,14 +297,6 @@ button {
     width: 50%;
     padding: 2rem 2rem 2rem 2rem;
     position: relative;
-}
-.home-container-item-left-background {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 .home-container-item-left-title {
     font-size: 10rem;
@@ -393,13 +392,21 @@ button {
 .login {
     position: absolute;
     top: var(--top);
-    left: 0;
+    left: 300px;
+    width: calc(100% - 300px);
+    height: 100vh;
+    padding: 15px;
+    overflow: hidden;
+}
+.login-main,
+.register-main {
     width: 100%;
-    height: calc(100vh - 65px);
+    height: 100%;
+    background: url('./Imgs/飛行機なし.png') center/cover no-repeat;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('./Imgs/飛行機なし.png') center/cover no-repeat;
 }
 .register-container,
 .login-container {
@@ -496,13 +503,13 @@ button {
     position: fixed;
     top: var(--top);
     left: 0;
-    height: calc(100vh - 65px);
-    background: rgb(255, 255, 255);
+    height: 100vh;
+    background: var(--cha);
     z-index: 101;
     overflow: hidden;
 }
 .explore::before {
-    background: linear-gradient(to right, transparent, #aaa);
+    // background: linear-gradient(to right, transparent, #aaa);
     content: '';
     height: 100%;
     opacity: 0.1;
@@ -516,18 +523,28 @@ button {
     position: absolute;
     top: 0;
     left: 0;
-    width: 250px;
+    width: 300px;
     height: 100%;
-}
-.explore-item {
     display: flex;
     align-items: center;
-    margin: 0 0 3rem 2rem;
+    justify-content: center;
+}
+.explore-items-main {
+    width: 100%;
+}
+.explore-item {
+    // display: flex;
+    // align-items: center;
+    text-align: center;
+    margin: 0 0 3rem 0;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
 
     img {
-        width: 25px;
-        height: 25px;
-        margin-right: 2.5rem;
+        width: 30px;
+        height: 30px;
+        // margin-right: 2.5rem;
     }
 
     &:hover {
@@ -535,11 +552,11 @@ button {
     }
 }
 .explore-line {
-    width: 100%;
+    width: 70%;
     height: calc(3rem + 2px);
-    border-top: 2px solid var(--myColor);
+    border-top: 3px solid var(--myColor);
     opacity: 0.2;
-    // margin: 0 auto;
+    margin: 0 auto;
 }
 .explore-disable {
     display: none;
@@ -957,7 +974,7 @@ button {
     color: var(--cha);
 }
 .prefectures-container {
-    width: 75%;
+    width: 100%;
     min-height: 550px;
     margin: 0 auto;
     display: flex;

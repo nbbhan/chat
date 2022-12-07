@@ -46,28 +46,33 @@ function Nav() {
                     ></div>
 
                     <div className="nav-items-container">
-                        <button className="menu-trigger" ref={triggerRef} onClick={() => handleTrigger()}>
+                        <button
+                            style={{ display: 'none' }}
+                            className="menu-trigger"
+                            ref={triggerRef}
+                            onClick={() => handleTrigger()}
+                        >
                             <span></span>
                             <span></span>
                             <span></span>
                         </button>
 
-                        <Link to="/">
+                        {/* <Link to="/">
                             <div className="nav-items-logo">
                                 <img src={logo} />
                             </div>
-                        </Link>
+                        </Link> */}
                     </div>
 
-                    <div className="nav-items-search">
+                    {/* <div className="nav-items-search">
                         <input type="text" placeholder="検索..." />
 
                         <div>
                             <img src={loupe} />
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className="nav-items-light">
+                    {/* <div className="nav-items-light">
                         <div
                             onClick={() => {
                                 handleChangeTheme()
@@ -75,7 +80,7 @@ function Nav() {
                         >
                             <img src={lightOff} />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

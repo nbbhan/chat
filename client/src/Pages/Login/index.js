@@ -52,51 +52,53 @@ function Login() {
             <Explore />
 
             <div className="login">
-                <div className="login-container">
-                    <div className="login-container-title">ログイン</div>
+                <div className="login-main">
+                    <div className="login-container">
+                        <div className="login-container-title">ログイン</div>
 
-                    <form onSubmit={(e) => handleSubmit(e)}>
-                        <div className="login-container-items">
-                            <div className="login-container-item">
-                                <label className={errors.username && 'text-danger'}>
-                                    {errors.username ?? 'ユーザー名'}
-                                </label>
-                                <br />
-                                <div>
-                                    <input
-                                        type="text"
-                                        className={errors.username && 'is-invalid'}
-                                        value={variables.username}
-                                        onChange={(e) => setVariables({ ...variables, username: e.target.value })}
-                                    />
+                        <form onSubmit={(e) => handleSubmit(e)}>
+                            <div className="login-container-items">
+                                <div className="login-container-item">
+                                    <label className={errors.username && 'text-danger'}>
+                                        {errors.username ?? 'ユーザー名'}
+                                    </label>
+                                    <br />
+                                    <div>
+                                        <input
+                                            type="text"
+                                            className={errors.username && 'is-invalid'}
+                                            value={variables.username}
+                                            onChange={(e) => setVariables({ ...variables, username: e.target.value })}
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="login-container-item">
+                                    <label className={errors.password && 'text-danger'}>
+                                        {errors.password ?? 'パスワード'}
+                                    </label>
+                                    <br />
+                                    <div>
+                                        <input
+                                            type="password"
+                                            className={errors.password && 'is-invalid'}
+                                            value={variables.password}
+                                            onChange={(e) => setVariables({ ...variables, password: e.target.value })}
+                                        />
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className="login-container-item">
-                                <label className={errors.password && 'text-danger'}>
-                                    {errors.password ?? 'パスワード'}
-                                </label>
-                                <br />
-                                <div>
-                                    <input
-                                        type="password"
-                                        className={errors.password && 'is-invalid'}
-                                        value={variables.password}
-                                        onChange={(e) => setVariables({ ...variables, password: e.target.value })}
-                                    />
-                                </div>
+                            <div className="login-btn">
+                                <button type="submit">ログイン</button>
                             </div>
-                        </div>
+                        </form>
 
-                        <div className="login-btn">
-                            <button type="submit">ログイン</button>
+                        <div className="login-link">
+                            <span>
+                                <Link to="/register">まだアカウントをお持ちでない方</Link>
+                            </span>
                         </div>
-                    </form>
-
-                    <div className="login-link">
-                        <span>
-                            <Link to="/register">まだアカウントをお持ちでない方</Link>
-                        </span>
                     </div>
                 </div>
             </div>

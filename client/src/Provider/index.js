@@ -40,7 +40,7 @@ function Provider({ children }) {
     // Usestated
     const [theme, setTheme] = useState('light')
 
-    const [width, setWidth] = useState(65)
+    const [width, setWidth] = useState(300)
 
     const [chatshow, setChatshow] = useState('none')
 
@@ -60,7 +60,7 @@ function Provider({ children }) {
     }
 
     const handleChangeWidth = () => {
-        setWidth(width === 65 ? 250 : 65)
+        setWidth(width === 0 ? 300 : 0)
     }
 
     const handleChatshow = () => {

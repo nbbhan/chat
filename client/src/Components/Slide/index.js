@@ -82,7 +82,7 @@ function Slide(props) {
                                             <span>{item.info}</span>
                                         </div>
 
-                                        <div className="slide-container-item-price">{`￥${item.price}`}</div>
+                                        <div className="slide-container-item-price">{`${item.price}円（税込）`}</div>
 
                                         <div className="slide-container-item-rating">{`${item.rating}`}</div>
                                     </div>
