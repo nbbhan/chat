@@ -44,9 +44,9 @@ function Provider({ children }) {
 
     const [chatshow, setChatshow] = useState('none')
 
-    const [login, setLogin] = useState('enable')
+    const [login, setLogin] = useState('disable')
 
-    const [logout, setLogout] = useState('disable')
+    const [logout, setLogout] = useState('enable')
 
     const [chatbox, setChatbox] = useState('hide')
 

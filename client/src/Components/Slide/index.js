@@ -52,7 +52,7 @@ function Slide(props) {
                 <div
                     className="slide-container-main"
                     style={{
-                        width: `${length * 570 - 210}px`,
+                        width: `${length * 500 - 210}px`,
                     }}
                 >
                     {props.arr &&
@@ -69,6 +69,8 @@ function Slide(props) {
                                         </div>
 
                                         <div className="slide-container-item-price">{`￥${item.price}`}</div>
+
+                                        <div className="slide-container-item-rating">{`${item.rating}`}</div>
                                     </div>
                                 )
                             } else {
