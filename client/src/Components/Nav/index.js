@@ -35,7 +35,7 @@ function Nav() {
     }, [trigger])
 
     return (
-        <div className={`nav`}>
+        <div className={`nav`} onClick={() => handleTrigger()}>
             <div className="nav-container">
                 <div className={`nav-items ${storage}`}>
                     <div
@@ -46,7 +46,7 @@ function Nav() {
                     ></div>
 
                     <div className="nav-items-container">
-                        <button className="menu-trigger" ref={triggerRef} onClick={() => handleTrigger()}>
+                        <button className="menu-trigger" ref={triggerRef}>
                             <span></span>
                             <span></span>
                             <span></span>
