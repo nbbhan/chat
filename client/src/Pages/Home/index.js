@@ -35,7 +35,7 @@ function Home() {
         <>
             <Explore />
 
-            <div className="home" style={{ left: `${myData.width}px`, width: `calc(100% - ${myData.width}px)` }}>
+            <div className="home">
                 <div className="home-container">
                     <div className="home-container-items">
                         <div className="home-container-item" style={{ height: '100%' }}>

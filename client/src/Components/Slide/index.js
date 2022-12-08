@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 
 import BtnLR from '../BtnLR'
+import love from '~/Imgs/love.png'
+import cart from '~/Imgs/cart.png'
 
 function Slide(props) {
     let length = 15
@@ -61,23 +63,7 @@ function Slide(props) {
                                 return (
                                     <div className="slide-container-item" key={index} style={{ marginRight: '0' }}>
                                         <div className="slide-container-item-img">
-                                            <img src={item.imgUrl} />
-                                        </div>
-
-                                        <div className="slide-container-item-info">
-                                            <span>{item.info}</span>
-                                        </div>
-
-                                        <div className="slide-container-item-price">{`￥${item.price}`}</div>
-
-                                        <div className="slide-container-item-rating">{`${item.rating}`}</div>
-                                    </div>
-                                )
-                            } else {
-                                return (
-                                    <div className="slide-container-item" key={index}>
-                                        <div className="slide-container-item-img">
-                                            <img src={item.imgUrl} />
+                                            <img id="slide-img" src={item.imgUrl} />
                                         </div>
 
                                         <div className="slide-container-item-info">
@@ -87,6 +73,46 @@ function Slide(props) {
                                         <div className="slide-container-item-price">{`${item.price}円（税込）`}</div>
 
                                         <div className="slide-container-item-rating">{`${item.rating}`}</div>
+
+                                        <div className="slide-container-item-btnContainer">
+                                            <div className="slide-container-item-btnContainer-love">
+                                                <img src={love} />
+                                            </div>
+
+                                            <div className="slide-container-item-btnContainer-sen"></div>
+
+                                            <div className="slide-container-item-btnContainer-cart">
+                                                <img src={cart} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            } else {
+                                return (
+                                    <div className="slide-container-item" key={index}>
+                                        <div className="slide-container-item-img">
+                                            <img id="slide-img" src={item.imgUrl} />
+                                        </div>
+
+                                        <div className="slide-container-item-info">
+                                            <span>{item.info}</span>
+                                        </div>
+
+                                        <div className="slide-container-item-price">{`${item.price}円（税込）`}</div>
+
+                                        <div className="slide-container-item-rating">{`${item.rating}`}</div>
+
+                                        <div className="slide-container-item-btnContainer">
+                                            <div className="slide-container-item-btnContainer-love">
+                                                <img src={love} />
+                                            </div>
+
+                                            <div className="slide-container-item-btnContainer-sen"></div>
+
+                                            <div className="slide-container-item-btnContainer-cart">
+                                                <img src={cart} />
+                                            </div>
+                                        </div>
                                     </div>
                                 )
                             }

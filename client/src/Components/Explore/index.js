@@ -33,24 +33,15 @@ function Explore() {
     }
 
     return (
-        <div className="explore" style={{ width: `${myData.width}px` }}>
+        // <div className="explore" style={{ width: `${myData.width}px` }}>
+        <div className="explore">
             <div className="explore-items">
                 <div className="explore-items-main">
                     <Link to="/">
                         <div className="explore-item">
-                            <img src={logoW} style={{ width: '100px', height: '100px' }} />
-
-                            {/* <div>QOKS</div> */}
+                            <img src={logoW} style={{ width: '80px', height: '80px' }} />
                         </div>
                     </Link>
-
-                    {/* <Link to="/">
-                        <div className="explore-item">
-                            <img src={home} />
-
-                            <div>ホーム</div>
-                        </div>
-                    </Link> */}
 
                     <div className="explore-item">
                         <img src={cart} />

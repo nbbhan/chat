@@ -2,9 +2,7 @@ import { useContext, useEffect, useState } from 'react'
 
 import { Data } from '../../Provider'
 
-import aki from '../../Imgs/aki.jpg'
-import fuji from '../../Imgs/fuji.jpg'
-import kinkakuji from '../../Imgs/kinkakuji.jpg'
+import prefectures1 from '../../Imgs/prefectures-1.png'
 
 import Items from './Items'
 import Main from './Main'
@@ -26,7 +24,7 @@ function Prefectures() {
                 <div className="prefectures-container-left">
                     {/* {myData.select} */}
 
-                    <img src={kinkakuji} />
+                    <img src={prefectures1} />
                 </div>
 
                 <div className="prefectures-container-right">

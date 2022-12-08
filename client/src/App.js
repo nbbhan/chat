@@ -7,6 +7,7 @@ import Login from './Pages/Login'
 import Register from './Pages/Register'
 import Nav from './Components/Nav'
 import Chatbox from './Components/Chatbox'
+import NavContainer from './Components/NavContainer'
 
 import { Data } from './Provider'
 
@@ -27,7 +28,9 @@ function App() {
 
     return (
         <div className="App">
-            {/* <Nav /> */}
+            <Nav />
+
+            <NavContainer />
 
             <Chatbox />
 

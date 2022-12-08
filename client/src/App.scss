@@ -46,7 +46,7 @@
     --top: 0;
     --myColor: rgb(210, 210, 210);
     --borderR: 5px;
-    --boxS: 3px 3px 7px rgb(150, 150, 150, 0.7);
+    --boxS: 3px 3px 7px rgb(210, 210, 210, 0.5);
     --fontComfor: 'Comfortaa', cursive;
     --fontZen: 'Zen Maru Gothic', sans-serif;
     --opa: 1;
@@ -102,12 +102,14 @@ button {
 
 // Nav
 .nav {
-    width: 100%;
-    height: 20px;
+    width: 60px;
+    height: 60px;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 102;
+    border-radius: var(--borderR);
+    overflow: hidden;
     // box-shadow: var(--boxS);
 }
 .nav-container {
@@ -121,7 +123,7 @@ button {
     padding: 0 2rem 0 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
 }
 .nav-items-shadow {
@@ -249,11 +251,61 @@ button {
     }
 }
 
+// NavContainer
+.navContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    z-index: 101;
+    padding: 15px 15px 15px 0;
+    transition: all 0.3s ease-in-out;
+    animation: linear 0.3s forwards;
+}
+.navContainer-main {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: #5c88b8;
+}
+@keyframes closeNav {
+    0% {
+        width: 300px;
+        height: 100vh;
+    }
+
+    50% {
+        width: 300px;
+        height: calc(300px + 15px);
+    }
+    100% {
+        width: 0;
+        height: 0;
+    }
+}
+
+@keyframes openNav {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    50% {
+        width: 300px;
+        height: calc(300px + 15px);
+    }
+    100% {
+        width: 300px;
+        height: 100vh;
+    }
+}
 // Home
 .home {
     position: absolute;
+    left: 300px;
     top: var(--top);
-    width: 100%;
+    width: calc(100% - 300px);
     height: 100vh;
     z-index: 100;
     color: var(--fontColor);
@@ -293,7 +345,7 @@ button {
 }
 .home-container-item-last {
     width: 100%;
-    height: 01px;
+    height: 200px;
     background: white;
     // box-shadow: var(--boxS);
     // border-radius: var(--borderR);
@@ -315,19 +367,19 @@ button {
     text-align: center;
 }
 .home-container-item-left-contents {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 60px;
     font-family: var(--fontZen);
 }
 .home-container-item-left-btn {
     display: flex;
     justify-content: center;
-    margin-top: 10rem;
+    margin-top: 15rem;
     // border: 1px solid red;
 }
 .home-container-item-left-btn-text {
     position: relative;
-    font-size: 22px;
+    font-size: 2.5rem;
     padding: 0 0 1rem 0;
     // border: 1px solid red;
     transition: all 0.3s ease-in-out;
@@ -361,7 +413,7 @@ button {
 .home-container-item-left-btn-img {
     position: absolute;
     bottom: 0;
-    left: -70%;
+    left: -60%;
     width: 70px;
     height: 70px;
 
@@ -520,6 +572,7 @@ button {
     top: var(--top);
     left: 0;
     height: 100vh;
+    width: 300px;
     background: var(--cha);
     z-index: 101;
     overflow: hidden;
@@ -835,14 +888,14 @@ button {
     }
 }
 .slide-title-left {
-    font-size: 3rem;
+    font-size: 2.5rem;
     display: flex;
     align-items: center;
     letter-spacing: 5px;
     margin-left: 1.5rem;
 }
 .slide-title-right {
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: flex;
     align-items: flex-end;
     opacity: 0.5;
@@ -860,12 +913,13 @@ button {
     // border: 1px solid var(--cha);
     border-radius: var(--borderR);
     transition: all 0.3s ease-in-out;
+    position: relative;
 
     &:hover {
         cursor: pointer;
         box-shadow: 0 3px 10px 3px var(--myColor);
 
-        img {
+        #slide-img {
             transform: scale(0.98);
             width: 100%;
             height: 100%;
@@ -875,6 +929,10 @@ button {
             span {
                 color: var(--cha);
             }
+        }
+
+        .slide-container-item-btnContainer {
+            transform: translateY(0%);
         }
     }
 }
@@ -889,8 +947,50 @@ button {
         height: 100%;
         border-radius: var(--borderR);
         object-fit: cover;
-        transition: all 0.3s ease;
+        transition: all 0.3s ease-in-out;
     }
+}
+.slide-container-item-btnContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 101px;
+    height: 50px;
+    padding: 1rem 1rem 0 0;
+    // box-shadow: var(--boxS);
+    background: white;
+    border-radius: var(--borderR);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    transform: translateY(-150%);
+}
+.slide-container-item-btnContainer-love {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+.slide-container-item-btnContainer-cart {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+.slide-container-item-btnContainer-sen {
+    width: 1px;
+    height: 50%;
+    background: var(--myColor);
 }
 .slide-container-item-info {
     // font-weight: 500;
@@ -963,7 +1063,7 @@ button {
 .prefectures-items {
     width: 100%;
     font-family: var(--fontZen);
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
     // border: 1px solid red;
     display: flex;
     align-items: center;
@@ -972,7 +1072,6 @@ button {
 }
 .prefectures-items-container {
     width: 400px;
-    transform: translateX(0.5rem);
 }
 .prefectures-items-background {
     position: absolute;
@@ -981,12 +1080,34 @@ button {
     width: 100%;
     height: 100%;
     // border: 1px solid red;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+}
+#small-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    transform: translate(50%, 100%);
+}
+#small-2 {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    height: 150px;
+    transform: rotate(15deg);
+}
+#small-3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 150px;
+    transform: translate(-200%, 150%);
+}
+#small-4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    transform: translate(200%, 0);
 }
 .prefectures-item {
     line-height: 35px;
@@ -999,7 +1120,6 @@ button {
 }
 .prefectures-container {
     width: 100%;
-    min-height: 450px;
     margin: 0 auto;
     display: flex;
 }
@@ -1043,7 +1163,7 @@ button {
 .prefectures-container-right-select-R {
     width: 80%;
     height: 100%;
-    font-size: 30px;
+    font-size: 2.5rem;
     font-weight: 400;
     color: var(--cha);
     display: flex;
@@ -1132,7 +1252,7 @@ button {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: white;
     border-radius: 100rem;
 }
 .menu-trigger span:nth-of-type(1) {
