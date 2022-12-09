@@ -43,7 +43,7 @@ function Prefectures() {
 
             <div className="prefectures-container">
                 <div className="prefectures-container-left">
-                    <img src={imgArr[x]} />
+                    <img src={imgArr[x]} style={{ animationName: 'fadein' }} />
                 </div>
 
                 <div className="prefectures-container-right">

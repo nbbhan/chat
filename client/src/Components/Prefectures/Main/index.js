@@ -59,7 +59,6 @@ function Main() {
                                 )
                             }
                         })
-
                         return html
                     default:
                         break

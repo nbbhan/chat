@@ -39,7 +39,7 @@ function Home() {
                 <div className="home-container">
                     <div className="home-container-items">
                         <div className="home-container-item" style={{ height: '100%' }}>
-                            <div className="home-container-item-left">
+                            {/* <div className="home-container-item-left">
                                 <div className="home-container-item-left-title">QOKS</div>
 
                                 <div className="home-container-item-left-contents">
@@ -60,11 +60,7 @@ function Home() {
                                         </div>
                                     </div>
                                 </div>
-
-                                {/* <div className="home-container-item-left-background">
-                                    <img src={homeleft} />
-                                </div> */}
-                            </div>
+                            </div> */}
 
                             <div className="home-container-item-right">
                                 <ImgContainer />

@@ -260,7 +260,7 @@ button {
     position: fixed;
     top: 0;
     right: 0;
-    width: 300px;
+    width: 400px;
     height: 100vh;
     z-index: 101;
     padding: 15px 15px 15px 0;
@@ -275,13 +275,13 @@ button {
 }
 @keyframes closeNav {
     0% {
-        width: 300px;
+        width: 400px;
         height: 100vh;
     }
 
     50% {
-        width: 300px;
-        height: calc(300px + 15px);
+        width: 400px;
+        height: calc(400px + 15px);
     }
     100% {
         width: 0;
@@ -296,11 +296,11 @@ button {
     }
 
     50% {
-        width: 300px;
-        height: calc(300px + 15px);
+        width: 400px;
+        height: calc(400px + 15px);
     }
     100% {
-        width: 300px;
+        width: 400px;
         height: 100vh;
     }
 }
@@ -333,7 +333,7 @@ button {
     overflow: hidden;
 }
 .home-container-items {
-    width: calc(100% + 17px);
+    // width: calc(100% + 17px);
     height: 100%;
     background: white;
     overflow-x: hidden;
@@ -442,7 +442,7 @@ button {
     }
 }
 .home-container-item-right {
-    width: 50%;
+    width: 100%;
     height: 100%;
     padding: 2rem 2rem 2rem 2rem;
 }
@@ -1129,14 +1129,27 @@ button {
 }
 .prefectures-container-left {
     border-right: none;
+    min-height: 506px;
     width: 440px;
     padding: 0 3rem 0 2rem;
+    overflow: hidden;
 
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: var(--borderR);
+        animation: alternate 1s forwards;
+        transform: translateY(100%);
+    }
+}
+@keyframes fadein {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }
 .prefectures-container-right {
