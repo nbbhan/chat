@@ -44,13 +44,17 @@ function Provider({ children }) {
 
     const [chatshow, setChatshow] = useState('none')
 
-    const [login, setLogin] = useState('disable')
+    const [login, setLogin] = useState('enable')
 
-    const [logout, setLogout] = useState('enable')
+    const [logout, setLogout] = useState('disable')
 
     const [chatbox, setChatbox] = useState('hide')
 
     const [select, setSelect] = useState('北海道・東北')
+
+    const [ani, setAni] = useState('fadein1')
+
+    const [nav, setNav] = useState('off')
 
     // Handle
     const handleChange = () => {
@@ -71,6 +75,14 @@ function Provider({ children }) {
         setSelect(value)
     }
 
+    const handleAni = () => {
+        setAni(ani === 'fadein1' ? 'fadein2' : 'fadein1')
+    }
+
+    const handleNav = () => {
+        setNav(nav === 'off' ? 'on' : 'off')
+    }
+
     // Provider value
     const value = {
         // Array
@@ -85,6 +97,8 @@ function Provider({ children }) {
         logout,
         chatbox,
         select,
+        ani,
+        nav,
 
         // Set State
         setLogin,
@@ -96,6 +110,8 @@ function Provider({ children }) {
         handleChangeWidth,
         handleChatshow,
         handleSelect,
+        handleAni,
+        handleNav,
     }
 
     return <Data.Provider value={value}>{children}</Data.Provider>

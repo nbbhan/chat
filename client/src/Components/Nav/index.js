@@ -28,6 +28,8 @@ function Nav() {
         setTrigger(!trigger)
 
         myData.handleChangeWidth()
+
+        myData.handleNav()
     }
 
     useEffect(() => {

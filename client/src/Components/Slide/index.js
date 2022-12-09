@@ -47,7 +47,10 @@ function Slide(props) {
                     {props.name}
                 </div>
 
-                <div className="slide-title-right">もっと見る</div>
+                <div className="slide-title-right">
+                    もっと見る
+                    <div className="underline"></div>
+                </div>
             </div>
 
             <div className="slide-container">

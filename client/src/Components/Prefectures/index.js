@@ -4,6 +4,9 @@ import { Data } from '~/Provider'
 
 import prefectures1 from '~/Imgs/prefectures-1.png'
 import prefectures2 from '~/Imgs/prefectures-2.png'
+import prefectures3 from '~/Imgs/prefectures-3.png'
+import prefectures4 from '~/Imgs/prefectures-4.png'
+import prefectures5 from '~/Imgs/prefectures-5.png'
 
 import Items from './Items'
 import Main from './Main'
@@ -14,24 +17,39 @@ function Prefectures() {
     let x
 
     const imgArr = [
-        // 北海道
+        // 日本
         prefectures1,
         // 四国
         prefectures2,
+        //　北海道
+        prefectures3,
+        // 中国
+        prefectures4,
+        // 九州
+        prefectures5,
     ]
 
     const handleSelectValue = (e) => {
         myData.handleSelect(e.target.value)
+
+        myData.handleAni()
     }
 
     switch (myData.select) {
-        case '北海道・東北':
-            x = 0
-            break
         case '四国':
             x = 1
             break
+        case '北海道・東北':
+            x = 2
+            break
+        case '中国':
+            x = 3
+            break
+        case '九州':
+            x = 4
+            break
         default:
+            x = 0
             break
     }
 
@@ -43,7 +61,7 @@ function Prefectures() {
 
             <div className="prefectures-container">
                 <div className="prefectures-container-left">
-                    <img src={imgArr[x]} style={{ animationName: 'fadein' }} />
+                    <img src={imgArr[x]} style={{ animationName: `${myData.ani}` }} />
                 </div>
 
                 <div className="prefectures-container-right">

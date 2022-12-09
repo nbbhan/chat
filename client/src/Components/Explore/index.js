@@ -14,6 +14,7 @@ import addUser from '~/Imgs/addUser.png'
 import user from '~/Imgs/user.png'
 import heart from '~/Imgs/heart.png'
 import logoW from '~/Imgs/logoW.png'
+import start from '../../Imgs/start.png'
 
 import { Data } from '~/Provider'
 import { useAuthDispatch } from '~/context/auth'
@@ -44,21 +45,36 @@ function Explore() {
                     </Link>
 
                     <div className="explore-item">
-                        <img src={cart} />
+                        <div style={{ textAlign: 'center' }}>
+                            <img src={cart} />
 
-                        <div>カート</div>
+                            <div className="explore-item-text">
+                                カート
+                                <div className="underline" style={{ background: 'white' }}></div>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="explore-item">
-                        <img src={token} />
+                        <div style={{ textAlign: 'center' }}>
+                            <img src={token} />
 
-                        <div>ポイント</div>
+                            <div className="explore-item-text">
+                                ポイント
+                                <div className="underline" style={{ background: 'white' }}></div>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="explore-item">
-                        <img src={heart} />
+                        <div style={{ textAlign: 'center' }}>
+                            <img src={heart} />
 
-                        <div>お気に入り</div>
+                            <div className="explore-item-text">
+                                お気に入り
+                                <div className="underline" style={{ background: 'white' }}></div>
+                            </div>
+                        </div>
                     </div>
 
                     {/* <div className="explore-item" onClick={() => handleChat()}>
@@ -71,30 +87,50 @@ function Explore() {
 
                     <Link to="/login">
                         <div className={`explore-item ${myData.login}`}>
-                            <img src={login} />
+                            <div style={{ textAlign: 'center' }}>
+                                <img src={login} />
 
-                            <div>ログイン</div>
+                                <div className="explore-item-text">
+                                    ログイン
+                                    <div className="underline" style={{ background: 'white' }}></div>
+                                </div>
+                            </div>
                         </div>
                     </Link>
 
                     <Link to="/register">
                         <div className={`explore-item ${myData.login}`}>
-                            <img src={addUser} />
+                            <div style={{ textAlign: 'center' }}>
+                                <img src={addUser} />
 
-                            <div>新規登録</div>
+                                <div className="explore-item-text">
+                                    新規登録
+                                    <div className="underline" style={{ background: 'white' }}></div>
+                                </div>
+                            </div>
                         </div>
                     </Link>
 
                     <div className={`explore-item ${myData.logout}`}>
-                        <img src={user} />
+                        <div style={{ textAlign: 'center' }}>
+                            <img src={user} />
 
-                        <div>プロフィール</div>
+                            <div className="explore-item-text">
+                                プロフィール
+                                <div className="underline" style={{ background: 'white' }}></div>
+                            </div>
+                        </div>
                     </div>
 
                     <div className={`explore-item ${myData.logout}`} onClick={() => handleLogout()}>
-                        <img src={logout} />
+                        <div style={{ textAlign: 'center' }}>
+                            <img src={logout} />
 
-                        <div>ログアウト</div>
+                            <div className="explore-item-text">
+                                ログアウト
+                                <div className="underline" style={{ background: 'white' }}></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

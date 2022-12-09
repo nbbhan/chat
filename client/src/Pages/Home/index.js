@@ -62,7 +62,7 @@ function Home() {
                                 </div>
                             </div> */}
 
-                            <div className="home-container-item-right">
+                            <div className="home-container-item-img">
                                 <ImgContainer />
                             </div>
                         </div>
