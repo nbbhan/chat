@@ -44,38 +44,44 @@ function Explore() {
                         </div>
                     </Link>
 
-                    <div className="explore-item">
-                        <div style={{ textAlign: 'center' }}>
-                            <img src={cart} />
+                    <Link to="/cart">
+                        <div className="explore-item">
+                            <div style={{ textAlign: 'center' }}>
+                                <img src={cart} />
 
-                            <div className="explore-item-text">
-                                カート
-                                <div className="underline" style={{ background: 'white' }}></div>
+                                <div className="explore-item-text">
+                                    カート
+                                    <div className="underline" style={{ background: 'white' }}></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div className="explore-item">
-                        <div style={{ textAlign: 'center' }}>
-                            <img src={token} />
+                    <Link to="/point">
+                        <div className="explore-item">
+                            <div style={{ textAlign: 'center' }}>
+                                <img src={token} />
 
-                            <div className="explore-item-text">
-                                ポイント
-                                <div className="underline" style={{ background: 'white' }}></div>
+                                <div className="explore-item-text">
+                                    ポイント
+                                    <div className="underline" style={{ background: 'white' }}></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div className="explore-item">
-                        <div style={{ textAlign: 'center' }}>
-                            <img src={heart} />
+                    <Link to="/love">
+                        <div className="explore-item">
+                            <div style={{ textAlign: 'center' }}>
+                                <img src={heart} />
 
-                            <div className="explore-item-text">
-                                お気に入り
-                                <div className="underline" style={{ background: 'white' }}></div>
+                                <div className="explore-item-text">
+                                    お気に入り
+                                    <div className="underline" style={{ background: 'white' }}></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
                     {/* <div className="explore-item" onClick={() => handleChat()}>
                         <img src={chat} />

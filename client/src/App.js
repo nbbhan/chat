@@ -5,6 +5,9 @@ import '~/App.scss'
 import Home from './Pages/Home'
 import Login from './Pages/Login'
 import Register from './Pages/Register'
+import Cart from '~/Pages/Cart'
+import Point from '~/Pages/Point'
+import Love from '~/Pages/Love'
 import Nav from './Components/Nav'
 import Chatbox from './Components/Chatbox'
 import NavContainer from './Components/NavContainer'
@@ -38,6 +41,9 @@ function App() {
                 <Route path="" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/point" element={<Point />} />
+                <Route path="/love" element={<Love />} />
             </Routes>
         </div>
     )

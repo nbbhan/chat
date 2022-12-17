@@ -410,7 +410,7 @@ button {
 }
 .home-container-item-last {
     width: 100%;
-    height: 200px;
+    height: 0;
     background: white;
     // box-shadow: var(--boxS);
     // border-radius: var(--borderR);
@@ -1093,9 +1093,10 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 15%;
-    margin-left: auto;
-    margin-right: 0;
+    width: 10%;
+    // margin-left: auto;
+    // margin-right: 0;
+    margin: 0 auto;
     border-radius: 100rem;
     box-shadow: 0 3px 5px 3px var(--myColor);
     padding: 0.5rem;
@@ -1129,16 +1130,17 @@ button {
         }
     }
 }
-.slide-percent {
-    height: 15px;
-    width: 60%;
-    border: 2px solid rgb(184, 140, 92, 0.4);
-    border-radius: 100rem;
-}
+// .slide-percent {
+//     height: 15px;
+//     width: 60%;
+//     border: 2px solid rgb(184, 140, 92, 0.4);
+//     border-radius: 100rem;
+// }
 
 // Prefectures
 .prefectures {
     width: 100%;
+    margin-top: 5rem;
 }
 .prefectures-items {
     width: 100%;
@@ -1349,6 +1351,58 @@ button {
         transition-delay: 0.1s;
     }
 }
+
+// Cart
+.cart {
+    position: absolute;
+    top: var(--top);
+    left: 300px;
+    width: calc(100% - 300px);
+    height: 100vh;
+    padding: 15px;
+    overflow: hidden;
+}
+.cart-main {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 15px;
+}
+
+// Point
+.point {
+    position: absolute;
+    top: var(--top);
+    left: 300px;
+    width: calc(100% - 300px);
+    height: 100vh;
+    padding: 15px;
+    overflow: hidden;
+}
+.point-main {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 15px;
+}
+
+// Love
+.love {
+    position: absolute;
+    top: var(--top);
+    left: 300px;
+    width: calc(100% - 300px);
+    height: 100vh;
+    padding: 15px;
+    overflow: hidden;
+}
+.love-main {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 15px;
+}
+
 // --------------------------------------------
 .menu-trigger,
 .menu-trigger span {
@@ -1359,7 +1413,7 @@ button {
 .menu-trigger {
     position: relative;
     width: 35px;
-    height: 20px;
+    height: 23px;
     background: none;
     border: none;
     appearance: none;
@@ -1369,7 +1423,7 @@ button {
     position: absolute;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background-color: white;
     border-radius: 100rem;
 }
@@ -1377,7 +1431,7 @@ button {
     top: 0;
 }
 .menu-trigger span:nth-of-type(2) {
-    top: 9.5px;
+    top: 10px;
 }
 .menu-trigger span:nth-of-type(3) {
     bottom: 0;
@@ -1387,10 +1441,10 @@ button {
 }
 @keyframes menu-bar01 {
     0% {
-        transform: translateY(9px) rotate(45deg);
+        transform: translateY(10px) rotate(45deg);
     }
     50% {
-        transform: translateY(9px) rotate(0);
+        transform: translateY(10px) rotate(0);
     }
     100% {
         transform: translateY(0) rotate(0);
@@ -1405,10 +1459,10 @@ button {
 }
 @keyframes menu-bar02 {
     0% {
-        transform: translateY(-9px) rotate(-45deg);
+        transform: translateY(-10px) rotate(-45deg);
     }
     50% {
-        transform: translateY(-9px) rotate(0);
+        transform: translateY(-10px) rotate(0);
     }
     100% {
         transform: translateY(0) rotate(0);
@@ -1422,10 +1476,10 @@ button {
         transform: translateY(0) rotate(0);
     }
     50% {
-        transform: translateY(9px) rotate(0);
+        transform: translateY(10px) rotate(0);
     }
     100% {
-        transform: translateY(9px) rotate(45deg);
+        transform: translateY(10px) rotate(45deg);
     }
 }
 .menu-trigger.active span:nth-of-type(2) {
@@ -1439,9 +1493,9 @@ button {
         transform: translateY(0) rotate(0);
     }
     50% {
-        transform: translateY(-9px) rotate(0);
+        transform: translateY(-10px) rotate(0);
     }
     100% {
-        transform: translateY(-9px) rotate(-45deg);
+        transform: translateY(-10px) rotate(-45deg);
     }
 }

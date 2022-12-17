@@ -8,8 +8,6 @@ function BtnLR() {
                 <img src={left} />
             </div>
 
-            <div className="slide-percent"></div>
-
             <div className="slide-btn-next">
                 <img src={right} />
             </div>

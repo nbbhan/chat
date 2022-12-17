@@ -7,6 +7,8 @@ import prefectures2 from '~/Imgs/prefectures-2.png'
 import prefectures3 from '~/Imgs/prefectures-3.png'
 import prefectures4 from '~/Imgs/prefectures-4.png'
 import prefectures5 from '~/Imgs/prefectures-5.png'
+import prefectures6 from '~/Imgs/prefectures-6.png'
+import prefectures7 from '~/Imgs/prefectures-7.png'
 
 import Items from './Items'
 import Main from './Main'
@@ -27,6 +29,10 @@ function Prefectures() {
         prefectures4,
         // 九州
         prefectures5,
+        // 近畿
+        prefectures6,
+        // 中部
+        prefectures7,
     ]
 
     const handleSelectValue = (e) => {
@@ -47,6 +53,12 @@ function Prefectures() {
             break
         case '九州':
             x = 4
+            break
+        case '近畿':
+            x = 5
+            break
+        case '中部':
+            x = 6
             break
         default:
             x = 0

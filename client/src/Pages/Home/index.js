@@ -81,6 +81,22 @@ function Home() {
                             <Prefectures />
                         </div>
 
+                        <div className="home-container-item">
+                            <div>
+                                <div>ABC</div>
+
+                                <div>
+                                    <div>item 1</div>
+
+                                    <div>item 2</div>
+
+                                    <div>item 3</div>
+
+                                    <div>item 4</div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div className="home-container-item-last"></div>
                     </div>
                 </div>

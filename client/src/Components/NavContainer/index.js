@@ -28,12 +28,14 @@ function NavContainer() {
                         </div>
                     </Link>
 
-                    <div className="navContainer-main-item">
-                        <div className="navContainer-main-item-text">
-                            ホーム
-                            <div className="underline" style={{ background: 'white' }}></div>
+                    <Link to="/">
+                        <div className="navContainer-main-item">
+                            <div className="navContainer-main-item-text">
+                                ホーム
+                                <div className="underline" style={{ background: 'white' }}></div>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
 
                     <div className="navContainer-main-item">
                         <div className="navContainer-main-item-text">
