@@ -5,13 +5,13 @@ import { Data } from '~/Provider'
 import Explore from '~/Components/Explore'
 import Title from '~/Components/Title'
 
-function Point() {
+function Favorite() {
     const myData = useContext(Data)
 
     const inf = {
-        link: 'point',
-        en: 'POINT',
-        jp: 'ポイント',
+        link: 'favorite',
+        en: 'FAVORITE',
+        jp: 'お気に入り',
         des1: '気軽に立ち寄って自由にすごせるのがロゴスランドの魅力。',
         des2: 'そこで「たべる」「あそぶ」「とまる」「かりる」の4つのカテゴリーにわけて園内をご紹介します。',
     }
@@ -20,8 +20,8 @@ function Point() {
         <>
             <Explore />
 
-            <div className="point">
-                <div className="point-main">
+            <div className="favorite">
+                <div className="favorite-main">
                     <Title props={inf} />
                 </div>
             </div>
@@ -29,4 +29,4 @@ function Point() {
     )
 }
 
-export default Point
+export default Favorite

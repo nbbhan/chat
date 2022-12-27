@@ -4,7 +4,7 @@ export const Data = createContext()
 
 function Provider({ children }) {
     // Arrays
-    const region = ['関東', '北海道・東北', '中部', '近畿', '中国', '四国', '九州']
+    const region = ['北海道・東北', '関東', '中部', '近畿', '中国', '四国', '九州']
 
     const prefect = [
         {

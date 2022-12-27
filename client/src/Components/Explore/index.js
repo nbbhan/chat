@@ -70,7 +70,7 @@ function Explore() {
                         </div>
                     </Link>
 
-                    <Link to="/love">
+                    <Link to="/favorite">
                         <div className="explore-item">
                             <div style={{ textAlign: 'center' }}>
                                 <img src={heart} />

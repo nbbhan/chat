@@ -7,7 +7,7 @@ import Login from './Pages/Login'
 import Register from './Pages/Register'
 import Cart from '~/Pages/Cart'
 import Point from '~/Pages/Point'
-import Love from '~/Pages/Love'
+import Favorite from '~/Pages/Favorite'
 import Nav from './Components/Nav'
 import Chatbox from './Components/Chatbox'
 import NavContainer from './Components/NavContainer'
@@ -43,7 +43,7 @@ function App() {
                 <Route path="/register" element={<Register />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/point" element={<Point />} />
-                <Route path="/love" element={<Love />} />
+                <Route path="/favorite" element={<Favorite />} />
             </Routes>
         </div>
     )
