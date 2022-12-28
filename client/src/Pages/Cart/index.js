@@ -41,7 +41,7 @@ function Cart() {
                                             </div>
 
                                             <div className="cart-main-item-inf-buy">
-                                                <div className="cart-main-item-inf-loveBtn">♥に追加</div>
+                                                <div className="cart-main-item-inf-loveBtn">♥へ移動</div>
                                                 <div className="cart-main-item-inf-buyBtn">今すぐ購入</div>
                                             </div>
                                         </div>
@@ -64,7 +64,7 @@ function Cart() {
                                             </div>
 
                                             <div className="cart-main-item-inf-buy">
-                                                <div className="cart-main-item-inf-loveBtn">♥に追加</div>
+                                                <div className="cart-main-item-inf-loveBtn">♥へ移動</div>
                                                 <div className="cart-main-item-inf-buyBtn">今すぐ購入</div>
                                             </div>
 
@@ -87,7 +87,7 @@ function Cart() {
                                             </div>
 
                                             <div className="cart-main-item-inf-buy">
-                                                <div className="cart-main-item-inf-loveBtn">♥に追加</div>
+                                                <div className="cart-main-item-inf-loveBtn">♥へ移動</div>
                                                 <div className="cart-main-item-inf-buyBtn">今すぐ購入</div>
                                             </div>
 
@@ -110,7 +110,7 @@ function Cart() {
                                             </div>
 
                                             <div className="cart-main-item-inf-buy">
-                                                <div className="cart-main-item-inf-loveBtn">♥に追加</div>
+                                                <div className="cart-main-item-inf-loveBtn">♥へ移動</div>
                                                 <div className="cart-main-item-inf-buyBtn">今すぐ購入</div>
                                             </div>
 
@@ -133,7 +133,7 @@ function Cart() {
                                             </div>
 
                                             <div className="cart-main-item-inf-buy">
-                                                <div className="cart-main-item-inf-loveBtn">♥に追加</div>
+                                                <div className="cart-main-item-inf-loveBtn">♥へ移動</div>
                                                 <div className="cart-main-item-inf-buyBtn">今すぐ購入</div>
                                             </div>
 
