@@ -5,6 +5,8 @@ import { Data } from '~/Provider'
 import Explore from '~/Components/Explore'
 import Title from '~/Components/Title'
 
+import point from '~/Imgs/point.png'
+
 function Point() {
     const myData = useContext(Data)
 
@@ -15,6 +17,8 @@ function Point() {
         des1: '気軽に立ち寄って自由にすごせるのがロゴスランドの魅力。',
         des2: 'そこで「たべる」「あそぶ」「とまる」「かりる」の4つのカテゴリーにわけて園内をご紹介します。',
     }
+
+    const now = 500
 
     return (
         <>
@@ -27,7 +31,10 @@ function Point() {
 
                         <div className="point-main-container">
                             <div className="point-main-container-items">
-                                <div className="point-main-container-total">500</div>
+                                <div className="point-main-container-total">
+                                    <span className="point-main-container-text">ポイント数:</span>
+                                    <span className="point-main-container-number">{`${now}`}</span>
+                                </div>
 
                                 <div className="point-main-container-breakdown">
                                     <div className="point-main-container-buy">100</div>

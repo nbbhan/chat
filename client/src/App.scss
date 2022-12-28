@@ -1522,12 +1522,27 @@ button {
 }
 .point-main-container-items {
     width: 100%;
-    border: 1px solid blue;
 }
 .point-main-container-total {
-    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: flex-end;
+    border: 1px solid blue;
+
+    img {
+        width: 25px;
+        height: 25px;
+        margin-right: 1rem;
+    }
+}
+.point-main-container-text {
+    font-size: 12px;
+    color: var(--myColor);
+}
+.point-main-container-number {
+    color: var(--cha);
+    font-weight: 700;
+    font-size: 25px;
 }
 
 // Favorite
