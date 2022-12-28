@@ -21,8 +21,22 @@ function Point() {
             <Explore />
 
             <div className="point">
-                <div className="point-main">
-                    <Title props={inf} />
+                <div className="point-container">
+                    <div className="point-main">
+                        <Title props={inf} />
+
+                        <div className="point-main-container">
+                            <div className="point-main-container-items">
+                                <div className="point-main-container-total">500</div>
+
+                                <div className="point-main-container-breakdown">
+                                    <div className="point-main-container-buy">100</div>
+
+                                    <div className="point-main-container-bonus">400</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

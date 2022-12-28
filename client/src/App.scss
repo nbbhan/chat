@@ -1503,11 +1503,31 @@ button {
     padding: 15px 15px 15px 0;
     overflow: hidden;
 }
-.point-main {
+.point-container {
     width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.point-main {
+    width: calc(100% + 17px);
     height: 100%;
     background: white;
     border-radius: 10px;
+    overflow-y: scroll;
+}
+.point-main-container {
+    width: 100%;
+    padding: 0 180px;
+}
+.point-main-container-items {
+    width: 100%;
+    border: 1px solid blue;
+}
+.point-main-container-total {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 // Favorite
@@ -1520,11 +1540,22 @@ button {
     padding: 15px 15px 15px 0;
     overflow: hidden;
 }
-.favorite-main {
+.favorite-container {
     width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.favorite-main {
+    width: calc(100% + 17px);
     height: 100%;
     background: white;
     border-radius: 10px;
+    overflow-y: scroll;
+}
+.favorite-main-container {
+    width: 100%;
+    padding: 0 180px;
 }
 
 // Title
