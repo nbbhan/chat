@@ -81,7 +81,7 @@ function Home() {
                             <Prefectures />
                         </div>
 
-                        <div className="home-container-item">
+                        {/* <div className="home-container-item">
                             <div>
                                 <div>ABC</div>
 
@@ -95,7 +95,7 @@ function Home() {
                                     <div>item 4</div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="home-container-item-last"></div>
                     </div>

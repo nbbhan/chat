@@ -1388,7 +1388,7 @@ button {
 .cart-main-item {
     width: 100%;
     height: 249px;
-    margin-bottom: 5rem;
+    margin-bottom: 60px;
 }
 .cart-main-item-container {
     width: 100%;
@@ -1522,27 +1522,110 @@ button {
 }
 .point-main-container-items {
     width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px 1px var(--myColor);
+    margin-bottom: 60px;
+}
+.point-main-container-line {
+    width: 1px;
+    height: 70%;
+    background: var(--myColor);
 }
 .point-main-container-total {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    border: 1px solid blue;
+    margin-bottom: 3rem;
 
     img {
         width: 25px;
         height: 25px;
-        margin-right: 1rem;
+        margin-right: 0.3rem;
     }
-}
-.point-main-container-text {
-    font-size: 12px;
-    color: var(--myColor);
 }
 .point-main-container-number {
     color: var(--cha);
     font-weight: 700;
-    font-size: 25px;
+    font-size: 35px;
+    font-family: var(--fontComfor);
+    transform: translateY(10px);
+}
+.point-main-container-breakdown,
+.point-main-container-btns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+.point-main-container-breakdown-items {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+.point-main-container-breakdown-item,
+.point-main-container-btns-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid red;
+    width: 50%;
+}
+.point-main-container-breakdown-text {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--myColor);
+    margin-right: 1rem;
+}
+.point-main-container-btns-items {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.point-main-container-btns-text {
+    width: 130px;
+    height: 45px;
+    border-radius: var(--borderR);
+    box-shadow: 0 1px 5px 1px var(--myColor);
+    // border: 1px solid var(--myColor);
+    color: var(--myColor);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+        cursor: pointer;
+        color: white;
+        background: var(--cha);
+    }
+}
+.point-main-container-other {
+    width: 100%;
+    // border: 1px solid blue;
+}
+.point-main-container-other-items {
+    display: flex;
+    width: 100%;
+}
+.point-main-container-other-item {
+    width: 50%;
+    height: 200px;
+    padding: 20px 20px;
+}
+.point-main-container-other-item-main {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px 1px var(--myColor);
+    padding: 0.5rem 1rem;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 // Favorite
@@ -1618,7 +1701,7 @@ button {
     font-weight: 700;
     font-size: 16px;
     font-family: var(--fontZen);
-    color: black;
+    color: var(--myColor);
     letter-spacing: 0.2rem;
 }
 .title-line {

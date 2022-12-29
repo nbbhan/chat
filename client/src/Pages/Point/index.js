@@ -1,4 +1,5 @@
 import { useContext, useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 import { Data } from '~/Provider'
 
@@ -18,7 +19,10 @@ function Point() {
         des2: 'そこで「たべる」「あそぶ」「とまる」「かりる」の4つのカテゴリーにわけて園内をご紹介します。',
     }
 
-    const now = 500
+    const pointNum = {
+        buy: 4000,
+        get: 1000,
+    }
 
     return (
         <>
@@ -32,14 +36,76 @@ function Point() {
                         <div className="point-main-container">
                             <div className="point-main-container-items">
                                 <div className="point-main-container-total">
-                                    <span className="point-main-container-text">ポイント数:</span>
-                                    <span className="point-main-container-number">{`${now}`}</span>
+                                    <div className="point-main-container-number">
+                                        <img src={point} />
+                                        {`${pointNum.buy + pointNum.get}`}
+                                    </div>
                                 </div>
 
                                 <div className="point-main-container-breakdown">
-                                    <div className="point-main-container-buy">100</div>
+                                    <div className="point-main-container-breakdown-items">
+                                        <div className="point-main-container-breakdown-item">
+                                            <div className="point-main-container-breakdown-text">購入したポイント:</div>
+                                            <div className="point-main-container-breakdown-num">{pointNum.buy}</div>
+                                        </div>
 
-                                    <div className="point-main-container-bonus">400</div>
+                                        <div className="point-main-container-line"></div>
+
+                                        <div className="point-main-container-breakdown-item">
+                                            <div className="point-main-container-breakdown-text">無料ポイント:</div>
+                                            <div className="point-main-container-breakdown-num">{pointNum.get}</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="point-main-container-btns">
+                                    <div className="point-main-container-btns-items">
+                                        <div className="point-main-container-btns-item">
+                                            <div className="point-main-container-btns-text">ポイント購入</div>
+                                        </div>
+
+                                        {/* <div className="point-main-container-line"></div> */}
+
+                                        <div className="point-main-container-btns-item">
+                                            <div className="point-main-container-btns-text">ポイントGET</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="point-main-container-other">
+                                    <div className="point-main-container-other-items">
+                                        <div className="point-main-container-other-item">
+                                            <div className="point-main-container-other-item-main">購入履歴</div>
+                                        </div>
+
+                                        <div className="point-main-container-other-item">
+                                            <div className="point-main-container-other-item-main">チャージ履歴</div>
+                                        </div>
+                                    </div>
+
+                                    <div className="point-main-container-other-items">
+                                        <div className="point-main-container-other-item">
+                                            <div className="point-main-container-other-item-main">使い方</div>
+                                        </div>
+
+                                        <div className="point-main-container-other-item">
+                                            <div className="point-main-container-other-item-main">
+                                                FAQ・お問い合わせ
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="point-main-container-other-items">
+                                        <div className="point-main-container-other-item">
+                                            <div className="point-main-container-other-item-main">
+                                                プライバシーポリシー
+                                            </div>
+                                        </div>
+
+                                        <div className="point-main-container-other-item">
+                                            <div className="point-main-container-other-item-main">利用規約</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
