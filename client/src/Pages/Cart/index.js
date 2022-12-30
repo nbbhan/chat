@@ -41,8 +41,8 @@ function Cart() {
                                             </div>
 
                                             <div className="cart-main-item-inf-buy">
-                                                <div className="cart-main-item-inf-loveBtn">ポイント</div>
-                                                <div className="cart-main-item-inf-buyBtn">現金</div>
+                                                <div className="cart-main-item-inf-loveBtn">♥へ移動</div>
+                                                <div className="cart-main-item-inf-buyBtn">今すぐ購入</div>
                                             </div>
                                         </div>
 
@@ -64,8 +64,8 @@ function Cart() {
                                             </div>
 
                                             <div className="cart-main-item-inf-buy">
-                                                <div className="cart-main-item-inf-loveBtn">ポイント</div>
-                                                <div className="cart-main-item-inf-buyBtn">現金</div>
+                                                <div className="cart-main-item-inf-loveBtn">♥へ移動</div>
+                                                <div className="cart-main-item-inf-buyBtn">今すぐ購入</div>
                                             </div>
 
                                             <div className="cart-main-item-container-close">削除</div>
@@ -87,8 +87,8 @@ function Cart() {
                                             </div>
 
                                             <div className="cart-main-item-inf-buy">
-                                                <div className="cart-main-item-inf-loveBtn">ポイント</div>
-                                                <div className="cart-main-item-inf-buyBtn">現金</div>
+                                                <div className="cart-main-item-inf-loveBtn">♥へ移動</div>
+                                                <div className="cart-main-item-inf-buyBtn">今すぐ購入</div>
                                             </div>
 
                                             <div className="cart-main-item-container-close">削除</div>
@@ -110,8 +110,8 @@ function Cart() {
                                             </div>
 
                                             <div className="cart-main-item-inf-buy">
-                                                <div className="cart-main-item-inf-loveBtn">ポイント</div>
-                                                <div className="cart-main-item-inf-buyBtn">現金</div>
+                                                <div className="cart-main-item-inf-loveBtn">♥へ移動</div>
+                                                <div className="cart-main-item-inf-buyBtn">今すぐ購入</div>
                                             </div>
 
                                             <div className="cart-main-item-container-close">削除</div>
@@ -133,8 +133,8 @@ function Cart() {
                                             </div>
 
                                             <div className="cart-main-item-inf-buy">
-                                                <div className="cart-main-item-inf-loveBtn">ポイント</div>
-                                                <div className="cart-main-item-inf-buyBtn">現金</div>
+                                                <div className="cart-main-item-inf-loveBtn">♥へ移動</div>
+                                                <div className="cart-main-item-inf-buyBtn">今すぐ購入</div>
                                             </div>
 
                                             <div className="cart-main-item-container-close">削除</div>

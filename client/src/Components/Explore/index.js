@@ -44,6 +44,19 @@ function Explore() {
                         </div>
                     </Link>
 
+                    <Link to="/">
+                        <div className="explore-item">
+                            <div style={{ textAlign: 'center' }}>
+                                <img src={cart} />
+
+                                <div className="explore-item-text">
+                                    ホーム
+                                    <div className="underline" style={{ background: 'white' }}></div>
+                                </div>
+                            </div>
+                        </div>
+                    </Link>
+
                     <Link to="/cart">
                         <div className="explore-item">
                             <div style={{ textAlign: 'center' }}>
