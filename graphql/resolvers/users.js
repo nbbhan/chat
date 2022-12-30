@@ -80,6 +80,21 @@ module.exports = {
                 throw err
             }
         },
+        getProfile: async (_, __, { user }) => {
+            try {
+                if (!user) throw new AuthenticationError('Unauthenticated')
+
+                let users = await User.findAll({
+                    attributes: ['username', 'imageUrl', 'createdAt'],
+                    where: { username: { [Op.eq]: user.username } },
+                })
+
+                return users
+            } catch (err) {
+                console.log(err)
+                throw err
+            }
+        },
     },
     Mutation: {
         register: async (_, args) => {

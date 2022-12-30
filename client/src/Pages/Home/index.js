@@ -29,7 +29,7 @@ const GET_POPULAR = gql`
 function Home() {
     const myData = useContext(Data)
 
-    const { loading, data, error } = useQuery(GET_POPULAR)
+    const { data } = useQuery(GET_POPULAR)
 
     return (
         <>

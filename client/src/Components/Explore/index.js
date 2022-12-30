@@ -27,6 +27,7 @@ function Explore() {
     const handleLogout = () => {
         dispatch({ type: 'LOGOUT' })
         window.location.reload()
+        window.location = '/'
     }
 
     const handleChat = () => {
@@ -47,7 +48,7 @@ function Explore() {
                     <Link to="/">
                         <div className="explore-item">
                             <div style={{ textAlign: 'center' }}>
-                                <img src={cart} />
+                                <img src={home} />
 
                                 <div className="explore-item-text">
                                     ホーム

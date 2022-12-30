@@ -39,13 +39,6 @@ function NavContainer() {
 
                     <div className="navContainer-main-item">
                         <div className="navContainer-main-item-text">
-                            チャット
-                            <div className="underline" style={{ background: 'white' }}></div>
-                        </div>
-                    </div>
-
-                    <div className="navContainer-main-item">
-                        <div className="navContainer-main-item-text">
                             使い方
                             <div className="underline" style={{ background: 'white' }}></div>
                         </div>

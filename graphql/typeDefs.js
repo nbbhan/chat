@@ -9,6 +9,11 @@ module.exports = gql`
         imageUrl: String
         latestMessage: Message
     }
+    type Profile {
+        username: String!
+        createdAt: String!
+        imageUrl: String
+    }
     type Message {
         uuid: String!
         content: String!
@@ -67,6 +72,7 @@ module.exports = gql`
     }
     type Query {
         getUsers: [User]!
+        getProfile: [Profile]!
         login(username: String!, password: String!): User!
         getMessages(from: String!): [Message]!
         getPopular: [Popular]!

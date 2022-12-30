@@ -1,12 +1,26 @@
+import { gql, useQuery } from '@apollo/client'
 import { useContext, useState, useEffect } from 'react'
 
 import { Data } from '~/Provider'
+import { useMessageDispatch, useMessageState } from '~/context/message'
 
 import Explore from '~/Components/Explore'
 import Title from '~/Components/Title'
 
+const GET_PROFILE = gql`
+    query getProfile {
+        getProfile {
+            username
+            createdAt
+            imageUrl
+        }
+    }
+`
+
 function Profile() {
     const myData = useContext(Data)
+
+    const { data } = useQuery(GET_PROFILE)
 
     const inf = {
         link: 'profile',
@@ -29,11 +43,11 @@ function Profile() {
                             <div className="profile-main-container-items">
                                 <div className="profile-main-container-profimg">
                                     <div>
-                                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1700&q=80" />
+                                        <img src={data && data.getProfile[0].imageUrl} />
                                     </div>
                                 </div>
 
-                                <div className="profile-main-container-name">john</div>
+                                <div className="profile-main-container-name">{data && data.getProfile[0].username}</div>
 
                                 <div className="point-main-container-breakdown">
                                     <div className="point-main-container-breakdown-items">
@@ -46,7 +60,9 @@ function Profile() {
 
                                         <div className="point-main-container-breakdown-item">
                                             <div className="point-main-container-breakdown-text">登録日:</div>
-                                            <div className="point-main-container-breakdown-num">2022/12/30</div>
+                                            <div className="point-main-container-breakdown-num">
+                                                {data && data.getProfile[0].createdAt}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
