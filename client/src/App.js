@@ -8,6 +8,7 @@ import Register from './Pages/Register'
 import Cart from '~/Pages/Cart'
 import Point from '~/Pages/Point'
 import Favorite from '~/Pages/Favorite'
+import Profile from '~/Pages/Profile'
 import Nav from './Components/Nav'
 import Chatbox from './Components/Chatbox'
 import NavContainer from './Components/NavContainer'
@@ -44,6 +45,7 @@ function App() {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/point" element={<Point />} />
                 <Route path="/favorite" element={<Favorite />} />
+                <Route path="/profile" element={<Profile />} />
             </Routes>
         </div>
     )

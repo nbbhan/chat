@@ -123,7 +123,7 @@ function Slide(props) {
                 </div>
             </div>
 
-            <BtnLR />
+            {/* <BtnLR /> */}
         </div>
     )
 }

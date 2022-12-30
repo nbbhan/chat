@@ -75,22 +75,20 @@ function Point() {
                                 <div className="point-main-container-other">
                                     <div className="point-main-container-other-items">
                                         <div className="point-main-container-other-item">
-                                            <div className="point-main-container-other-item-main">購入履歴</div>
-                                        </div>
-
-                                        <div className="point-main-container-other-item">
-                                            <div className="point-main-container-other-item-main">チャージ履歴</div>
-                                        </div>
-                                    </div>
-
-                                    <div className="point-main-container-other-items">
-                                        <div className="point-main-container-other-item">
-                                            <div className="point-main-container-other-item-main">使い方</div>
+                                            <div className="point-main-container-other-item-main">
+                                                <div className="point-main-container-other-item-main-text">
+                                                    購入履歴
+                                                    <div className="underline"></div>
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div className="point-main-container-other-item">
                                             <div className="point-main-container-other-item-main">
-                                                FAQ・お問い合わせ
+                                                <div className="point-main-container-other-item-main-text">
+                                                    チャージ履歴
+                                                    <div className="underline"></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -98,12 +96,40 @@ function Point() {
                                     <div className="point-main-container-other-items">
                                         <div className="point-main-container-other-item">
                                             <div className="point-main-container-other-item-main">
-                                                プライバシーポリシー
+                                                <div className="point-main-container-other-item-main-text">
+                                                    使い方
+                                                    <div className="underline"></div>
+                                                </div>
                                             </div>
                                         </div>
 
                                         <div className="point-main-container-other-item">
-                                            <div className="point-main-container-other-item-main">利用規約</div>
+                                            <div className="point-main-container-other-item-main">
+                                                <div className="point-main-container-other-item-main-text">
+                                                    FAQ・お問い合わせ
+                                                    <div className="underline"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="point-main-container-other-items">
+                                        <div className="point-main-container-other-item">
+                                            <div className="point-main-container-other-item-main">
+                                                <div className="point-main-container-other-item-main-text">
+                                                    プライバシーポリシー
+                                                    <div className="underline"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="point-main-container-other-item">
+                                            <div className="point-main-container-other-item-main">
+                                                <div className="point-main-container-other-item-main-text">
+                                                    利用規約
+                                                    <div className="underline"></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

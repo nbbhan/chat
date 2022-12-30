@@ -117,16 +117,18 @@ function Explore() {
                         </div>
                     </Link>
 
-                    <div className={`explore-item ${myData.logout}`}>
-                        <div style={{ textAlign: 'center' }}>
-                            <img src={user} />
+                    <Link to="/profile">
+                        <div className={`explore-item ${myData.logout}`}>
+                            <div style={{ textAlign: 'center' }}>
+                                <img src={user} />
 
-                            <div className="explore-item-text">
-                                プロフィール
-                                <div className="underline" style={{ background: 'white' }}></div>
+                                <div className="explore-item-text">
+                                    プロフィール
+                                    <div className="underline" style={{ background: 'white' }}></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
                     <div className={`explore-item ${myData.logout}`} onClick={() => handleLogout()}>
                         <div style={{ textAlign: 'center' }}>
