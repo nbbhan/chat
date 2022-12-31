@@ -29,59 +29,12 @@ module.exports = gql`
         imgUrl: String!
         dealerId: String
     }
-    type Dealer {
-        dealerId: String!
-        account: String!
-        username: String!
-        email: String!
-        password: String!
-        imgUrl: String
-        info: String!
-        intro: String!
-    }
-    type Product {
-        productId: String!
-        info: String!
-        dealerId: String!
-        price: Float!
-        imgUrl: String!
-        intro: String!
-    }
-    type Watch {
-        watchId: String!
-        userId: String!
-        productId: String!
-    }
-    type Cart {
-        addtocartId: String
-        userId: String!
-        productId: String!
-        quantity: Float!
-    }
-    type Point {
-        userId: String!
-        point: Float!
-        token: String!
-    }
-    type Purchase {
-        historyId: String!
-        userId: String!
-        productId: String!
-        quantity: Float!
-        returnedQuantity: Float
-    }
     type Query {
         getUsers: [User]!
         getProfile: [Profile]!
         login(username: String!, password: String!): User!
         getMessages(from: String!): [Message]!
         getPopular: [Popular]!
-        getDealer: [Dealer]!
-        getProduct: [Product]!
-        getWatch: [Watch]!
-        getCart: [Cart]!
-        getPoint: [Point]!
-        getPurchase: [Purchase]!
     }
     type Mutation {
         register(username: String!, email: String!, password: String!, confirmPassword: String!): User!
