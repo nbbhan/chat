@@ -25,8 +25,8 @@ module.exports = {
                 password: password,
                 imageUrl:
                     'https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2190&q=80',
-                buyPoint: 4000,
-                getPoint: 1000,
+                buyPoint: 1138,
+                getPoint: 1926,
                 createdAt,
                 updatedAt,
             },
