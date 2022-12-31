@@ -27,6 +27,8 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
             },
             imageUrl: DataTypes.STRING,
+            buyPoint: DataTypes.INTEGER,
+            getPoint: DataTypes.INTEGER,
         },
         {
             sequelize,

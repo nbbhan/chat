@@ -23,6 +23,8 @@ module.exports = {
                 allowNull: false,
             },
             imageUrl: Sequelize.STRING,
+            buyPoint: Sequelize.INTEGER,
+            getPoint: Sequelize.INTEGER,
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE,
