@@ -2,7 +2,6 @@ import { gql, useQuery } from '@apollo/client'
 import { useContext, useState, useEffect } from 'react'
 
 import { Data } from '~/Provider'
-import { useMessageDispatch, useMessageState } from '~/context/message'
 
 import Explore from '~/Components/Explore'
 import Title from '~/Components/Title'
@@ -13,6 +12,8 @@ const GET_PROFILE = gql`
             username
             createdAt
             imageUrl
+            buyPoint
+            getPoint
         }
     }
 `
@@ -53,7 +54,9 @@ function Profile() {
                                     <div className="point-main-container-breakdown-items">
                                         <div className="point-main-container-breakdown-item">
                                             <div className="point-main-container-breakdown-text">フォロー中:</div>
-                                            <div className="point-main-container-breakdown-num">5</div>
+                                            <div className="point-main-container-breakdown-num">
+                                                {data && data.getProfile[0].getPoint}
+                                            </div>
                                         </div>
 
                                         <div className="point-main-container-line"></div>

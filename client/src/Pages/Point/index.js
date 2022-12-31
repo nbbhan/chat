@@ -1,3 +1,4 @@
+import { gql, useQuery } from '@apollo/client'
 import { useContext, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -8,8 +9,22 @@ import Title from '~/Components/Title'
 
 import point from '~/Imgs/point.png'
 
+const GET_PROFILE = gql`
+    query getProfile {
+        getProfile {
+            username
+            createdAt
+            imageUrl
+            buyPoint
+            getPoint
+        }
+    }
+`
+
 function Point() {
     const myData = useContext(Data)
+
+    const { data } = useQuery(GET_PROFILE)
 
     const inf = {
         link: 'point',
@@ -19,9 +34,13 @@ function Point() {
         des2: 'そこで「たべる」「あそぶ」「とまる」「かりる」の4つのカテゴリーにわけて園内をご紹介します。',
     }
 
-    const pointNum = {
-        buy: 4000,
-        get: 1000,
+    let buyP
+
+    let getP
+
+    if (data) {
+        buyP = data.getProfile[0].buyPoint
+        getP = data.getProfile[0].getPoint
     }
 
     return (
@@ -38,7 +57,7 @@ function Point() {
                                 <div className="point-main-container-total">
                                     <div className="point-main-container-number">
                                         <img src={point} />
-                                        {`${pointNum.buy + pointNum.get}`}
+                                        {`${buyP + getP}`}
                                     </div>
                                 </div>
 
@@ -46,14 +65,14 @@ function Point() {
                                     <div className="point-main-container-breakdown-items">
                                         <div className="point-main-container-breakdown-item">
                                             <div className="point-main-container-breakdown-text">購入したポイント:</div>
-                                            <div className="point-main-container-breakdown-num">{pointNum.buy}</div>
+                                            <div className="point-main-container-breakdown-num">{buyP}</div>
                                         </div>
 
                                         <div className="point-main-container-line"></div>
 
                                         <div className="point-main-container-breakdown-item">
                                             <div className="point-main-container-breakdown-text">無料ポイント:</div>
-                                            <div className="point-main-container-breakdown-num">{pointNum.get}</div>
+                                            <div className="point-main-container-breakdown-num">{getP}</div>
                                         </div>
                                     </div>
                                 </div>
