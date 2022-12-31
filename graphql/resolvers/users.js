@@ -85,7 +85,7 @@ module.exports = {
                 if (!user) throw new AuthenticationError('Unauthenticated')
 
                 let users = await User.findAll({
-                    attributes: ['username', 'imageUrl', 'createdAt'],
+                    attributes: ['username', 'imageUrl', 'createdAt', 'buyPoint', 'getPoint'],
                     where: { username: { [Op.eq]: user.username } },
                 })
 

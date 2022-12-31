@@ -53,7 +53,7 @@ function Profile() {
                                     <div className="point-main-container-breakdown-items">
                                         <div className="point-main-container-breakdown-item">
                                             <div className="point-main-container-breakdown-text">フォロー中:</div>
-                                            <div className="point-main-container-breakdown-num">5 </div>
+                                            <div className="point-main-container-breakdown-num">5</div>
                                         </div>
 
                                         <div className="point-main-container-line"></div>

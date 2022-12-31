@@ -13,6 +13,8 @@ module.exports = gql`
         username: String!
         createdAt: String!
         imageUrl: String
+        buyPoint: Float!
+        getPoint: Float!
     }
     type Message {
         uuid: String!
