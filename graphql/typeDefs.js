@@ -32,12 +32,21 @@ module.exports = gql`
         imgUrl: String!
         dealerId: String
     }
+    type Product {
+        productId: String!
+        info: String!
+        price: Float!
+        rating: String!
+        imgUrl: String!
+        dealerId: String
+    }
     type Query {
         getUsers: [User]!
         getProfile: [Profile]!
         login(username: String!, password: String!): User!
         getMessages(from: String!): [Message]!
         getPopular: [Popular]!
+        getProduct: [Product]!
     }
     type Mutation {
         register(username: String!, email: String!, password: String!, confirmPassword: String!): User!

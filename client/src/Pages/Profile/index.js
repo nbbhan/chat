@@ -1,5 +1,5 @@
 import { gql, useQuery } from '@apollo/client'
-import { useContext, useState, useEffect } from 'react'
+import { useContext } from 'react'
 
 import { Data } from '~/Provider'
 
@@ -14,6 +14,7 @@ const GET_PROFILE = gql`
             imageUrl
             buyPoint
             getPoint
+            follow
         }
     }
 `
@@ -55,7 +56,7 @@ function Profile() {
                                         <div className="point-main-container-breakdown-item">
                                             <div className="point-main-container-breakdown-text">フォロー中:</div>
                                             <div className="point-main-container-breakdown-num">
-                                                {data && data.getProfile[0].getPoint}
+                                                {data && data.getProfile[0].follow}
                                             </div>
                                         </div>
 

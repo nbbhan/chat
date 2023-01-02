@@ -5,7 +5,11 @@ import love from '~/Imgs/love.png'
 import cart from '~/Imgs/cart.png'
 
 function Slide(props) {
-    let length = 15
+    let length = props.arr && props.arr.getPopular.length
+
+    const handleAdd = (id, m) => {
+        console.log(id, m)
+    }
 
     useEffect(() => {
         const slider = document.querySelectorAll('.slide-container')
@@ -78,13 +82,19 @@ function Slide(props) {
                                         <div className="slide-container-item-rating">{`${item.rating}`}</div>
 
                                         <div className="slide-container-item-btnContainer">
-                                            <div className="slide-container-item-btnContainer-love">
+                                            <div
+                                                className="slide-container-item-btnContainer-love"
+                                                onClick={() => handleAdd(item.productId, 'f')}
+                                            >
                                                 <img src={love} />
                                             </div>
 
                                             <div className="slide-container-item-btnContainer-sen"></div>
 
-                                            <div className="slide-container-item-btnContainer-cart">
+                                            <div
+                                                className="slide-container-item-btnContainer-cart"
+                                                onClick={() => handleAdd(item.productId, 'c')}
+                                            >
                                                 <img src={cart} />
                                             </div>
                                         </div>
@@ -106,13 +116,19 @@ function Slide(props) {
                                         <div className="slide-container-item-rating">{`${item.rating}`}</div>
 
                                         <div className="slide-container-item-btnContainer">
-                                            <div className="slide-container-item-btnContainer-love">
+                                            <div
+                                                className="slide-container-item-btnContainer-love"
+                                                onClick={() => handleAdd(item.productId, 'f')}
+                                            >
                                                 <img src={love} />
                                             </div>
 
                                             <div className="slide-container-item-btnContainer-sen"></div>
 
-                                            <div className="slide-container-item-btnContainer-cart">
+                                            <div
+                                                className="slide-container-item-btnContainer-cart"
+                                                onClick={() => handleAdd(item.productId, 'c')}
+                                            >
                                                 <img src={cart} />
                                             </div>
                                         </div>
