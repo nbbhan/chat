@@ -25,6 +25,7 @@ module.exports = {
             imageUrl: Sequelize.STRING,
             buyPoint: Sequelize.FLOAT,
             getPoint: Sequelize.FLOAT,
+            follow: Sequelize.FLOAT,
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE,

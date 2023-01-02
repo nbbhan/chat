@@ -29,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
             imageUrl: DataTypes.STRING,
             buyPoint: DataTypes.FLOAT,
             getPoint: DataTypes.FLOAT,
+            follow: DataTypes.FLOAT,
         },
         {
             sequelize,

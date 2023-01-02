@@ -15,6 +15,7 @@ module.exports = gql`
         imageUrl: String
         buyPoint: Float!
         getPoint: Float!
+        follow: Float!
     }
     type Message {
         uuid: String!
