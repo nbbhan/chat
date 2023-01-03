@@ -1,12 +1,25 @@
-import { useContext, useState, useEffect } from 'react'
+import { gql, useQuery } from '@apollo/client'
+import { useContext } from 'react'
 
 import { Data } from '~/Provider'
 
 import Explore from '~/Components/Explore'
 import Title from '~/Components/Title'
 
+const GET_CART = gql`
+    query getCart {
+        getCart {
+            productId
+        }
+    }
+`
+
 function Cart() {
     const myData = useContext(Data)
+
+    const { data } = useQuery(GET_CART)
+
+    console.log(data)
 
     const inf = {
         link: 'cart',
