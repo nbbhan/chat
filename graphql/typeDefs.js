@@ -44,14 +44,19 @@ module.exports = gql`
         productId: String!
         user: String!
     }
+    type Favorite {
+        productId: String!
+        user: String!
+    }
     type Query {
         getUsers: [User]!
-        getProfile: [Profile]!
         login(username: String!, password: String!): User!
         getMessages(from: String!): [Message]!
+        getProfile: [Profile]!
         getPopular: [Popular]!
         getProduct: [Product]!
         getCart: [Cart]!
+        getFavorite: [Favorite]!
     }
     type Mutation {
         register(username: String!, email: String!, password: String!, confirmPassword: String!): User!
