@@ -37,13 +37,9 @@ module.exports = {
         },
         deleteCart: async (_, args) => {
             try {
-                const allOfCart = await Cart.findAll()
-
                 const item = await Cart.findOne({
                     where: { productId: args.productId, user: args.user },
                 })
-
-                console.log(allOfCart)
 
                 return item
             } catch (err) {
