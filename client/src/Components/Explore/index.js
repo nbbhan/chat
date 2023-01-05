@@ -84,7 +84,7 @@ function Explore() {
                         </div>
                     </Link>
 
-                    <Link to="/favorite">
+                    {/* <Link to="/favorite">
                         <div className="explore-item">
                             <div style={{ textAlign: 'center' }}>
                                 <img src={heart} />
@@ -95,7 +95,7 @@ function Explore() {
                                 </div>
                             </div>
                         </div>
-                    </Link>
+                    </Link> */}
 
                     {/* <div className="explore-item" onClick={() => handleChat()}>
                         <img src={chat} />

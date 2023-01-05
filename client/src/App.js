@@ -44,7 +44,7 @@ function App() {
                 <Route path="/register" element={<Register />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/point" element={<Point />} />
-                <Route path="/favorite" element={<Favorite />} />
+                {/* <Route path="/favorite" element={<Favorite />} /> */}
                 <Route path="/profile" element={<Profile />} />
             </Routes>
         </div>

@@ -35,17 +35,5 @@ module.exports = {
                 throw err
             }
         },
-        deleteCart: async (_, args) => {
-            try {
-                const item = await Cart.findOne({
-                    where: { productId: args.productId, user: args.user },
-                })
-
-                return item
-            } catch (err) {
-                console.log(err)
-                throw err
-            }
-        },
     },
 }

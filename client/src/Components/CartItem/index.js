@@ -35,7 +35,6 @@ function CartItem({ item }) {
                                         </div>
 
                                         <div className="cart-main-item-inf-buy">
-                                            <div className="cart-main-item-inf-loveBtn">♥へ移動</div>
                                             <div className="cart-main-item-inf-buyBtn">今すぐ購入</div>
                                         </div>
                                     </div>

@@ -1,5 +1,4 @@
 import { useContext, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { gql, useQuery } from '@apollo/client'
 
 import sen from '../../Imgs/sen.png'
@@ -14,14 +13,10 @@ import flame from '../../Imgs/flame.png'
 import newImg from '../../Imgs/new.png'
 import start from '../../Imgs/start.png'
 
-const GET_POPULAR = gql`
-    query popular {
-        getPopular {
-            productId
-            price
-            info
-            imgUrl
-            rating
+const GET_PROFILE = gql`
+    query getProfile {
+        getProfile {
+            username
         }
     }
 `
@@ -29,7 +24,7 @@ const GET_POPULAR = gql`
 function Home() {
     const myData = useContext(Data)
 
-    const { data } = useQuery(GET_POPULAR)
+    const { data } = useQuery(GET_PROFILE)
 
     return (
         <>
@@ -74,7 +69,7 @@ function Home() {
                         </div>
 
                         <div className="home-container-item">
-                            <Slide arr={data} name="人気商品" icon={flame} />
+                            <Slide user={data} name="人気商品" icon={flame} />
                         </div>
 
                         <div className="home-container-item">

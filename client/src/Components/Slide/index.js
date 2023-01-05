@@ -1,15 +1,74 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { gql, useQuery, useMutation } from '@apollo/client'
 
 import BtnLR from '../BtnLR'
 import love from '~/Imgs/love.png'
 import cart from '~/Imgs/cart.png'
 
-function Slide(props) {
-    let length = props.arr && props.arr.getPopular.length
-
-    const handleAdd = (id, m) => {
-        console.log(id, m)
+const GET_POPULAR = gql`
+    query popular {
+        getPopular {
+            productId
+            price
+            info
+            imgUrl
+            rating
+        }
     }
+`
+
+const ADD_TO_CART = gql`
+    mutation Mutation($productId: String!, $user: String!) {
+        addCart(productId: $productId, user: $user) {
+            productId
+            user
+        }
+    }
+`
+
+function Slide({ name, icon, user }) {
+    const { data } = useQuery(GET_POPULAR)
+
+    const navigate = useNavigate()
+
+    const [variables, setVariables] = useState({
+        productId: '',
+        user: '',
+    })
+
+    let length = data && data.getPopular.length
+
+    const [addToCart] = useMutation(ADD_TO_CART)
+
+    const handleAdd = (area, object) => {
+        switch (area) {
+            case 'favorite':
+                console.log('do nothing')
+                break
+            case 'cart':
+                setVariables((prevState) => {
+                    return prevState
+                })
+                setVariables((prevState) => {
+                    prevState = {
+                        productId: object.productId,
+                        user: object.user,
+                    }
+
+                    let newPrevState = prevState
+
+                    return newPrevState
+                })
+                break
+        }
+    }
+
+    useEffect(() => {
+        if (variables.productId != '' && variables.user != '') {
+            addToCart({ variables })
+        }
+    }, [variables])
 
     useEffect(() => {
         const slider = document.querySelectorAll('.slide-container')
@@ -47,8 +106,8 @@ function Slide(props) {
         <div className="slide">
             <div className="slide-title">
                 <div className="slide-title-left">
-                    <img src={props.icon} />
-                    {props.name}
+                    <img src={icon} />
+                    {name}
                 </div>
 
                 <div className="slide-title-right">
@@ -64,8 +123,8 @@ function Slide(props) {
                         width: `${length * 500 - 210}px`,
                     }}
                 >
-                    {props.arr &&
-                        props.arr.getPopular.map((item, index, row) => {
+                    {data &&
+                        data.getPopular.map((item, index, row) => {
                             if (index + 1 === row.length) {
                                 return (
                                     <div className="slide-container-item" key={index} style={{ marginRight: '0' }}>
@@ -82,18 +141,29 @@ function Slide(props) {
                                         <div className="slide-container-item-rating">{`${item.rating}`}</div>
 
                                         <div className="slide-container-item-btnContainer">
-                                            <div
+                                            {/* <div
                                                 className="slide-container-item-btnContainer-love"
-                                                onClick={() => handleAdd(item.productId, 'f')}
+                                                onClick={() => {
+                                                    handleAdd('favorite', {
+                                                        productId: item.productId,
+                                                        user: user && user.getProfile[0].username,
+                                                    })
+                                                }}
                                             >
                                                 <img src={love} />
                                             </div>
 
-                                            <div className="slide-container-item-btnContainer-sen"></div>
+                                            <div className="slide-container-item-btnContainer-sen"></div> */}
 
                                             <div
                                                 className="slide-container-item-btnContainer-cart"
-                                                onClick={() => handleAdd(item.productId, 'c')}
+                                                id="quan"
+                                                onClick={() => {
+                                                    handleAdd('cart', {
+                                                        productId: item.productId,
+                                                        user: user && user.getProfile[0].username,
+                                                    })
+                                                }}
                                             >
                                                 <img src={cart} />
                                             </div>
@@ -116,18 +186,29 @@ function Slide(props) {
                                         <div className="slide-container-item-rating">{`${item.rating}`}</div>
 
                                         <div className="slide-container-item-btnContainer">
-                                            <div
+                                            {/* <div
                                                 className="slide-container-item-btnContainer-love"
-                                                onClick={() => handleAdd(item.productId, 'f')}
+                                                onClick={() => {
+                                                    handleAdd('favorite', {
+                                                        productId: item.productId,
+                                                        user: user && user.getProfile[0].username,
+                                                    })
+                                                }}
                                             >
                                                 <img src={love} />
                                             </div>
 
-                                            <div className="slide-container-item-btnContainer-sen"></div>
+                                            <div className="slide-container-item-btnContainer-sen"></div> */}
 
                                             <div
                                                 className="slide-container-item-btnContainer-cart"
-                                                onClick={() => handleAdd(item.productId, 'c')}
+                                                id="quan"
+                                                onClick={() => {
+                                                    handleAdd('cart', {
+                                                        productId: item.productId,
+                                                        user: user && user.getProfile[0].username,
+                                                    })
+                                                }}
                                             >
                                                 <img src={cart} />
                                             </div>
