@@ -62,5 +62,6 @@ module.exports = gql`
         register(username: String!, email: String!, password: String!, confirmPassword: String!): User!
         sendMessage(to: String!, content: String!): Message!
         addCart(productId: String!, user: String!): Cart!
+        deleteCart(id: Int!, user: String!): Cart!
     }
 `

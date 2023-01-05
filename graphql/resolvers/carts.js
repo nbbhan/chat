@@ -1,6 +1,7 @@
 const { AuthenticationError } = require('apollo-server')
 
 const { Cart } = require('../../models')
+const { Op } = require('sequelize')
 
 module.exports = {
     Query: {
@@ -30,6 +31,21 @@ module.exports = {
                 })
 
                 return newItem
+            } catch (err) {
+                console.log(err)
+                throw err
+            }
+        },
+        deleteCart: async (_, args) => {
+            try {
+                const carts = await Cart.findAll({
+                    attributes: ['id', 'user', 'productId'],
+                    where: { user: { [Op.eq]: args.user } },
+                })
+
+                await carts.splice(2, 1)
+
+                return carts
             } catch (err) {
                 console.log(err)
                 throw err
