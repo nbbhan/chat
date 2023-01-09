@@ -37,19 +37,23 @@ function NavContainer() {
                         </div>
                     </Link>
 
-                    <div className="navContainer-main-item">
-                        <div className="navContainer-main-item-text">
-                            使い方
-                            <div className="underline" style={{ background: 'white' }}></div>
+                    <Link to="/guide">
+                        <div className="navContainer-main-item">
+                            <div className="navContainer-main-item-text">
+                                使い方
+                                <div className="underline" style={{ background: 'white' }}></div>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div className="navContainer-main-item">
-                        <div className="navContainer-main-item-text">
-                            QOKSについて
-                            <div className="underline" style={{ background: 'white' }}></div>
+                    <Link to="/about">
+                        <div className="navContainer-main-item">
+                            <div className="navContainer-main-item-text">
+                                QOKSについて
+                                <div className="underline" style={{ background: 'white' }}></div>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
 
                     <div className="navContainer-main-item">
                         <div className="navContainer-main-item-text">
