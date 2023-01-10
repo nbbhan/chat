@@ -28,8 +28,10 @@ function ProductInfo() {
 
                         <div className="productInfo-main-container">
                             <div className="productInfo-main-container-items">
-                                <div>
-                                    <div>img</div>
+                                <div className="productInfo-main-container-item">
+                                    <div className="productInfo-main-container-item-img">
+                                        <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
+                                    </div>
 
                                     <div>info</div>
                                 </div>
