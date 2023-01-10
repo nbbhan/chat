@@ -6,6 +6,7 @@ import Explore from '../../Components/Explore'
 import ImgContainer from '../../Components/ImgContainer'
 import Slide from '../../Components/Slide'
 import Prefectures from '~/Components/Prefectures'
+import Sns from '~/Components/Sns'
 
 import { Data } from '../../Provider'
 
@@ -76,21 +77,9 @@ function Home() {
                             <Prefectures />
                         </div>
 
-                        {/* <div className="home-container-item">
-                            <div>
-                                <div>ABC</div>
-
-                                <div>
-                                    <div>item 1</div>
-
-                                    <div>item 2</div>
-
-                                    <div>item 3</div>
-
-                                    <div>item 4</div>
-                                </div>
-                            </div>
-                        </div> */}
+                        <div className="home-container-item">
+                            <Sns />
+                        </div>
 
                         <div className="home-container-item-last"></div>
                     </div>

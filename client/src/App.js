@@ -12,7 +12,6 @@ import Profile from '~/Pages/Profile'
 import Guide from '~/Pages/Guide'
 import About from '~/Pages/About'
 import Contact from '~/Pages/Contact'
-import Pi from './Pages/ProductInfo'
 import Nav from './Components/Nav'
 import Chatbox from './Components/Chatbox'
 import NavContainer from './Components/NavContainer'
@@ -53,7 +52,6 @@ function App() {
                 <Route path="/guide" element={<Guide />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/pi" element={<Pi />} />
             </Routes>
         </div>
     )

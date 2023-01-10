@@ -27,7 +27,7 @@ function Main() {
                                 return (
                                     <div
                                         className="prefectures-container-right-main-item"
-                                        style={{ width: '90%' }}
+                                        style={{ width: 'calc(100% - 2rem)' }}
                                         key={index}
                                     >
                                         <div className="prefectures-container-right-main-item-content">{item}</div>
