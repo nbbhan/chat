@@ -12,8 +12,6 @@ function Nav() {
 
     const triggerRef = useRef()
 
-    const [trigger, setTrigger] = useState(false)
-
     const storage = window.localStorage.getItem('theme')
 
     const handleTogger = () => {
@@ -24,20 +22,12 @@ function Nav() {
         myData.handleChange()
     }
 
-    const handleTrigger = () => {
-        setTrigger(!trigger)
-
-        myData.handleChangeWidth()
-
-        myData.handleNav()
-    }
-
     useEffect(() => {
         handleTogger()
-    }, [trigger])
+    }, [myData.trigger])
 
     return (
-        <div className={`nav`} onClick={() => handleTrigger()}>
+        <div className={`nav`} onClick={() => myData.handleTrigger()}>
             <div className="nav-container">
                 <div className={`nav-items ${storage}`}>
                     <div

@@ -56,6 +56,10 @@ function Provider({ children }) {
 
     const [nav, setNav] = useState('off')
 
+    const [modal, setModal] = useState('none')
+
+    const [trigger, setTrigger] = useState(false)
+
     // Handle
     const handleChange = () => {
         setTheme(theme === 'light' ? 'dark' : 'light')
@@ -83,6 +87,18 @@ function Provider({ children }) {
         setNav(nav === 'off' ? 'on' : 'off')
     }
 
+    const handleModal = () => {
+        setModal(modal === 'none' ? 'flex' : 'none')
+    }
+
+    const handleTrigger = () => {
+        setTrigger(!trigger)
+
+        handleChangeWidth()
+
+        handleNav()
+    }
+
     // Provider value
     const value = {
         // Array
@@ -99,11 +115,14 @@ function Provider({ children }) {
         select,
         ani,
         nav,
+        modal,
+        trigger,
 
         // Set State
         setLogin,
         setLogout,
         setChatbox,
+        setTrigger,
 
         // Function
         handleChange,
@@ -112,6 +131,8 @@ function Provider({ children }) {
         handleSelect,
         handleAni,
         handleNav,
+        handleModal,
+        handleTrigger,
     }
 
     return <Data.Provider value={value}>{children}</Data.Provider>

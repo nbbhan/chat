@@ -8,6 +8,10 @@ import { Data } from '~/Provider'
 function NavContainer() {
     const myData = useContext(Data)
 
+    const handleModal = () => {
+        myData.handleModal()
+    }
+
     useEffect(() => {}, [myData.width])
 
     return (
@@ -56,7 +60,13 @@ function NavContainer() {
                         </div>
                     </Link>
 
-                    <div className="navContainer-main-item">
+                    <div
+                        className="navContainer-main-item"
+                        onClick={() => {
+                            handleModal()
+                            myData.handleTrigger()
+                        }}
+                    >
                         <div className="navContainer-main-item-text">
                             お問い合わせ
                             <div className="underline" style={{ background: 'white' }}></div>
