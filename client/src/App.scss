@@ -477,12 +477,6 @@ button {
     padding: 15px 15px 15px 0;
     // background: rgba(50, 50, 50, 0.4);
     background: var(--cha);
-
-    a {
-        text-decoration: underline !important;
-        color: var(--aColor) !important;
-        // font-size: 20px;
-    }
 }
 .home-container {
     width: 100%;
@@ -2277,6 +2271,15 @@ button {
     justify-content: center;
     align-items: center;
     font-family: var(--fontZen);
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            cursor: pointer;
+            color: var(--cha);
+        }
+    }
 }
 .modal-main {
     background: white;
