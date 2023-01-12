@@ -6,6 +6,7 @@ import { Data } from '~/Provider'
 import Explore from '~/Components/Explore'
 import Title from '~/Components/Title'
 import FavoriteItem from '~/Components/FavoriteItem'
+import Modal from '~/Components/Modal'
 
 const GET_FAVORITE = gql`
     query getFavorite {
@@ -34,6 +35,7 @@ function Favorite() {
 
             <div className="favorite">
                 <div className="favorite-container">
+                    <Modal />
                     <div className="favorite-main">
                         <Title props={inf} />
 

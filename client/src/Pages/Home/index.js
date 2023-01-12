@@ -7,12 +7,12 @@ import ImgContainer from '../../Components/ImgContainer'
 import Slide from '../../Components/Slide'
 import Prefectures from '~/Components/Prefectures'
 import Sns from '~/Components/Sns'
+import Last from '~/Components/Last'
+import Modal from '~/Components/Modal'
 
 import { Data } from '../../Provider'
 
 import flame from '../../Imgs/flame.png'
-import newImg from '../../Imgs/new.png'
-import start from '../../Imgs/start.png'
 
 const GET_PROFILE = gql`
     query getProfile {
@@ -33,6 +33,7 @@ function Home() {
 
             <div className="home">
                 <div className="home-container">
+                    <Modal />
                     <div className="home-container-items">
                         <div className="home-container-item" style={{ height: '100%' }}>
                             {/* <div className="home-container-item-left">
@@ -81,7 +82,7 @@ function Home() {
                             <Sns />
                         </div>
 
-                        <div className="home-container-item-last"></div>
+                        <Last />
                     </div>
                 </div>
             </div>

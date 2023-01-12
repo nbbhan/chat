@@ -2,7 +2,8 @@ import { useContext, useEffect } from 'react'
 
 import { Data } from '~/Provider'
 
-import transit from '~/Imgs/transit.png'
+import eye from '~/Imgs/eye.png'
+import transit2 from '~/Imgs/transit2.png'
 
 function Main() {
     const myData = useContext(Data)
@@ -30,13 +31,18 @@ function Main() {
                                         style={{ width: 'calc(100% - 2rem)' }}
                                         key={index}
                                     >
-                                        <div className="prefectures-container-right-main-item-content">{item}</div>
+                                        <div className="prefectures-container-right-main-item-content">
+                                            <div>{item}</div>
+
+                                            <img src={transit2} />
+                                        </div>
 
                                         <div
                                             className="prefectures-container-right-main-item-hover"
                                             onClick={(e) => handleTransition(e)}
                                         >
-                                            <img src={transit} />
+                                            <img src={eye} />
+                                            &nbsp; 詳しく見る
                                         </div>
                                     </div>
                                 )
@@ -47,13 +53,18 @@ function Main() {
                                         style={{ width: '100%' }}
                                         key={index}
                                     >
-                                        <div className="prefectures-container-right-main-item-content">{item}</div>
+                                        <div className="prefectures-container-right-main-item-content">
+                                            <div>{item}</div>
+
+                                            <img src={transit2} />
+                                        </div>
 
                                         <div
                                             className="prefectures-container-right-main-item-hover"
                                             onClick={(e) => handleTransition(e)}
                                         >
-                                            <img src={transit} />
+                                            <img src={eye} />
+                                            &nbsp; 詳しく見る
                                         </div>
                                     </div>
                                 )

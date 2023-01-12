@@ -1,5 +1,6 @@
 import Explore from '~/Components/Explore'
 import Title from '~/Components/Title'
+import Modal from '~/Components/Modal'
 
 function About() {
     const inf = {
@@ -16,6 +17,7 @@ function About() {
 
             <div className="about">
                 <div className="about-container">
+                    <Modal />
                     <div className="about-main">
                         <Title props={inf} />
 

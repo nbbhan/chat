@@ -41,7 +41,7 @@ function Explore() {
                 <div className="explore-items-main">
                     <Link to="/">
                         <div className="explore-item">
-                            <img src={logoW} style={{ width: '80px', height: '80px' }} />
+                            <img src={logoW} style={{ width: '80px', height: '80px', transform: 'rotate(10deg)' }} />
                         </div>
                     </Link>
 
@@ -98,9 +98,14 @@ function Explore() {
                     </Link> */}
 
                     {/* <div className="explore-item" onClick={() => handleChat()}>
-                        <img src={chat} />
+                        <div style={{ textAlign: 'center' }}>
+                            <img src={chat} />
 
-                        <div>チャット</div>
+                            <div className="explore-item-text">
+                                チャット
+                                <div className="underline" style={{ background: 'white' }}></div>
+                            </div>
+                        </div>
                     </div> */}
 
                     <div className="explore-line"></div>
@@ -153,6 +158,10 @@ function Explore() {
                                 <div className="underline" style={{ background: 'white' }}></div>
                             </div>
                         </div>
+                    </div>
+
+                    <div className="explore-item" style={{ fontSize: '12px', color: 'var(--myColor)' }}>
+                        © 2023 Qoks inc. All Right Reserved.
                     </div>
                 </div>
             </div>

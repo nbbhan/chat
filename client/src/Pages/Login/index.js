@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { gql, useLazyQuery } from '@apollo/client'
 
 import Explore from '../../Components/Explore'
+import Modal from '~/Components/Modal'
 import { useAuthDispatch } from '../../context/auth'
 
 import { Data } from '../../Provider'
@@ -53,6 +54,7 @@ function Login() {
 
             <div className="login">
                 <div className="login-main">
+                    <Modal />
                     <div className="login-container">
                         <div className="login-container-title">ログイン</div>
 

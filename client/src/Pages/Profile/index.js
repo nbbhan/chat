@@ -5,6 +5,7 @@ import { Data } from '~/Provider'
 
 import Explore from '~/Components/Explore'
 import Title from '~/Components/Title'
+import Modal from '~/Components/Modal'
 
 const GET_PROFILE = gql`
     query getProfile {
@@ -38,6 +39,7 @@ function Profile() {
 
             <div className="profile">
                 <div className="profile-container">
+                    <Modal />
                     <div className="profile-main">
                         <Title props={inf} />
 

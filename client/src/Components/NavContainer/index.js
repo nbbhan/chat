@@ -21,6 +21,7 @@ function NavContainer() {
                                 display: 'flex',
                                 justifyContent: 'center',
                                 marginBottom: '2rem',
+                                transform: 'rotate(10deg)',
                                 // border: '1px solid white',
                             }}
                         >
