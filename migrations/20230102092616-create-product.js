@@ -33,6 +33,12 @@ module.exports = {
                 allowNull: false,
                 type: Sequelize.STRING(5),
             },
+            area: {
+                type: Sequelize.STRING,
+            },
+            prefecture: {
+                type: Sequelize.STRING,
+            },
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE,
