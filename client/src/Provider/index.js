@@ -58,7 +58,7 @@ function Provider({ children }) {
 
     const [cm, setCm] = useState('none')
 
-    const [sm, setSm] = useState('flex')
+    const [sm, setSm] = useState('none')
 
     const [trigger, setTrigger] = useState(false)
 
