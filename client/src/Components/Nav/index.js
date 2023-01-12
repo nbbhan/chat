@@ -1,9 +1,4 @@
 import { useEffect, useState, useRef, useContext } from 'react'
-import { Link } from 'react-router-dom'
-
-import logo from '../../Imgs/logoN.png'
-import loupe from '../../Imgs/loupe.png'
-import lightOff from '../../Imgs/light-off.png'
 
 import { Data } from '../../Provider'
 

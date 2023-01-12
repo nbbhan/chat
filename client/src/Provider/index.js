@@ -56,7 +56,9 @@ function Provider({ children }) {
 
     const [nav, setNav] = useState('off')
 
-    const [modal, setModal] = useState('none')
+    const [cm, setCm] = useState('none')
+
+    const [sm, setSm] = useState('flex')
 
     const [trigger, setTrigger] = useState(false)
 
@@ -87,8 +89,12 @@ function Provider({ children }) {
         setNav(nav === 'off' ? 'on' : 'off')
     }
 
-    const handleModal = () => {
-        setModal(modal === 'none' ? 'flex' : 'none')
+    const handleCM = () => {
+        setCm(cm === 'none' ? 'flex' : 'none')
+    }
+
+    const handleSM = () => {
+        setSm(sm === 'none' ? 'flex' : 'none')
     }
 
     const handleTrigger = () => {
@@ -115,7 +121,8 @@ function Provider({ children }) {
         select,
         ani,
         nav,
-        modal,
+        cm,
+        sm,
         trigger,
 
         // Set State
@@ -131,7 +138,8 @@ function Provider({ children }) {
         handleSelect,
         handleAni,
         handleNav,
-        handleModal,
+        handleCM,
+        handleSM,
         handleTrigger,
     }
 

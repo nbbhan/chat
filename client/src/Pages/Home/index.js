@@ -9,6 +9,7 @@ import Prefectures from '~/Components/Prefectures'
 import Sns from '~/Components/Sns'
 import Last from '~/Components/Last'
 import Modal from '~/Components/Modal'
+import SettingModal from '~/Components/SettingModal'
 
 import { Data } from '../../Provider'
 
@@ -34,6 +35,8 @@ function Home() {
             <div className="home">
                 <div className="home-container">
                     <Modal />
+
+                    <SettingModal />
                     <div className="home-container-items">
                         <div className="home-container-item" style={{ height: '100%' }}>
                             {/* <div className="home-container-item-left">
