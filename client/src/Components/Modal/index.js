@@ -18,7 +18,7 @@ function Modal() {
             <div className="modal-main">
                 <div className="modal-container">
                     <div className="modal-container-left">
-                        <Link to="/contact">
+                        <Link to="/contact" onClick={() => handleModal()}>
                             <div className="modal-container-item">
                                 <div style={{ textAlign: 'center' }}>
                                     <div style={{ marginBottom: '2rem' }}>
