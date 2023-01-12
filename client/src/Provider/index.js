@@ -63,8 +63,14 @@ function Provider({ children }) {
     const [trigger, setTrigger] = useState(false)
 
     // Handle
-    const handleChange = () => {
-        setTheme(theme === 'light' ? 'dark' : 'light')
+    const changeToLight = () => {
+        setTheme('dark')
+
+        window.localStorage.setItem('theme', theme)
+    }
+
+    const changeToDark = () => {
+        setTheme('light')
 
         window.localStorage.setItem('theme', theme)
     }
@@ -132,7 +138,8 @@ function Provider({ children }) {
         setTrigger,
 
         // Function
-        handleChange,
+        changeToDark,
+        changeToLight,
         handleChangeWidth,
         handleChatshow,
         handleSelect,

@@ -13,10 +13,6 @@ function Nav() {
         triggerRef.current.classList.toggle('active')
     }
 
-    const handleChangeTheme = () => {
-        myData.handleChange()
-    }
-
     useEffect(() => {
         handleTogger()
     }, [myData.trigger])
@@ -39,16 +35,6 @@ function Nav() {
                             <span></span>
                         </button>
                     </div>
-
-                    {/* <div className="nav-items-light">
-                        <div
-                            onClick={() => {
-                                handleChangeTheme()
-                            }}
-                        >
-                            <img src={lightOff} />
-                        </div>
-                    </div> */}
                 </div>
             </div>
         </div>
