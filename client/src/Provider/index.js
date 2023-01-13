@@ -114,7 +114,16 @@ function Provider({ children }) {
     }
 
     const getProductData = (data) => {
-        setProduct(data)
+        setProduct((prevState) => {
+            return prevState
+        })
+        setProduct((prevState) => {
+            prevState = data
+
+            let newPrevState = prevState
+
+            return newPrevState
+        })
     }
 
     // Provider value
