@@ -39,6 +39,8 @@ module.exports = gql`
         rating: String!
         imgUrl: String!
         dealerId: String
+        area: String
+        prefecture: String
     }
     type Cart {
         productId: String!

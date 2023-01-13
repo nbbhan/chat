@@ -9,9 +9,11 @@ import prefectures4 from '~/Imgs/prefectures-4.png'
 import prefectures5 from '~/Imgs/prefectures-5.png'
 import prefectures6 from '~/Imgs/prefectures-6.png'
 import prefectures7 from '~/Imgs/prefectures-7.png'
+import prefectures8 from '~/Imgs/prefectures-8.png'
 
 import Items from './Items'
 import Main from './Main'
+import Container from './Container'
 
 function Prefectures() {
     const myData = useContext(Data)
@@ -33,6 +35,8 @@ function Prefectures() {
         prefectures6,
         // 中部
         prefectures7,
+        //関東
+        prefectures8,
     ]
 
     const handleSelectValue = (e) => {
@@ -59,6 +63,9 @@ function Prefectures() {
             break
         case '中部':
             x = 6
+            break
+        case '関東':
+            x = 7
             break
         default:
             x = 0
@@ -104,6 +111,8 @@ function Prefectures() {
                     <Main />
                 </div>
             </div>
+
+            <Container />
         </div>
     )
 }

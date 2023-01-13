@@ -62,6 +62,8 @@ function Provider({ children }) {
 
     const [trigger, setTrigger] = useState(false)
 
+    const [product, setProduct] = useState('')
+
     // Handle
     const changeToLight = () => {
         setTheme('dark')
@@ -111,6 +113,10 @@ function Provider({ children }) {
         handleNav()
     }
 
+    const getProductData = (data) => {
+        setProduct(data)
+    }
+
     // Provider value
     const value = {
         // Array
@@ -130,6 +136,7 @@ function Provider({ children }) {
         cm,
         sm,
         trigger,
+        product,
 
         // Set State
         setLogin,
@@ -148,6 +155,7 @@ function Provider({ children }) {
         handleCM,
         handleSM,
         handleTrigger,
+        getProductData,
     }
 
     return <Data.Provider value={value}>{children}</Data.Provider>

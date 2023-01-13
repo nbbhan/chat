@@ -30,6 +30,8 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING(5),
                 allowNull: false,
             },
+            area: DataTypes.STRING,
+            prefecture: DataTypes.STRING,
         },
         {
             sequelize,

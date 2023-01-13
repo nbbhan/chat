@@ -13,7 +13,9 @@ function Main() {
 
         e.target.nodeName === 'IMG' ? (log = e.target.offsetParent) : (log = e.target)
 
-        console.log(log)
+        let data = log.attributes.data.value
+
+        myData.getProductData(data)
     }
 
     useEffect(() => {}, [myData.select])
@@ -38,6 +40,7 @@ function Main() {
                                         </div>
 
                                         <div
+                                            data={item}
                                             className="prefectures-container-right-main-item-hover"
                                             onClick={(e) => handleTransition(e)}
                                         >
@@ -60,6 +63,7 @@ function Main() {
                                         </div>
 
                                         <div
+                                            data={item}
                                             className="prefectures-container-right-main-item-hover"
                                             onClick={(e) => handleTransition(e)}
                                         >

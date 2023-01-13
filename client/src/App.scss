@@ -1458,6 +1458,12 @@ button {
         transition-delay: 0.1s;
     }
 }
+.prefectures-itemsContainer {
+    border: 1px solid red;
+    width: 100%;
+    min-height: 300px;
+    padding: 0 20px 0 20px;
+}
 
 // Cart
 .cart {
@@ -2246,7 +2252,6 @@ button {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     display: flex;
     align-items: center;
     font-size: 2rem;
@@ -2254,8 +2259,10 @@ button {
     font-style: italic;
     font-family: var(--fontComfor);
     color: var(--cha);
-    padding: 0 0 0 0.5rem;
+    padding: 0 0.5rem 0 0.5rem;
+    margin-left: 0.5rem;
     transform: translateY(-55%);
+    background: white;
     // border: 1px solid red;
 }
 
