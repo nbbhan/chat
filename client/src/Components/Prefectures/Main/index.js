@@ -18,10 +18,6 @@ function Main() {
         myData.getProductData(data)
     }
 
-    useEffect(() => {
-        handleTransition(e)
-    }, [myData.product])
-
     useEffect(() => {}, [myData.select])
 
     return (
