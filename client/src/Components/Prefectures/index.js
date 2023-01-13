@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from 'react'
 import { gql, useQuery } from '@apollo/client'
+import classname from 'classname'
 
 import { Data } from '~/Provider'
 
@@ -86,6 +87,10 @@ function Prefectures() {
 
     useEffect(() => {}, [myData.select])
 
+    const clsx = classname({
+        prefecturesOn: myData.product,
+    })
+
     return (
         <div className="prefectures">
             <Items />
@@ -127,7 +132,7 @@ function Prefectures() {
             <div className="prefecture-scroll">
                 <span>
                     {myData.product}
-                    <div></div>
+                    <div className={clsx}></div>
                 </span>
                 &nbsp;
             </div>
