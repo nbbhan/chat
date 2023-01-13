@@ -1040,7 +1040,6 @@ button {
     overflow: hidden;
 }
 .slide-container-main {
-    // width: 8340px;
     height: 439px;
     display: flex;
     align-items: center;
@@ -1460,29 +1459,117 @@ button {
 }
 .prefectures-itemsContainer {
     width: 100%;
-    padding: 0 20px 0 20px;
+    overflow: hidden;
 }
 .prefectures-itemsContainer-items {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    // border: 1px solid red;
+    height: 439px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
 }
-.prefectures-itemsContainer-item {
-    height: 300px;
-    padding: 25px 60px 25px 60px;
+.prefecture-container-item {
+    width: 480px;
+    height: 95%;
+    margin-right: 8rem;
+    padding: 1rem;
+    // border: 1px solid var(--cha);
     border-radius: var(--borderR);
+    transition: all 0.3s ease-in-out;
+    position: relative;
 
     &:hover {
         cursor: pointer;
         box-shadow: 0 3px 10px 3px var(--myColor);
+
+        #prefecture-img {
+            transform: scale(0.98);
+            width: 100%;
+            height: 100%;
+        }
+
+        .prefecture-container-item-info {
+            span {
+                color: var(--cha);
+            }
+        }
+
+        .prefecture-container-item-btnContainer {
+            transform: translateY(0%);
+        }
     }
+}
+.prefecture-container-item-img {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: flex-end;
 
     img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
         border-radius: var(--borderR);
+        object-fit: cover;
+        transition: all 0.3s ease-in-out;
     }
+}
+.prefecture-container-item-btnContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 101px;
+    height: 50px;
+    padding: 1rem 1rem 0 0;
+    // box-shadow: var(--boxS);
+    background: white;
+    border-radius: var(--borderR);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    transform: translateY(-150%);
+}
+.prefecture-container-item-btnContainer-love {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+.prefecture-container-item-btnContainer-cart {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+.prefecture-container-item-btnContainer-sen {
+    width: 1px;
+    height: 50%;
+    background: var(--myColor);
+}
+.prefecture-container-item-info {
+    // font-weight: 500;
+    font-size: 22px;
+    margin-top: 1rem;
+    transition: all 0.3s ease-in-out;
+
+    span {
+        border-radius: var(--borderR);
+        transition: all 0.3s ease-in-out;
+    }
+}
+.prefecture-container-item-price {
+    // font-weight: 500;
+}
+.prefecture-container-item-rating {
+    // font-weight: 500;
 }
 
 // Cart
