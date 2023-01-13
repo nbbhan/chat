@@ -30,10 +30,8 @@ function Container() {
                 {data &&
                     data.getProduct.map((element, index) => {
                         if (myData.product) {
-                            if (element.prefecture === myData.product) {
-                                console.log(element.prefecture)
-                                console.log(myData.product)
-                            }
+                            console.log(element.prefecture)
+                            // console.log(myData.product)
                         }
                     })}
             </div>
