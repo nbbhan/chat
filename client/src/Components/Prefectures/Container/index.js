@@ -29,9 +29,8 @@ function Container() {
             <div>
                 {data &&
                     data.getProduct.map((element, index) => {
-                        if (myData.product) {
-                            console.log(element.prefecture)
-                            // console.log(myData.product)
+                        if (element.prefecture === myData.product) {
+                            return <div key={index}>{element.productId}</div>
                         }
                     })}
             </div>
