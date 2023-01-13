@@ -1569,7 +1569,6 @@ button {
 }
 .prefecture-scroll {
     width: 100%;
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1578,6 +1577,7 @@ button {
 
     span {
         position: relative;
+        margin-bottom: 10px;
 
         div {
             position: absolute;

@@ -134,7 +134,6 @@ function Prefectures() {
                     {myData.product}
                     <div className={clsx}></div>
                 </span>
-                &nbsp;
             </div>
 
             <Container user={data} />
