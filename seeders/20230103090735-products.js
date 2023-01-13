@@ -124,6 +124,18 @@ module.exports = {
                 updatedAt: '2020-07-01 07:00:00',
             },
             {
+                productId: 'p0098',
+                info: '横手焼きそば',
+                price: '1300',
+                rating: '5',
+                imgUrl: 'https://thumb.photo-ac.com/86/86fe929f88259ba52e2e431249620d33_t.jpeg',
+                dealerId: '',
+                prefecture: '秋田県',
+                area: 'hokkaido_touhoku',
+                createdAt: '2020-07-01 07:00:00',
+                updatedAt: '2020-07-01 07:00:00',
+            },
+            {
                 productId: 'p0101',
                 info: 'みょうが',
                 price: '600',
