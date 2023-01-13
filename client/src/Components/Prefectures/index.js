@@ -11,6 +11,7 @@ import prefectures5 from '~/Imgs/prefectures-5.png'
 import prefectures6 from '~/Imgs/prefectures-6.png'
 import prefectures7 from '~/Imgs/prefectures-7.png'
 import prefectures8 from '~/Imgs/prefectures-8.png'
+import scroll from '~/Imgs/scrolling.png'
 
 import Items from './Items'
 import Main from './Main'
@@ -121,6 +122,14 @@ function Prefectures() {
 
                     <Main />
                 </div>
+            </div>
+
+            <div className="prefecture-scroll">
+                <span>
+                    {myData.product}
+                    <div></div>
+                </span>
+                &nbsp;
             </div>
 
             <Container user={data} />

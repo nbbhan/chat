@@ -1460,12 +1460,11 @@ button {
 .prefectures-itemsContainer {
     width: 100%;
     overflow: hidden;
-    border: 1px solid red;
 }
 .prefectures-itemsContainer-items {
     display: flex;
     align-items: center;
-    padding: 0 1rem 0 1rem;
+    padding: 0rem 1rem 0 1rem;
 }
 .prefecture-container-item {
     margin: 1rem 8rem 1rem 0rem;
@@ -1567,6 +1566,29 @@ button {
 }
 .prefecture-container-item-rating {
     // font-weight: 500;
+}
+.prefecture-scroll {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: var(--cha);
+
+    span {
+        position: relative;
+
+        div {
+            position: absolute;
+            bottom: -5px;
+            left: -50px;
+            width: calc(100% + 100px);
+            height: 2px;
+            background: var(--cha);
+            border-radius: 100rem;
+        }
+    }
 }
 
 // Cart
