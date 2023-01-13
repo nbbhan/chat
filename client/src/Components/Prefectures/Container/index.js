@@ -26,11 +26,15 @@ function Container() {
 
     return (
         <div className="prefectures-itemsContainer">
-            <div>
+            <div className="prefectures-itemsContainer-items">
                 {data &&
                     data.getProduct.map((element, index) => {
                         if (element.prefecture === myData.product) {
-                            return <div key={index}>{element.info}</div>
+                            return (
+                                <div className="prefectures-itemsContainer-item" key={index}>
+                                    <img src={element.imgUrl} />
+                                </div>
+                            )
                         }
                     })}
             </div>

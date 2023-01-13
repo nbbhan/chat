@@ -1459,10 +1459,30 @@ button {
     }
 }
 .prefectures-itemsContainer {
-    border: 1px solid red;
     width: 100%;
-    min-height: 300px;
     padding: 0 20px 0 20px;
+}
+.prefectures-itemsContainer-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // border: 1px solid red;
+}
+.prefectures-itemsContainer-item {
+    height: 300px;
+    padding: 25px 60px 25px 60px;
+    border-radius: var(--borderR);
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0 3px 10px 3px var(--myColor);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: var(--borderR);
+    }
 }
 
 // Cart
