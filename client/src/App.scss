@@ -1468,7 +1468,6 @@ button {
     padding: 0 1rem 0 1rem;
 }
 .prefecture-container-item {
-    width: 480px;
     height: 95%;
     margin-right: 8rem;
     padding: 1rem;
@@ -1499,7 +1498,7 @@ button {
     }
 }
 .prefecture-container-item-img {
-    width: 100%;
+    width: calc(480px - 9rem);
     height: 70%;
     display: flex;
     align-items: flex-end;

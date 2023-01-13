@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from 'react'
+import { gql, useQuery } from '@apollo/client'
 
 import { Data } from '~/Provider'
 
@@ -15,8 +16,18 @@ import Items from './Items'
 import Main from './Main'
 import Container from './Container'
 
+const GET_PROFILE = gql`
+    query getProfile {
+        getProfile {
+            username
+        }
+    }
+`
+
 function Prefectures() {
     const myData = useContext(Data)
+
+    const { data } = useQuery(GET_PROFILE)
 
     let x
 
@@ -112,7 +123,7 @@ function Prefectures() {
                 </div>
             </div>
 
-            <Container />
+            <Container user={data} />
         </div>
     )
 }

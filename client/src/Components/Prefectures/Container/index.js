@@ -1,5 +1,5 @@
-import { gql, useQuery } from '@apollo/client'
-import { useContext, useEffect } from 'react'
+import { gql, useQuery, useMutation } from '@apollo/client'
+import { useContext, useEffect, useState } from 'react'
 
 import { Data } from '~/Provider'
 
@@ -19,10 +19,49 @@ const GET_PRODUCT = gql`
     }
 `
 
-function Container() {
+const ADD_TO_CART = gql`
+    mutation Mutation($productId: String!, $user: String!) {
+        addCart(productId: $productId, user: $user) {
+            productId
+            user
+        }
+    }
+`
+
+function Container({ user }) {
     const myData = useContext(Data)
 
     const { data } = useQuery(GET_PRODUCT)
+
+    const [addToCart] = useMutation(ADD_TO_CART)
+
+    const [variables, setVariables] = useState({
+        productId: '',
+        user: '',
+    })
+
+    const handleAdd = (area, object) => {
+        switch (area) {
+            case 'favorite':
+                console.log('do nothing')
+                break
+            case 'cart':
+                setVariables((prevState) => {
+                    return prevState
+                })
+                setVariables((prevState) => {
+                    prevState = {
+                        productId: object.productId,
+                        user: object.user,
+                    }
+
+                    let newPrevState = prevState
+
+                    return newPrevState
+                })
+                break
+        }
+    }
 
     useEffect(() => {}, [myData.product])
 
@@ -58,110 +97,62 @@ function Container() {
         })
     })
 
-    let length = 4
+    useEffect(() => {
+        if (variables.productId != '' && variables.user != '') {
+            addToCart({ variables })
+        }
+    }, [variables])
 
     return (
         <div className="prefectures-itemsContainer">
-            <div
-                className="prefectures-itemsContainer-items"
-                style={{
-                    width: `${length * 500}px`,
-                }}
-            >
+            <div className="prefectures-itemsContainer-items">
                 {data &&
-                    data.getProduct.map((item, index, row) => {
+                    data.getProduct.map((item, index) => {
                         if (item.prefecture === myData.product) {
-                            if (index + 1 === row.length) {
-                                return (
-                                    <div className="prefecture-container-item" key={index} style={{ marginRight: '0' }}>
-                                        <div className="prefecture-container-item-img">
-                                            <img id="prefecture-img" src={item.imgUrl} />
+                            return (
+                                <div className="prefecture-container-item" key={index}>
+                                    <div className="prefecture-container-item-img">
+                                        <img id="prefecture-img" src={item.imgUrl} />
+                                    </div>
+
+                                    <div className="prefecture-container-item-info">
+                                        <span>{item.info}</span>
+                                    </div>
+
+                                    <div className="prefecture-container-item-price">{`${item.price}円（税込）`}</div>
+
+                                    <div className="prefecture-container-item-rating">{`${item.rating}`}</div>
+
+                                    <div className="prefecture-container-item-btnContainer">
+                                        {/* <div
+                                            className="prefecture-container-item-btnContainer-love"
+                                            onClick={() => {
+                                                handleAdd('favorite', {
+                                                    productId: item.productId,
+                                                    user: user && user.getProfile[0].username,
+                                                })
+                                            }}
+                                        >
+                                            <img src={love} />
                                         </div>
 
-                                        <div className="prefecture-container-item-info">
-                                            <span>{item.info}</span>
-                                        </div>
+                                        <div className="prefecture-container-item-btnContainer-sen"></div> */}
 
-                                        <div className="prefecture-container-item-price">{`${item.price}円（税込）`}</div>
-
-                                        <div className="prefecture-container-item-rating">{`${item.rating}`}</div>
-
-                                        <div className="prefecture-container-item-btnContainer">
-                                            {/* <div
-                                                className="prefecture-container-item-btnContainer-love"
-                                                onClick={() => {
-                                                    handleAdd('favorite', {
-                                                        productId: item.productId,
-                                                        user: user && user.getProfile[0].username,
-                                                    })
-                                                }}
-                                            >
-                                                <img src={love} />
-                                            </div>
-
-                                            <div className="prefecture-container-item-btnContainer-sen"></div> */}
-
-                                            <div
-                                                className="prefecture-container-item-btnContainer-cart"
-                                                id="quan"
-                                                // onClick={() => {
-                                                //     handleAdd('cart', {
-                                                //         productId: item.productId,
-                                                //         user: user && user.getProfile[0].username,
-                                                //     })
-                                                // }}
-                                            >
-                                                <img src={cart} />
-                                            </div>
+                                        <div
+                                            className="prefecture-container-item-btnContainer-cart"
+                                            id="quan"
+                                            onClick={() => {
+                                                handleAdd('cart', {
+                                                    productId: item.productId,
+                                                    user: user && user.getProfile[0].username,
+                                                })
+                                            }}
+                                        >
+                                            <img src={cart} />
                                         </div>
                                     </div>
-                                )
-                            } else {
-                                return (
-                                    <div className="prefecture-container-item" key={index}>
-                                        <div className="prefecture-container-item-img">
-                                            <img id="prefecture-img" src={item.imgUrl} />
-                                        </div>
-
-                                        <div className="prefecture-container-item-info">
-                                            <span>{item.info}</span>
-                                        </div>
-
-                                        <div className="prefecture-container-item-price">{`${item.price}円（税込）`}</div>
-
-                                        <div className="prefecture-container-item-rating">{`${item.rating}`}</div>
-
-                                        <div className="prefecture-container-item-btnContainer">
-                                            {/* <div
-                                                className="prefecture-container-item-btnContainer-love"
-                                                onClick={() => {
-                                                    handleAdd('favorite', {
-                                                        productId: item.productId,
-                                                        user: user && user.getProfile[0].username,
-                                                    })
-                                                }}
-                                            >
-                                                <img src={love} />
-                                            </div>
-
-                                            <div className="prefecture-container-item-btnContainer-sen"></div> */}
-
-                                            <div
-                                                className="prefecture-container-item-btnContainer-cart"
-                                                id="quan"
-                                                // onClick={() => {
-                                                //     handleAdd('cart', {
-                                                //         productId: item.productId,
-                                                //         user: user && user.getProfile[0].username,
-                                                //     })
-                                                // }}
-                                            >
-                                                <img src={cart} />
-                                            </div>
-                                        </div>
-                                    </div>
-                                )
-                            }
+                                </div>
+                            )
                         }
                     })}
             </div>
