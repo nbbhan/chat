@@ -1587,8 +1587,12 @@ button {
             height: 2px;
             background: var(--cha);
             border-radius: 100rem;
+            display: none;
         }
     }
+}
+.prefecturesOn {
+    display: block !important;
 }
 
 // Cart
