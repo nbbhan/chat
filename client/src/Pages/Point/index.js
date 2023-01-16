@@ -7,6 +7,7 @@ import { Data } from '~/Provider'
 import Explore from '~/Components/Explore'
 import Title from '~/Components/Title'
 import Modal from '~/Components/Modal'
+import SettingModal from '~/Components/SettingModal'
 
 import point from '~/Imgs/point.png'
 
@@ -51,6 +52,9 @@ function Point() {
             <div className="point">
                 <div className="point-container">
                     <Modal />
+
+                    <SettingModal />
+
                     <div className="point-main">
                         <Title props={inf} />
 

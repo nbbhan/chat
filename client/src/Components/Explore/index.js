@@ -58,7 +58,7 @@ function Explore() {
                         </div>
                     </Link>
 
-                    <Link to="/cart">
+                    <a href="/cart">
                         <div className="explore-item">
                             <div style={{ textAlign: 'center' }}>
                                 <img src={cart} />
@@ -69,7 +69,7 @@ function Explore() {
                                 </div>
                             </div>
                         </div>
-                    </Link>
+                    </a>
 
                     <Link to="/point">
                         <div className="explore-item">

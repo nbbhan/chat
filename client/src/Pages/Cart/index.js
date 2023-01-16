@@ -7,6 +7,7 @@ import Explore from '~/Components/Explore'
 import Title from '~/Components/Title'
 import CartItem from '~/Components/CartItem'
 import Modal from '~/Components/Modal'
+import SettingModal from '~/Components/SettingModal'
 
 const GET_CART = gql`
     query getCart {
@@ -36,6 +37,9 @@ function Cart() {
             <div className="cart">
                 <div className="cart-container">
                     <Modal />
+
+                    <SettingModal />
+
                     <div className="cart-main">
                         <Title props={inf} />
 

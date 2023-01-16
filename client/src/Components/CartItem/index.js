@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react'
 import { gql, useQuery, useMutation } from '@apollo/client'
+import { useContext } from 'react'
+
+import { Data } from '../../Provider'
 
 const GET_PRODUCT = gql`
     query getProduct {
@@ -9,6 +12,19 @@ const GET_PRODUCT = gql`
             info
             productId
             rating
+        }
+    }
+`
+
+const GET_PROFILE = gql`
+    query getProfile {
+        getProfile {
+            username
+            createdAt
+            imageUrl
+            buyPoint
+            getPoint
+            follow
         }
     }
 `
@@ -25,6 +41,10 @@ const DELETE_PRODUCT = gql`
 function CartItem({ item }) {
     const { data } = useQuery(GET_PRODUCT)
 
+    const profile = useQuery(GET_PROFILE)
+
+    const myData = useContext(Data)
+
     const [variables, setVariables] = useState({
         productId: '',
         user: '',
@@ -32,20 +52,22 @@ function CartItem({ item }) {
 
     const [deleteProduct] = useMutation(DELETE_PRODUCT)
 
-    const handleDelete = (productId, user) => {
+    const handleDelete = (object) => {
         setVariables((prevState) => {
             return prevState
         })
         setVariables((prevState) => {
             prevState = {
-                productId: productId,
-                user: user,
+                productId: object.productId,
+                user: object.user,
             }
 
             let newPrevState = prevState
 
             return newPrevState
         })
+
+        window.location.reload()
     }
 
     useEffect(() => {
@@ -80,7 +102,12 @@ function CartItem({ item }) {
 
                                     <div
                                         className="cart-main-item-container-close"
-                                        onClick={() => handleDelete(element.productId, 'jane')}
+                                        onClick={() =>
+                                            handleDelete({
+                                                productId: element.productId,
+                                                user: profile.data && profile.data.getProfile[0].username,
+                                            })
+                                        }
                                     >
                                         削除
                                     </div>

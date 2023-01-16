@@ -10,6 +10,7 @@ import Sns from '~/Components/Sns'
 import Last from '~/Components/Last'
 import Modal from '~/Components/Modal'
 import SettingModal from '~/Components/SettingModal'
+import Noti from '~/Components/Noti'
 
 import { Data } from '../../Provider'
 
@@ -37,6 +38,9 @@ function Home() {
                     <Modal />
 
                     <SettingModal />
+
+                    <Noti />
+
                     <div className="home-container-items">
                         <div className="home-container-item" style={{ height: '100%' }}>
                             {/* <div className="home-container-item-left">

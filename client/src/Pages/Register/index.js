@@ -4,6 +4,7 @@ import { gql, useMutation } from '@apollo/client'
 
 import Explore from '../../Components/Explore'
 import Modal from '~/Components/Modal'
+import SettingModal from '~/Components/SettingModal'
 
 const REGISTER_USER = gql`
     mutation register($username: String!, $email: String!, $password: String!, $confirmPassword: String!) {
@@ -45,6 +46,9 @@ function Register() {
             <div className="register">
                 <div className="register-main">
                     <Modal />
+
+                    <SettingModal />
+
                     <div className="register-container">
                         <div className="register-container-title">アカウント作成</div>
 

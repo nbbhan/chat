@@ -60,6 +60,8 @@ function Provider({ children }) {
 
     const [sm, setSm] = useState('none')
 
+    const [noti, setNoti] = useState('none')
+
     const [trigger, setTrigger] = useState(false)
 
     const [product, setProduct] = useState('')
@@ -105,6 +107,10 @@ function Provider({ children }) {
         setSm(sm === 'none' ? 'flex' : 'none')
     }
 
+    const handleNoti = () => {
+        setNoti(noti === 'none' ? 'flex' : 'none')
+    }
+
     const handleTrigger = () => {
         setTrigger(!trigger)
 
@@ -137,6 +143,7 @@ function Provider({ children }) {
         sm,
         trigger,
         product,
+        noti,
 
         // Set State
         setLogin,
@@ -156,6 +163,7 @@ function Provider({ children }) {
         handleSM,
         handleTrigger,
         getProductData,
+        handleNoti,
     }
 
     return <Data.Provider value={value}>{children}</Data.Provider>

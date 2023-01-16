@@ -5,6 +5,7 @@ import { gql, useLazyQuery } from '@apollo/client'
 import Explore from '../../Components/Explore'
 import Modal from '~/Components/Modal'
 import { useAuthDispatch } from '../../context/auth'
+import SettingModal from '~/Components/SettingModal'
 
 import { Data } from '../../Provider'
 
@@ -55,6 +56,9 @@ function Login() {
             <div className="login">
                 <div className="login-main">
                     <Modal />
+
+                    <SettingModal />
+
                     <div className="login-container">
                         <div className="login-container-title">ログイン</div>
 
