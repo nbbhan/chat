@@ -43,9 +43,7 @@ module.exports = {
                     where: { user: { [Op.eq]: args.user } },
                 })
 
-                await carts.splice(2, 1)
-
-                return carts
+                console.log(carts)
             } catch (err) {
                 console.log(err)
                 throw err
