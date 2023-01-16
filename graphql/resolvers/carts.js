@@ -39,7 +39,7 @@ module.exports = {
         deleteCart: async (_, args) => {
             try {
                 const carts = await Cart.findOne({
-                    where: { user: { [Op.eq]: args.user }, id: { [Op.eq]: args.id } },
+                    where: { user: { [Op.eq]: args.user }, productId: { [Op.eq]: args.productId } },
                 }).then((cart) => {
                     cart.destroy()
                 })

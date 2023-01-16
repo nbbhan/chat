@@ -1,18 +1,20 @@
 import social from '~/Imgs/social.png'
-import japan from '~/Imgs/3.png'
+import face from '~/Imgs/Facebook.png'
+import ins from '~/Imgs/Instagram.png'
+import tiktok from '~/Imgs/TikTok.png'
+import twi from '~/Imgs/Twitter.png'
 
 function Sns() {
     return (
         <div className="sns">
+            {/* <div className="sns-title">
+                <img src={social} />
+                <span>ソーシャルメディア</span>
+            </div> */}
+
             <div className="sns-startline">
                 <div></div>
             </div>
-
-            {/* <div className="sns-title">
-                <img src={social} style={{ transform: 'rotate(-15deg)' }} />
-                <span>ソーシャルメディア</span>
-                <img src={social} style={{ transform: 'rotate(15deg)' }} />
-            </div> */}
 
             <div className="sns-container">
                 <div className="sns-container-left">
@@ -23,7 +25,7 @@ function Sns() {
                                     <span>#</span>facebook
                                 </div>
 
-                                {/* <img src={japan} /> */}
+                                <img src={face} />
                             </div>
                         </div>
 
@@ -33,7 +35,7 @@ function Sns() {
                                     <span>#</span>instagram
                                 </div>
 
-                                {/* <img src={japan} /> */}
+                                <img src={ins} />
                             </div>
                         </div>
                     </div>
@@ -45,7 +47,7 @@ function Sns() {
                                     <span>#</span>twitter
                                 </div>
 
-                                {/* <img src={japan} /> */}
+                                <img src={tiktok} />
                             </div>
                         </div>
 
@@ -55,7 +57,7 @@ function Sns() {
                                     <span>#</span>tiktok
                                 </div>
 
-                                {/* <img src={japan} /> */}
+                                <img src={twi} />
                             </div>
                         </div>
                     </div>
