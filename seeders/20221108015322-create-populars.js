@@ -6,7 +6,7 @@ module.exports = {
             {
                 productId: 'p0001',
                 info: 'お茶',
-                price: '100',
+                price: '270',
                 rating: '3.5',
                 imgUrl: 'https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
                 dealerId: '',
@@ -55,7 +55,7 @@ module.exports = {
             },
             {
                 productId: 'p0006',
-                info: 'うどん',
+                info: '讃岐うどん',
                 price: '400',
                 rating: '3',
                 imgUrl: 'https://images.unsplash.com/photo-1618841557871-b4664fbf0cb3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8JUUzJTgxJTg2JUUzJTgxJUE5JUUzJTgyJTkzfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
@@ -116,7 +116,7 @@ module.exports = {
             {
                 productId: 'p0012',
                 info: 'カツオのたたき',
-                price: '1000',
+                price: '2100',
                 rating: '3.7',
                 imgUrl: 'https://thumb.photo-ac.com/82/82a3e44f25f94a88d03ee4c59576859e_t.jpeg',
                 dealerId: '',
@@ -145,10 +145,10 @@ module.exports = {
             },
             {
                 productId: 'p0015',
-                info: '手作り饅頭',
+                info: 'ういろう',
                 price: '500',
-                rating: '2.7',
-                imgUrl: 'https://thumb.photo-ac.com/36/36c3bc385f45bd27dfb2ec6d0719daf0_t.jpeg',
+                rating: '3.7',
+                imgUrl: 'https://thumb.photo-ac.com/a8/a8dd9928ef4fad2dfb64e12bfeac3626_t.jpeg',
                 dealerId: '',
                 createdAt: '2020-07-01 07:00:00',
                 updatedAt: '2020-07-01 07:00:00',

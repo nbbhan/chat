@@ -44,7 +44,7 @@ function Sns() {
                         <div className="sns-item" style={{ padding: '2rem 2rem 0 0' }}>
                             <div className="sns-item-container">
                                 <div className="sns-item-container-title">
-                                    <span>#</span>twitter
+                                    <span>#</span>tiktok
                                 </div>
 
                                 <img src={tiktok} />
@@ -54,7 +54,7 @@ function Sns() {
                         <div className="sns-item" style={{ padding: '2rem 0 0 2rem' }}>
                             <div className="sns-item-container">
                                 <div className="sns-item-container-title">
-                                    <span>#</span>tiktok
+                                    <span>#</span>twitter
                                 </div>
 
                                 <img src={twi} />
