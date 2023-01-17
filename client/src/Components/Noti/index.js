@@ -5,7 +5,7 @@ import add from '~/Imgs/addC.png'
 
 import { Data } from '~/Provider'
 
-function Noti({ question = 'カートに追加しますか' }) {
+function Noti() {
     const myData = useContext(Data)
 
     const handleClose = () => {
@@ -16,7 +16,7 @@ function Noti({ question = 'カートに追加しますか' }) {
             <div className="noti-main">
                 <div className="noti-close">
                     <div className="noti-close-container">
-                        {question}?<div className="underline"></div>
+                        カートに追加しますか?<div className="underline"></div>
                     </div>
                 </div>
 
@@ -33,7 +33,14 @@ function Noti({ question = 'カートに追加しますか' }) {
                         </div>
                     </div>
 
-                    <div className="noti-container-right">
+                    <div
+                        className="noti-container-right"
+                        onClick={() => {
+                            myData.setSubmit(!myData.submit)
+
+                            handleClose()
+                        }}
+                    >
                         <div className="noti-container-item">
                             <div style={{ textAlign: 'center' }}>
                                 <div style={{ marginBottom: '2rem' }}>

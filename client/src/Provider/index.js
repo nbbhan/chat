@@ -62,9 +62,15 @@ function Provider({ children }) {
 
     const [noti, setNoti] = useState('none')
 
+    const [search, setSearch] = useState('none')
+
+    const [submit, setSubmit] = useState(false)
+
     const [trigger, setTrigger] = useState(false)
 
     const [product, setProduct] = useState('')
+
+    const [sv, setSv] = useState('')
 
     // Handle
     const changeToLight = () => {
@@ -144,12 +150,18 @@ function Provider({ children }) {
         trigger,
         product,
         noti,
+        submit,
+        search,
+        sv,
 
         // Set State
         setLogin,
         setLogout,
         setChatbox,
         setTrigger,
+        setSubmit,
+        setSv,
+        setSearch,
 
         // Function
         changeToDark,

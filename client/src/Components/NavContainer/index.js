@@ -89,6 +89,21 @@ function NavContainer() {
                             <div className="underline" style={{ background: 'white' }}></div>
                         </div>
                     </div>
+
+                    <div className="navContainer-main-item">
+                        <div className="navContainer-main-item-search">
+                            <input
+                                placeholder="商品、都道府県を検索..."
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter') {
+                                        myData.setSearch('flex')
+
+                                        myData.setSv(e.target.value)
+                                    }
+                                }}
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

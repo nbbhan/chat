@@ -11,6 +11,7 @@ import Last from '~/Components/Last'
 import Modal from '~/Components/Modal'
 import SettingModal from '~/Components/SettingModal'
 import Noti from '~/Components/Noti'
+import Search from '~/Components/Search'
 
 import { Data } from '../../Provider'
 
@@ -40,6 +41,8 @@ function Home() {
                     <SettingModal />
 
                     <Noti />
+
+                    <Search />
 
                     <div className="home-container-items">
                         <div className="home-container-item" style={{ height: '100%' }}>

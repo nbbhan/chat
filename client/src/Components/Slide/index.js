@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { gql, useQuery, useMutation } from '@apollo/client'
+import { useContext } from 'react'
+
+import { Data } from '~/Provider'
 
 import BtnLR from '../BtnLR'
 import love from '~/Imgs/love.png'
@@ -30,6 +33,8 @@ const ADD_TO_CART = gql`
 function Slide({ name, icon, user }) {
     const { data } = useQuery(GET_POPULAR)
 
+    const myData = useContext(Data)
+
     const navigate = useNavigate()
 
     const [variables, setVariables] = useState({
@@ -42,6 +47,8 @@ function Slide({ name, icon, user }) {
     const [addToCart] = useMutation(ADD_TO_CART)
 
     const handleAdd = (area, object) => {
+        myData.handleNoti()
+
         switch (area) {
             case 'favorite':
                 console.log('do nothing')
@@ -68,7 +75,7 @@ function Slide({ name, icon, user }) {
         if (variables.productId != '' && variables.user != '') {
             addToCart({ variables })
         }
-    }, [variables])
+    }, [myData.submit])
 
     useEffect(() => {
         const slider = document.querySelectorAll('.slide-container')
