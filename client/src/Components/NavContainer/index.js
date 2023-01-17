@@ -99,6 +99,8 @@ function NavContainer() {
                                         myData.setSearch('flex')
 
                                         myData.setSv(e.target.value)
+
+                                        e.target.value = ''
                                     }
                                 }}
                             />
