@@ -6,6 +6,7 @@ import Explore from '../../Components/Explore'
 import Modal from '~/Components/Modal'
 import { useAuthDispatch } from '../../context/auth'
 import SettingModal from '~/Components/SettingModal'
+import Search from '~/Components/Search'
 
 import { Data } from '../../Provider'
 
@@ -58,6 +59,8 @@ function Login() {
                     <Modal />
 
                     <SettingModal />
+
+                    <Search />
 
                     <div className="login-container">
                         <div className="login-container-title">ログイン</div>

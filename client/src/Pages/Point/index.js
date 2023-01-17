@@ -8,6 +8,7 @@ import Explore from '~/Components/Explore'
 import Title from '~/Components/Title'
 import Modal from '~/Components/Modal'
 import SettingModal from '~/Components/SettingModal'
+import Search from '~/Components/Search'
 
 import point from '~/Imgs/point.png'
 
@@ -54,6 +55,8 @@ function Point() {
                     <Modal />
 
                     <SettingModal />
+
+                    <Search />
 
                     <div className="point-main">
                         <Title props={inf} />

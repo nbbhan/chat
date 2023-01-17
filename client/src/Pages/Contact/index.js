@@ -2,6 +2,7 @@ import Explore from '~/Components/Explore'
 import Title from '~/Components/Title'
 import Modal from '~/Components/Modal'
 import SettingModal from '~/Components/SettingModal'
+import Search from '~/Components/Search'
 
 function Contact() {
     const inf = {
@@ -21,6 +22,9 @@ function Contact() {
                     <Modal />
 
                     <SettingModal />
+
+                    <Search />
+
                     <div className="contact-main">
                         <Title props={inf} />
 

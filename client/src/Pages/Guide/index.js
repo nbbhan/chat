@@ -2,6 +2,7 @@ import Explore from '~/Components/Explore'
 import Title from '~/Components/Title'
 import Modal from '~/Components/Modal'
 import SettingModal from '~/Components/SettingModal'
+import Search from '~/Components/Search'
 
 function Guide() {
     const inf = {
@@ -21,6 +22,8 @@ function Guide() {
                     <Modal />
 
                     <SettingModal />
+
+                    <Search />
 
                     <div className="guide-main">
                         <Title props={inf} />
