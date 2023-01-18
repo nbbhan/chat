@@ -25,7 +25,9 @@ function Sns() {
                                     <span>#</span>facebook
                                 </div>
 
-                                <img src={face} />
+                                <a href="https://facebook.com/share" data-text="QOKS">
+                                    <img src={face} />
+                                </a>
                             </div>
                         </div>
 
@@ -35,7 +37,9 @@ function Sns() {
                                     <span>#</span>instagram
                                 </div>
 
-                                <img src={ins} />
+                                <a href="https://instagram.com/p" data-text="QOKS">
+                                    <img src={ins} />
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -47,7 +51,9 @@ function Sns() {
                                     <span>#</span>tiktok
                                 </div>
 
-                                <img src={tiktok} />
+                                <a href="https://tiktok.com/share" data-text="QOKS">
+                                    <img src={tiktok} />
+                                </a>
                             </div>
                         </div>
 
@@ -57,7 +63,9 @@ function Sns() {
                                     <span>#</span>twitter
                                 </div>
 
-                                <img src={twi} />
+                                <a href="https://twitter.com/share" data-text="QOKS">
+                                    <img src={twi} />
+                                </a>
                             </div>
                         </div>
                     </div>
