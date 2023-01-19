@@ -22,7 +22,7 @@ function NavContainer() {
         <div className="navContainer" style={{ animationName: `${myData.width}` }}>
             <div className="navContainer-main">
                 <div className="navContainer-main-items" style={{ animationName: `${myData.nav}` }}>
-                    <Link to="/">
+                    <Link to="/" onClick={() => myData.handleTrigger()}>
                         <div
                             className="navContainer-main-item"
                             style={{
@@ -37,7 +37,7 @@ function NavContainer() {
                         </div>
                     </Link>
 
-                    <Link to="/">
+                    <Link to="/" onClick={() => myData.handleTrigger()}>
                         <div className="navContainer-main-item">
                             <div className="navContainer-main-item-text">
                                 ホーム
@@ -46,7 +46,7 @@ function NavContainer() {
                         </div>
                     </Link>
 
-                    <Link to="/guide">
+                    <Link to="/guide" onClick={() => myData.handleTrigger()}>
                         <div className="navContainer-main-item">
                             <div className="navContainer-main-item-text">
                                 使い方
@@ -55,7 +55,7 @@ function NavContainer() {
                         </div>
                     </Link>
 
-                    <Link to="/about">
+                    <Link to="/about" onClick={() => myData.handleTrigger()}>
                         <div className="navContainer-main-item">
                             <div className="navContainer-main-item-text">
                                 QOKSについて
@@ -101,6 +101,8 @@ function NavContainer() {
                                         myData.setSv(e.target.value)
 
                                         e.target.value = ''
+
+                                        myData.handleTrigger()
                                     }
                                 }}
                             />

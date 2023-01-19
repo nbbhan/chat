@@ -2198,10 +2198,19 @@ button {
 .about-main-container-items {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 1px 5px 1px var(--myColor);
+    // box-shadow: 0 1px 5px 1px var(--myColor);
     margin-bottom: 60px;
+    display: flex;
 }
+.about-main-container-item {
+    width: 50%;
 
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
 // Contact
 .contact {
     position: absolute;

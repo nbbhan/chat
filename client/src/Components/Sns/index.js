@@ -20,15 +20,15 @@ function Sns() {
                 <div className="sns-container-left">
                     <div className="sns-items">
                         <div className="sns-item" style={{ padding: '0 2rem 2rem 0' }}>
-                            <div className="sns-item-container">
-                                <div className="sns-item-container-title">
-                                    <span>#</span>facebook
-                                </div>
+                            <a href="https://facebook.com/share" data-text="QOKS">
+                                <div className="sns-item-container">
+                                    <div className="sns-item-container-title">
+                                        <span>#</span>facebook
+                                    </div>
 
-                                <a href="https://facebook.com/share" data-text="QOKS">
                                     <img src={face} />
-                                </a>
-                            </div>
+                                </div>
+                            </a>
                         </div>
 
                         <div className="sns-item" style={{ padding: '0 0 2rem 2rem' }}>
