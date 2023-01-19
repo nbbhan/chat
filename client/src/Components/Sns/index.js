@@ -32,41 +32,41 @@ function Sns() {
                         </div>
 
                         <div className="sns-item" style={{ padding: '0 0 2rem 2rem' }}>
-                            <div className="sns-item-container">
-                                <div className="sns-item-container-title">
-                                    <span>#</span>instagram
-                                </div>
+                            <a href="https://instagram.com/p" data-text="QOKS">
+                                <div className="sns-item-container">
+                                    <div className="sns-item-container-title">
+                                        <span>#</span>instagram
+                                    </div>
 
-                                <a href="https://instagram.com/p" data-text="QOKS">
                                     <img src={ins} />
-                                </a>
-                            </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
                     <div className="sns-items">
                         <div className="sns-item" style={{ padding: '2rem 2rem 0 0' }}>
-                            <div className="sns-item-container">
-                                <div className="sns-item-container-title">
-                                    <span>#</span>tiktok
-                                </div>
+                            <a href="https://tiktok.com/share" data-text="QOKS">
+                                <div className="sns-item-container">
+                                    <div className="sns-item-container-title">
+                                        <span>#</span>tiktok
+                                    </div>
 
-                                <a href="https://tiktok.com/share" data-text="QOKS">
                                     <img src={tiktok} />
-                                </a>
-                            </div>
+                                </div>
+                            </a>
                         </div>
 
                         <div className="sns-item" style={{ padding: '2rem 0 0 2rem' }}>
-                            <div className="sns-item-container">
-                                <div className="sns-item-container-title">
-                                    <span>#</span>twitter
-                                </div>
+                            <a href="https://twitter.com/share" data-text="QOKS">
+                                <div className="sns-item-container">
+                                    <div className="sns-item-container-title">
+                                        <span>#</span>twitter
+                                    </div>
 
-                                <a href="https://twitter.com/share" data-text="QOKS">
                                     <img src={twi} />
-                                </a>
-                            </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
