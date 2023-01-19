@@ -1,5 +1,5 @@
 import { gql, useQuery } from '@apollo/client'
-import { useContext, useState, useEffect } from 'react'
+import { useContext, useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 import { Data } from '~/Provider'
@@ -28,6 +28,8 @@ function Point() {
     const myData = useContext(Data)
 
     const { data } = useQuery(GET_PROFILE)
+
+    const myRef = useRef()
 
     const inf = {
         link: 'point',
@@ -71,8 +73,12 @@ function Point() {
             charged: '3000',
         },
         {
+            date: '2023/01/19 17:00',
+            charged: '1000',
+        },
+        {
             date: '2023/01/31 17:00',
-            charged: '2000',
+            charged: '1000',
         },
     ]
 
@@ -84,6 +90,52 @@ function Point() {
         buyP = data.getProfile[0].buyPoint
         getP = data.getProfile[0].getPoint
     }
+
+    let [view, setView] = useState([])
+
+    const handleChangeView = (method) => {
+        switch (method) {
+            case 'buy':
+                setView([...historyB])
+
+                myRef.current.innerHTML = historyB
+                    .map((item, index) => {
+                        return `
+                            <div class="point-main-container-other-items" style="display: block;">
+                                <div class="point-main-container-other-item" style="width: 100%; height: 100px;">
+                                    <div class="point-main-container-other-item-main" style="display: flex; justify-content: space-between; align-items: center;">
+                                        <div style="width: 30%;">${item.product}</div>
+                                        <div style="width: 30%; display: flex;">${item.used}</div>
+                                        <div style="width: 40%; display: flex; justify-content: flex-end;">${item.date}</div>
+                                    </div>    
+                                </div>
+                            </div>
+                        `
+                    })
+                    .join('')
+                break
+            case 'charge':
+                setView([...historyC])
+
+                myRef.current.innerHTML = historyC
+                    .map((item) => {
+                        return `
+                            <div class="point-main-container-other-items" style="display: block;">
+                                <div class="point-main-container-other-item" style="width: 100%; height: 100px;">
+                                    <div class="point-main-container-other-item-main" style="display: flex; justify-content: space-between; align-items: center;">
+                                        <div style="width: 50%; display: flex;">${item.charged}</div>
+                                        <div style="width: 50%; display: flex; justify-content: flex-end;">${item.date}</div>
+                                    </div>    
+                                </div>
+                            </div>
+                        `
+                    })
+                    .join('')
+                break
+        }
+    }
+
+    useEffect(() => {}, [view])
 
     return (
         <>
@@ -139,9 +191,14 @@ function Point() {
                                     </div>
                                 </div>
 
-                                <div className="point-main-container-other">
+                                <div className="point-main-container-other" ref={myRef}>
                                     <div className="point-main-container-other-items">
-                                        <div className="point-main-container-other-item">
+                                        <div
+                                            className="point-main-container-other-item"
+                                            onClick={() => {
+                                                handleChangeView('buy')
+                                            }}
+                                        >
                                             <div className="point-main-container-other-item-main">
                                                 <div className="point-main-container-other-item-main-text">
                                                     購入履歴
@@ -150,7 +207,12 @@ function Point() {
                                             </div>
                                         </div>
 
-                                        <div className="point-main-container-other-item">
+                                        <div
+                                            className="point-main-container-other-item"
+                                            onClick={() => {
+                                                handleChangeView('charge')
+                                            }}
+                                        >
                                             <div className="point-main-container-other-item-main">
                                                 <div className="point-main-container-other-item-main-text">
                                                     チャージ履歴
@@ -199,6 +261,9 @@ function Point() {
                                             </div>
                                         </div>
                                     </div>
+
+                                    {/* ------------------------------------------- */}
+                                    <div></div>
                                 </div>
                             </div>
                         </div>
