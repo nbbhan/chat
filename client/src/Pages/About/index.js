@@ -34,8 +34,11 @@ function About() {
                             <div className="about-main-container-items">
                                 <div className="about-main-container-item">
                                     <div className="about-main-container-item-title">QOKSの由来について</div>
-                                    制作チーム全員の頭文字をとってQOKSは生まれました。 QOKSの掲げる目標と効果
-                                    経済の停滞した現状の打開のため国産国消の精神のもと農畜産業のみならずそのほかの産業においてもMADE
+                                    制作チーム全員の頭文字をとってQOKSは生まれました。
+                                    <br />
+                                    <br />
+                                    <div className="about-main-container-item-title">QOKSの掲げる目標と効果</div>
+                                    経済の停滞した現状の打開のため、国産国消の精神のもと農畜産業のみならず、そのほかの産業においてもMADE
                                     IN JAPANの製品を取り扱っています。
                                     <br />
                                     それにより販売者は販売経路の拡大とそれに伴う売上の増加を見込め、利用者は遠方の故郷や、訪れたことのない土地の特産品を得ることができる。
@@ -47,7 +50,8 @@ function About() {
                                     チャット機能を使用することでユーザーとコミュニケーションをとる事ができ、
                                     <br />
                                     その他にポイント、アカウント機能などがあります。
-                                    また画面遷移や商品情報取得時間が高速化されており、スムーズにお買い物をする事が可能です。
+                                    <br />
+                                    また、画面遷移や商品情報取得時間が高速化されており、スムーズにお買い物をする事が可能です。
                                 </div>
 
                                 <div className="about-main-container-item">
