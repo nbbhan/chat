@@ -41,6 +41,8 @@ function Container({ user }) {
     })
 
     const handleAdd = (area, object) => {
+        myData.handleNoti()
+
         switch (area) {
             case 'favorite':
                 console.log('do nothing')
@@ -101,7 +103,7 @@ function Container({ user }) {
         if (variables.productId != '' && variables.user != '') {
             addToCart({ variables })
         }
-    }, [variables])
+    }, [myData.submit])
 
     return (
         <div className="prefectures-itemsContainer">
