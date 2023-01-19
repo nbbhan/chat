@@ -1,5 +1,5 @@
 import { gql, useQuery } from '@apollo/client'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 
 import { Data } from '~/Provider'
 
@@ -8,6 +8,7 @@ import Title from '~/Components/Title'
 import Modal from '~/Components/Modal'
 import SettingModal from '~/Components/SettingModal'
 import Search from '~/Components/Search'
+import ProfileModal from '~/Components/ProfileModal'
 
 const GET_PROFILE = gql`
     query getProfile {
@@ -35,6 +36,12 @@ function Profile() {
         des2: 'そこで「たべる」「あそぶ」「とまる」「かりる」の4つのカテゴリーにわけて園内をご紹介します。',
     }
 
+    const handleChangeProfile = () => {
+        myData.handlePM()
+    }
+
+    useEffect(() => {}, [myData.pm])
+
     return (
         <>
             <Explore />
@@ -46,6 +53,8 @@ function Profile() {
                     <SettingModal />
 
                     <Search />
+
+                    <ProfileModal />
 
                     <div className="profile-main">
                         <Title props={inf} />
@@ -82,7 +91,12 @@ function Profile() {
 
                                 <div className="point-main-container-other">
                                     <div className="point-main-container-other-items">
-                                        <div className="point-main-container-other-item">
+                                        <div
+                                            className="point-main-container-other-item"
+                                            onClick={() => {
+                                                handleChangeProfile()
+                                            }}
+                                        >
                                             <div className="point-main-container-other-item-main">
                                                 <div className="point-main-container-other-item-main-text">
                                                     プロフィールを編集

@@ -72,6 +72,8 @@ function Provider({ children }) {
 
     const [sv, setSv] = useState('')
 
+    const [pm, setPm] = useState('none')
+
     // Handle
     const changeToLight = () => {
         setTheme('dark')
@@ -111,6 +113,10 @@ function Provider({ children }) {
 
     const handleSM = () => {
         setSm(sm === 'none' ? 'flex' : 'none')
+    }
+
+    const handlePM = () => {
+        setPm(pm === 'none' ? 'flex' : 'none')
     }
 
     const handleNoti = () => {
@@ -153,6 +159,7 @@ function Provider({ children }) {
         submit,
         search,
         sv,
+        pm,
 
         // Set State
         setLogin,
@@ -176,6 +183,7 @@ function Provider({ children }) {
         handleTrigger,
         getProductData,
         handleNoti,
+        handlePM,
     }
 
     return <Data.Provider value={value}>{children}</Data.Provider>

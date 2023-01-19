@@ -143,5 +143,20 @@ module.exports = {
                 throw new UserInputError('Bad input', { errors })
             }
         },
+        changeProfile: async (_, args) => {
+            try {
+                let users = await User.findOne({
+                    where: { username: { [Op.eq]: `${args.user}` } },
+                }).then((user) => {
+                    user.imageUrl = `${args.img}`
+                    user.save()
+                })
+
+                return users
+            } catch (err) {
+                console.log(err)
+                throw err
+            }
+        },
     },
 }
