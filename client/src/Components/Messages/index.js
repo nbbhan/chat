@@ -86,8 +86,10 @@ function Messages() {
         sendMessage({ variables: { to: selectedUser, content } })
     }
 
+    const storage = window.localStorage.getItem('theme')
+
     return (
-        <div className={`message ${myData.chatbox}`}>
+        <div className={`message ${myData.chatbox} ${storage}`}>
             <div className="message-title">
                 <div className="message-close" onClick={() => myData.setChatbox('hide')}>
                     <img src={close} />

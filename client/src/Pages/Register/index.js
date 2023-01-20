@@ -40,6 +40,8 @@ function Register() {
         registerUser({ variables })
     }
 
+    const storage = window.localStorage.getItem('theme')
+
     return (
         <>
             <Explore />
@@ -52,7 +54,7 @@ function Register() {
 
                     <Search />
 
-                    <div className="register-container">
+                    <div className={`register-container ${storage}`}>
                         <div className="register-container-title">アカウント作成</div>
 
                         <form onSubmit={(e) => handleSubmit(e)}>

@@ -137,6 +137,8 @@ function Point() {
 
     useEffect(() => {}, [view])
 
+    const storage = window.localStorage.getItem('theme')
+
     return (
         <>
             <Explore />
@@ -149,7 +151,7 @@ function Point() {
 
                     <Search />
 
-                    <div className="point-main">
+                    <div className={`point-main ${storage}`}>
                         <Title props={inf} />
 
                         <div className="point-main-container">

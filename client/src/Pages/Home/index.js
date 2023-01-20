@@ -30,6 +30,8 @@ function Home() {
 
     const { data } = useQuery(GET_PROFILE)
 
+    const storage = window.localStorage.getItem('theme')
+
     return (
         <>
             <Explore />
@@ -45,7 +47,7 @@ function Home() {
                     <Search />
 
                     <div className="home-container-items">
-                        <div className="home-container-item" style={{ height: '100%' }}>
+                        <div className={`home-container-item ${storage}`} style={{ height: '100%' }}>
                             {/* <div className="home-container-item-left">
                                 <div className="home-container-item-left-title">QOKS</div>
 
@@ -74,21 +76,21 @@ function Home() {
                             </div>
                         </div>
 
-                        <div className="home-container-item" style={{ height: '250px' }}>
+                        <div className={`home-container-item ${storage}`} style={{ height: '250px' }}>
                             <div className="home-container-item-sen">
                                 <img src={sen} />
                             </div>
                         </div>
 
-                        <div className="home-container-item">
+                        <div className={`home-container-item ${storage}`}>
                             <Slide user={data} name="人気商品" icon={flame} />
                         </div>
 
-                        <div className="home-container-item">
+                        <div className={`home-container-item ${storage}`}>
                             <Prefectures />
                         </div>
 
-                        <div className="home-container-item">
+                        <div className={`home-container-item ${storage}`}>
                             <Sns />
                         </div>
 

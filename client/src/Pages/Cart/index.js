@@ -31,6 +31,8 @@ function Cart() {
         des2: 'ご注文が完了するまでは、お客様の商品は確保されませんので、購入手続きの操作中に商品売り切れとなることがございます。',
     }
 
+    const storage = window.localStorage.getItem('theme')
+
     return (
         <>
             <Explore />
@@ -43,7 +45,7 @@ function Cart() {
 
                     <Search />
 
-                    <div className="cart-main">
+                    <div className={`cart-main ${storage}`}>
                         <Title props={inf} />
 
                         <div className="cart-main-container">

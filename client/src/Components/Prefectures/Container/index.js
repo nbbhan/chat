@@ -105,6 +105,8 @@ function Container({ user }) {
         }
     }, [myData.submit])
 
+    const storage = window.localStorage.getItem('theme')
+
     return (
         <div className="prefectures-itemsContainer">
             <div className="prefectures-itemsContainer-items">
@@ -125,7 +127,7 @@ function Container({ user }) {
 
                                     <div className="prefecture-container-item-rating">{`${item.rating}`}</div>
 
-                                    <div className="prefecture-container-item-btnContainer">
+                                    <div className={`prefecture-container-item-btnContainer ${storage}`}>
                                         {/* <div
                                             className="prefecture-container-item-btnContainer-love"
                                             onClick={() => {

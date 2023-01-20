@@ -20,7 +20,7 @@ function Nav() {
     return (
         <div className={`nav`} onClick={() => myData.handleTrigger()}>
             <div className="nav-container">
-                <div className={`nav-items ${storage}`}>
+                <div className={`nav-items`}>
                     <div
                         className="nav-items-shadow"
                         style={{

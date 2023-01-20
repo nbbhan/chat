@@ -13,9 +13,11 @@ function Modal() {
         myData.handleSM()
     }
 
+    const storage = window.localStorage.getItem('theme')
+
     return (
         <div className="modal" style={{ display: `${myData.sm}` }}>
-            <div className="modal-main">
+            <div className={`modal-main ${storage}`}>
                 <div className="modal-container">
                     <div className="modal-container-left">
                         <div

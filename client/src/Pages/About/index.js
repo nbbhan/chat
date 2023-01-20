@@ -15,6 +15,8 @@ function About() {
         des2: '遠方の故郷や訪れたことのない土地の特産品を得ることができるのがQOKSです。',
     }
 
+    const storage = window.localStorage.getItem('theme')
+
     return (
         <>
             <Explore />
@@ -27,7 +29,7 @@ function About() {
 
                     <Search />
 
-                    <div className="about-main">
+                    <div className={`about-main ${storage}`}>
                         <Title props={inf} />
 
                         <div className="about-main-container">

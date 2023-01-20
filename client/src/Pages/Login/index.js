@@ -50,6 +50,8 @@ function Login() {
         loginUser({ variables })
     }
 
+    const storage = window.localStorage.getItem('theme')
+
     return (
         <>
             <Explore />
@@ -62,7 +64,7 @@ function Login() {
 
                     <Search />
 
-                    <div className="login-container">
+                    <div className={`login-container ${storage}`}>
                         <div className="login-container-title">ログイン</div>
 
                         <form onSubmit={(e) => handleSubmit(e)}>

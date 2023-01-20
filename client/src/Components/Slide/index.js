@@ -109,6 +109,8 @@ function Slide({ name, icon, user }) {
         })
     })
 
+    const storage = window.localStorage.getItem('theme')
+
     return (
         <div className="slide">
             <div className="slide-title">
@@ -192,7 +194,7 @@ function Slide({ name, icon, user }) {
 
                                         <div className="slide-container-item-rating">{`${item.rating}`}</div>
 
-                                        <div className="slide-container-item-btnContainer">
+                                        <div className={`slide-container-item-btnContainer ${storage}`}>
                                             {/* <div
                                                 className="slide-container-item-btnContainer-love"
                                                 onClick={() => {

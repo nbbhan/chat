@@ -11,9 +11,12 @@ function Noti() {
     const handleClose = () => {
         myData.handleNoti()
     }
+
+    const storage = window.localStorage.getItem('theme')
+
     return (
         <div className="noti" style={{ display: `${myData.noti}` }}>
-            <div className="noti-main">
+            <div className={`noti-main ${storage}`}>
                 <div className="noti-close">
                     <div className="noti-close-container">
                         カートに追加しますか?<div className="underline"></div>

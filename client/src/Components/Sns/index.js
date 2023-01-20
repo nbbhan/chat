@@ -5,6 +5,8 @@ import tiktok from '~/Imgs/TikTok.png'
 import twi from '~/Imgs/Twitter.png'
 
 function Sns() {
+    const storage = window.localStorage.getItem('theme')
+
     return (
         <div className="sns">
             {/* <div className="sns-title">
@@ -22,7 +24,7 @@ function Sns() {
                         <div className="sns-item" style={{ padding: '0 2rem 2rem 0' }}>
                             <a href="https://facebook.com/share" data-text="QOKS">
                                 <div className="sns-item-container">
-                                    <div className="sns-item-container-title">
+                                    <div className={`sns-item-container-title ${storage}`}>
                                         <span>#</span>facebook
                                     </div>
 
@@ -34,7 +36,7 @@ function Sns() {
                         <div className="sns-item" style={{ padding: '0 0 2rem 2rem' }}>
                             <a href="https://instagram.com/p" data-text="QOKS">
                                 <div className="sns-item-container">
-                                    <div className="sns-item-container-title">
+                                    <div className={`sns-item-container-title ${storage}`}>
                                         <span>#</span>instagram
                                     </div>
 
@@ -48,7 +50,7 @@ function Sns() {
                         <div className="sns-item" style={{ padding: '2rem 2rem 0 0' }}>
                             <a href="https://tiktok.com/share" data-text="QOKS">
                                 <div className="sns-item-container">
-                                    <div className="sns-item-container-title">
+                                    <div className={`sns-item-container-title ${storage}`}>
                                         <span>#</span>tiktok
                                     </div>
 
@@ -60,7 +62,7 @@ function Sns() {
                         <div className="sns-item" style={{ padding: '2rem 0 0 2rem' }}>
                             <a href="https://twitter.com/share" data-text="QOKS">
                                 <div className="sns-item-container">
-                                    <div className="sns-item-container-title">
+                                    <div className={`sns-item-container-title ${storage}`}>
                                         <span>#</span>twitter
                                     </div>
 

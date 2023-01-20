@@ -19,6 +19,8 @@ function Guide() {
         des2: 'ご質問等ございましたら、「お問い合わせ」よりご連絡ください',
     }
 
+    const storage = window.localStorage.getItem('theme')
+
     return (
         <>
             <Explore />
@@ -31,7 +33,7 @@ function Guide() {
 
                     <Search />
 
-                    <div className="guide-main">
+                    <div className={`guide-main ${storage}`}>
                         <Title props={inf} />
 
                         <div className="guide-main-container">

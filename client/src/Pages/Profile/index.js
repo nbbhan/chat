@@ -42,6 +42,8 @@ function Profile() {
 
     useEffect(() => {}, [myData.pm])
 
+    const storage = window.localStorage.getItem('theme')
+
     return (
         <>
             <Explore />
@@ -56,7 +58,7 @@ function Profile() {
 
                     <ProfileModal />
 
-                    <div className="profile-main">
+                    <div className={`profile-main ${storage}`}>
                         <Title props={inf} />
 
                         <div className="profile-main-container">

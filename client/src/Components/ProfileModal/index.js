@@ -63,9 +63,11 @@ function ProfileModal() {
         }
     }, [variables])
 
+    const storage = window.localStorage.getItem('theme')
+
     return (
         <div className="profileModal" style={{ display: `${myData.pm}` }}>
-            <div className="profileModal-main">
+            <div className={`profileModal-main ${storage}`}>
                 <div className="profileModal-container">
                     <div className="profileModal-close" style={{ padding: '10px 20px 10px 20px' }}>
                         <div className="profileModal-close-container">プロフィール画像を選択</div>

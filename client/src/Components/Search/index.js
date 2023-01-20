@@ -80,9 +80,11 @@ function Search() {
         }
     }, [variables])
 
+    const storage = window.localStorage.getItem('theme')
+
     return (
         <div className="search" style={{ display: `${myData.search}` }}>
-            <div className="search-main">
+            <div className={`search-main ${storage}`}>
                 <div className="search-title">
                     <span style={{ color: 'var(--myColor)', fontSize: '16px' }}>検索結果:&nbsp;</span> {myData.sv}
                 </div>

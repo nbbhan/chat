@@ -8,8 +8,10 @@ import Messages from '../Messages'
 function Chatbox() {
     const myData = useContext(Data)
 
+    const storage = window.localStorage.getItem('theme')
+
     return (
-        <div className="chatbox" style={{ display: `${myData.chatshow}` }}>
+        <div className={`chatbox ${storage}`} style={{ display: `${myData.chatshow}` }}>
             <Users />
 
             <Messages />

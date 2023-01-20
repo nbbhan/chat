@@ -91,6 +91,8 @@ function Prefectures() {
         prefecturesOn: myData.product,
     })
 
+    const storage = window.localStorage.getItem('theme')
+
     return (
         <div className="prefectures">
             <Items />
@@ -104,6 +106,7 @@ function Prefectures() {
                     <div className="prefectures-container-right-select">
                         <div className="prefectures-container-right-select-L">
                             <select
+                                className={` ${storage}`}
                                 onChange={(e) => {
                                     handleSelectValue(e)
                                 }}
