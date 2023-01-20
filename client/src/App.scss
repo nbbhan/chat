@@ -2159,6 +2159,13 @@ button {
 .guide-main-container {
     width: 100%;
     padding: 0 180px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
 }
 .guide-main-container-items {
     width: 100%;

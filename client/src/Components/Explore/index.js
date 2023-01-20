@@ -39,11 +39,11 @@ function Explore() {
         <div className="explore">
             <div className="explore-items">
                 <div className="explore-items-main">
-                    <Link to="/">
+                    <a href="/">
                         <div className="explore-item">
                             <img src={logoW} style={{ width: '80px', height: '80px', transform: 'rotate(10deg)' }} />
                         </div>
-                    </Link>
+                    </a>
 
                     <Link to="/">
                         <div className="explore-item">

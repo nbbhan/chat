@@ -4,6 +4,12 @@ import Modal from '~/Components/Modal'
 import SettingModal from '~/Components/SettingModal'
 import Search from '~/Components/Search'
 
+import home from '~/Imgs/Home_Screen.png'
+import cart from '~/Imgs/Cart_Screen.png'
+import point from '~/Imgs/Point_Screen.png'
+import contact from '~/Imgs/Contact_Screen.png'
+import setting from '~/Imgs/Setting_Screen.png'
+
 function Guide() {
     const inf = {
         link: 'guide',
@@ -29,33 +35,56 @@ function Guide() {
                         <Title props={inf} />
 
                         <div className="guide-main-container">
-                            左側に上からホーム、カート、ポイント、ログイン、新規登録がございますので、
+                            ・左側に上からホーム、カート、ポイント、ログイン、新規登録がございますので、
                             アカウントをお持ちの方はログインを、お持ちでない方は新規登録をクリックし必要な情報を入力してください。
-                            右上のボタンを押していただくと上からホーム、使い方、QOKSについて、お問い合わせ、設定、検索入力欄がございます
                             <br />
-                            ホームについて：
+                            <br />
+                            ・右上のボタンを押していただくと上からホーム、使い方、QOKSについて、お問い合わせ、設定、検索入力欄がございます。
+                            <br />
+                            <br />
+                            ・ホームについて：
                             <br />
                             スクロールすると人気商品や都道府県別の商品が表示されます。
-                            商品をポイントするとカートボタンが表示されます
-                            地方をクリックしお望みの都道府県のある地方を選択して下さい
+                            商品をポイントするとカートボタンが表示されます。
+                            地方をクリックしお望みの都道府県のある地方を選択して下さい。
                             また各都道府県をクリックすると各地域の商品が表示されます。
                             ページの最後にはSNSへアクセスできるリンクボタンがあります。
                             <br />
-                            カートについて：
+                            <br />
+                            <img src={home} />
+                            <br />
+                            <br />
+                            ・カートについて：
                             <br />
                             商品のカートボタンをクリックするとその商品がカート内に表示されます。
                             購入、または削除したい商品をポイントすることで購入ボタン、削除ボタンが表示されます。
-                            ポイントについて：
+                            <br />
+                            <br />
+                            <img src={cart} />
+                            <br />
+                            <br />
+                            ・ポイントについて：
                             <br />
                             QOKS内で使用できるポイントです。 購入または広告を視聴することでポイントを入手できます。
                             <br />
-                            お問い合わせについて：
+                            <br />
+                            <img src={point} />
+                            <br />
+                            <br />
+                            ・お問い合わせについて：
                             <br />
                             メールとチャットの２種類の方法でご質問可能です。
                             <br />
-                            設定について：
+                            <br />
+                            <img src={contact} />
+                            <br />
+                            <br />
+                            ・設定について：
                             <br />
                             背景テーマをライトモードとダークモードに変更可能です。
+                            <br />
+                            <br />
+                            <img src={setting} />
                         </div>
                     </div>
                 </div>
