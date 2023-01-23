@@ -8,6 +8,7 @@ import { Data } from '~/Provider'
 import BtnLR from '../BtnLR'
 import love from '~/Imgs/love.png'
 import cart from '~/Imgs/cart.png'
+import cart_dark from '~/Imgs/cart_dark.png'
 
 const GET_POPULAR = gql`
     query popular {
@@ -174,7 +175,7 @@ function Slide({ name, icon, user }) {
                                                     })
                                                 }}
                                             >
-                                                <img src={cart} />
+                                                <img src={storage === 'dark' ? cart_dark : cart} />
                                             </div>
                                         </div>
                                     </div>
@@ -219,7 +220,7 @@ function Slide({ name, icon, user }) {
                                                     })
                                                 }}
                                             >
-                                                <img src={cart} />
+                                                <img src={storage === 'dark' ? cart_dark : cart} />
                                             </div>
                                         </div>
                                     </div>

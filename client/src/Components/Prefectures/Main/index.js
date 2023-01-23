@@ -3,7 +3,9 @@ import { useContext, useEffect } from 'react'
 import { Data } from '~/Provider'
 
 import eye from '~/Imgs/eye.png'
+import eye_dark from '~/Imgs/eye_dark.png'
 import transit2 from '~/Imgs/transit2.png'
+import transit2_dark from '~/Imgs/transit2_dark.png'
 
 function Main() {
     const myData = useContext(Data)
@@ -19,6 +21,8 @@ function Main() {
     }
 
     useEffect(() => {}, [myData.select])
+
+    const storage = window.localStorage.getItem('theme')
 
     return (
         <div className="prefectures-container-right-main">
@@ -36,7 +40,7 @@ function Main() {
                                         <div className="prefectures-container-right-main-item-content">
                                             <div>{item}</div>
 
-                                            <img src={transit2} />
+                                            <img src={storage === 'dark' ? transit2_dark : transit2} />
                                         </div>
 
                                         <div
@@ -44,7 +48,7 @@ function Main() {
                                             className="prefectures-container-right-main-item-hover"
                                             onClick={(e) => handleTransition(e)}
                                         >
-                                            <img src={eye} />
+                                            <img src={storage === 'dark' ? eye_dark : eye} />
                                             &nbsp; 詳しく見る
                                         </div>
                                     </div>
@@ -59,7 +63,7 @@ function Main() {
                                         <div className="prefectures-container-right-main-item-content">
                                             <div>{item}</div>
 
-                                            <img src={transit2} />
+                                            <img src={storage === 'dark' ? transit2_dark : transit2} />
                                         </div>
 
                                         <div
@@ -67,7 +71,7 @@ function Main() {
                                             className="prefectures-container-right-main-item-hover"
                                             onClick={(e) => handleTransition(e)}
                                         >
-                                            <img src={eye} />
+                                            <img src={storage === 'dark' ? eye_dark : eye} />
                                             &nbsp; 詳しく見る
                                         </div>
                                     </div>

@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom'
 
 import right from '~/Imgs/breadRight.png'
+import right_dark from '~/Imgs/breadRight_dark.png'
 
 function Title({ props }) {
+    const storage = window.localStorage.getItem('theme')
+
     return (
         <>
             <div className="title">
@@ -12,7 +15,7 @@ function Title({ props }) {
                     </Link>
 
                     <div className="title-space">
-                        <img src={right} />
+                        <img src={storage === 'dark' ? right_dark : right} />
                     </div>
 
                     <div className="title-now">{props.jp}</div>

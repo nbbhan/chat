@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from 'react'
 import { Data } from '~/Provider'
 
 import cart from '~/Imgs/cart.png'
+import cart_dark from '~/Imgs/cart_dark.png'
 
 const GET_PRODUCT = gql`
     query getProduct {
@@ -152,7 +153,7 @@ function Container({ user }) {
                                                 })
                                             }}
                                         >
-                                            <img src={cart} />
+                                            <img src={storage === 'dark' ? cart_dark : cart} />
                                         </div>
                                     </div>
                                 </div>
