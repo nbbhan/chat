@@ -11,9 +11,143 @@
     a {
         color: white !important;
     }
+
+    .slide-container-item,
+    .prefecture-container-item {
+        border: 1px solid rgb(100, 100, 100) !important;
+
+        &:hover {
+            box-shadow: none !important;
+            border: 1px solid rgb(180, 180, 180) !important;
+        }
+    }
+
+    .noti-container-left,
+    .noti-container-right {
+        border: 1px solid rgb(100, 100, 100, 0) !important;
+
+        &:hover {
+            .noti-container-item {
+                box-shadow: none !important;
+                border: 1px solid rgb(180, 180, 180) !important;
+            }
+        }
+    }
+
+    .sns-item-container {
+        border: 1px solid rgb(100, 100, 100) !important;
+
+        &:hover {
+            box-shadow: none !important;
+            border: 1px solid rgb(180, 180, 180) !important;
+        }
+        img {
+            width: 80%;
+            height: 100%;
+            transform: scale(0.7);
+            object-fit: cover;
+        }
+    }
+
+    // ↓↓↓反映されない↓↓↓
+    .modal-main {
+        border: 1px solid rgb(100, 100, 100) !important;
+    }
+
+    .modal-container-left,
+    .modal-container-right {
+        &:hover {
+            .modal-container-item {
+                box-shadow: none !important;
+                border: 1px solid rgb(180, 180, 180) !important;
+            }
+        }
+    }
+
+    .cart-main-item-container {
+        border: 1px solid rgb(100, 100, 100) !important;
+        &:hover {
+            box-shadow: none !important;
+            border: 1px solid rgb(180, 180, 180) !important;
+        }
+    }
+
+    .cart-main-item-container-close {
+        border: 1px solid rgb(180, 180, 180) !important;
+        box-shadow: none !important;
+        &:hover {
+            box-shadow: none !important;
+            border: 1px solid rgb(180, 180, 180) !important;
+        }
+    }
+
+    .cart-main-item-inf-buyBtn {
+        border: 1px solid rgb(180, 180, 180) !important;
+        box-shadow: none !important;
+        &:hover {
+            box-shadow: none !important;
+            border: 1px solid rgb(180, 180, 180) !important;
+        }
+    }
+
+    .point-main-container-items,
+    .point-main-container-other-item-main {
+        border: 1px solid rgb(180, 180, 180) !important;
+        box-shadow: none !important;
+    }
+
+    .point-main-container-btns-text {
+        border: 1px solid rgb(180, 180, 180) !important;
+        box-shadow: none !important;
+    }
+
+    .profile-main-container-items {
+        border: 1px solid rgb(180, 180, 180) !important;
+        box-shadow: none !important;
+    }
+
+    .profile-main-container-profimg {
+        div {
+            box-shadow: 3px 3px 7px rgb(50, 50, 50);
+        }
+    }
+
+    .profileModal-container {
+        border: 1px solid rgb(180, 180, 180) !important;
+    }
+
+    // ↓↓↓反映されない↓↓↓
+    .search-main {
+        border: 1px solid rgb(100, 100, 100) !important;
+    }
+
+    .search-item {
+        border: 1px solid rgb(100, 100, 100) !important;
+        &:hover {
+            border: 1px solid rgb(180, 180, 180) !important;
+            box-shadow: none !important;
+        }
+    }
+
+    .search-item-info-addBtn {
+        border: 1px solid rgb(100, 100, 100) !important;
+        box-shadow: none;
+        &:hover {
+            border: 1px solid rgb(180, 180, 180) !important;
+            box-shadow: none !important;
+        }
+    }
+
+    // ↓↓↓反映されない↓↓↓
+    .chatbox {
+        border: 1px solid rgb(100, 100, 100) !important;
+        box-shadow: none !important;
+    }
 }
+
 .light {
 }
+
 .enable {
     display: flex !important;
     width: 100%;
@@ -2580,6 +2714,7 @@ button {
 .modal-container {
     width: 100%;
     height: 300px;
+    border-radius: 10px;
     display: flex;
 }
 .modal-container-left {
@@ -2899,6 +3034,7 @@ button {
 .profileModal-container {
     width: 100%;
     // height: 300px;
+    border-radius: 10px;
 
     input {
         border: none;
