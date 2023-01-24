@@ -66,5 +66,15 @@ module.exports = gql`
         addCart(productId: String!, user: String!): Cart!
         deleteCart(productId: String!, user: String!): Cart
         changeProfile(user: String!, img: String!): Profile
+        addProduct(
+            productId: String!
+            info: String!
+            price: Float!
+            rating: String!
+            imgUrl: String!
+            dealerId: String!
+            area: String!
+            prefecture: String!
+        ): Product!
     }
 `

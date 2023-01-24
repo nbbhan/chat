@@ -13,4 +13,27 @@ module.exports = {
             }
         },
     },
+    Mutation: {
+        addProduct: async (_, args) => {
+            let { productId, info, price, rating, imgUrl, dealerId, area, prefecture } = args
+
+            try {
+                const newItem = await Product.create({
+                    productId,
+                    info,
+                    price,
+                    rating,
+                    imgUrl,
+                    dealerId,
+                    area,
+                    prefecture,
+                })
+
+                return newItem
+            } catch (err) {
+                console.log(err)
+                throw err
+            }
+        },
+    },
 }

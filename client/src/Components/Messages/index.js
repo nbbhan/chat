@@ -6,7 +6,9 @@ import { Data } from '../../Provider'
 
 import Message from '../Message'
 import close from '~/Imgs/close.png'
+import close_dark from '~/Imgs/close_dark.png'
 import send from '~/Imgs/send.png'
+import send_dark from '~/Imgs/send_dark.png'
 
 const SEND_MESSAGE = gql`
     mutation sendMessage($to: String!, $content: String!) {
@@ -92,7 +94,7 @@ function Messages() {
         <div className={`message ${myData.chatbox} ${storage}`}>
             <div className="message-title">
                 <div className="message-close" onClick={() => myData.setChatbox('hide')}>
-                    <img src={close} />
+                    <img src={storage === 'dark' ? close_dark : close} />
                 </div>
 
                 <div className="message-name">{selectedUser}</div>
@@ -118,7 +120,7 @@ function Messages() {
                         />
                     </div>
                     <div className="message-send-btn">
-                        <img src={send} onClick={submitMessage} />
+                        <img src={storage === 'dark' ? send_dark : send} onClick={submitMessage} />
                     </div>
                 </form>
             </div>

@@ -21,5 +21,6 @@ module.exports = {
         ...userResolvers.Mutation,
         ...messageResolvers.Mutation,
         ...cartResolvers.Mutation,
+        ...productResolvers.Mutation,
     },
 }

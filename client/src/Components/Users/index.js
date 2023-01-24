@@ -75,19 +75,33 @@ function Users() {
         ))
     }
 
+    const handleChat = () => {
+        myData.handleChatshow()
+    }
+
     return (
         <>
-            <div className="chatbox-title">
-                CHAT BOX
-                <img />
+            <div className="chatbox-main">
+                <div className="chatbox-title">
+                    CHAT BOX
+                    <img />
+                </div>
+
+                <div className="chatbox-search">
+                    {/* <input type="text" placeholder="検索..." /> */}
+                    <div></div>
+                </div>
+
+                <div className="chatbox-container">
+                    <div className="chatbox-container-items">{usersMarkup}</div>
+                </div>
             </div>
 
-            <div className="chatbox-search">
-                <input type="text" placeholder="検索..." />
-            </div>
-
-            <div className="chatbox-container">
-                <div className="chatbox-container-items">{usersMarkup}</div>
+            <div className="chatbox-close">
+                <div className="chatbox-close-container" onClick={() => handleChat()}>
+                    閉じる
+                    <div className="underline"></div>
+                </div>
             </div>
         </>
     )

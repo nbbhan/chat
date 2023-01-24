@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 import on from '~/Imgs/light-on.png'
 import off from '~/Imgs/light-off.png'
+import off_dark from '~/Imgs/light-off_dark.png'
 
 import { Data } from '~/Provider'
 
@@ -28,7 +29,7 @@ function Modal() {
                         >
                             <div style={{ textAlign: 'center' }}>
                                 <div style={{ marginBottom: '2rem' }}>
-                                    <img src={off} />
+                                    <img src={storage === 'dark' ? off_dark : off} />
                                 </div>
 
                                 <div>ダークテーマ</div>

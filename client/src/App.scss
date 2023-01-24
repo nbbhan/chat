@@ -41,12 +41,6 @@
             box-shadow: none !important;
             border: 1px solid rgb(180, 180, 180) !important;
         }
-        img {
-            width: 80%;
-            height: 100%;
-            transform: scale(0.7);
-            object-fit: cover;
-        }
     }
 
     // ↓↓↓反映されない↓↓↓
@@ -108,7 +102,7 @@
 
     .profile-main-container-profimg {
         div {
-            box-shadow: 3px 3px 7px rgb(50, 50, 50);
+            box-shadow: 3px 3px 7px rgb(50, 50, 50) !important;
         }
     }
 
@@ -131,11 +125,37 @@
 
     .search-item-info-addBtn {
         border: 1px solid rgb(100, 100, 100) !important;
-        box-shadow: none;
+        box-shadow: none !important;
         &:hover {
             border: 1px solid rgb(180, 180, 180) !important;
             box-shadow: none !important;
         }
+    }
+
+    .prefectures-container-right-select-line-main {
+        background: #f0f1f2 !important;
+    }
+
+    .prefectures-container-right-main-item {
+        border-bottom: 1px solid rgba(180, 180, 180, 0.1) !important;
+    }
+
+    .prefecture-scroll {
+        color: #f0f1f2 !important;
+        span {
+            div {
+                background: rgb(180, 180, 180) !important;
+            }
+        }
+    }
+
+    .prefectures-title,
+    .slide-title,
+    .prefectures-container-right-select-R,
+    .modal-close-container,
+    .chatbox-close-container,
+    .chatbox-title {
+        color: #f0f1f2 !important;
     }
 
     // ↓↓↓反映されない↓↓↓
@@ -144,8 +164,16 @@
         box-shadow: none !important;
     }
 
+    .message {
+        border: none !important;
+    }
+
     .received {
         background: rgb(100, 100, 100) !important;
+    }
+
+    .underline {
+        background: #f0f1f2 !important;
     }
 }
 
@@ -653,7 +681,8 @@ button {
     background: white;
     overflow-x: hidden;
 }
-.home-container-item {
+.home-container-item,
+.home-container-item-kmt {
     width: 100%;
     background: white;
     position: relative;
@@ -984,12 +1013,20 @@ button {
     font-family: var(--fontComfor);
     color: var(--cha);
     text-align: center;
+    margin-bottom: 2rem;
 }
 .chatbox-search {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    height: 1px;
+
+    div {
+        background: rgb(100, 100, 100);
+        width: 50%;
+        height: 100%;
+    }
 
     input {
         border: 2px solid var(--myColor);
@@ -1013,7 +1050,7 @@ button {
 .chatbox-container {
     width: 100%;
     // border: 1px solid red;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 .chatbox-container-items {
     width: 100%;
@@ -1066,6 +1103,36 @@ button {
         align-items: center;
     }
 }
+.chatbox-main {
+    min-height: 500px;
+}
+.chatbox-close {
+    width: 100%;
+    height: calc(100% - 500px);
+    padding: 10px 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chatbox-close-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--cha);
+    position: relative;
+
+    &:hover {
+        cursor: pointer;
+
+        .underline {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+}
+
 .message {
     position: absolute;
     top: 0;
@@ -2714,6 +2781,7 @@ button {
     width: 580px;
     border-radius: 10px;
     overflow: hidden;
+    // border: 1px solid red;
 }
 .modal-container {
     width: 100%;
