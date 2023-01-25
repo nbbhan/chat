@@ -1,7 +1,7 @@
 {
     "development": {
         "username": "root",
-        "password": "o-harananba",
+        "password": "010219",
         "database": "chat",
         "host": "127.0.0.1",
         "dialect": "mysql"
