@@ -6,6 +6,10 @@ module.exports = (sequelize, DataTypes) => {
     }
     Buy.init(
         {
+            user: {
+                type: DataTypes.STRING,
+                allowNull: false,
+            },
             productId: {
                 type: DataTypes.STRING(20),
                 allowNull: false,

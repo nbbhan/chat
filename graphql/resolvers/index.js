@@ -4,6 +4,7 @@ const popularResolvers = require('./populars')
 const productResolvers = require('./products')
 const cartResolvers = require('./carts')
 const favoriteResolvers = require('./favorites')
+const buyResolvers = require('./buys')
 
 module.exports = {
     Message: {
@@ -16,6 +17,7 @@ module.exports = {
         ...productResolvers.Query,
         ...cartResolvers.Query,
         ...favoriteResolvers.Query,
+        ...buyResolvers.Query,
     },
     Mutation: {
         ...userResolvers.Mutation,
