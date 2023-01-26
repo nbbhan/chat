@@ -183,7 +183,7 @@ function Post() {
 
                                 <div className="post-btn">
                                     <button type="submit" onClick={() => setSubmit(!submit)}>
-                                        アップロード
+                                        出品
                                     </button>
                                 </div>
                             </div>
