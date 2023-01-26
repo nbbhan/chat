@@ -56,25 +56,62 @@ function Post() {
         <>
             <Explore />
 
-            <div className="about">
-                <div className="about-container">
+            <div className="post">
+                <div className="post-container">
                     <Modal />
 
                     <SettingModal />
 
                     <Search />
 
-                    <div className={`about-main ${storage}`}>
+                    <div className={`post-main ${storage}`}>
                         <Title props={inf} />
 
-                        <div className="about-main-container">
-                            <input placeholder="productId" />
-                            <input placeholder="info" />
-                            <input placeholder="price" />
-                            <input placeholder="rating" />
-                            <input placeholder="imgUrl" />
-                            <input placeholder="area" />
-                            <input placeholder="prefecture" />
+                        <div className="post-main-container">
+                            <div className="post-main-container-items">
+                                <div className="post-main-container-item">
+                                    <div className="post-main-container-item-imgInput">
+                                        <input type="file" />
+                                    </div>
+                                </div>
+
+                                <div className="post-main-container-item">
+                                    <div className="post-main-container-item-group">
+                                        <div className="post-main-container-item-label">商品 ID</div>
+                                        <div className="post-main-container-item-input">
+                                            <input />
+                                        </div>
+                                    </div>
+
+                                    <div className="post-main-container-item-group">
+                                        <div className="post-main-container-item-label">名前</div>
+                                        <div className="post-main-container-item-input">
+                                            <input />
+                                        </div>
+                                    </div>
+
+                                    <div className="post-main-container-item-group">
+                                        <div className="post-main-container-item-label">値段</div>
+                                        <div className="post-main-container-item-input">
+                                            <input />
+                                        </div>
+                                    </div>
+
+                                    <div className="post-main-container-item-group">
+                                        <div className="post-main-container-item-label">地域</div>
+                                        <div className="post-main-container-item-input">
+                                            <input />
+                                        </div>
+                                    </div>
+
+                                    <div className="post-main-container-item-group">
+                                        <div className="post-main-container-item-label">都道府県</div>
+                                        <div className="post-main-container-item-input">
+                                            <input />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
