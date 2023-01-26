@@ -85,7 +85,7 @@ function Post() {
             prefectureRef.current.value = ''
             priceRef.current.value = ''
 
-            alert('出品完了')
+            alert('出品完了です。')
         }
     }, [submit])
 
