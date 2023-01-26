@@ -1,5 +1,5 @@
-import { gql, useQuery, useMutation } from '@apollo/client'
-import { useState, useEffect } from 'react'
+import { gql, useMutation } from '@apollo/client'
+import { useState, useEffect, useRef } from 'react'
 
 import Explore from '~/Components/Explore'
 import Title from '~/Components/Title'
@@ -58,6 +58,13 @@ function Post() {
         price: '',
     })
 
+    const productRef = useRef()
+    const infoRef = useRef()
+    const imgRef = useRef()
+    const areaRef = useRef()
+    const prefectureRef = useRef()
+    const priceRef = useRef()
+
     useEffect(() => {
         if (
             variables.productId !== '' &&
@@ -68,6 +75,17 @@ function Post() {
             variables.price !== ''
         ) {
             addToProduct({ variables })
+
+            setVariables('')
+
+            productRef.current.value = ''
+            infoRef.current.value = ''
+            imgRef.current.value = ''
+            areaRef.current.value = ''
+            prefectureRef.current.value = ''
+            priceRef.current.value = ''
+
+            alert('出品完了')
         }
     }, [submit])
 
@@ -92,6 +110,7 @@ function Post() {
                                     <div className="post-main-container-item">
                                         <div className="post-main-container-item-imgInput">
                                             <input
+                                                ref={imgRef}
                                                 onChange={(e) => setVariables({ ...variables, imgUrl: e.target.value })}
                                             />
                                         </div>
@@ -102,6 +121,7 @@ function Post() {
                                             <div className="post-main-container-item-label">商品 ID</div>
                                             <div className="post-main-container-item-input">
                                                 <input
+                                                    ref={productRef}
                                                     onChange={(e) =>
                                                         setVariables({ ...variables, productId: e.target.value })
                                                     }
@@ -113,6 +133,7 @@ function Post() {
                                             <div className="post-main-container-item-label">名前</div>
                                             <div className="post-main-container-item-input">
                                                 <input
+                                                    ref={infoRef}
                                                     onChange={(e) =>
                                                         setVariables({ ...variables, info: e.target.value })
                                                     }
@@ -124,6 +145,7 @@ function Post() {
                                             <div className="post-main-container-item-label">値段</div>
                                             <div className="post-main-container-item-input">
                                                 <input
+                                                    ref={priceRef}
                                                     type="number"
                                                     step="any"
                                                     onChange={(e) =>
@@ -137,6 +159,7 @@ function Post() {
                                             <div className="post-main-container-item-label">地域</div>
                                             <div className="post-main-container-item-input">
                                                 <input
+                                                    ref={areaRef}
                                                     onChange={(e) =>
                                                         setVariables({ ...variables, area: e.target.value })
                                                     }
@@ -148,6 +171,7 @@ function Post() {
                                             <div className="post-main-container-item-label">都道府県</div>
                                             <div className="post-main-container-item-input">
                                                 <input
+                                                    ref={prefectureRef}
                                                     onChange={(e) =>
                                                         setVariables({ ...variables, prefecture: e.target.value })
                                                     }
