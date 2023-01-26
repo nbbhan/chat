@@ -13,7 +13,7 @@ module.exports = {
                 email: 'qoks@email.com',
                 password: await bcrypt.hash('qoks', 6),
                 imageUrl:
-                    'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1700&q=80',
+                    'https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
                 buyPoint: 0,
                 getPoint: 0,
                 follow: 0,
@@ -25,7 +25,7 @@ module.exports = {
                 email: 'admin@email.com',
                 password: await bcrypt.hash('admin', 6),
                 imageUrl:
-                    'https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2190&q=80',
+                    'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
                 buyPoint: 0,
                 getPoint: 0,
                 follow: 0,
@@ -37,9 +37,21 @@ module.exports = {
                 email: 'hokkaido_ryoushi@email.com',
                 password: password,
                 imageUrl:
-                    'https://images.unsplash.com/photo-1566753323558-f4e0952af115?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2122&q=80',
+                    'https://images.unsplash.com/photo-1590133604435-b3c70cb2de90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80',
                 buyPoint: 7000,
                 getPoint: 500,
+                follow: 5,
+                createdAt,
+                updatedAt,
+            },
+            {
+                username: 'yamada',
+                email: 'yamada@email.com',
+                password: password,
+                imageUrl:
+                    'https://images.unsplash.com/photo-1566753323558-f4e0952af115?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2122&q=80',
+                buyPoint: 5000,
+                getPoint: 1996,
                 follow: 5,
                 createdAt,
                 updatedAt,
