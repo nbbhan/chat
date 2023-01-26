@@ -110,6 +110,7 @@ function Post() {
                                     <div className="post-main-container-item">
                                         <div className="post-main-container-item-imgInput">
                                             <input
+                                                placeholder="画像URLを入力..."
                                                 ref={imgRef}
                                                 onChange={(e) => setVariables({ ...variables, imgUrl: e.target.value })}
                                             />
@@ -146,8 +147,6 @@ function Post() {
                                             <div className="post-main-container-item-input">
                                                 <input
                                                     ref={priceRef}
-                                                    type="number"
-                                                    step="any"
                                                     onChange={(e) =>
                                                         setVariables({ ...variables, price: e.target.value })
                                                     }
@@ -158,12 +157,16 @@ function Post() {
                                         <div className="post-main-container-item-group">
                                             <div className="post-main-container-item-label">地域</div>
                                             <div className="post-main-container-item-input">
-                                                <input
+                                                <select
                                                     ref={areaRef}
                                                     onChange={(e) =>
                                                         setVariables({ ...variables, area: e.target.value })
                                                     }
-                                                />
+                                                >
+                                                    <option value="">選択</option>
+                                                    <option value="hokkaido_touhoku">北海道・東北</option>
+                                                    <option value="kanto">関東</option>
+                                                </select>
                                             </div>
                                         </div>
 

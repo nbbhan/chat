@@ -3211,7 +3211,7 @@ button {
     input {
         border: 1px solid var(--myColor);
         // border-radius: var(--borderR);
-        border-radius: 100rem;
+        border-radius: 10px;
         height: 40px;
         width: 100%;
         padding: 0 1.5rem 0 1.5rem;
@@ -3226,6 +3226,19 @@ button {
         &::placeholder {
             color: var(--myColor);
         }
+    }
+
+    select {
+        width: 100%;
+        border: 1px solid var(--myColor);
+        // border-radius: var(--borderR);
+        border-radius: 10px;
+        height: 40px;
+        padding: 0 1.5rem 0 1.5rem;
+        outline: none;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: var(--fontZen);
     }
 }
 
