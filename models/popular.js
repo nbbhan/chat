@@ -15,12 +15,11 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
             },
             price: {
-                type: DataTypes.FLOAT(5),
+                type: DataTypes.STRING,
                 allowNull: false,
             },
             rating: {
                 type: DataTypes.FLOAT,
-                allowNull: false,
             },
             imgUrl: {
                 type: DataTypes.STRING,
@@ -28,7 +27,6 @@ module.exports = (sequelize, DataTypes) => {
             },
             dealerId: {
                 type: DataTypes.STRING(5),
-                allowNull: false,
             },
         },
         {

@@ -27,16 +27,16 @@ module.exports = gql`
     type Popular {
         productId: String!
         info: String!
-        price: Float!
-        rating: String!
+        price: String!
+        rating: String
         imgUrl: String!
         dealerId: String
     }
     type Product {
         productId: String!
         info: String!
-        price: Float!
-        rating: String!
+        price: String!
+        rating: String
         imgUrl: String!
         dealerId: String
         area: String
@@ -54,7 +54,7 @@ module.exports = gql`
         user: String!
         productId: String!
         info: String!
-        price: Float!
+        price: String!
         imgUrl: String!
     }
     type Query {
@@ -77,7 +77,7 @@ module.exports = gql`
         addProduct(
             productId: String!
             info: String!
-            price: Float!
+            price: String!
             imgUrl: String!
             area: String!
             prefecture: String!

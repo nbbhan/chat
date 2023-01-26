@@ -3192,6 +3192,9 @@ button {
     box-shadow: 0 1px 5px 1px var(--myColor);
     margin-bottom: 60px;
     padding: 10px;
+}
+.post-main-container-items-main {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -3242,7 +3245,7 @@ button {
         width: 100%;
         padding: 1.5rem 1.5rem 0 1.5rem;
         font-size: 16px;
-        font-family: var(--fontComfor);
+        font-family: var(--fontZen);
         // box-shadow: 0 1px 5px 1px var(--myColor);
 
         &:focus {
@@ -3252,6 +3255,24 @@ button {
         &::placeholder {
             color: var(--myColor);
         }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+.post-btn {
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        width: 170px;
+        height: 45px;
+        border: 2px solid var(--myColor);
+        border-radius: var(--borderR);
 
         &:hover {
             cursor: pointer;

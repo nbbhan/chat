@@ -19,10 +19,9 @@ module.exports = {
             },
             price: {
                 allowNull: false,
-                type: Sequelize.FLOAT(5),
+                type: Sequelize.STRING,
             },
             rating: {
-                allowNull: false,
                 type: Sequelize.FLOAT,
             },
             imgUrl: {
@@ -30,7 +29,6 @@ module.exports = {
                 type: Sequelize.STRING,
             },
             dealerId: {
-                allowNull: false,
                 type: Sequelize.STRING(5),
             },
             createdAt: {
