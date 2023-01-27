@@ -43,8 +43,8 @@ module.exports = {
             let errors = {}
 
             try {
-                if (username.trim() === '') errors.username = 'username must not be empty'
-                if (password === '') errors.password = 'password must not be empty'
+                if (username.trim() === '') errors.username = '※ユーザーネームを入力してください'
+                if (password === '') errors.password = '※パスワードを入力してください'
 
                 if (Object.keys(errors).length > 0) {
                     throw new UserInputError('bad input', { errors })
@@ -103,12 +103,12 @@ module.exports = {
 
             try {
                 // Validate input data
-                if (email.trim() === '') errors.email = 'email must not be empty'
-                if (username.trim() === '') errors.username = 'username must not be empty'
-                if (password.trim() === '') errors.password = 'password must not be empty'
-                if (confirmPassword.trim() === '') errors.confirmPassword = 'repeat password must not be empty'
+                if (email.trim() === '') errors.email = '※メールアドレスを入力してください'
+                if (username.trim() === '') errors.username = '※ユーザーネームを入力してください'
+                if (password.trim() === '') errors.password = '※パスワードを入力してください'
+                if (confirmPassword.trim() === '') errors.confirmPassword = '※パスワードをもう一度入力してください'
 
-                if (password !== confirmPassword) errors.confirmPassword = 'passwords must match'
+                if (password !== confirmPassword) errors.confirmPassword = '※パスワードが一致しません'
 
                 // // Check if username / email exists
                 // const userByUsername = await User.findOne({ where: { username } })

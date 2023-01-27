@@ -37,7 +37,7 @@ module.exports = {
             },
             {
                 uuid: 'fd4cee68-5caf-4b1b-80a9-5b9add7fd863',
-                content: 'すべて980円（税込）になっております。',
+                content: 'すべて980円になっております。',
                 from: 'hokkaido_ryoushi',
                 to: 'yamada',
                 createdAt: '2020-07-01 11:00:00',

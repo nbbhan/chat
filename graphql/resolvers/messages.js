@@ -13,7 +13,7 @@ module.exports = {
                     where: { username: from },
                 })
 
-                if (!otherUser) throw new UserInputError('User not found')
+                if (!otherUser) throw new UserInputError('ユーザーが見つかりません')
 
                 const usernames = [user.username, otherUser.username]
 
@@ -40,13 +40,13 @@ module.exports = {
                 const recipient = await User.findOne({ where: { username: to } })
 
                 if (!recipient) {
-                    throw new UserInputError('User not found')
+                    throw new UserInputError('ユーザーが見つかりません')
                 } else if (recipient.username === user.username) {
-                    throw new UserInputError('You cant message yourself')
+                    throw new UserInputError('自分にはメッセージを送れません')
                 }
 
                 if (content.trim() === '') {
-                    throw new UserInputError('Message is empty')
+                    throw new UserInputError('メッセージがありません')
                 }
 
                 const message = await Message.create({
