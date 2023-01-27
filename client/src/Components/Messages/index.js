@@ -105,7 +105,7 @@ function Messages() {
                     messagesData.getMessages.map((message, index) => <Message key={index} message={message}></Message>)
                 ) : (
                     <div className="received" style={{ marginLeft: '1rem' }}>
-                        Contact now!
+                        疑問点があれば質問しましょう
                     </div>
                 )}
             </div>

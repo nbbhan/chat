@@ -68,7 +68,7 @@ function Users() {
                     <div className="chatbox-container-item-name">{user.username}</div>
 
                     <div className="chatbox-container-item-message">
-                        {user.latestMessage ? user.latestMessage.content : 'You are now connected!'}
+                        {user.latestMessage ? user.latestMessage.content : '接続しました！'}
                     </div>
                 </div>
             </div>
