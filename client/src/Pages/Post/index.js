@@ -89,6 +89,17 @@ function Post() {
         }
     }, [submit])
 
+    const handleSelect = (value) => {
+        switch (value) {
+            case 'hokkaido_touhoku':
+                prefectureRef.current.innerHTML = `
+                    <option value="hokkaido">北海道</option>
+                    <option value="aomori">青森県</option>
+                `
+                break
+        }
+    }
+
     return (
         <>
             <Explore />
@@ -159,9 +170,11 @@ function Post() {
                                             <div className="post-main-container-item-input">
                                                 <select
                                                     ref={areaRef}
-                                                    onChange={(e) =>
+                                                    onChange={(e) => {
                                                         setVariables({ ...variables, area: e.target.value })
-                                                    }
+
+                                                        handleSelect(e.target.value)
+                                                    }}
                                                 >
                                                     <option value="">-選択-</option>
                                                     <option value="hokkaido_touhoku">北海道・東北</option>
@@ -179,13 +192,12 @@ function Post() {
                                             <div className="post-main-container-item-label">都道府県</div>
                                             <div className="post-main-container-item-input">
                                                 <select
-                                                    ref={areaRef}
+                                                    ref={prefectureRef}
                                                     onChange={(e) =>
                                                         setVariables({ ...variables, prefecture: e.target.value })
                                                     }
                                                 >
-                                                    <option value="">-選択-</option>
-                                                    <option value="hokkaido">北海道</option>
+                                                    {/* <option value="hokkaido">北海道</option>
                                                     <option value="aomori">青森県</option>
                                                     <option value="iwate">岩手県</option>
                                                     <option value="miyagi">宮城県</option>
@@ -231,7 +243,7 @@ function Post() {
                                                     <option value="oita">大分県</option>
                                                     <option value="miyazaki">宮崎県</option>
                                                     <option value="kagoshima">鹿児島県</option>
-                                                    <option value="okinawa">沖縄県</option>
+                                                    <option value="okinawa">沖縄県</option> */}
                                                 </select>
                                             </div>
                                         </div>
