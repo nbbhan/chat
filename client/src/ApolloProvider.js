@@ -1,7 +1,7 @@
 import React from 'react'
 import { ApolloClient, InMemoryCache, ApolloProvider as Provider, createHttpLink, split } from '@apollo/client'
 import { setContext } from '@apollo/client/link/context'
-import { WebSocketLink } from '@apollo/client/link/ws'
+import { GraphQLWsLink } from '@apollo/client/link/subscriptions'
 import { getMainDefinition } from '@apollo/client/utilities'
 
 let httpLink = createHttpLink({
@@ -22,8 +22,8 @@ const authLink = setContext((_, { headers }) => {
 
 httpLink = authLink.concat(httpLink)
 
-const wsLink = new WebSocketLink({
-    uri: `ws://localhost:4000/graphql`,
+const wsLink = new GraphQLWsLink({
+    url: `ws://localhost:4000/graphql`,
     options: {
         reconnect: true,
         connectionParams: {
