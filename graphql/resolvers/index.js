@@ -25,4 +25,7 @@ module.exports = {
         ...cartResolvers.Mutation,
         ...productResolvers.Mutation,
     },
+    Subscription: {
+        ...messageResolvers.Subscription,
+    },
 }

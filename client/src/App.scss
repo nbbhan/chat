@@ -1000,8 +1000,8 @@ button {
 // Chatbox
 .chatbox {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 15px;
+    right: 15px;
     border-radius: var(--borderR);
     background: white;
     width: 400px;
@@ -1114,7 +1114,6 @@ button {
 .chatbox-close {
     width: 100%;
     height: calc(100% - 500px);
-    padding: 10px 20px 20px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1164,6 +1163,7 @@ button {
 .message-box {
     display: flex;
     margin: 0.5rem 1rem 0.5rem 1rem;
+    overflow: hidden;
 }
 .message-title {
     display: flex;
@@ -1214,8 +1214,8 @@ button {
     input {
         border: 1px solid var(--myColor);
         // border-radius: var(--borderR);
-        border-radius: 100rem;
-        height: 80%;
+        border-radius: 10px;
+        height: 60%;
         width: 100%;
         padding: 0 1.5rem 0 1.5rem;
         font-size: 16px;
@@ -1246,18 +1246,18 @@ button {
     }
 }
 .sent {
-    width: auto;
+    max-width: 80%;
     padding: 1rem 1.5rem 1rem 1.5rem;
-    border-radius: 100rem;
+    border-radius: 10px;
     background: #0d6efd;
     color: white;
     margin-left: auto;
     margin-right: 0;
 }
 .received {
-    width: auto;
+    max-width: 80%;
     padding: 1rem 1.5rem 1rem 1.5rem;
-    border-radius: 100rem;
+    border-radius: 10px;
     background: #e9ecef;
     margin-right: auto;
     margin-left: 0;
