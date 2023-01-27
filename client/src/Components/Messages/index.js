@@ -114,7 +114,7 @@ function Messages() {
                 <form onSubmit={submitMessage} className="message-form">
                     <div className="message-send-input">
                         <input
-                            placeholder="Type a message..."
+                            placeholder="ここにメッセージを入力..."
                             value={content}
                             onChange={(e) => setContent(e.target.value)}
                         />
