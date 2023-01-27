@@ -39,8 +39,8 @@ function Post() {
         link: 'post',
         en: 'POST',
         jp: '出品',
-        des1: '出品用のページです',
-        des2: '\\です！/',
+        des1: '山の幸、海の幸、伝統工芸品、四季折々の品',
+        des2: 'あなたの出す様々な品を多くの人が待ちわびています。',
     }
 
     const [addToProduct] = useMutation(POST_PRODUCT)
