@@ -1,5 +1,6 @@
 const { UserInputError, AuthenticationError } = require('apollo-server')
 const { Op } = require('sequelize')
+const { withFilter } = require('graphql-subscriptions')
 
 const { Message, User } = require('../../models')
 
