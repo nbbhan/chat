@@ -10,6 +10,7 @@ import Search from '~/Components/Search'
 const GET_PRODUCT = gql`
     query GetProduct {
         getProduct {
+            id
             productId
             info
             price
@@ -75,7 +76,7 @@ function Post() {
         price: '',
     })
 
-    const productRef = useRef()
+    // const productRef = useRef()
     const infoRef = useRef()
     const imgRef = useRef()
     const areaRef = useRef()
@@ -84,7 +85,7 @@ function Post() {
 
     useEffect(() => {
         if (
-            variables.productId !== '' &&
+            // variables.productId !== '' &&
             variables.info !== '' &&
             variables.area !== '' &&
             variables.prefecture !== '' &&
@@ -95,7 +96,9 @@ function Post() {
 
             setVariables('')
 
-            productRef.current.value = ''
+            window.location.reload()
+
+            // productRef.current.value = ''
             infoRef.current.value = ''
             imgRef.current.value = ''
             areaRef.current.value = ''
@@ -215,7 +218,7 @@ function Post() {
                                     </div>
 
                                     <div className="post-main-container-item">
-                                        <div className="post-main-container-item-group">
+                                        {/* <div className="post-main-container-item-group">
                                             <div className="post-main-container-item-label">商品 ID</div>
                                             <div className="post-main-container-item-input">
                                                 <input
@@ -225,7 +228,7 @@ function Post() {
                                                     }
                                                 />
                                             </div>
-                                        </div>
+                                        </div> */}
 
                                         <div className="post-main-container-item-group">
                                             <div className="post-main-container-item-label">名前</div>
@@ -294,11 +297,12 @@ function Post() {
                                         onClick={() => {
                                             setSubmit(!submit)
 
+                                            let nextId
+
                                             // productID
-                                            data &&
-                                                data.getProduct.map((item) => {
-                                                    console.log(item.productId)
-                                                })
+                                            nextId = data && data.getProduct[data.getProduct.length - 1].id
+
+                                            setVariables({ ...variables, productId: `p0${nextId + 1}` })
                                         }}
                                     >
                                         出品

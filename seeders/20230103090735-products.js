@@ -664,7 +664,7 @@ module.exports = {
                 updatedAt: '2020-07-01 07:00:00',
             },
             {
-                productId: 'p0099',
+                productId: 'p0160',
                 info: '日本酒',
                 price: '7000',
                 rating: '4',
@@ -820,7 +820,7 @@ module.exports = {
                 updatedAt: '2020-07-01 07:00:00',
             },
             {
-                productId: 'p0126',
+                productId: 'p0161',
                 info: 'わさび',
                 price: '470',
                 rating: '4.2',

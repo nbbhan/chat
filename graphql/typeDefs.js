@@ -33,6 +33,7 @@ module.exports = gql`
         dealerId: String
     }
     type Product {
+        id: Int
         productId: String!
         info: String!
         price: String!

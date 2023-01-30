@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     Product.init(
         {
             productId: {
-                type: DataTypes.STRING(20),
+                type: DataTypes.STRING(5),
                 allowNull: false,
             },
             info: {
