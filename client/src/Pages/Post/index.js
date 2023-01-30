@@ -231,7 +231,7 @@ function Post() {
                                         </div> */}
 
                                         <div className="post-main-container-item-group">
-                                            <div className="post-main-container-item-label">名前</div>
+                                            <div className="post-main-container-item-label">名称</div>
                                             <div className="post-main-container-item-input">
                                                 <input
                                                     ref={infoRef}

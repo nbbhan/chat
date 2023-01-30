@@ -9,6 +9,8 @@ import cart from '~/Imgs/Cart_Screen.png'
 import point from '~/Imgs/Point_Screen.png'
 import contact from '~/Imgs/Contact_Screen.png'
 import setting from '~/Imgs/Setting_Screen.png'
+import post1 from '~/Imgs/Post_Screen1.png'
+import post2 from '~/Imgs/Post_Screen2.png'
 
 function Guide() {
     const inf = {
@@ -87,6 +89,17 @@ function Guide() {
                             <br />
                             <br />
                             <img src={setting} />
+                            <br />
+                            <br />
+                            ・出品について：
+                            <br />
+                            画像アドレス、名称、値段、地域、都道府県を入力して商品を出品可能です。
+                            <br />
+                            <br />
+                            <img src={post1} />
+                            <br />
+                            <br />
+                            <img src={post2} />
                         </div>
                     </div>
                 </div>

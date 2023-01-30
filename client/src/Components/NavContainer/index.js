@@ -90,6 +90,15 @@ function NavContainer() {
                         </div>
                     </div>
 
+                    <Link to="/post" onClick={() => myData.handleTrigger()}>
+                        <div className="navContainer-main-item">
+                            <div className="navContainer-main-item-text">
+                                出品
+                                <div className="underline" style={{ background: 'white' }}></div>
+                            </div>
+                        </div>
+                    </Link>
+
                     <div className="navContainer-main-item">
                         <div className="navContainer-main-item-search">
                             <input
