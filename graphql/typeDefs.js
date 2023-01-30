@@ -58,9 +58,6 @@ module.exports = gql`
         price: String!
         imgUrl: String!
     }
-    type Subscription {
-        newMessage: Message!
-    }
     type Query {
         getUsers: [User]!
         login(username: String!, password: String!): User!
@@ -86,5 +83,8 @@ module.exports = gql`
             area: String!
             prefecture: String!
         ): Product!
+    }
+    type Subscription {
+        newMessage: Message!
     }
 `

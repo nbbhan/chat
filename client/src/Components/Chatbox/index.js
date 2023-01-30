@@ -9,13 +9,13 @@ import Users from '../Users'
 import Messages from '../Messages'
 
 const NEW_MESSAGE = gql`
-    subscription newMessage {
+    subscription Subscription {
         newMessage {
-            uuid
-            from
-            to
             content
             createdAt
+            from
+            to
+            uuid
         }
     }
 `
@@ -26,6 +26,8 @@ function Chatbox() {
     const { user } = useAuthState()
 
     const { data: messageData, error: messageError } = useSubscription(NEW_MESSAGE)
+
+    // console.log(messageData)
 
     useEffect(() => {
         if (messageError) console.log(messageError)
