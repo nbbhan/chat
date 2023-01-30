@@ -64,7 +64,7 @@ function Users() {
                     <img src={user.imageUrl} />
                 </div>
 
-                <div style={{ height: '100%' }}>
+                <div style={{ height: '100%', width: 'calc(100% - 60px)', overflow: 'hidden' }}>
                     <div className="chatbox-container-item-name">{user.username}</div>
 
                     <div className="chatbox-container-item-message">
