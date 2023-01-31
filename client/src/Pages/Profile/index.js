@@ -40,6 +40,10 @@ function Profile() {
         myData.handlePM()
     }
 
+    const handleCM = () => {
+        myData.handleCM()
+    }
+
     useEffect(() => {}, [myData.pm])
 
     const storage = window.localStorage.getItem('theme')
@@ -71,45 +75,45 @@ function Profile() {
 
                                 <div className="profile-main-container-name">{data && data.getProfile[0].username}</div>
 
-                                <div className="point-main-container-breakdown">
-                                    <div className="point-main-container-breakdown-items">
-                                        <div className="point-main-container-breakdown-item">
-                                            <div className="point-main-container-breakdown-text">フォロー中:</div>
-                                            <div className="point-main-container-breakdown-num">
+                                <div className="profile-main-container-breakdown">
+                                    <div className="profile-main-container-breakdown-items">
+                                        <div className="profile-main-container-breakdown-item">
+                                            <div className="profile-main-container-breakdown-text">フォロー中:</div>
+                                            <div className="profile-main-container-breakdown-num">
                                                 {data && data.getProfile[0].follow}
                                             </div>
                                         </div>
 
-                                        <div className="point-main-container-line"></div>
+                                        <div className="profile-main-container-line"></div>
 
-                                        <div className="point-main-container-breakdown-item">
-                                            <div className="point-main-container-breakdown-text">登録日:</div>
-                                            <div className="point-main-container-breakdown-num">
+                                        <div className="profile-main-container-breakdown-item">
+                                            <div className="profile-main-container-breakdown-text">登録日:</div>
+                                            <div className="profile-main-container-breakdown-num">
                                                 {data && data.getProfile[0].createdAt}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="point-main-container-other">
-                                    <div className="point-main-container-other-items">
+                                <div className="profile-main-container-other">
+                                    <div className="profile-main-container-other-items">
                                         <div
-                                            className="point-main-container-other-item"
+                                            className="profile-main-container-other-item"
                                             onClick={() => {
                                                 handleChangeProfile()
                                             }}
                                         >
-                                            <div className="point-main-container-other-item-main">
-                                                <div className="point-main-container-other-item-main-text">
+                                            <div className="profile-main-container-other-item-main">
+                                                <div className="profile-main-container-other-item-main-text">
                                                     プロフィールを編集
                                                     <div className="underline"></div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div className="point-main-container-other-item">
-                                            <div className="point-main-container-other-item-main">
-                                                <div className="point-main-container-other-item-main-text">
+                                        <div className="profile-main-container-other-item">
+                                            <div className="profile-main-container-other-item-main">
+                                                <div className="profile-main-container-other-item-main-text">
                                                     パスワードを変更
                                                     <div className="underline"></div>
                                                 </div>
@@ -117,19 +121,23 @@ function Profile() {
                                         </div>
                                     </div>
 
-                                    <div className="point-main-container-other-items">
-                                        <div className="point-main-container-other-item">
-                                            <div className="point-main-container-other-item-main">
-                                                <div className="point-main-container-other-item-main-text">
+                                    <div className="profile-main-container-other-items">
+                                        <div className="profile-main-container-other-item">
+                                            <div className="profile-main-container-other-item-main">
+                                                <div className="profile-main-container-other-item-main-text">
                                                     フォローを管理
                                                     <div className="underline"></div>
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <div className="point-main-container-other-item">
-                                            <div className="point-main-container-other-item-main">
-                                                <div className="point-main-container-other-item-main-text">
+                                        <div className="profile-main-container-other-item">
+                                            <div
+                                                className="profile-main-container-other-item-main"
+                                                onClick={() => {
+                                                    handleCM()
+                                                }}
+                                            >
+                                                <div className="profile-main-container-other-item-main-text">
                                                     FAQ・お問い合わせ
                                                     <div className="underline"></div>
                                                 </div>
@@ -137,19 +145,19 @@ function Profile() {
                                         </div>
                                     </div>
 
-                                    <div className="point-main-container-other-items">
-                                        <div className="point-main-container-other-item">
-                                            <div className="point-main-container-other-item-main">
-                                                <div className="point-main-container-other-item-main-text">
+                                    <div className="profile-main-container-other-items">
+                                        <div className="profile-main-container-other-item">
+                                            <div className="profile-main-container-other-item-main">
+                                                <div className="profile-main-container-other-item-main-text">
                                                     プライバシーポリシー
                                                     <div className="underline"></div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div className="point-main-container-other-item">
-                                            <div className="point-main-container-other-item-main">
-                                                <div className="point-main-container-other-item-main-text">
+                                        <div className="profile-main-container-other-item">
+                                            <div className="profile-main-container-other-item-main">
+                                                <div className="profile-main-container-other-item-main-text">
                                                     利用規約
                                                     <div className="underline"></div>
                                                 </div>

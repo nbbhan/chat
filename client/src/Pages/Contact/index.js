@@ -11,8 +11,8 @@ function Contact() {
         link: 'contact',
         en: 'CONTACT',
         jp: 'お問い合わせ',
-        des1: 'わからないことがあればお気軽にご連絡ください。',
-        des2: '',
+        // des1: 'わからないことがあればお気軽にご連絡ください。',
+        // des2: '',
     }
 
     const storage = window.localStorage.getItem('theme')

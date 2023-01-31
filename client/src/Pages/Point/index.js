@@ -135,6 +135,10 @@ function Point() {
         }
     }
 
+    const handleCM = () => {
+        myData.handleCM()
+    }
+
     useEffect(() => {}, [view])
 
     const storage = window.localStorage.getItem('theme')
@@ -235,7 +239,12 @@ function Point() {
                                         </div>
 
                                         <div className="point-main-container-other-item">
-                                            <div className="point-main-container-other-item-main">
+                                            <div
+                                                className="point-main-container-other-item-main"
+                                                onClick={() => {
+                                                    handleCM()
+                                                }}
+                                            >
                                                 <div className="point-main-container-other-item-main-text">
                                                     FAQ・お問い合わせ
                                                     <div className="underline"></div>

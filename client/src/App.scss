@@ -95,7 +95,8 @@
         box-shadow: none !important;
     }
 
-    .profile-main-container-items {
+    .profile-main-container-items,
+    .profile-main-container-other-item-main {
         border: 1px solid rgb(180, 180, 180) !important;
         box-shadow: none !important;
     }
@@ -2345,6 +2346,41 @@ button {
     font-weight: 300;
     color: var(--myColor);
     margin-right: 1rem;
+}
+.profile-main-container-other {
+    width: 100%;
+    // border: 1px solid blue;
+}
+.profile-main-container-other-items {
+    display: flex;
+    width: 100%;
+}
+.profile-main-container-other-item {
+    width: 50%;
+    height: 200px;
+    padding: 20px 20px;
+}
+.profile-main-container-other-item-main {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px 1px var(--myColor);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: flex-start;
+
+    &:hover {
+        cursor: pointer;
+        color: var(--cha);
+
+        .underline {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+}
+.profile-main-container-other-item-main-text {
+    position: relative;
 }
 
 // Guide
