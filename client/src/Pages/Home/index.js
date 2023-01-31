@@ -2,6 +2,7 @@ import { useContext, useEffect } from 'react'
 import { gql, useQuery } from '@apollo/client'
 
 import sen from '../../Imgs/sen.png'
+import sen_dark from '../../Imgs/sen_dark.png'
 import Explore from '../../Components/Explore'
 import ImgContainer from '../../Components/ImgContainer'
 import Slide from '../../Components/Slide'
@@ -78,7 +79,7 @@ function Home() {
 
                         <div className={`home-container-item ${storage}`} style={{ height: '250px' }}>
                             <div className="home-container-item-sen">
-                                <img src={sen} />
+                                <img src={storage === 'dark' ? sen_dark : sen} />
                             </div>
                         </div>
 

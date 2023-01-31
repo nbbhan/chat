@@ -5,7 +5,7 @@
 
 // Define
 .dark {
-    background: rgb(80, 80, 80) !important;
+    background: rgb(14, 18, 42) !important;
     color: white !important;
 
     a {
@@ -160,7 +160,7 @@
 
     // ↓↓↓反映されない↓↓↓
     .chatbox {
-        border: 1px solid rgb(100, 100, 100) !important;
+        border: 2px solid rgb(100, 100, 100) !important;
         box-shadow: none !important;
     }
 
@@ -1008,8 +1008,8 @@ button {
     min-height: calc(550px + 1rem);
     z-index: 102;
     padding: 1rem;
-    // border: 2px solid var(--myColor);
-    box-shadow: 0 1px 5px 1px var(--myColor);
+    border: 2px solid var(--myColor);
+    box-shadow: 0 1px 3px 1px var(--myColor);
     font-family: var(--fontComfor);
 }
 .chatbox-title {
@@ -2785,8 +2785,8 @@ button {
     background: white;
     width: 580px;
     border-radius: 10px;
-    overflow: hidden;
-    // border: 1px solid red;
+    // overflow: hidden;
+    border: 1px solid rgb(100, 100, 100);
 }
 .modal-container {
     width: 100%;
@@ -2976,6 +2976,7 @@ button {
     width: 580px;
     border-radius: 10px;
     overflow: hidden;
+    border: 1px solid rgb(100, 100, 100);
 }
 .search-container {
     width: calc(100% + 17px);
@@ -3240,6 +3241,10 @@ button {
         font-weight: 400;
         font-family: var(--fontZen);
         -webkit-appearance: none;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
