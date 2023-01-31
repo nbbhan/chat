@@ -113,6 +113,7 @@ function Post() {
         switch (value) {
             case 'hokkaido_touhoku':
                 prefectureRef.current.innerHTML = `
+                    <option value="">-選択-</option>
                     <option value="北海道">北海道</option>
                     <option value="青森県">青森県</option>
                     <option value="岩手県">岩手県</option>
@@ -124,6 +125,7 @@ function Post() {
                 break
             case 'kanto':
                 prefectureRef.current.innerHTML = `
+                    <option value="">-選択-</option>
                     <option value="茨城県">茨城県</option>
                     <option value="栃木県">栃木県</option>
                     <option value="群馬県">群馬県</option>
@@ -135,6 +137,7 @@ function Post() {
                 break
             case 'tyubu':
                 prefectureRef.current.innerHTML = `
+                    <option value="">-選択-</option>
                     <option value="新潟県">新潟県</option>
                     <option value="富山県">富山県</option>
                     <option value="石川県">石川県</option>
@@ -159,6 +162,7 @@ function Post() {
                 break
             case 'tyugoku':
                 prefectureRef.current.innerHTML = `
+                    <option value="">-選択-</option>
                     <option value="鳥取県">鳥取県</option>
                     <option value="島根県">島根県</option>
                     <option value="岡山県">岡山県</option>
@@ -168,6 +172,7 @@ function Post() {
                 break
             case 'sikoku':
                 prefectureRef.current.innerHTML = `
+                    <option value="">-選択-</option>
                     <option value="徳島県">徳島県</option>
                     <option value="香川県">香川県</option>
                     <option value="愛媛県">愛媛県</option>
@@ -176,6 +181,7 @@ function Post() {
                 break
             case 'kyusyu':
                 prefectureRef.current.innerHTML = `
+                    <option value="">-選択-</option>
                     <option value="福岡県">福岡県</option>
                     <option value="佐賀県">佐賀県</option>
                     <option value="長崎県">長崎県</option>
