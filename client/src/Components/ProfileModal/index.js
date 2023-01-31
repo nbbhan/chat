@@ -93,7 +93,7 @@ function ProfileModal() {
 
                     <div className="profileModal-close">
                         <div
-                            className="profileModal-close-container"
+                            className="profileModal-close-container" //「プロフィール画像を選択」と「閉じる」どちらもcursor:pointerが起動している
                             onClick={() => {
                                 myData.handlePM()
                             }}
