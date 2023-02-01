@@ -9,7 +9,7 @@ module.exports = {
 
         await queryInterface.bulkInsert('users', [
             {
-                username: 'qoks',
+                username: 'QOKS',
                 email: 'qoks@email.com',
                 password: await bcrypt.hash('qoks', 6),
                 imageUrl:

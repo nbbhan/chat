@@ -106,7 +106,7 @@ function Register() {
 
                                 <div className="register-container-item">
                                     <label className={errors.confirmPassword && 'text-danger'}>
-                                        {errors.confirmPassword ?? '確認'}
+                                        {errors.confirmPassword ?? 'パスワードの確認'}
                                     </label>
                                     <br />
                                     <div>

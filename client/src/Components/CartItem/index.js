@@ -100,6 +100,8 @@ function CartItem({ item }) {
                                         </div>
                                     </div>
 
+                                    {/* 個数うううううううううううううううううう */}
+
                                     <div
                                         className="cart-main-item-container-close"
                                         onClick={() =>

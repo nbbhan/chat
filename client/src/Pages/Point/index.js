@@ -31,6 +31,8 @@ function Point() {
 
     const myRef = useRef()
 
+    const backRef = useRef()
+
     const inf = {
         link: 'point',
         en: 'POINT',
@@ -113,6 +115,8 @@ function Point() {
                         `
                     })
                     .join('')
+
+                backRef.current.style.display = 'flex'
                 break
             case 'charge':
                 setView([...historyC])
@@ -131,12 +135,18 @@ function Point() {
                         `
                     })
                     .join('')
+
+                backRef.current.style.display = 'flex'
                 break
         }
     }
 
     const handleCM = () => {
         myData.handleCM()
+    }
+
+    const handleBack = () => {
+        window.location.reload()
     }
 
     useEffect(() => {}, [view])
@@ -230,12 +240,14 @@ function Point() {
 
                                     <div className="point-main-container-other-items">
                                         <div className="point-main-container-other-item">
-                                            <div className="point-main-container-other-item-main">
-                                                <div className="point-main-container-other-item-main-text">
-                                                    使い方
-                                                    <div className="underline"></div>
+                                            <Link to="/guide">
+                                                <div className="point-main-container-other-item-main">
+                                                    <div className="point-main-container-other-item-main-text">
+                                                        使い方
+                                                        <div className="underline"></div>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         </div>
 
                                         <div className="point-main-container-other-item">
@@ -246,7 +258,7 @@ function Point() {
                                                 }}
                                             >
                                                 <div className="point-main-container-other-item-main-text">
-                                                    FAQ・お問い合わせ
+                                                    お問い合わせ
                                                     <div className="underline"></div>
                                                 </div>
                                             </div>
@@ -272,9 +284,13 @@ function Point() {
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    {/* ------------------------------------------- */}
-                                    <div></div>
+                                <div className="modal-close" ref={backRef} style={{ display: 'none' }}>
+                                    <div className="modal-close-container" onClick={() => handleBack()}>
+                                        戻る
+                                        <div className="underline"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

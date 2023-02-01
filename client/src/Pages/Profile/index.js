@@ -138,7 +138,7 @@ function Profile() {
                                                 }}
                                             >
                                                 <div className="profile-main-container-other-item-main-text">
-                                                    FAQ・お問い合わせ
+                                                    お問い合わせ
                                                     <div className="underline"></div>
                                                 </div>
                                             </div>

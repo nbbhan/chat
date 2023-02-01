@@ -252,6 +252,7 @@ function Post() {
                                             <div className="post-main-container-item-label">値段</div>
                                             <div className="post-main-container-item-input">
                                                 <input
+                                                    type="number"
                                                     ref={priceRef}
                                                     onChange={(e) =>
                                                         setVariables({ ...variables, price: e.target.value })
