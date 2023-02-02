@@ -126,7 +126,7 @@ function Container({ user }) {
 
                                     <div className="prefecture-container-item-price">{`${item.price}円（税込）`}</div>
 
-                                    <div className="prefecture-container-item-rating">{`${item.rating}`}</div>
+                                    <div className="prefecture-container-item-rating">{`☆ ${item.rating} / 5`}</div>
 
                                     <div className={`prefecture-container-item-btnContainer ${storage}`}>
                                         {/* <div

@@ -148,7 +148,7 @@ function Slide({ name, icon, user }) {
 
                                         <div className="slide-container-item-price">{`${item.price}円（税込）`}</div>
 
-                                        <div className="slide-container-item-rating">{`${item.rating}`}</div>
+                                        <div className="slide-container-item-rating">{`☆ ${item.rating} / 5`}</div>
 
                                         <div className="slide-container-item-btnContainer">
                                             {/* <div
@@ -193,7 +193,7 @@ function Slide({ name, icon, user }) {
 
                                         <div className="slide-container-item-price">{`${item.price}円（税込）`}</div>
 
-                                        <div className="slide-container-item-rating">{`${item.rating}`}</div>
+                                        <div className="slide-container-item-rating">{`☆ ${item.rating} / 5`}</div>
 
                                         <div className={`slide-container-item-btnContainer ${storage}`}>
                                             {/* <div

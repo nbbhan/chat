@@ -112,7 +112,7 @@ function Search() {
                                                 <div className="search-item-info-container">
                                                     <div className="search-item-name">{element.info}</div>
                                                     <div className="search-item-price">{element.price}円（税込）</div>
-                                                    <div className="search-item-rating">{element.rating}</div>
+                                                    <div className="search-item-rating">☆ {element.rating} / 5</div>
                                                 </div>
 
                                                 <div className="search-item-info-add">

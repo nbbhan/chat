@@ -45,8 +45,8 @@ module.exports = {
                 updatedAt,
             },
             {
-                username: 'yamada',
-                email: 'yamada@email.com',
+                username: 'ohara',
+                email: 'ohara@email.com',
                 password: password,
                 imageUrl:
                     'https://images.unsplash.com/photo-1566753323558-f4e0952af115?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2122&q=80',

@@ -92,7 +92,7 @@ function CartItem({ item }) {
                                         <div className="cart-main-item-inf-container">
                                             <div className="cart-main-item-name">{element.info}</div>
                                             <div className="cart-main-item-price">{element.price}円（税込）</div>
-                                            <div className="cart-main-item-rating">{element.rating}</div>
+                                            <div className="cart-main-item-rating">☆ {element.rating} / 5</div>
                                         </div>
 
                                         <div className="cart-main-item-inf-buy">

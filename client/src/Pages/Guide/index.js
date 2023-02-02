@@ -19,6 +19,8 @@ import post1 from '~/Imgs/Post_Screen1.png'
 import post1_dark from '~/Imgs/Post_Screen1_dark.png'
 import post2 from '~/Imgs/Post_Screen2.png'
 import post2_dark from '~/Imgs/Post_Screen2_dark.png'
+import profile from '~/Imgs/Profile_Screen.png'
+import profile_dark from '~/Imgs/Profile_Screen_dark.png'
 
 function Guide() {
     const inf = {
@@ -110,6 +112,18 @@ function Guide() {
                             <br />
                             <br />
                             <img src={storage === 'dark' ? post2_dark : post2} />
+                            <br />
+                            <br />
+                            ・プロフィールについて：
+                            <br />
+                            プロフィール写真、パスワードの変更やフォロー管理が可能です。
+                            <br />
+                            <br />
+                            <img src={storage === 'dark' ? profile_dark : profile} />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
                         </div>
                     </div>
                 </div>

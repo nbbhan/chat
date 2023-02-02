@@ -13,7 +13,19 @@
         color: white !important;
     }
 
-    .slide-container-item,
+    .slide-container-item {
+        border: 1px solid rgb(100, 100, 100) !important;
+
+        &:hover {
+            box-shadow: none !important;
+            border: 1px solid rgb(180, 180, 180) !important;
+        }
+
+        .slide-container-item-btnContainer {
+            background: rgb(50, 50, 50);
+        }
+    }
+
     .prefecture-container-item {
         border: 1px solid rgb(100, 100, 100) !important;
 
