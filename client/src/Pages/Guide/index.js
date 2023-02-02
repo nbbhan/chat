@@ -6,12 +6,19 @@ import Search from '~/Components/Search'
 import Noti from '~/Components/Noti'
 
 import home from '~/Imgs/Home_Screen.png'
+import home_dark from '~/Imgs/Home_Screen_dark.png'
 import cart from '~/Imgs/Cart_Screen.png'
+import cart_dark from '~/Imgs/Cart_Screen_dark.png'
 import point from '~/Imgs/Point_Screen.png'
+import point_dark from '~/Imgs/Point_Screen_dark.png'
 import contact from '~/Imgs/Contact_Screen.png'
+import contact_dark from '~/Imgs/Contact_Screen_dark.png'
 import setting from '~/Imgs/Setting_Screen.png'
+import setting_dark from '~/Imgs/Setting_Screen_dark.png'
 import post1 from '~/Imgs/Post_Screen1.png'
+import post1_dark from '~/Imgs/Post_Screen1_dark.png'
 import post2 from '~/Imgs/Post_Screen2.png'
+import post2_dark from '~/Imgs/Post_Screen2_dark.png'
 
 function Guide() {
     const inf = {
@@ -58,7 +65,7 @@ function Guide() {
                             ページの最後にはSNSへアクセスできるリンクボタンがあります。
                             <br />
                             <br />
-                            <img src={home} />
+                            <img src={storage === 'dark' ? home_dark : home} />
                             <br />
                             <br />
                             ・カートについて：
@@ -67,7 +74,7 @@ function Guide() {
                             購入、または削除したい商品をポイントすることで購入ボタン、削除ボタンが表示されます。
                             <br />
                             <br />
-                            <img src={cart} />
+                            <img src={storage === 'dark' ? cart_dark : cart} />
                             <br />
                             <br />
                             ・ポイントについて：
@@ -75,7 +82,7 @@ function Guide() {
                             QOKS内で使用できるポイントです。 購入または広告を視聴することでポイントを入手できます。
                             <br />
                             <br />
-                            <img src={point} />
+                            <img src={storage === 'dark' ? point_dark : point} />
                             <br />
                             <br />
                             ・お問い合わせについて：
@@ -83,7 +90,7 @@ function Guide() {
                             メールとチャットの２種類の方法でご質問可能です。
                             <br />
                             <br />
-                            <img src={contact} />
+                            <img src={storage === 'dark' ? contact_dark : contact} />
                             <br />
                             <br />
                             ・設定について：
@@ -91,7 +98,7 @@ function Guide() {
                             背景テーマをライトモードとダークモードに変更可能です。
                             <br />
                             <br />
-                            <img src={setting} />
+                            <img src={storage === 'dark' ? setting_dark : setting} />
                             <br />
                             <br />
                             ・出品について：
@@ -99,10 +106,10 @@ function Guide() {
                             画像アドレス、名称、値段、地域、都道府県を入力して商品を出品可能です。
                             <br />
                             <br />
-                            <img src={post1} />
+                            <img src={storage === 'dark' ? post1_dark : post1} />
                             <br />
                             <br />
-                            <img src={post2} />
+                            <img src={storage === 'dark' ? post2_dark : post2} />
                         </div>
                     </div>
                 </div>
