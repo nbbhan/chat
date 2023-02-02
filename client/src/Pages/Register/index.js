@@ -6,6 +6,7 @@ import Explore from '../../Components/Explore'
 import Modal from '~/Components/Modal'
 import SettingModal from '~/Components/SettingModal'
 import Search from '~/Components/Search'
+import Noti from '~/Components/Noti'
 
 const REGISTER_USER = gql`
     mutation register($username: String!, $email: String!, $password: String!, $confirmPassword: String!) {
@@ -53,6 +54,8 @@ function Register() {
                     <SettingModal />
 
                     <Search />
+
+                    <Noti />
 
                     <div className={`register-container ${storage}`}>
                         <div className="register-container-title">アカウント作成</div>

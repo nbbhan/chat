@@ -75,7 +75,7 @@ function ProfileModal() {
 
                     <div className="profileModal-container-item">
                         <input
-                            placeholder="Enter your avata.."
+                            placeholder="画像URLを入力..."
                             onKeyDown={(e) => {
                                 if (e.key === 'Enter') {
                                     handleChange({

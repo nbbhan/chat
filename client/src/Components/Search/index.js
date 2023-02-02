@@ -56,20 +56,29 @@ function Search() {
 
     const [addToCart] = useMutation(ADD_TO_CART)
 
-    const handleAdd = (object) => {
-        setVariables((prevState) => {
-            return prevState
-        })
-        setVariables((prevState) => {
-            prevState = {
-                productId: object.productId,
-                user: object.user,
-            }
+    const handleAdd = (area, object) => {
+        myData.handleNoti()
 
-            let newPrevState = prevState
+        switch (area) {
+            case 'favorite':
+                console.log('do nothing')
+                break
+            case 'cart':
+                setVariables((prevState) => {
+                    return prevState
+                })
+                setVariables((prevState) => {
+                    prevState = {
+                        productId: object.productId,
+                        user: object.user,
+                    }
 
-            return newPrevState
-        })
+                    let newPrevState = prevState
+
+                    return newPrevState
+                })
+                break
+        }
     }
 
     useEffect(() => {}, [myData.sv])
@@ -78,7 +87,7 @@ function Search() {
         if (variables.productId != '' && variables.user != '') {
             addToCart({ variables })
         }
-    }, [variables])
+    }, [myData.submit])
 
     const storage = window.localStorage.getItem('theme')
 
@@ -110,7 +119,7 @@ function Search() {
                                                     <div
                                                         className="search-item-info-addBtn"
                                                         onClick={() => {
-                                                            handleAdd({
+                                                            handleAdd('cart', {
                                                                 productId: element.productId,
                                                                 user:
                                                                     profile.data && profile.data.getProfile[0].username,

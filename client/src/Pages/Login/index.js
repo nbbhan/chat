@@ -7,6 +7,7 @@ import Modal from '~/Components/Modal'
 import { useAuthDispatch } from '../../context/auth'
 import SettingModal from '~/Components/SettingModal'
 import Search from '~/Components/Search'
+import Noti from '~/Components/Noti'
 
 import { Data } from '../../Provider'
 
@@ -63,6 +64,8 @@ function Login() {
                     <SettingModal />
 
                     <Search />
+
+                    <Noti />
 
                     <div className={`login-container ${storage}`}>
                         <div className="login-container-title">ログイン</div>

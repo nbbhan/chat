@@ -2,8 +2,14 @@ import small1 from '~/Imgs/small-1.png'
 import small2 from '~/Imgs/small-2.png'
 import small3 from '~/Imgs/small-3.png'
 import small4 from '~/Imgs/small-4.png'
+import small1_dark from '~/Imgs/small-1_dark.png'
+import small2_dark from '~/Imgs/small-2_dark.png'
+import small3_dark from '~/Imgs/small-3_dark.png'
+import small4_dark from '~/Imgs/small-4_dark.png'
 
 function Items() {
+    const storage = window.localStorage.getItem('theme')
+
     return (
         <div className="prefectures-items">
             <div className="prefectures-items-container">
@@ -26,13 +32,13 @@ function Items() {
             </div>
 
             <div className="prefectures-items-background">
-                <img id="small-1" src={small1} />
+                <img id="small-1" src={storage === 'dark' ? small1_dark : small1} />
 
-                <img id="small-2" src={small2} />
+                <img id="small-2" src={storage === 'dark' ? small2_dark : small2} />
 
-                <img id="small-3" src={small3} />
+                <img id="small-3" src={storage === 'dark' ? small3_dark : small3} />
 
-                <img id="small-4" src={small4} />
+                <img id="small-4" src={storage === 'dark' ? small4_dark : small4} />
             </div>
         </div>
     )

@@ -3,6 +3,7 @@ import Title from '~/Components/Title'
 import Modal from '~/Components/Modal'
 import SettingModal from '~/Components/SettingModal'
 import Search from '~/Components/Search'
+import Noti from '~/Components/Noti'
 
 import jp from '~/Imgs/prefectures-1.png'
 
@@ -28,6 +29,8 @@ function About() {
                     <SettingModal />
 
                     <Search />
+
+                    <Noti />
 
                     <div className={`about-main ${storage}`}>
                         <Title props={inf} />

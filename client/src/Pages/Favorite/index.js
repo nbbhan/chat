@@ -9,6 +9,7 @@ import FavoriteItem from '~/Components/FavoriteItem'
 import Modal from '~/Components/Modal'
 import SettingModal from '~/Components/SettingModal'
 import Search from '~/Components/Search'
+import Noti from '~/Components/Noti'
 
 const GET_FAVORITE = gql`
     query getFavorite {
@@ -42,6 +43,8 @@ function Favorite() {
                     <SettingModal />
 
                     <Search />
+
+                    <Noti />
 
                     <div className="favorite-main">
                         <Title props={inf} />

@@ -5,6 +5,7 @@ import Title from '~/Components/Title'
 import Modal from '~/Components/Modal'
 import SettingModal from '~/Components/SettingModal'
 import Search from '~/Components/Search'
+import Noti from '~/Components/Noti'
 
 function Contact() {
     const inf = {
@@ -28,6 +29,8 @@ function Contact() {
                     <SettingModal />
 
                     <Search />
+
+                    <Noti />
 
                     <div className="contact-main">
                         <div className={`contact-container ${storage}`}>

@@ -160,7 +160,10 @@ function Explore() {
                         </div>
                     </div>
 
-                    <div className="explore-item" style={{ fontSize: '12px', color: 'var(--myColor)' }}>
+                    <div
+                        className="explore-item"
+                        style={{ fontSize: '12px', color: 'var(--myColor)', cursor: 'default' }}
+                    >
                         © 2023 Qoks inc. All Right Reserved.
                     </div>
                 </div>

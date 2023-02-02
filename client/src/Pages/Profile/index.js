@@ -9,6 +9,7 @@ import Modal from '~/Components/Modal'
 import SettingModal from '~/Components/SettingModal'
 import Search from '~/Components/Search'
 import ProfileModal from '~/Components/ProfileModal'
+import Noti from '~/Components/Noti'
 
 const GET_PROFILE = gql`
     query getProfile {
@@ -61,6 +62,8 @@ function Profile() {
                     <Search />
 
                     <ProfileModal />
+
+                    <Noti />
 
                     <div className={`profile-main ${storage}`}>
                         <Title props={inf} />

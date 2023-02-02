@@ -3,6 +3,7 @@ import Title from '~/Components/Title'
 import Modal from '~/Components/Modal'
 import SettingModal from '~/Components/SettingModal'
 import Search from '~/Components/Search'
+import Noti from '~/Components/Noti'
 
 import home from '~/Imgs/Home_Screen.png'
 import cart from '~/Imgs/Cart_Screen.png'
@@ -34,6 +35,8 @@ function Guide() {
                     <SettingModal />
 
                     <Search />
+
+                    <Noti />
 
                     <div className={`guide-main ${storage}`}>
                         <Title props={inf} />

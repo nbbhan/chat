@@ -82,6 +82,7 @@ function NavContainer() {
                         onClick={() => {
                             handleSM()
                             myData.handleTrigger()
+                            myData.setSearch('none')
                         }}
                     >
                         <div className="navContainer-main-item-text">
