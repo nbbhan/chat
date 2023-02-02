@@ -49,29 +49,6 @@ function Home() {
 
                     <div className="home-container-items">
                         <div className={`home-container-item ${storage}`} style={{ height: '100%' }}>
-                            {/* <div className="home-container-item-left">
-                                <div className="home-container-item-left-title">QOKS</div>
-
-                                <div className="home-container-item-left-contents">
-                                    <div>
-                                        経済の停滞した現状の打開のため国消国産の精神のもと農畜産業のみならずそのほかの産業においてもMADE
-                                        IN JAPANの製品を取り扱い、それにより販売者は
-                                        <span style={{ color: '#b88c5c' }}>販売経路の拡大</span>とそれに伴う
-                                        <span style={{ color: '#b88c5c' }}>売上の増加</span>
-                                        を見込め、利用者は遠方の故郷や、訪れたことのない土地の特産品を得ることができる。これを目標としてQOKSを開発しました。
-                                    </div>
-                                </div>
-
-                                <div className="home-container-item-left-btn">
-                                    <div className="home-container-item-left-btn-text">
-                                        すぐにはじめる<div className="underline"></div>
-                                        <div className="home-container-item-left-btn-img">
-                                            <img src={start} />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> */}
-
                             <div className="home-container-item-img">
                                 <ImgContainer />
                             </div>
