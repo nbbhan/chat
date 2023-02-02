@@ -96,11 +96,19 @@ function CartItem({ item }) {
                                         </div>
 
                                         <div className="cart-main-item-inf-buy">
-                                            <div className="cart-main-item-inf-buyBtn">今すぐ購入</div>
+                                            <div
+                                                className="cart-main-item-inf-buyBtn"
+                                                onClick={() =>
+                                                    handleDelete({
+                                                        productId: element.productId,
+                                                        user: profile.data && profile.data.getProfile[0].username,
+                                                    })
+                                                }
+                                            >
+                                                今すぐ購入
+                                            </div>
                                         </div>
                                     </div>
-
-                                    {/* 個数うううううううううううううううううう */}
 
                                     <div
                                         className="cart-main-item-container-close"
