@@ -199,6 +199,10 @@
         border: 1px solid rgb(180, 180, 180) !important;
         box-shadow: none;
     }
+
+    .img-text-main {
+        background: rgb(50, 50, 50, 0.9);
+    }
 }
 
 .light {
@@ -769,10 +773,10 @@ button {
     font-size: 35px;
     font-weight: 500;
     display: flex;
-    transform: translate(-100%, 50%);
+    transform: translate(-100%, 60%);
 }
 .img-text-main {
-    background: var(--cha);
+    background: rgb(184, 140, 92, 0.9);
     // border-radius: 10px;
     // margin-left: 1rem;
     padding: 1.5rem;
