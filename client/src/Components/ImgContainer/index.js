@@ -3,6 +3,7 @@ import long_dark from '~/Imgs/longback_dark.png'
 
 function ImgContainer() {
     const storage = window.localStorage.getItem('theme')
+
     return (
         <div className="img-container">
             <img src={storage === 'dark' ? long_dark : long} />
