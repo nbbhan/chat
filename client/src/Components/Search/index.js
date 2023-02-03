@@ -106,7 +106,12 @@ function Search() {
                     <div className="search-items">
                         {data &&
                             data.getProduct.map((element, index) => {
-                                if (element.prefecture === myData.sv || element.info === myData.sv) {
+                                if (
+                                    element.prefecture === myData.sv ||
+                                    element.info === myData.sv ||
+                                    element.prefecture.includes(myData.sv) ||
+                                    element.info.includes(myData.sv)
+                                ) {
                                     let renderRating
 
                                     switch (element.rating) {
