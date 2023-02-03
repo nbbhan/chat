@@ -16,6 +16,8 @@ const GET_PRODUCT = gql`
             info
             productId
             rating
+            area
+            prefecture
         }
     }
 `
@@ -265,6 +267,7 @@ function CartItem({ item }) {
                                         <div className="cart-main-item-inf-container">
                                             <div className="cart-main-item-name">{element.info}</div>
                                             <div className="cart-main-item-price">{element.price}円（税込）</div>
+                                            <div className="cart-main-item-prefecture">{element.prefecture}</div>
                                             <div className="cart-main-item-rating">{renderRating}</div>
                                         </div>
 

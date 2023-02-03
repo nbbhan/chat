@@ -19,6 +19,8 @@ const GET_POPULAR = gql`
             info
             imgUrl
             rating
+            area
+            prefecture
         }
     }
 `
@@ -318,6 +320,8 @@ function Slide({ name, icon, user }) {
 
                                         <div className="slide-container-item-price">{`${item.price}円（税込）`}</div>
 
+                                        <div className="slide-container-item-prefecture">{item.prefecture}</div>
+
                                         <div className="slide-container-item-rating">{renderRating}</div>
 
                                         <div className="slide-container-item-btnContainer">
@@ -531,6 +535,8 @@ function Slide({ name, icon, user }) {
                                         </div>
 
                                         <div className="slide-container-item-price">{`${item.price}円（税込）`}</div>
+
+                                        <div className="slide-container-item-prefecture">{item.prefecture}</div>
 
                                         <div className="slide-container-item-rating">{renderRating}</div>
 

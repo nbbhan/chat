@@ -285,6 +285,7 @@ function Search() {
                                                 <div className="search-item-info-container">
                                                     <div className="search-item-name">{element.info}</div>
                                                     <div className="search-item-price">{element.price}円（税込）</div>
+                                                    <div className="search-item-prefecture">{element.prefecture}</div>
                                                     <div className="search-item-rating">{renderRating}</div>
                                                 </div>
 
