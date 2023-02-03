@@ -716,6 +716,13 @@ button {
         }
     }
 }
+.navContainer-line {
+    width: 100%;
+    height: calc(3rem + 2px);
+    border-top: 3px solid var(--myColor);
+    opacity: 0.2;
+    margin: 0 auto;
+}
 // Home
 .home {
     position: absolute;
@@ -1030,7 +1037,7 @@ button {
     padding: 1rem;
     border: 2px solid var(--myColor);
     box-shadow: 0 1px 3px 1px var(--myColor);
-    font-family: var(--fontComfor);
+    font-family: var(--fontZen);
 }
 .chatbox-title {
     font-size: 30px;
@@ -1119,13 +1126,22 @@ button {
     background: rgb(210, 210, 210, 0.5);
 
     div {
-        width: 150px;
+        width: 130px;
         height: 45px;
-        border: 2px solid black;
         border-radius: var(--borderR);
+        box-shadow: 0 1px 5px 1px var(--myColor);
+        color: var(--myColor);
+        font-weight: 500;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+            cursor: pointer;
+            color: white;
+            background: var(--cha);
+        }
     }
 }
 .chatbox-main {
@@ -2869,6 +2885,7 @@ button {
     height: 300px;
     border-radius: 10px;
     display: flex;
+    font-weight: 500;
 }
 .modal-container-left {
     width: 50%;

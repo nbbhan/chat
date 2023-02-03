@@ -23,23 +23,6 @@ function Modal() {
                         <div
                             className="modal-container-item"
                             onClick={() => {
-                                myData.changeToDark()
-                            }}
-                        >
-                            <div style={{ textAlign: 'center' }}>
-                                <div style={{ marginBottom: '2rem' }}>
-                                    <img src={storage === 'dark' ? off_dark : off} alt="" />
-                                </div>
-
-                                <div>ダークテーマ</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="modal-container-right">
-                        <div
-                            className="modal-container-item"
-                            onClick={() => {
                                 myData.changeToLight()
                             }}
                         >
@@ -49,6 +32,23 @@ function Modal() {
                                 </div>
 
                                 <div>ライトテーマ</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="modal-container-right">
+                        <div
+                            className="modal-container-item"
+                            onClick={() => {
+                                myData.changeToDark()
+                            }}
+                        >
+                            <div style={{ textAlign: 'center' }}>
+                                <div style={{ marginBottom: '2rem' }}>
+                                    <img src={storage === 'dark' ? off_dark : off} alt="" />
+                                </div>
+
+                                <div>ダークテーマ</div>
                             </div>
                         </div>
                     </div>

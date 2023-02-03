@@ -43,6 +43,25 @@ function NavContainer() {
                         </div>
                     </Link>
 
+                    <div className="navContainer-main-item">
+                        <div className="navContainer-main-item-search">
+                            <input
+                                placeholder="商品、都道府県を検索..."
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter') {
+                                        myData.setSearch('flex')
+
+                                        myData.setSv(e.target.value)
+
+                                        e.target.value = ''
+
+                                        myData.handleTrigger()
+                                    }
+                                }}
+                            />
+                        </div>
+                    </div>
+
                     <Link to="/" onClick={() => myData.handleTrigger()}>
                         <div className="navContainer-main-item">
                             <img src={home} alt="" />
@@ -73,6 +92,18 @@ function NavContainer() {
                         </div>
                     </Link>
 
+                    <Link to="/post" onClick={() => myData.handleTrigger()}>
+                        <div className="navContainer-main-item">
+                            <img src={post} alt="" />
+                            <div className="navContainer-main-item-text">
+                                <div className="navContainer-main-item-text-post">出品</div>
+                                <div className="underline" style={{ background: 'yellow' }}></div>
+                            </div>
+                        </div>
+                    </Link>
+
+                    <div className="navContainer-line"></div>
+
                     <div
                         className="navContainer-main-item"
                         onClick={() => {
@@ -99,35 +130,6 @@ function NavContainer() {
                         <div className="navContainer-main-item-text">
                             設定
                             <div className="underline" style={{ background: 'white' }}></div>
-                        </div>
-                    </div>
-
-                    <Link to="/post" onClick={() => myData.handleTrigger()}>
-                        <div className="navContainer-main-item">
-                            <img src={post} alt="" />
-                            <div className="navContainer-main-item-text">
-                                <div className="navContainer-main-item-text-post">出品</div>
-                                <div className="underline" style={{ background: 'yellow' }}></div>
-                            </div>
-                        </div>
-                    </Link>
-
-                    <div className="navContainer-main-item">
-                        <div className="navContainer-main-item-search">
-                            <input
-                                placeholder="商品、都道府県を検索..."
-                                onKeyDown={(e) => {
-                                    if (e.key === 'Enter') {
-                                        myData.setSearch('flex')
-
-                                        myData.setSv(e.target.value)
-
-                                        e.target.value = ''
-
-                                        myData.handleTrigger()
-                                    }
-                                }}
-                            />
                         </div>
                     </div>
                 </div>
