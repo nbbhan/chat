@@ -28,6 +28,8 @@ module.exports = (sequelize, DataTypes) => {
             dealerId: {
                 type: DataTypes.STRING(5),
             },
+            area: DataTypes.STRING,
+            prefecture: DataTypes.STRING,
         },
         {
             sequelize,
