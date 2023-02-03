@@ -871,7 +871,7 @@ button {
 .register-btn,
 .login-btn {
     width: 100%;
-    height: 40px;
+    height: 45px;
     // border: 1px solid red;
     display: flex;
     justify-content: center;
@@ -881,11 +881,19 @@ button {
     button {
         width: 100px;
         height: 100%;
-        border: 2px solid var(--myColor);
         border-radius: var(--borderR);
+        box-shadow: 0 1px 5px 1px var(--myColor);
+        // border: 1px solid var(--myColor);
+        border: none;
+        color: var(--myColor);
+        font-weight: 500;
+        background: white;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
             cursor: pointer;
+            background: var(--cha);
+            color: white;
         }
     }
 }
@@ -3348,11 +3356,19 @@ button {
     button {
         width: 120px;
         height: 45px;
-        border: 2px solid var(--myColor);
         border-radius: var(--borderR);
+        box-shadow: 0 1px 5px 1px var(--myColor);
+        // border: 1px solid var(--myColor);
+        border: none;
+        color: var(--myColor);
+        font-weight: 500;
+        background: white;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
             cursor: pointer;
+            background: var(--cha);
+            color: white;
         }
     }
 }
