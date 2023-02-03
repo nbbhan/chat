@@ -79,14 +79,10 @@ function Guide() {
                             右上のナビゲーションボタンを押して、検索バーで【商品名】と【都道府県】のどちらかから商品の検索ができます。
                             <br />
                             <br />
-<<<<<<< Updated upstream
-                            {/* <img src={storage === 'dark' ? search_dark : search} alt="" /> */}
-=======
                             <img src={storage === 'dark' ? search1_dark : search1} />
                             <br />
                             <br />
                             <img src={storage === 'dark' ? search2_dark : search2} />
->>>>>>> Stashed changes
                             <br />
                             <br />
                             ・カートについて：
