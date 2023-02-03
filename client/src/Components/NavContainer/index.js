@@ -5,6 +5,11 @@ import { Data } from '~/Provider'
 
 import logoW from '~/Imgs/logoW.png'
 import home from '~/Imgs/home.png'
+import guide from '~/Imgs/guide.png'
+import about from '~/Imgs/about.png'
+import contact from '~/Imgs/contact.png'
+import setting from '~/Imgs/setting.png'
+import post from '~/Imgs/post.png'
 
 function NavContainer() {
     const myData = useContext(Data)
@@ -51,6 +56,7 @@ function NavContainer() {
                     <Link to="/guide" onClick={() => myData.handleTrigger()}>
                         <div className="navContainer-main-item">
                             <div className="navContainer-main-item-text">
+                                <img src={guide} />
                                 使い方
                                 <div className="underline" style={{ background: 'white' }}></div>
                             </div>
@@ -60,6 +66,7 @@ function NavContainer() {
                     <Link to="/about" onClick={() => myData.handleTrigger()}>
                         <div className="navContainer-main-item">
                             <div className="navContainer-main-item-text">
+                                <img src={about} />
                                 QOKSについて
                                 <div className="underline" style={{ background: 'white' }}></div>
                             </div>
@@ -74,6 +81,7 @@ function NavContainer() {
                         }}
                     >
                         <div className="navContainer-main-item-text">
+                            <img src={contact} />
                             お問い合わせ
                             <div className="underline" style={{ background: 'white' }}></div>
                         </div>
@@ -88,6 +96,7 @@ function NavContainer() {
                         }}
                     >
                         <div className="navContainer-main-item-text">
+                            <img src={setting} />
                             設定
                             <div className="underline" style={{ background: 'white' }}></div>
                         </div>
@@ -96,6 +105,7 @@ function NavContainer() {
                     <Link to="/post" onClick={() => myData.handleTrigger()}>
                         <div className="navContainer-main-item">
                             <div className="navContainer-main-item-text">
+                                <img src={post} />
                                 出品
                                 <div className="underline" style={{ background: 'white' }}></div>
                             </div>
