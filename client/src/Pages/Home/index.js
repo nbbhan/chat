@@ -56,7 +56,7 @@ function Home() {
 
                         <div className={`home-container-item ${storage}`} style={{ height: '250px' }}>
                             <div className="home-container-item-sen">
-                                <img src={storage === 'dark' ? sen_dark : sen} />
+                                <img src={storage === 'dark' ? sen_dark : sen} alt="" />
                             </div>
                         </div>
 

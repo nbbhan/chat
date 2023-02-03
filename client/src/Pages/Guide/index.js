@@ -69,7 +69,7 @@ function Guide() {
                             ページの最後にはSNSへアクセスできるリンクボタンがあります。
                             <br />
                             <br />
-                            <img src={storage === 'dark' ? home_dark : home} />
+                            <img src={storage === 'dark' ? home_dark : home} alt="" />
                             <br />
                             <br />
                             ・検索機能について：
@@ -77,7 +77,7 @@ function Guide() {
                             検索ができます。
                             <br />
                             <br />
-                            {/* <img src={storage === 'dark' ? search_dark : search} /> */}
+                            {/* <img src={storage === 'dark' ? search_dark : search} alt="" /> */}
                             <br />
                             <br />
                             ・カートについて：
@@ -86,7 +86,7 @@ function Guide() {
                             購入、または削除したい商品をポイントすることで購入ボタン、削除ボタンが表示されます。
                             <br />
                             <br />
-                            <img src={storage === 'dark' ? cart_dark : cart} />
+                            <img src={storage === 'dark' ? cart_dark : cart} alt="" />
                             <br />
                             <br />
                             ・ポイントについて：
@@ -94,7 +94,7 @@ function Guide() {
                             QOKS内で使用できるポイントです。 購入または広告を視聴することでポイントを入手できます。
                             <br />
                             <br />
-                            <img src={storage === 'dark' ? point_dark : point} />
+                            <img src={storage === 'dark' ? point_dark : point} alt="" />
                             <br />
                             <br />
                             ・お問い合わせについて：
@@ -102,7 +102,7 @@ function Guide() {
                             メールとチャットの２種類の方法でご質問可能です。
                             <br />
                             <br />
-                            <img src={storage === 'dark' ? contact_dark : contact} />
+                            <img src={storage === 'dark' ? contact_dark : contact} alt="" />
                             <br />
                             <br />
                             ・設定について：
@@ -110,7 +110,7 @@ function Guide() {
                             背景テーマをライトモードとダークモードに変更可能です。
                             <br />
                             <br />
-                            <img src={storage === 'dark' ? setting_dark : setting} />
+                            <img src={storage === 'dark' ? setting_dark : setting} alt="" />
                             <br />
                             <br />
                             ・出品について：
@@ -118,10 +118,10 @@ function Guide() {
                             画像アドレス、名称、値段、地域、都道府県を入力して商品を出品可能です。
                             <br />
                             <br />
-                            <img src={storage === 'dark' ? post1_dark : post1} />
+                            <img src={storage === 'dark' ? post1_dark : post1} alt="" />
                             <br />
                             <br />
-                            <img src={storage === 'dark' ? post2_dark : post2} />
+                            <img src={storage === 'dark' ? post2_dark : post2} alt="" />
                             <br />
                             <br />
                             ・プロフィールについて：
@@ -129,7 +129,7 @@ function Guide() {
                             プロフィール写真、パスワードの変更やフォロー管理が可能です。
                             <br />
                             <br />
-                            <img src={storage === 'dark' ? profile_dark : profile} />
+                            <img src={storage === 'dark' ? profile_dark : profile} alt="" />
                             <br />
                             <br />
                             <br />

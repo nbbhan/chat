@@ -29,7 +29,7 @@ function Modal() {
                             <div className="modal-container-item">
                                 <div style={{ textAlign: 'center' }}>
                                     <div style={{ marginBottom: '2rem' }}>
-                                        <img src={email} />
+                                        <img src={email} alt="" />
                                     </div>
 
                                     <div>メールでお問い合わせ</div>
@@ -42,7 +42,7 @@ function Modal() {
                         <div className="modal-container-item" onClick={() => handleChat()}>
                             <div style={{ textAlign: 'center' }}>
                                 <div style={{ marginBottom: '2rem' }}>
-                                    <img src={chat} />
+                                    <img src={chat} alt="" />
                                 </div>
 
                                 <div>チャットでお問い合わせ</div>

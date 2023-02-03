@@ -86,7 +86,7 @@ function Messages() {
         <div className={`message ${myData.chatbox} ${storage}`}>
             <div className="message-title">
                 <div className="message-close" onClick={() => myData.setChatbox('hide')}>
-                    <img src={storage === 'dark' ? close_dark : close} />
+                    <img src={storage === 'dark' ? close_dark : close} alt="" />
                 </div>
 
                 <div className="message-name">{selectedUser}</div>
@@ -112,7 +112,7 @@ function Messages() {
                         />
                     </div>
                     <div className="message-send-btn">
-                        <img src={storage === 'dark' ? send_dark : send} onClick={submitMessage} />
+                        <img src={storage === 'dark' ? send_dark : send} onClick={submitMessage} alt="" />
                     </div>
                 </form>
             </div>
@@ -121,9 +121,3 @@ function Messages() {
 }
 
 export default Messages
-
-{
-    /* <div className="chatbox-chat-avatar">
-        <img src={user.imageUrl} />
-    </div> */
-}

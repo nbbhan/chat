@@ -60,7 +60,7 @@ function About() {
                                 </div>
 
                                 <div className="about-main-container-item">
-                                    <img src={jp} />
+                                    <img src={jp} alt="" />
                                 </div>
                             </div>
                         </div>

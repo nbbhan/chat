@@ -28,7 +28,7 @@ function Noti() {
                         <div className="noti-container-item">
                             <div style={{ textAlign: 'center' }}>
                                 <div style={{ marginBottom: '2rem' }}>
-                                    <img src={cancel} />
+                                    <img src={cancel} alt="" />
                                 </div>
 
                                 <div>キャンセル</div>
@@ -47,7 +47,7 @@ function Noti() {
                         <div className="noti-container-item">
                             <div style={{ textAlign: 'center' }}>
                                 <div style={{ marginBottom: '2rem' }}>
-                                    <img src={add} />
+                                    <img src={add} alt="" />
                                 </div>
 
                                 <div>追加</div>

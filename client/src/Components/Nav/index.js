@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useContext } from 'react'
+import { useEffect, useRef, useContext } from 'react'
 
 import { Data } from '../../Provider'
 
@@ -7,7 +7,7 @@ function Nav() {
 
     const triggerRef = useRef()
 
-    const storage = window.localStorage.getItem('theme')
+    // const storage = window.localStorage.getItem('theme')
 
     const handleTogger = () => {
         triggerRef.current.classList.toggle('active')

@@ -1,7 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom'
-
 import Explore from '~/Components/Explore'
-import Title from '~/Components/Title'
 import Modal from '~/Components/Modal'
 import SettingModal from '~/Components/SettingModal'
 import Search from '~/Components/Search'

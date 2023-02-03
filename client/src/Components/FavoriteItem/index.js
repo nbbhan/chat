@@ -24,7 +24,7 @@ function FavoriteItem({ item }) {
                             <div className="favorite-main-item" key={index}>
                                 <div className="favorite-main-item-container">
                                     <div className="favorite-main-item-img">
-                                        <img src={element.imgUrl} />
+                                        <img src={element.imgUrl} alt="" />
                                     </div>
 
                                     <div className="favorite-main-item-inf">

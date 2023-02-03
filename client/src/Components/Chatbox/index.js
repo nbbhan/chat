@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react'
 import { gql, useSubscription } from '@apollo/client'
 
 import { Data } from '../../Provider'
-import { useAuthDispatch, useAuthState } from '../../context/auth'
+import { useAuthState } from '../../context/auth'
 import { useMessageDispatch } from '../../context/message'
 
 import Users from '../Users'
@@ -26,8 +26,6 @@ function Chatbox() {
     const { user } = useAuthState()
 
     const { data: messageData, error: messageError } = useSubscription(NEW_MESSAGE)
-
-    // console.log(messageData)
 
     useEffect(() => {
         if (messageError) console.log(messageError)

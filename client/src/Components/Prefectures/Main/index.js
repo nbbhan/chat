@@ -40,7 +40,7 @@ function Main() {
                                         <div className="prefectures-container-right-main-item-content">
                                             <div>{item}</div>
 
-                                            <img src={storage === 'dark' ? transit2_dark : transit2} />
+                                            <img src={storage === 'dark' ? transit2_dark : transit2} alt="" />
                                         </div>
 
                                         <div
@@ -48,7 +48,7 @@ function Main() {
                                             className="prefectures-container-right-main-item-hover"
                                             onClick={(e) => handleTransition(e)}
                                         >
-                                            <img src={storage === 'dark' ? eye_dark : eye} />
+                                            <img src={storage === 'dark' ? eye_dark : eye} alt="" />
                                             &nbsp; 詳しく見る
                                         </div>
                                     </div>
@@ -63,7 +63,7 @@ function Main() {
                                         <div className="prefectures-container-right-main-item-content">
                                             <div>{item}</div>
 
-                                            <img src={storage === 'dark' ? transit2_dark : transit2} />
+                                            <img src={storage === 'dark' ? transit2_dark : transit2} alt="" />
                                         </div>
 
                                         <div
@@ -71,7 +71,7 @@ function Main() {
                                             className="prefectures-container-right-main-item-hover"
                                             onClick={(e) => handleTransition(e)}
                                         >
-                                            <img src={storage === 'dark' ? eye_dark : eye} />
+                                            <img src={storage === 'dark' ? eye_dark : eye} alt="" />
                                             &nbsp; 詳しく見る
                                         </div>
                                     </div>

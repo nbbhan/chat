@@ -91,11 +91,11 @@ function CartItem({ item }) {
                             case '0':
                                 renderRating = (
                                     <div>
-                                        <img src={star_space} />
-                                        <img src={star_space} />
-                                        <img src={star_space} />
-                                        <img src={star_space} />
-                                        <img src={star_space} />
+                                        <img src={star_space} alt="" />
+                                        <img src={star_space} alt="" />
+                                        <img src={star_space} alt="" />
+                                        <img src={star_space} alt="" />
+                                        <img src={star_space} alt="" />
                                     </div>
                                 )
                                 break
@@ -110,22 +110,22 @@ function CartItem({ item }) {
                             case '0.9':
                                 renderRating = (
                                     <div>
-                                        <img src={star_half} />
-                                        <img src={star_space} />
-                                        <img src={star_space} />
-                                        <img src={star_space} />
-                                        <img src={star_space} />
+                                        <img src={star_half} alt="" />
+                                        <img src={star_space} alt="" />
+                                        <img src={star_space} alt="" />
+                                        <img src={star_space} alt="" />
+                                        <img src={star_space} alt="" />
                                     </div>
                                 )
                                 break
                             case '1':
                                 renderRating = (
                                     <div>
-                                        <img src={star} />
-                                        <img src={star_space} />
-                                        <img src={star_space} />
-                                        <img src={star_space} />
-                                        <img src={star_space} />
+                                        <img src={star} alt="" />
+                                        <img src={star_space} alt="" />
+                                        <img src={star_space} alt="" />
+                                        <img src={star_space} alt="" />
+                                        <img src={star_space} alt="" />
                                     </div>
                                 )
                                 break
@@ -140,22 +140,22 @@ function CartItem({ item }) {
                             case '1.9':
                                 renderRating = (
                                     <div>
-                                        <img src={star} />
-                                        <img src={star_half} />
-                                        <img src={star_space} />
-                                        <img src={star_space} />
-                                        <img src={star_space} />
+                                        <img src={star} alt="" />
+                                        <img src={star_half} alt="" />
+                                        <img src={star_space} alt="" />
+                                        <img src={star_space} alt="" />
+                                        <img src={star_space} alt="" />
                                     </div>
                                 )
                                 break
                             case '2':
                                 renderRating = (
                                     <div>
-                                        <img src={star} />
-                                        <img src={star} />
-                                        <img src={star_space} />
-                                        <img src={star_space} />
-                                        <img src={star_space} />
+                                        <img src={star} alt="" />
+                                        <img src={star} alt="" />
+                                        <img src={star_space} alt="" />
+                                        <img src={star_space} alt="" />
+                                        <img src={star_space} alt="" />
                                     </div>
                                 )
                                 break
@@ -170,22 +170,22 @@ function CartItem({ item }) {
                             case '2.9':
                                 renderRating = (
                                     <div>
-                                        <img src={star} />
-                                        <img src={star} />
-                                        <img src={star_half} />
-                                        <img src={star_space} />
-                                        <img src={star_space} />
+                                        <img src={star} alt="" />
+                                        <img src={star} alt="" />
+                                        <img src={star_half} alt="" />
+                                        <img src={star_space} alt="" />
+                                        <img src={star_space} alt="" />
                                     </div>
                                 )
                                 break
                             case '3':
                                 renderRating = (
                                     <div>
-                                        <img src={star} />
-                                        <img src={star} />
-                                        <img src={star} />
-                                        <img src={star_space} />
-                                        <img src={star_space} />
+                                        <img src={star} alt="" />
+                                        <img src={star} alt="" />
+                                        <img src={star} alt="" />
+                                        <img src={star_space} alt="" />
+                                        <img src={star_space} alt="" />
                                     </div>
                                 )
                                 break
@@ -200,22 +200,22 @@ function CartItem({ item }) {
                             case '3.9':
                                 renderRating = (
                                     <div>
-                                        <img src={star} />
-                                        <img src={star} />
-                                        <img src={star} />
-                                        <img src={star_half} />
-                                        <img src={star_space} />
+                                        <img src={star} alt="" />
+                                        <img src={star} alt="" />
+                                        <img src={star} alt="" />
+                                        <img src={star_half} alt="" />
+                                        <img src={star_space} alt="" />
                                     </div>
                                 )
                                 break
                             case '4':
                                 renderRating = (
                                     <div>
-                                        <img src={star} />
-                                        <img src={star} />
-                                        <img src={star} />
-                                        <img src={star} />
-                                        <img src={star_space} />
+                                        <img src={star} alt="" />
+                                        <img src={star} alt="" />
+                                        <img src={star} alt="" />
+                                        <img src={star} alt="" />
+                                        <img src={star_space} alt="" />
                                     </div>
                                 )
                                 break
@@ -230,22 +230,22 @@ function CartItem({ item }) {
                             case '4.9':
                                 renderRating = (
                                     <div>
-                                        <img src={star} />
-                                        <img src={star} />
-                                        <img src={star} />
-                                        <img src={star} />
-                                        <img src={star_half} />
+                                        <img src={star} alt="" />
+                                        <img src={star} alt="" />
+                                        <img src={star} alt="" />
+                                        <img src={star} alt="" />
+                                        <img src={star_half} alt="" />
                                     </div>
                                 )
                                 break
                             case '5':
                                 renderRating = (
                                     <div>
-                                        <img src={star} />
-                                        <img src={star} />
-                                        <img src={star} />
-                                        <img src={star} />
-                                        <img src={star} />
+                                        <img src={star} alt="" />
+                                        <img src={star} alt="" />
+                                        <img src={star} alt="" />
+                                        <img src={star} alt="" />
+                                        <img src={star} alt="" />
                                     </div>
                                 )
                                 break
@@ -258,7 +258,7 @@ function CartItem({ item }) {
                             <div className="cart-main-item" key={index}>
                                 <div className="cart-main-item-container">
                                     <div className="cart-main-item-img">
-                                        <img src={element.imgUrl} />
+                                        <img src={element.imgUrl} alt="" />
                                     </div>
 
                                     <div className="cart-main-item-inf">

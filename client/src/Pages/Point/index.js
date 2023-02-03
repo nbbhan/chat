@@ -175,7 +175,7 @@ function Point() {
                             <div className="point-main-container-items">
                                 <div className="point-main-container-total">
                                     <div className="point-main-container-number">
-                                        <img src={point} />
+                                        <img src={point} alt="" />
                                         {`${buyP + getP}`}
                                     </div>
                                 </div>

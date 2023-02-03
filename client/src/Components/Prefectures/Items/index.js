@@ -32,13 +32,13 @@ function Items() {
             </div>
 
             <div className="prefectures-items-background">
-                <img id="small-1" src={storage === 'dark' ? small1_dark : small1} />
+                <img id="small-1" src={storage === 'dark' ? small1_dark : small1} alt="" />
 
-                <img id="small-2" src={storage === 'dark' ? small2_dark : small2} />
+                <img id="small-2" src={storage === 'dark' ? small2_dark : small2} alt="" />
 
-                <img id="small-3" src={storage === 'dark' ? small3_dark : small3} />
+                <img id="small-3" src={storage === 'dark' ? small3_dark : small3} alt="" />
 
-                <img id="small-4" src={storage === 'dark' ? small4_dark : small4} />
+                <img id="small-4" src={storage === 'dark' ? small4_dark : small4} alt="" />
             </div>
         </div>
     )

@@ -1,5 +1,4 @@
 import { useContext } from 'react'
-import { Link } from 'react-router-dom'
 
 import on from '~/Imgs/light-on.png'
 import off from '~/Imgs/light-off.png'
@@ -29,7 +28,7 @@ function Modal() {
                         >
                             <div style={{ textAlign: 'center' }}>
                                 <div style={{ marginBottom: '2rem' }}>
-                                    <img src={storage === 'dark' ? off_dark : off} />
+                                    <img src={storage === 'dark' ? off_dark : off} alt="" />
                                 </div>
 
                                 <div>ダークテーマ</div>
@@ -46,7 +45,7 @@ function Modal() {
                         >
                             <div style={{ textAlign: 'center' }}>
                                 <div style={{ marginBottom: '2rem' }}>
-                                    <img src={on} />
+                                    <img src={on} alt="" />
                                 </div>
 
                                 <div>ライトテーマ</div>

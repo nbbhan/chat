@@ -12,7 +12,6 @@ import prefectures5 from '~/Imgs/prefectures-5.png'
 import prefectures6 from '~/Imgs/prefectures-6.png'
 import prefectures7 from '~/Imgs/prefectures-7.png'
 import prefectures8 from '~/Imgs/prefectures-8.png'
-import scroll from '~/Imgs/scrolling.png'
 
 import Items from './Items'
 import Main from './Main'
@@ -99,7 +98,7 @@ function Prefectures() {
 
             <div className="prefectures-container">
                 <div className="prefectures-container-left">
-                    <img src={imgArr[x]} style={{ animationName: `${myData.ani}` }} />
+                    <img src={imgArr[x]} style={{ animationName: `${myData.ani}` }} alt="" />
                 </div>
 
                 <div className="prefectures-container-right">

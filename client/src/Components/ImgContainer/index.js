@@ -6,7 +6,7 @@ function ImgContainer() {
 
     return (
         <div className="img-container">
-            <img src={storage === 'dark' ? long_dark : long} />
+            <img src={storage === 'dark' ? long_dark : long} alt="" />
 
             <div className="img-text">
                 <div className="img-text-main" style={{ transform: 'translateY(22.5%)' }}>

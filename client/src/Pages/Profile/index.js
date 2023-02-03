@@ -72,7 +72,7 @@ function Profile() {
                             <div className="profile-main-container-items">
                                 <div className="profile-main-container-profimg">
                                     <div>
-                                        <img src={data && data.getProfile[0].imageUrl} />
+                                        <img src={data && data.getProfile[0].imageUrl} alt="" />
                                     </div>
                                 </div>
 

@@ -61,7 +61,7 @@ function Users() {
                 }}
             >
                 <div className="chatbox-container-item-avatar">
-                    <img src={user.imageUrl} />
+                    <img src={user.imageUrl} alt="" />
                 </div>
 
                 <div style={{ height: '100%', width: 'calc(100% - 60px)', overflow: 'hidden' }}>
@@ -84,7 +84,7 @@ function Users() {
             <div className="chatbox-main">
                 <div className="chatbox-title">
                     CHAT BOX
-                    <img />
+                    <img alt="" />
                 </div>
 
                 <div className="chatbox-search">

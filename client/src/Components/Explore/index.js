@@ -1,20 +1,14 @@
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 
 import home from '~/Imgs/home.png'
-import bell from '~/Imgs/bell.png'
 import token from '~/Imgs/token.png'
 import cart from '~/Imgs/shopping-cart.png'
-import chat from '~/Imgs/chat.png'
-import info from '~/Imgs/info.png'
-import favor from '~/Imgs/favor.png'
 import login from '~/Imgs/login.png'
 import logout from '~/Imgs/logout.png'
 import addUser from '~/Imgs/addUser.png'
 import user from '~/Imgs/user.png'
-import heart from '~/Imgs/heart.png'
 import logoW from '~/Imgs/logoW.png'
-import start from '../../Imgs/start.png'
 
 import { Data } from '~/Provider'
 import { useAuthDispatch } from '~/context/auth'
@@ -30,25 +24,24 @@ function Explore() {
         window.location = '/'
     }
 
-    const handleChat = () => {
-        myData.handleChatshow()
-    }
-
     return (
-        // <div className="explore" style={{ width: `${myData.width}px` }}>
         <div className="explore">
             <div className="explore-items">
                 <div className="explore-items-main">
                     <a href="/">
                         <div className="explore-item">
-                            <img src={logoW} style={{ width: '80px', height: '80px', transform: 'rotate(10deg)' }} />
+                            <img
+                                src={logoW}
+                                alt=""
+                                style={{ width: '80px', height: '80px', transform: 'rotate(10deg)' }}
+                            />
                         </div>
                     </a>
 
                     <Link to="/">
                         <div className="explore-item">
                             <div style={{ textAlign: 'center' }}>
-                                <img src={home} />
+                                <img src={home} alt="" />
 
                                 <div className="explore-item-text">
                                     ホーム
@@ -61,7 +54,7 @@ function Explore() {
                     <a href="/cart">
                         <div className="explore-item">
                             <div style={{ textAlign: 'center' }}>
-                                <img src={cart} />
+                                <img src={cart} alt="" />
 
                                 <div className="explore-item-text">
                                     カート
@@ -74,7 +67,7 @@ function Explore() {
                     <Link to="/point">
                         <div className="explore-item">
                             <div style={{ textAlign: 'center' }}>
-                                <img src={token} />
+                                <img src={token} alt="" />
 
                                 <div className="explore-item-text">
                                     ポイント
@@ -97,23 +90,12 @@ function Explore() {
                         </div>
                     </Link> */}
 
-                    {/* <div className="explore-item" onClick={() => handleChat()}>
-                        <div style={{ textAlign: 'center' }}>
-                            <img src={chat} />
-
-                            <div className="explore-item-text">
-                                チャット
-                                <div className="underline" style={{ background: 'white' }}></div>
-                            </div>
-                        </div>
-                    </div> */}
-
                     <div className="explore-line"></div>
 
                     <Link to="/login">
                         <div className={`explore-item ${myData.login}`}>
                             <div style={{ textAlign: 'center' }}>
-                                <img src={login} />
+                                <img src={login} alt="" />
 
                                 <div className="explore-item-text">
                                     ログイン
@@ -126,7 +108,7 @@ function Explore() {
                     <Link to="/register">
                         <div className={`explore-item ${myData.login}`}>
                             <div style={{ textAlign: 'center' }}>
-                                <img src={addUser} />
+                                <img src={addUser} alt="" />
 
                                 <div className="explore-item-text">
                                     新規登録
@@ -139,7 +121,7 @@ function Explore() {
                     <Link to="/profile">
                         <div className={`explore-item ${myData.logout}`}>
                             <div style={{ textAlign: 'center' }}>
-                                <img src={user} />
+                                <img src={user} alt="" />
 
                                 <div className="explore-item-text">
                                     プロフィール
@@ -151,7 +133,7 @@ function Explore() {
 
                     <div className={`explore-item ${myData.logout}`} onClick={() => handleLogout()}>
                         <div style={{ textAlign: 'center' }}>
-                            <img src={logout} />
+                            <img src={logout} alt="" />
 
                             <div className="explore-item-text">
                                 ログアウト

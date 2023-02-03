@@ -15,7 +15,7 @@ function Title({ props }) {
                     </Link>
 
                     <div className="title-space">
-                        <img src={storage === 'dark' ? right_dark : right} />
+                        <img src={storage === 'dark' ? right_dark : right} alt="" />
                     </div>
 
                     <div className="title-now">{props.jp}</div>

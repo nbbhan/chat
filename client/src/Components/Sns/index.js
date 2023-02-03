@@ -1,4 +1,3 @@
-import social from '~/Imgs/social.png'
 import face from '~/Imgs/Facebook.png'
 import ins from '~/Imgs/Instagram.png'
 import tiktok from '~/Imgs/TikTok.png'
@@ -9,11 +8,6 @@ function Sns() {
 
     return (
         <div className="sns">
-            {/* <div className="sns-title">
-                <img src={social} />
-                <span>ソーシャルメディア</span>
-            </div> */}
-
             <div className="sns-startline">
                 <div></div>
             </div>
@@ -28,7 +22,7 @@ function Sns() {
                                         <span>#</span>facebook
                                     </div>
 
-                                    <img src={face} />
+                                    <img src={face} alt="" />
                                 </div>
                             </a>
                         </div>
@@ -40,7 +34,7 @@ function Sns() {
                                         <span>#</span>instagram
                                     </div>
 
-                                    <img src={ins} />
+                                    <img src={ins} alt="" />
                                 </div>
                             </a>
                         </div>
@@ -54,7 +48,7 @@ function Sns() {
                                         <span>#</span>tiktok
                                     </div>
 
-                                    <img src={tiktok} />
+                                    <img src={tiktok} alt="" />
                                 </div>
                             </a>
                         </div>
@@ -66,7 +60,7 @@ function Sns() {
                                         <span>#</span>twitter
                                     </div>
 
-                                    <img src={twi} />
+                                    <img src={twi} alt="" />
                                 </div>
                             </a>
                         </div>
@@ -74,7 +68,7 @@ function Sns() {
                 </div>
 
                 {/* <div className="sns-container-right">
-                    <img src={japan} />
+                    <img src={japan} alt="" />
                 </div> */}
             </div>
 

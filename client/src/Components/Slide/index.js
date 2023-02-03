@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import { gql, useQuery, useMutation } from '@apollo/client'
 import { useContext } from 'react'
 
 import { Data } from '~/Provider'
 
-import BtnLR from '../BtnLR'
-import love from '~/Imgs/love.png'
 import cart from '~/Imgs/cart.png'
 import cart_dark from '~/Imgs/cart_dark.png'
 import star from '~/Imgs/star.png'
@@ -39,7 +37,7 @@ function Slide({ name, icon, user }) {
 
     const myData = useContext(Data)
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     const [variables, setVariables] = useState({
         productId: '',
@@ -119,7 +117,7 @@ function Slide({ name, icon, user }) {
         <div className="slide">
             <div className="slide-title">
                 <div className="slide-title-left">
-                    <img src={icon} />
+                    <img src={icon} alt="" />
                     {name}
                 </div>
 
@@ -145,11 +143,11 @@ function Slide({ name, icon, user }) {
                                     case '0':
                                         renderRating = (
                                             <div>
-                                                <img src={star_space} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
                                             </div>
                                         )
                                         break
@@ -164,22 +162,22 @@ function Slide({ name, icon, user }) {
                                     case '0.9':
                                         renderRating = (
                                             <div>
-                                                <img src={star_half} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
+                                                <img src={star_half} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
                                             </div>
                                         )
                                         break
                                     case '1':
                                         renderRating = (
                                             <div>
-                                                <img src={star} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
+                                                <img src={star} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
                                             </div>
                                         )
                                         break
@@ -194,22 +192,22 @@ function Slide({ name, icon, user }) {
                                     case '1.9':
                                         renderRating = (
                                             <div>
-                                                <img src={star} />
-                                                <img src={star_half} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
+                                                <img src={star} alt="" />
+                                                <img src={star_half} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
                                             </div>
                                         )
                                         break
                                     case '2':
                                         renderRating = (
                                             <div>
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
                                             </div>
                                         )
                                         break
@@ -224,22 +222,22 @@ function Slide({ name, icon, user }) {
                                     case '2.9':
                                         renderRating = (
                                             <div>
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star_half} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star_half} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
                                             </div>
                                         )
                                         break
                                     case '3':
                                         renderRating = (
                                             <div>
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
                                             </div>
                                         )
                                         break
@@ -254,22 +252,22 @@ function Slide({ name, icon, user }) {
                                     case '3.9':
                                         renderRating = (
                                             <div>
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star_half} />
-                                                <img src={star_space} />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star_half} alt="" />
+                                                <img src={star_space} alt="" />
                                             </div>
                                         )
                                         break
                                     case '4':
                                         renderRating = (
                                             <div>
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star_space} />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star_space} alt="" />
                                             </div>
                                         )
                                         break
@@ -284,22 +282,22 @@ function Slide({ name, icon, user }) {
                                     case '4.9':
                                         renderRating = (
                                             <div>
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star_half} />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star_half} alt="" />
                                             </div>
                                         )
                                         break
                                     case '5':
                                         renderRating = (
                                             <div>
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star} />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
                                             </div>
                                         )
                                         break
@@ -311,7 +309,7 @@ function Slide({ name, icon, user }) {
                                 return (
                                     <div className="slide-container-item" key={index} style={{ marginRight: '0' }}>
                                         <div className="slide-container-item-img">
-                                            <img id="slide-img" src={item.imgUrl} />
+                                            <img id="slide-img" src={item.imgUrl} alt="" />
                                         </div>
 
                                         <div className="slide-container-item-info">
@@ -332,7 +330,7 @@ function Slide({ name, icon, user }) {
                                                     })
                                                 }}
                                             >
-                                                <img src={love} />
+                                                <img src={love} alt="" />
                                             </div>
 
                                             <div className="slide-container-item-btnContainer-sen"></div> */}
@@ -347,7 +345,7 @@ function Slide({ name, icon, user }) {
                                                     })
                                                 }}
                                             >
-                                                <img src={storage === 'dark' ? cart_dark : cart} />
+                                                <img src={storage === 'dark' ? cart_dark : cart} alt="" />
                                             </div>
                                         </div>
                                     </div>
@@ -359,11 +357,11 @@ function Slide({ name, icon, user }) {
                                     case '0':
                                         renderRating = (
                                             <div>
-                                                <img src={star_space} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
                                             </div>
                                         )
                                         break
@@ -378,22 +376,22 @@ function Slide({ name, icon, user }) {
                                     case '0.9':
                                         renderRating = (
                                             <div>
-                                                <img src={star_half} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
+                                                <img src={star_half} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
                                             </div>
                                         )
                                         break
                                     case '1':
                                         renderRating = (
                                             <div>
-                                                <img src={star} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
+                                                <img src={star} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
                                             </div>
                                         )
                                         break
@@ -408,22 +406,22 @@ function Slide({ name, icon, user }) {
                                     case '1.9':
                                         renderRating = (
                                             <div>
-                                                <img src={star} />
-                                                <img src={star_half} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
+                                                <img src={star} alt="" />
+                                                <img src={star_half} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
                                             </div>
                                         )
                                         break
                                     case '2':
                                         renderRating = (
                                             <div>
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
                                             </div>
                                         )
                                         break
@@ -438,22 +436,22 @@ function Slide({ name, icon, user }) {
                                     case '2.9':
                                         renderRating = (
                                             <div>
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star_half} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star_half} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
                                             </div>
                                         )
                                         break
                                     case '3':
                                         renderRating = (
                                             <div>
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star_space} />
-                                                <img src={star_space} />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star_space} alt="" />
+                                                <img src={star_space} alt="" />
                                             </div>
                                         )
                                         break
@@ -468,22 +466,22 @@ function Slide({ name, icon, user }) {
                                     case '3.9':
                                         renderRating = (
                                             <div>
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star_half} />
-                                                <img src={star_space} />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star_half} alt="" />
+                                                <img src={star_space} alt="" />
                                             </div>
                                         )
                                         break
                                     case '4':
                                         renderRating = (
                                             <div>
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star_space} />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star_space} alt="" />
                                             </div>
                                         )
                                         break
@@ -498,22 +496,22 @@ function Slide({ name, icon, user }) {
                                     case '4.9':
                                         renderRating = (
                                             <div>
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star_half} />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star_half} alt="" />
                                             </div>
                                         )
                                         break
                                     case '5':
                                         renderRating = (
                                             <div>
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star} />
-                                                <img src={star} />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
+                                                <img src={star} alt="" />
                                             </div>
                                         )
                                         break
@@ -525,7 +523,7 @@ function Slide({ name, icon, user }) {
                                 return (
                                     <div className="slide-container-item" key={index}>
                                         <div className="slide-container-item-img">
-                                            <img id="slide-img" src={item.imgUrl} />
+                                            <img id="slide-img" src={item.imgUrl} alt="" />
                                         </div>
 
                                         <div className="slide-container-item-info">
@@ -546,7 +544,7 @@ function Slide({ name, icon, user }) {
                                                     })
                                                 }}
                                             >
-                                                <img src={love} />
+                                                <img src={love} alt="" />
                                             </div>
 
                                             <div className="slide-container-item-btnContainer-sen"></div> */}
@@ -561,7 +559,7 @@ function Slide({ name, icon, user }) {
                                                     })
                                                 }}
                                             >
-                                                <img src={storage === 'dark' ? cart_dark : cart} />
+                                                <img src={storage === 'dark' ? cart_dark : cart} alt="" />
                                             </div>
                                         </div>
                                     </div>
