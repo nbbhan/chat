@@ -1,9 +1,10 @@
 import { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-import logoW from '~/Imgs/logoW.png'
-
 import { Data } from '~/Provider'
+
+import logoW from '~/Imgs/logoW.png'
+import home from '~/Imgs/home.png'
 
 function NavContainer() {
     const myData = useContext(Data)
@@ -40,6 +41,7 @@ function NavContainer() {
                     <Link to="/" onClick={() => myData.handleTrigger()}>
                         <div className="navContainer-main-item">
                             <div className="navContainer-main-item-text">
+                                <img src={home} />
                                 ホーム
                                 <div className="underline" style={{ background: 'white' }}></div>
                             </div>
