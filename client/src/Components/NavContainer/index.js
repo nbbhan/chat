@@ -106,8 +106,8 @@ function NavContainer() {
                         <div className="navContainer-main-item">
                             <img src={post} alt="" />
                             <div className="navContainer-main-item-text">
-                                出品
-                                <div className="underline" style={{ background: 'white' }}></div>
+                                <div className="navContainer-main-item-text-post">出品</div>
+                                <div className="underline" style={{ background: 'yellow' }}></div>
                             </div>
                         </div>
                     </Link>

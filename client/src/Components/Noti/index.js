@@ -2,6 +2,7 @@ import { useContext } from 'react'
 
 import cancel from '~/Imgs/cancelC.png'
 import add from '~/Imgs/addC.png'
+import add_dark from '~/Imgs/addC_dark.png'
 
 import { Data } from '~/Provider'
 
@@ -47,7 +48,7 @@ function Noti() {
                         <div className="noti-container-item">
                             <div style={{ textAlign: 'center' }}>
                                 <div style={{ marginBottom: '2rem' }}>
-                                    <img src={add} alt="" />
+                                    <img src={storage === 'dark' ? add_dark : add} alt="" />
                                 </div>
 
                                 <div>追加</div>
