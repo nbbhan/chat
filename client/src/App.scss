@@ -215,6 +215,19 @@
     .img-text-main {
         background: rgb(50, 50, 50, 0.9);
     }
+
+    .post-btn,
+    .login-btn,
+    .register-btn {
+        button {
+            box-shadow: none;
+            border: 1px solid rgb(100, 100, 100);
+            background: none;
+            &:hover {
+                border: 1px solid rgb(180, 180, 180) !important;
+            }
+        }
+    }
 }
 
 .light {
