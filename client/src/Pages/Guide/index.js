@@ -7,8 +7,10 @@ import Noti from '~/Components/Noti'
 
 import home from '~/Imgs/Home_Screen.png'
 import home_dark from '~/Imgs/Home_Screen_dark.png'
-// import search from '~/Imgs/Search_Screen.png'
-// import search_dark from '~/Imgs/Search_Screen_dark.png'
+import search1 from '~/Imgs/Search_Screen1.png'
+import search1_dark from '~/Imgs/Search_Screen1_dark.png'
+import search2 from '~/Imgs/Search_Screen2.png'
+import search2_dark from '~/Imgs/Search_Screen2_dark.png'
 import cart from '~/Imgs/Cart_Screen.png'
 import cart_dark from '~/Imgs/Cart_Screen_dark.png'
 import point from '~/Imgs/Point_Screen.png'
@@ -74,10 +76,17 @@ function Guide() {
                             <br />
                             ・検索機能について：
                             <br />
-                            検索ができます。
+                            右上のナビゲーションボタンを押して、検索バーで【商品名】と【都道府県】のどちらかから商品の検索ができます。
                             <br />
                             <br />
+<<<<<<< Updated upstream
                             {/* <img src={storage === 'dark' ? search_dark : search} alt="" /> */}
+=======
+                            <img src={storage === 'dark' ? search1_dark : search1} />
+                            <br />
+                            <br />
+                            <img src={storage === 'dark' ? search2_dark : search2} />
+>>>>>>> Stashed changes
                             <br />
                             <br />
                             ・カートについて：
