@@ -55,15 +55,15 @@ module.exports = {
                 })
 
                 if (!user) {
-                    errors.username = 'user not found'
-                    throw new UserInputError('user not found', { errors })
+                    errors.username = 'ユーザーが見つかりません'
+                    throw new UserInputError('ユーザーが見つかりません', { errors })
                 }
 
                 const correctPassword = await bcrypt.compare(password, user.password)
 
                 if (!correctPassword) {
-                    errors.password = 'password is incorrect'
-                    throw new UserInputError('password is incorrect', { errors })
+                    errors.password = 'パスワードが間違っています'
+                    throw new UserInputError('パスワードが間違っています', { errors })
                 }
 
                 const token = jwt.sign({ username }, JWT_SECRET, {

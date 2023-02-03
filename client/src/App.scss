@@ -1405,6 +1405,11 @@ button {
 }
 .slide-container-item-rating {
     // font-weight: 500;
+
+    img {
+        width: 16px;
+        margin-right: 1px;
+    }
 }
 .slide-btn {
     display: flex;
@@ -1787,6 +1792,10 @@ button {
 }
 .prefecture-container-item-rating {
     // font-weight: 500;
+    img {
+        width: 16px;
+        margin-right: 1px;
+    }
 }
 .prefecture-scroll {
     width: 100%;
@@ -1952,6 +1961,13 @@ button {
         cursor: pointer;
         color: white;
         background: var(--cha);
+    }
+}
+
+.cart-main-item-rating {
+    img {
+        width: 16px;
+        margin-right: 1px;
     }
 }
 
@@ -3084,6 +3100,12 @@ button {
         cursor: pointer;
         color: white;
         background: var(--cha);
+    }
+}
+.search-item-rating {
+    img {
+        width: 16px;
+        margin-right: 1px;
     }
 }
 .search-close {

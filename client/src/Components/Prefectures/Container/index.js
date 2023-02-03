@@ -5,6 +5,9 @@ import { Data } from '~/Provider'
 
 import cart from '~/Imgs/cart.png'
 import cart_dark from '~/Imgs/cart_dark.png'
+import star from '~/Imgs/star.png'
+import star_half from '~/Imgs/star_half.png'
+import star_space from '~/Imgs/star_space.png'
 
 const GET_PRODUCT = gql`
     query getProduct {
@@ -114,6 +117,175 @@ function Container({ user }) {
                 {data &&
                     data.getProduct.map((item, index) => {
                         if (item.prefecture === myData.product) {
+                            let renderRating
+
+                            switch (item.rating) {
+                                case '0':
+                                    renderRating = (
+                                        <div>
+                                            <img src={star_space} />
+                                            <img src={star_space} />
+                                            <img src={star_space} />
+                                            <img src={star_space} />
+                                            <img src={star_space} />
+                                        </div>
+                                    )
+                                    break
+                                case '0.1':
+                                case '0.2':
+                                case '0.3':
+                                case '0.4':
+                                case '0.5':
+                                case '0.6':
+                                case '0.7':
+                                case '0.8':
+                                case '0.9':
+                                    renderRating = (
+                                        <div>
+                                            <img src={star_half} />
+                                            <img src={star_space} />
+                                            <img src={star_space} />
+                                            <img src={star_space} />
+                                            <img src={star_space} />
+                                        </div>
+                                    )
+                                    break
+                                case '1':
+                                    renderRating = (
+                                        <div>
+                                            <img src={star} />
+                                            <img src={star_space} />
+                                            <img src={star_space} />
+                                            <img src={star_space} />
+                                            <img src={star_space} />
+                                        </div>
+                                    )
+                                    break
+                                case '1.1':
+                                case '1.2':
+                                case '1.3':
+                                case '1.4':
+                                case '1.5':
+                                case '1.6':
+                                case '1.7':
+                                case '1.8':
+                                case '1.9':
+                                    renderRating = (
+                                        <div>
+                                            <img src={star} />
+                                            <img src={star_half} />
+                                            <img src={star_space} />
+                                            <img src={star_space} />
+                                            <img src={star_space} />
+                                        </div>
+                                    )
+                                    break
+                                case '2':
+                                    renderRating = (
+                                        <div>
+                                            <img src={star} />
+                                            <img src={star} />
+                                            <img src={star_space} />
+                                            <img src={star_space} />
+                                            <img src={star_space} />
+                                        </div>
+                                    )
+                                    break
+                                case '2.1':
+                                case '2.2':
+                                case '2.3':
+                                case '2.4':
+                                case '2.5':
+                                case '2.6':
+                                case '2.7':
+                                case '2.8':
+                                case '2.9':
+                                    renderRating = (
+                                        <div>
+                                            <img src={star} />
+                                            <img src={star} />
+                                            <img src={star_half} />
+                                            <img src={star_space} />
+                                            <img src={star_space} />
+                                        </div>
+                                    )
+                                    break
+                                case '3':
+                                    renderRating = (
+                                        <div>
+                                            <img src={star} />
+                                            <img src={star} />
+                                            <img src={star} />
+                                            <img src={star_space} />
+                                            <img src={star_space} />
+                                        </div>
+                                    )
+                                    break
+                                case '3.1':
+                                case '3.2':
+                                case '3.3':
+                                case '3.4':
+                                case '3.5':
+                                case '3.6':
+                                case '3.7':
+                                case '3.8':
+                                case '3.9':
+                                    renderRating = (
+                                        <div>
+                                            <img src={star} />
+                                            <img src={star} />
+                                            <img src={star} />
+                                            <img src={star_half} />
+                                            <img src={star_space} />
+                                        </div>
+                                    )
+                                    break
+                                case '4':
+                                    renderRating = (
+                                        <div>
+                                            <img src={star} />
+                                            <img src={star} />
+                                            <img src={star} />
+                                            <img src={star} />
+                                            <img src={star_space} />
+                                        </div>
+                                    )
+                                    break
+                                case '4.1':
+                                case '4.2':
+                                case '4.3':
+                                case '4.4':
+                                case '4.5':
+                                case '4.6':
+                                case '4.7':
+                                case '4.8':
+                                case '4.9':
+                                    renderRating = (
+                                        <div>
+                                            <img src={star} />
+                                            <img src={star} />
+                                            <img src={star} />
+                                            <img src={star} />
+                                            <img src={star_half} />
+                                        </div>
+                                    )
+                                    break
+                                case '5':
+                                    renderRating = (
+                                        <div>
+                                            <img src={star} />
+                                            <img src={star} />
+                                            <img src={star} />
+                                            <img src={star} />
+                                            <img src={star} />
+                                        </div>
+                                    )
+                                    break
+                                default:
+                                    renderRating = <div></div>
+                                    break
+                            }
+
                             return (
                                 <div className="prefecture-container-item" key={index}>
                                     <div className="prefecture-container-item-img">
@@ -126,7 +298,7 @@ function Container({ user }) {
 
                                     <div className="prefecture-container-item-price">{`${item.price}円（税込）`}</div>
 
-                                    <div className="prefecture-container-item-rating">{`☆ ${item.rating} / 5`}</div>
+                                    <div className="prefecture-container-item-rating">{renderRating}</div>
 
                                     <div className={`prefecture-container-item-btnContainer ${storage}`}>
                                         {/* <div
