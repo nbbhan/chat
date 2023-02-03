@@ -45,8 +45,8 @@ function NavContainer() {
 
                     <Link to="/" onClick={() => myData.handleTrigger()}>
                         <div className="navContainer-main-item">
+                            <img src={home} />
                             <div className="navContainer-main-item-text">
-                                <img src={home} />
                                 ホーム
                                 <div className="underline" style={{ background: 'white' }}></div>
                             </div>
@@ -55,8 +55,8 @@ function NavContainer() {
 
                     <Link to="/guide" onClick={() => myData.handleTrigger()}>
                         <div className="navContainer-main-item">
+                            <img src={guide} />
                             <div className="navContainer-main-item-text">
-                                <img src={guide} />
                                 使い方
                                 <div className="underline" style={{ background: 'white' }}></div>
                             </div>
@@ -65,8 +65,8 @@ function NavContainer() {
 
                     <Link to="/about" onClick={() => myData.handleTrigger()}>
                         <div className="navContainer-main-item">
+                            <img src={about} />
                             <div className="navContainer-main-item-text">
-                                <img src={about} />
                                 QOKSについて
                                 <div className="underline" style={{ background: 'white' }}></div>
                             </div>
@@ -80,8 +80,8 @@ function NavContainer() {
                             myData.handleTrigger()
                         }}
                     >
+                        <img src={contact} />
                         <div className="navContainer-main-item-text">
-                            <img src={contact} />
                             お問い合わせ
                             <div className="underline" style={{ background: 'white' }}></div>
                         </div>
@@ -95,8 +95,8 @@ function NavContainer() {
                             myData.setSearch('none')
                         }}
                     >
+                        <img src={setting} />
                         <div className="navContainer-main-item-text">
-                            <img src={setting} />
                             設定
                             <div className="underline" style={{ background: 'white' }}></div>
                         </div>
@@ -104,8 +104,8 @@ function NavContainer() {
 
                     <Link to="/post" onClick={() => myData.handleTrigger()}>
                         <div className="navContainer-main-item">
+                            <img src={post} />
                             <div className="navContainer-main-item-text">
-                                <img src={post} />
                                 出品
                                 <div className="underline" style={{ background: 'white' }}></div>
                             </div>

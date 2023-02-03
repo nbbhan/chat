@@ -674,6 +674,8 @@ button {
     font-weight: 500;
     display: flex;
     margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
 
     &:hover {
         cursor: pointer;
@@ -683,17 +685,15 @@ button {
             transform-origin: bottom left;
         }
     }
-}
-.navContainer-main-item-text {
-    position: relative;
-    display: flex;
-    align-items: center;
 
     img {
         width: 25px;
         height: 25px;
         margin-right: 3rem;
     }
+}
+.navContainer-main-item-text {
+    position: relative;
 }
 .navContainer-main-item-search {
     width: 100%;
