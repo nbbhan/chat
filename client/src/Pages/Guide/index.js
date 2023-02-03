@@ -7,6 +7,8 @@ import Noti from '~/Components/Noti'
 
 import home from '~/Imgs/Home_Screen.png'
 import home_dark from '~/Imgs/Home_Screen_dark.png'
+// import search from '~/Imgs/Search_Screen.png'
+// import search_dark from '~/Imgs/Search_Screen_dark.png'
 import cart from '~/Imgs/Cart_Screen.png'
 import cart_dark from '~/Imgs/Cart_Screen_dark.png'
 import point from '~/Imgs/Point_Screen.png'
@@ -68,6 +70,14 @@ function Guide() {
                             <br />
                             <br />
                             <img src={storage === 'dark' ? home_dark : home} />
+                            <br />
+                            <br />
+                            ・検索機能について：
+                            <br />
+                            検索ができます。
+                            <br />
+                            <br />
+                            {/* <img src={storage === 'dark' ? search_dark : search} /> */}
                             <br />
                             <br />
                             ・カートについて：
