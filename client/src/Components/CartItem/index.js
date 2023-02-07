@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { gql, useQuery, useMutation } from '@apollo/client'
 import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 
 import { Data } from '../../Provider'
 
@@ -272,17 +273,9 @@ function CartItem({ item }) {
                                         </div>
 
                                         <div className="cart-main-item-inf-buy">
-                                            <div
-                                                className="cart-main-item-inf-buyBtn"
-                                                onClick={() =>
-                                                    handleDelete({
-                                                        productId: element.productId,
-                                                        user: profile.data && profile.data.getProfile[0].username,
-                                                    })
-                                                }
-                                            >
-                                                今すぐ購入
-                                            </div>
+                                            <Link to="/buy">
+                                                <div className="cart-main-item-inf-buyBtn">今すぐ購入</div>
+                                            </Link>
                                         </div>
                                     </div>
 
