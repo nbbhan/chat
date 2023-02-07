@@ -85,18 +85,18 @@ function Profile() {
                                 <div className="profile-main-container-breakdown">
                                     <div className="profile-main-container-breakdown-items">
                                         <div className="profile-main-container-breakdown-item">
-                                            <div className="profile-main-container-breakdown-text">フォロー中:</div>
+                                            <div className="profile-main-container-breakdown-text">ID:</div>
                                             <div className="profile-main-container-breakdown-num">
-                                                {data && data.getProfile[0].follow}
+                                                {data && data.getProfile[0].username}
                                             </div>
                                         </div>
 
                                         <div className="profile-main-container-line"></div>
 
                                         <div className="profile-main-container-breakdown-item">
-                                            <div className="profile-main-container-breakdown-text">登録日:</div>
+                                            <div className="profile-main-container-breakdown-text">住所:</div>
                                             <div className="profile-main-container-breakdown-num">
-                                                {data && data.getProfile[0].createdAt}
+                                                {data && data.getProfile[0].address}
                                             </div>
                                         </div>
                                     </div>
