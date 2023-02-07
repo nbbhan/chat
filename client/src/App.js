@@ -12,10 +12,12 @@ import Profile from '~/Pages/Profile'
 import Guide from '~/Pages/Guide'
 import About from '~/Pages/About'
 import Contact from '~/Pages/Contact'
-import Nav from './Components/Nav'
-import Chatbox from './Components/Chatbox'
-import NavContainer from './Components/NavContainer'
 import Post from './Pages/Post'
+import Buy from './Pages/Buy'
+
+import Chatbox from './Components/Chatbox'
+import Nav from './Components/Nav'
+import NavContainer from './Components/NavContainer'
 
 import { Data } from './Provider'
 
@@ -54,6 +56,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/post" element={<Post />} />
+                <Route path="/buy" element={<Buy />} />
             </Routes>
         </div>
     )
