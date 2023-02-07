@@ -80,7 +80,7 @@ module.exports = gql`
         sendMessage(to: String!, content: String!): Message!
         addCart(productId: String!, user: String!): Cart!
         deleteCart(productId: String!, user: String!): Cart
-        changeProfile(user: String!, img: String!): Profile
+        changeProfile(user: String!, img: String, profileName: String, address: String): Profile
         addProduct(
             productId: String!
             info: String!

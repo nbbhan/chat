@@ -157,7 +157,10 @@ module.exports = {
                 let users = await User.findOne({
                     where: { username: { [Op.eq]: `${args.user}` } },
                 }).then((user) => {
-                    user.imageUrl = `${args.img}`
+                    if (args.img !== '' && args.img !== undefined) user.imageUrl = `${args.img}`
+                    if (args.profileName !== '' && args.profileName !== undefined)
+                        user.profileName = `${args.profileName}`
+                    if (args.address !== '' && args.address !== undefined) user.address = `${args.address}`
                     user.save()
                 })
 

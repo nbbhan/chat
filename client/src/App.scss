@@ -3232,6 +3232,12 @@ button {
 }
 .profileModal-container-item {
     margin: 1rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        color: var(--cha);
+    }
 }
 .profileModal-container-title {
     display: flex;
