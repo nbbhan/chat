@@ -20,6 +20,8 @@ const GET_PROFILE = gql`
             buyPoint
             getPoint
             follow
+            address
+            profileName
         }
     }
 `
@@ -76,7 +78,9 @@ function Profile() {
                                     </div>
                                 </div>
 
-                                <div className="profile-main-container-name">{data && data.getProfile[0].username}</div>
+                                <div className="profile-main-container-name">
+                                    {data && data.getProfile[0].profileName}
+                                </div>
 
                                 <div className="profile-main-container-breakdown">
                                     <div className="profile-main-container-breakdown-items">

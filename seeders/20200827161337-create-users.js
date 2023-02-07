@@ -19,6 +19,8 @@ module.exports = {
                 follow: 0,
                 createdAt,
                 updatedAt,
+                address: '',
+                profileName: '',
             },
             {
                 username: 'admin',
@@ -31,6 +33,8 @@ module.exports = {
                 follow: 0,
                 createdAt,
                 updatedAt,
+                address: '',
+                profileName: '',
             },
             {
                 username: 'hokkaido_ryoushi',
@@ -43,6 +47,8 @@ module.exports = {
                 follow: 5,
                 createdAt,
                 updatedAt,
+                address: '北海道札幌市中央区1-1',
+                profileName: '大漁市場',
             },
             {
                 username: 'ohara',
@@ -55,6 +61,8 @@ module.exports = {
                 follow: 5,
                 createdAt,
                 updatedAt,
+                address: '大阪府大阪市浪速区2-22',
+                profileName: '大原',
             },
         ])
     },

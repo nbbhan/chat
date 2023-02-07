@@ -8,6 +8,8 @@ module.exports = gql`
         token: String
         imageUrl: String
         latestMessage: Message
+        address: String
+        profileName: String
     }
     type Profile {
         username: String!
@@ -16,6 +18,8 @@ module.exports = gql`
         buyPoint: Float
         getPoint: Float
         follow: Float
+        address: String
+        profileName: String
     }
     type Message {
         uuid: String!

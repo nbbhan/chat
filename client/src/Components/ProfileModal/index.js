@@ -25,6 +25,8 @@ const GET_PROFILE = gql`
             buyPoint
             getPoint
             follow
+            address
+            profileName
         }
     }
 `
@@ -70,10 +72,16 @@ function ProfileModal() {
             <div className={`profileModal-main ${storage}`}>
                 <div className="profileModal-container">
                     <div className="profileModal-close" style={{ padding: '10px 20px 10px 20px' }}>
-                        <div className="profileModal-container-title">プロフィール画像を選択</div>
+                        <div className="profileModal-container-title">プロフィールを編集</div>
                     </div>
 
-                    <div className="profileModal-container-item">
+                    <div className="profileModal-container-items">
+                        <div className="profileModal-container-item">プロフィール画像を変更</div>
+                        <div className="profileModal-container-item">アカウント名を変更</div>
+                        <div className="profileModal-container-item">住所を変更</div>
+                    </div>
+
+                    {/* <div className="profileModal-container-item">
                         <input
                             placeholder="画像URLを入力..."
                             onKeyDown={(e) => {
@@ -89,7 +97,7 @@ function ProfileModal() {
                                 }
                             }}
                         />
-                    </div>
+                    </div> */}
 
                     <div className="profileModal-close">
                         <div

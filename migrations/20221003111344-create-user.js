@@ -34,6 +34,12 @@ module.exports = {
                 allowNull: false,
                 type: Sequelize.DATE,
             },
+            address: {
+                type: Sequelize.STRING,
+            },
+            profileName: {
+                type: Sequelize.STRING(20),
+            },
         })
     },
     down: async (queryInterface, Sequelize) => {

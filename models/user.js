@@ -30,6 +30,8 @@ module.exports = (sequelize, DataTypes) => {
             buyPoint: DataTypes.FLOAT,
             getPoint: DataTypes.FLOAT,
             follow: DataTypes.FLOAT,
+            address: DataTypes.STRING,
+            profileName: DataTypes.STRING(20),
         },
         {
             sequelize,
