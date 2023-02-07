@@ -332,7 +332,7 @@ button {
     height: 100px;
     background: url('./Imgs/start.png') center/cover no-repeat;
     margin-bottom: 2rem;
-    animation: kaiten 1.5s infinite linear;
+    animation: kaiten 1.5s infinite linear reverse;
 }
 @keyframes kaiten {
     from {
