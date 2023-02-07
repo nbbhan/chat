@@ -8,6 +8,37 @@
         <title>QOKS</title>
     </head>
     <body>
+        <div id="loading">
+            <div class="loading-main">
+                <div class="loading-img"></div>
+                <div>Loading...</div>
+            </div>
+        </div>
         <div id="root"></div>
     </body>
 </html>
+
+<script>
+    ;(() => {
+        const page = document.querySelector('#root')
+        const wait = (delay = 0) => new Promise((resolve) => setTimeout(resolve, delay))
+
+        const setVisible = (elementOrSelector, visible) =>
+            ((typeof elementOrSelector === 'string'
+                ? document.querySelector(elementOrSelector)
+                : elementOrSelector
+            ).style.top = `${visible}%`)
+
+        page.style.display = 'none'
+        setVisible('#loading', 0)
+
+        document.addEventListener('DOMContentLoaded', () =>
+            wait(1000).then(() => {
+                setTimeout(() => {
+                    setVisible('#loading', 100)
+                }, 300)
+                page.style.display = 'block'
+            }),
+        )
+    })()
+</script>
