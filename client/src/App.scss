@@ -3540,3 +3540,27 @@ button {
         margin-top: 0.5rem;
     }
 }
+.prefecture-scroll {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: var(--cha);
+
+    span {
+        position: relative;
+        margin-bottom: 10px;
+
+        div {
+            position: absolute;
+            bottom: -5px;
+            left: -50px;
+            width: calc(100% + 100px);
+            height: 2px;
+            background: var(--cha);
+            border-radius: 100rem;
+            display: none;
+        }
+    }
+}

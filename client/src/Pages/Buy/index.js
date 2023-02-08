@@ -242,6 +242,13 @@ function Buy() {
                                         </div>
                                     </div>
 
+                                    <div className="prefecture-scroll">
+                                        <span>
+                                            購入手続き
+                                            <div></div>
+                                        </span>
+                                    </div>
+
                                     <div>ご購入者：{data && data.getProfile[0].profileName}</div>
                                     <div>お届け先：{data && data.getProfile[0].address}</div>
                                 </div>
