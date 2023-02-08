@@ -53,13 +53,27 @@ function Buy() {
 
                         <div className="buy-main-container">
                             <div className="buy-main-items">
-                                <div>{myData.buy.imgUrl}</div>
-                                <div>{myData.buy.price}</div>
-                                <div>{myData.buy.info}</div>
-                                <div>{myData.buy.productId}</div>
-                                <div>{myData.buy.prefecture}</div>
-                                <div>{data && data.getProfile[0].username}</div>
-                                <div>{data && data.getProfile[0].address}</div>
+                                <div className="buy-main-item">
+                                    <img src={myData.buy.imgUrl} />
+                                </div>
+                                <div className="buy-main-item">
+                                    <div className="buy-main-item-price">{myData.buy.price}</div>
+                                </div>
+                                <div className="buy-main-item">
+                                    <div className="buy-main-item-info">{myData.buy.info}</div>
+                                </div>
+                                <div className="buy-main-item">
+                                    <div className="buy-main-item-productId">{myData.buy.productId}</div>
+                                </div>
+                                <div className="buy-main-item">
+                                    <div className="buy-main-item-prefecture">{myData.buy.prefecture}</div>
+                                </div>
+                                <div className="buy-main-item">
+                                    <div className="buy-main-item-username">{data && data.getProfile[0].username}</div>
+                                </div>
+                                <div className="buy-main-item">
+                                    <div className="buy-main-item-address">{data && data.getProfile[0].address}</div>
+                                </div>
                             </div>
                         </div>
                     </div>
