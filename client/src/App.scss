@@ -3500,3 +3500,43 @@ button {
         border-radius: 10px;
     }
 }
+.buy-main-item-container {
+    width: 100%;
+    height: 100%;
+    // border: 1px solid var(--myColor);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    transition: all 0.3s ease-in;
+    position: relative;
+    margin-bottom: 2rem;
+
+    &:hover {
+        box-shadow: 0 3px 10px 3px var(--myColor);
+
+        .cart-main-item-img {
+            padding: 1rem;
+        }
+
+        .cart-main-item-inf-buy {
+            transform: translateY(0);
+        }
+
+        .cart-main-item-container-close {
+            transform: translateX(0);
+        }
+    }
+}
+.buy-main-item-inf {
+    flex: 1;
+    height: 100%;
+    padding: 1rem 2rem;
+}
+.buy-main-item-rating {
+    // font-weight: 500;
+    img {
+        width: 16px;
+        margin-right: 1px;
+        margin-top: 0.5rem;
+    }
+}
