@@ -5,14 +5,24 @@ import { Data } from '~/Provider'
 
 import Explore from '~/Components/Explore'
 import Title from '~/Components/Title'
-import CartItem from '~/Components/CartItem'
 import Modal from '~/Components/Modal'
 import SettingModal from '~/Components/SettingModal'
 import Search from '~/Components/Search'
 import Noti from '~/Components/Noti'
 
+const GET_PROFILE = gql`
+    query getProfile {
+        getProfile {
+            username
+            address
+        }
+    }
+`
+
 function Buy() {
     const myData = useContext(Data)
+
+    const { data } = useQuery(GET_PROFILE)
 
     const inf = {
         link: 'buy',
@@ -48,6 +58,8 @@ function Buy() {
                                 <div>{myData.buy.info}</div>
                                 <div>{myData.buy.productId}</div>
                                 <div>{myData.buy.prefecture}</div>
+                                <div>{data && data.getProfile[0].username}</div>
+                                <div>{data && data.getProfile[0].address}</div>
                             </div>
                         </div>
                     </div>
