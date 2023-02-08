@@ -53,26 +53,23 @@ function Buy() {
 
                         <div className="buy-main-container">
                             <div className="buy-main-items">
-                                <div className="buy-main-item">
-                                    <img src={myData.buy.imgUrl} />
-                                </div>
-                                <div className="buy-main-item">
-                                    <div className="buy-main-item-price">{myData.buy.price}</div>
-                                </div>
-                                <div className="buy-main-item">
-                                    <div className="buy-main-item-info">{myData.buy.info}</div>
-                                </div>
-                                <div className="buy-main-item">
-                                    <div className="buy-main-item-productId">{myData.buy.productId}</div>
-                                </div>
-                                <div className="buy-main-item">
-                                    <div className="buy-main-item-prefecture">{myData.buy.prefecture}</div>
-                                </div>
-                                <div className="buy-main-item">
-                                    <div className="buy-main-item-username">{data && data.getProfile[0].username}</div>
-                                </div>
-                                <div className="buy-main-item">
-                                    <div className="buy-main-item-address">{data && data.getProfile[0].address}</div>
+                                <div className="cart-main-item">
+                                    <div className="cart-main-item-container">
+                                        <div className="cart-main-item-img">
+                                            <img src={myData.buy.imgUrl} alt="" />
+                                        </div>
+
+                                        <div className="cart-main-item-inf">
+                                            <div className="cart-main-item-inf-container">
+                                                <div className="cart-main-item-name">{myData.buy.info}</div>
+                                                <div className="cart-main-item-price">{myData.buy.price}円（税込）</div>
+                                                <div className="cart-main-item-prefecture">{myData.buy.prefecture}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>{data && data.getProfile[0].username}</div>
+                                    <div>{data && data.getProfile[0].address}</div>
                                 </div>
                             </div>
                         </div>
