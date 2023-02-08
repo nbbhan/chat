@@ -74,6 +74,14 @@ function Provider({ children }) {
 
     const [pm, setPm] = useState('none')
 
+    const [buy, setBuy] = useState({
+        imgUrl: '',
+        price: '',
+        info: '',
+        productId: '',
+        prefecture: '',
+    })
+
     // Handle
     const changeToLight = () => {
         setTheme('dark')
@@ -160,6 +168,7 @@ function Provider({ children }) {
         search,
         sv,
         pm,
+        buy,
 
         // Set State
         setLogin,
@@ -169,6 +178,7 @@ function Provider({ children }) {
         setSubmit,
         setSv,
         setSearch,
+        setBuy,
 
         // Function
         changeToDark,

@@ -42,7 +42,13 @@ function Buy() {
                         <Title props={inf} />
 
                         <div className="buy-main-container">
-                            <div className="buy-main-items"></div>
+                            <div className="buy-main-items">
+                                <div>{myData.buy.imgUrl}</div>
+                                <div>{myData.buy.price}</div>
+                                <div>{myData.buy.info}</div>
+                                <div>{myData.buy.productId}</div>
+                                <div>{myData.buy.prefecture}</div>
+                            </div>
                         </div>
                     </div>
                 </div>

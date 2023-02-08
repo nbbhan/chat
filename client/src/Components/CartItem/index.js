@@ -273,7 +273,18 @@ function CartItem({ item }) {
                                         </div>
 
                                         <div className="cart-main-item-inf-buy">
-                                            <Link to="/buy">
+                                            <Link
+                                                to="/buy"
+                                                onClick={() => {
+                                                    myData.setBuy({
+                                                        imgUrl: element.imgUrl,
+                                                        price: element.price,
+                                                        info: element.info,
+                                                        productId: element.productId,
+                                                        prefecture: element.prefecture,
+                                                    })
+                                                }}
+                                            >
                                                 <div className="cart-main-item-inf-buyBtn">今すぐ購入</div>
                                             </Link>
                                         </div>
