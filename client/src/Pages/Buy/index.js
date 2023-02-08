@@ -14,6 +14,7 @@ const GET_PROFILE = gql`
     query getProfile {
         getProfile {
             username
+            profileName
             address
         }
     }
@@ -61,14 +62,18 @@ function Buy() {
 
                                         <div className="cart-main-item-inf">
                                             <div className="cart-main-item-inf-container">
-                                                <div className="cart-main-item-name">{myData.buy.info}</div>
-                                                <div className="cart-main-item-price">{myData.buy.price}円（税込）</div>
-                                                <div className="cart-main-item-prefecture">{myData.buy.prefecture}</div>
+                                                <div className="cart-main-item-name">商品名：{myData.buy.info}</div>
+                                                <div className="cart-main-item-price">
+                                                    価額：{myData.buy.price}円（税込）
+                                                </div>
+                                                <div className="cart-main-item-prefecture">
+                                                    出産地：{myData.buy.prefecture}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div>{data && data.getProfile[0].username}</div>
+                                    <div>{data && data.getProfile[0].profileName}</div>
                                     <div>{data && data.getProfile[0].address}</div>
                                 </div>
                             </div>
