@@ -282,6 +282,7 @@ function CartItem({ item }) {
                                                         info: element.info,
                                                         productId: element.productId,
                                                         prefecture: element.prefecture,
+                                                        rating: element.rating,
                                                     })
                                                 }}
                                             >

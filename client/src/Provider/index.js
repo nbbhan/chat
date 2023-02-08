@@ -80,6 +80,7 @@ function Provider({ children }) {
         info: '',
         productId: '',
         prefecture: '',
+        rating: '',
     })
 
     // Handle

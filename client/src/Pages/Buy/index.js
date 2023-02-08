@@ -69,6 +69,7 @@ function Buy() {
                                                 <div className="cart-main-item-prefecture">
                                                     出産地：{myData.buy.prefecture}
                                                 </div>
+                                                <div className="cart-main-item-rating">評価：{myData.buy.rating}</div>
                                             </div>
                                         </div>
                                     </div>
