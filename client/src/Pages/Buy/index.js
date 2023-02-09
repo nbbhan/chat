@@ -277,9 +277,9 @@ function Buy() {
                                                     id="test1"
                                                     name="radio-group"
                                                     value="現金"
-                                                    checked
+                                                    defaultChecked
                                                 />
-                                                <label for="test1">現金</label>
+                                                <label htmlFor="test1">現金</label>
                                             </div>
 
                                             <div className="buy-main-item-containerInfo-inputGroup">
@@ -290,14 +290,76 @@ function Buy() {
                                                     value="クレジットカード"
                                                 />
 
-                                                <label for="test2">クレジットカード</label>
+                                                <label htmlFor="test2">クレジットカード</label>
                                             </div>
 
                                             <div className="buy-main-item-containerInfo-inputGroup">
                                                 <input type="radio" id="test3" name="radio-group" value="ポイント" />
-                                                <label for="test3">ポイント</label>
+                                                <label htmlFor="test3">ポイント</label>
                                             </div>
                                         </form>
+                                    </div>
+
+                                    <div className="buy-main-item-containerInfo">
+                                        <div className="buy-main-item-containerInfo-title">3. 置き配指定</div>
+
+                                        <form>
+                                            <div className="buy-main-item-containerInfo-inputGroup">
+                                                <input
+                                                    type="radio"
+                                                    id="test4"
+                                                    name="radio-group"
+                                                    value="玄関"
+                                                    defaultChecked
+                                                />
+                                                <label htmlFor="test4">玄関</label>
+                                            </div>
+
+                                            <div className="buy-main-item-containerInfo-inputGroup">
+                                                <input
+                                                    type="radio"
+                                                    id="test5"
+                                                    name="radio-group"
+                                                    value="自転車のかご"
+                                                />
+
+                                                <label htmlFor="test5">自転車かご</label>
+                                            </div>
+
+                                            <div className="buy-main-item-containerInfo-inputGroup">
+                                                <input
+                                                    type="radio"
+                                                    id="test6"
+                                                    name="radio-group"
+                                                    value="宅配ボックス"
+                                                />
+                                                <label htmlFor="test6">宅配ボックス</label>
+                                            </div>
+
+                                            <div className="buy-main-item-containerInfo-inputGroup">
+                                                <input type="radio" id="test7" name="radio-group" value="車庫" />
+                                                <label htmlFor="test7">車庫</label>
+                                            </div>
+
+                                            <div className="buy-main-item-containerInfo-inputGroup">
+                                                <input
+                                                    type="radio"
+                                                    id="test8"
+                                                    name="radio-group"
+                                                    value="建物内受付／管理人"
+                                                />
+                                                <label htmlFor="test8">建物内受付／管理人</label>
+                                            </div>
+
+                                            <div className="buy-main-item-containerInfo-inputGroup">
+                                                <input type="radio" id="test9" name="radio-group" value="利用しない" />
+                                                <label htmlFor="test9">利用しない</label>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div className="buy-main-item-containerBtn">
+                                        <div>注文を確定</div>
                                     </div>
                                 </div>
                             </div>

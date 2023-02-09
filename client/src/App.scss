@@ -218,7 +218,8 @@
 
     .post-btn,
     .login-btn,
-    .register-btn {
+    .register-btn,
+    .contact-btn {
         button {
             box-shadow: none;
             border: 1px solid rgb(100, 100, 100);
@@ -3428,7 +3429,8 @@ button {
         }
     }
 }
-.post-btn {
+.post-btn,
+.contact-btn {
     width: 100%;
     margin-top: 3rem;
     display: flex;
@@ -3632,5 +3634,37 @@ button {
         opacity: 1;
         -webkit-transform: scale(1);
         transform: scale(1);
+    }
+}
+.buy-main-item-containerBtn {
+    width: 100%;
+    // border: 1px solid var(--myColor);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+    margin-bottom: 2rem;
+    padding: 1rem 0 2rem 0;
+    display: flex;
+    justify-content: center;
+
+    div {
+        width: 130px;
+        height: 45px;
+        border-radius: var(--borderR);
+        box-shadow: 0 1px 5px 1px var(--myColor);
+        // border: 1px solid var(--myColor);
+        color: var(--myColor);
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in;
+        margin-right: 2rem;
+
+        &:hover {
+            cursor: pointer;
+            color: white;
+            background: var(--cha);
+        }
     }
 }
