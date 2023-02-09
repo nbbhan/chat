@@ -242,15 +242,63 @@ function Buy() {
                                         </div>
                                     </div>
 
-                                    <div className="prefecture-scroll">
+                                    <div className="buy-scroll">
                                         <span>
                                             購入手続き
                                             <div></div>
                                         </span>
                                     </div>
 
-                                    <div>ご購入者：{data && data.getProfile[0].profileName}</div>
-                                    <div>お届け先：{data && data.getProfile[0].address}</div>
+                                    <div className="buy-main-item-containerInfo">
+                                        <div className="buy-main-item-containerInfo-title">1. お客様情報</div>
+
+                                        <div className="buy-main-item-containerInfo-item">
+                                            <span>ご購入者：</span>
+                                            {data && data.getProfile[0].profileName}
+                                        </div>
+
+                                        <div className="buy-main-item-containerInfo-item">
+                                            <span>お届け先：</span>
+                                            {data && data.getProfile[0].address}
+                                        </div>
+
+                                        <div className="buy-main-item-containerInfo-item">
+                                            <span>メールアドレス：</span>ohara@jp.com
+                                        </div>
+                                    </div>
+
+                                    <div className="buy-main-item-containerInfo">
+                                        <div className="buy-main-item-containerInfo-title">2. お支払い方法</div>
+
+                                        <form>
+                                            <div className="buy-main-item-containerInfo-inputGroup">
+                                                <input
+                                                    type="radio"
+                                                    id="test1"
+                                                    name="radio-group"
+                                                    value="現金"
+                                                    checked
+                                                />
+                                                <label for="test1">現金</label>
+                                            </div>
+
+                                            <div className="buy-main-item-containerInfo-inputGroup">
+                                                <input
+                                                    type="radio"
+                                                    id="test2"
+                                                    name="radio-group"
+                                                    value="クレジットカード"
+                                                />
+
+                                                <label for="test2">クレジットカード</label>
+                                            </div>
+
+                                            <div className="buy-main-item-containerInfo-inputGroup">
+                                                <input type="radio" id="test3" name="radio-group" value="ポイント" />
+                                                <label for="test3">ポイント</label>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
