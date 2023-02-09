@@ -55,15 +55,15 @@ module.exports = {
                 })
 
                 if (!user) {
-                    errors.username = 'ユーザーが見つかりません'
-                    throw new UserInputError('ユーザーが見つかりません', { errors })
+                    errors.username = '※ユーザーが見つかりません'
+                    throw new UserInputError('※ユーザーが見つかりません', { errors })
                 }
 
                 const correctPassword = await bcrypt.compare(password, user.password)
 
                 if (!correctPassword) {
-                    errors.password = 'パスワードが間違っています'
-                    throw new UserInputError('パスワードが間違っています', { errors })
+                    errors.password = '※パスワードが間違っています'
+                    throw new UserInputError('※パスワードが間違っています', { errors })
                 }
 
                 const token = jwt.sign({ username }, JWT_SECRET, {
@@ -145,7 +145,7 @@ module.exports = {
             } catch (err) {
                 console.log(err)
                 if (err.name === 'SequelizeUniqueConstraintError') {
-                    err.errors.forEach((e) => (errors[e.path] = `${e.path} is already taken`))
+                    err.errors.forEach((e) => (errors[e.path] = `※すでに使用されているので、変更してください`))
                 } else if (err.name === 'SequelizeValidationError') {
                     err.errors.forEach((e) => (errors[e.path] = e.message))
                 }
